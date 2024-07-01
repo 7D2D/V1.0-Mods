@@ -1,0 +1,41 @@
+<configs>
+	
+	<csv xpath="/entitygroups/entitygroup[@name='EnemyAnimalsForest']/text()" delim="\n" op="add" >
+		animalRobin, 2
+		animalEagle, 1
+		animalAlcatraz, 1
+	</csv>
+	<csv xpath="/entitygroups/entitygroup[@name='EnemyAnimalsBurntForestAny']/text()" delim="\n" op="add" >
+		animalEagle, 2
+		animalAlcatraz, 2
+	</csv>
+	<csv xpath="/entitygroups/entitygroup[@name='EnemyAnimalsBurntForestNight']/text()" delim="\n" op="add" >
+		animalBat, 1
+		animalBats, 2
+	</csv>
+	<csv xpath="/entitygroups/entitygroup[@name='EnemyAnimalsDesert']/text()" delim="\n" op="add" >
+		animalCrow, 5
+	</csv>
+	<csv xpath="/entitygroups/entitygroup[@name='EnemyAnimalsDesertNight']/text()" delim="\n" op="add" >
+		animalBat, 2
+		animalBats, 1
+	</csv>
+	<csv xpath="/entitygroups/entitygroup[@name='EnemyAnimalsSnow']/text()" delim="\n" op="add" >
+		animalEagle, 1
+		animalPenguin, 2
+	</csv>	
+	<csv xpath="/entitygroups/entitygroup[@name='EnemyAnimalsSnowNight']/text()" delim="\n" op="add" >
+		animalBat, 1
+		animalBats, 2
+		animalPenguin, 1
+	</csv>
+	<csv xpath="/entitygroups/entitygroup[@name='EnemyAnimalsWasteland']/text()" delim="\n" op="add" >
+		animalBat, 3
+		animalBats, 2
+	</csv>	
+	<csv xpath="/entitygroups/entitygroup[@name='EnemyAnimalsWastelandNight']/text()" delim="\n" op="add" >
+		animalBat, 3
+		animalBats, 3
+	</csv>	
+
+</configs>
