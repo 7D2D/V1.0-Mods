@@ -73,10 +73,21 @@
 		
 		<set xpath="//entity_class[starts-with(@name, 'animalCoyote')]/property[@value='SetNearestEntityAsTarget']/@data">class=EntityPlayer,15,10,EntityAnimalRabbit,0,18,EntityNPC,15,10</set> 		
 		
-		<set xpath="//entity_class[starts-with(@name, 'animalDireWolf')]/property[@value='ApproachAndAttackTarget']/@data">class=EntityAnimalStag,30,EntityPlayer,30,EntityZombie,20,EntityNPC,30</set> 
+		<!-- <set xpath="//entity_class[starts-with(@name, 'animalDireWolf')]/property[@value='ApproachAndAttackTarget']/@data">class=EntityAnimalStag,30,EntityPlayer,30,EntityZombie,20,EntityNPC,30</set> -->
 		
-		<set xpath="//entity_class[starts-with(@name, 'animalDireWolf')]/property[@value='SetNearestEntityAsTarget']/@data">class=EntityPlayer,29,24,EntityAnimalStag,0,0,EntityZombie,0,0,EntityNPC,29,24</set> 		
-		
+		<!-- <set xpath="//entity_class[starts-with(@name, 'animalDireWolf')]/property[@value='SetNearestEntityAsTarget']/@data">class=EntityPlayer,29,24,EntityAnimalStag,0,0,EntityZombie,0,0,EntityNPC,29,24</set> -->	
+
+		<set xpath="/entity_classes/entity_class[@name='animalDireWolf']/property[@name='AITask']/@value">
+			BreakBlock|
+			DestroyArea|
+			Territorial|
+			ApproachDistraction|
+			ApproachAndAttackTarget class=EntityPlayer,0,EntityBandit,0,EntityEnemyAnimal,0,EntityNPC,0,EntityAnimal,0|
+			ApproachSpot|
+			Look|
+			Wander|
+		</set>	
+
 		<set xpath="//entity_class[starts-with(@name, 'animalMountainLion')]/property[@value='ApproachAndAttackTarget']/@data">class=EntityAnimalStag,30,EntityPlayer,15,EntityZombie,20,EntityNPC,30</set> 
 		
 		<set xpath="//entity_class[starts-with(@name, 'animalMountainLion')]/property[@value='SetNearestEntityAsTarget']/@data">class=EntityPlayer,14,9,EntityAnimalStag,0,0,EntityZombie,0,5,EntityNPC,14,9</set> 
