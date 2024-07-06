@@ -34,16 +34,19 @@
 			<property name="AutoHire" value="false" />
 			<property name="EntityName" value="John Wayne" /> -->
           <property name="Meshfile" value="#@modfolder:Resources/XythNPCs.unity3d?BakerPlacement"/>
+		  <property name="CustomIcon" value="Baker_icon"/>
         </item>
 		
 		<item name="nursePickUpNPC">
 			<property name="Extends" value="spherePickUpNPC" />
           <property name="Meshfile" value="#@modfolder:Resources/XythNPCs.unity3d?NursePlacement"/>
+		  <property name="CustomIcon" value="Nurse_icon"/>
         </item>
 		
 		<item name="foxPickUpNPC">
 			<property name="Extends" value="spherePickUpNPC" />
           <property name="Meshfile" value="#@modfolder:Resources/XythNPCs.unity3d?FoxPlacement"/>
+		  <property name="CustomIcon" value="Fox_icon"/>
         </item>
 
 		<item name="itemNPCModHelp">

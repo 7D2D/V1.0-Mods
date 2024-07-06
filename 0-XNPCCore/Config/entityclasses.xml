@@ -3409,7 +3409,7 @@
 			<property name="LootDropProb" value="0.2"/> 
 		</entity_class>			
 		
-		<entity_class name="npcHarleyPipePistol" extends="npcPipePistolTemplate"> 
+		<entity_class name="npcHarleyPipePistol" extends="npcAdvancedPipePistolTemplate"> 
 		<!-- <entity_class name="npcHarleyPipePistol" extends="npcBanditPipePistolTemplate"> -->
 		<!-- <entity_class name="npcHarleyPipePistol" extends="npcBanditPipePistolTemplate2"> -->
 			<property name="UserSpawnType" value="Menu"/> 
@@ -3437,7 +3437,7 @@
 			<property name="AIPackages" value="NPCModCoreNoChat, NPCModHostileMeleeBasic, NPCModHostileRangedBasic"/> 
 		</entity_class>	
 		
-		<entity_class name="npcHarleyPipeRifle" extends="npcPipeRifleTemplate"> 
+		<entity_class name="npcHarleyPipeRifle" extends="npcAdvancedPipeRifleTemplate"> 
 			<property name="UserSpawnType" value="Menu"/> 
  			<property name="Tags" value="entity,female,npc,walker,ranged,voiceharley,bandit,DRMid,Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL"/>
 			<property name="Faction" value="bandits"/>
@@ -3463,7 +3463,7 @@
 			<property name="AIPackages" value="NPCModCoreNoChat, NPCModHostileMeleeBasic, NPCModHostileRangedBasic"/> 
 		</entity_class>	
 		
-		<entity_class name="npcHarleyPipeMG" extends="npcPipeMGTemplate"> 
+		<entity_class name="npcHarleyPipeMG" extends="npcAdvancedPipeMGTemplate"> 
 			<property name="UserSpawnType" value="Menu"/> 
  			<property name="Tags" value="entity,female,npc,walker,ranged,voiceharley,bandit,DRMid,Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL"/>
 			<property name="Faction" value="bandits"/>
@@ -3489,7 +3489,7 @@
 			<property name="AIPackages" value="NPCModCoreNoChat, NPCModHostileMeleeBasic, NPCModHostileRangedBasic"/> 
 		</entity_class>				
 		
-		<entity_class name="npcHarleyPipeShotgun" extends="npcPipeShotgunTemplate"> 
+		<entity_class name="npcHarleyPipeShotgun" extends="npcAdvancedPipeShotgunTemplate"> 
 			<property name="UserSpawnType" value="Menu"/> 
  			<property name="Tags" value="entity,female,npc,walker,ranged,voiceharley,bandit,DRMid,Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL"/>
 			<property name="Faction" value="bandits"/>
@@ -3516,7 +3516,7 @@
 			<property name="MaxViewAngle" value="270"/> 
 		</entity_class>	
 
-		<entity_class name="npcHarleySMG" extends="npcSMGTemplate"> 
+		<entity_class name="npcHarleySMG" extends="npcAdvancedSMGTemplate"> 
 			<property name="UserSpawnType" value="Menu"/> 
  			<property name="Tags" value="entity,female,npc,walker,ranged,voiceharley,bandit,DRMid,Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL"/>
 			<property name="Faction" value="bandits"/>
@@ -3542,7 +3542,7 @@
 			<property name="AIPackages" value="NPCModCoreNoChat, NPCModHostileMeleeBasic, NPCModHostileRangedBasic"/> 
 		</entity_class>	
 		
-		<entity_class name="npcHarleyM60" extends="npcM60Template"> 
+		<entity_class name="npcHarleyM60" extends="npcAdvancedM60Template"> 
 			<property name="UserSpawnType" value="Menu"/> 
  			<property name="Tags" value="entity,female,npc,walker,ranged,voiceharley,bandit,DRMid,Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL"/>
 			<property name="Faction" value="bandits"/>
@@ -3568,7 +3568,7 @@
 			<property name="AIPackages" value="NPCModCoreNoChat, NPCModHostileMeleeBasic, NPCModHostileRangedBasic"/> 
 		</entity_class>			
 		
-		<entity_class name="npcHarleyPistol" extends="npcPistolTemplate"> 
+		<entity_class name="npcHarleyPistol" extends="npcAdvancedPistolTemplate"> 
 			<property name="UserSpawnType" value="Menu"/> 
  			<property name="Tags" value="entity,female,npc,walker,ranged,voiceharley,bandit,DRMid,Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL"/>
 			<property name="Faction" value="bandits"/>
@@ -3594,7 +3594,7 @@
 			<property name="AIPackages" value="NPCModCoreNoChat, NPCModHostileMeleeBasic, NPCModHostileRangedBasic"/> 
 		</entity_class>				
 		
-		<entity_class name="npcHarleyDPistol" extends="npcDPistolTemplate"> 
+		<entity_class name="npcHarleyDPistol" extends="npcAdvancedDPistolTemplate"> 
 			<property name="UserSpawnType" value="Menu"/> 
  			<property name="Tags" value="entity,female,npc,walker,ranged,voiceharley,bandit,DRMid,Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL"/>
 			<property name="Faction" value="bandits"/>
@@ -3620,7 +3620,7 @@
 			<property name="AIPackages" value="NPCModCoreNoChat, NPCModHostileMeleeBasic, NPCModHostileRangedBasic"/> 
 		</entity_class>				
 
-		<entity_class name="npcHarleyAK47" extends="npcAK47Template"> 
+		<entity_class name="npcHarleyAK47" extends="npcAdvancedAK47Template"> 
 			<property name="UserSpawnType" value="Menu"/> 
  			<property name="Tags" value="entity,female,npc,walker,ranged,voiceharley,bandit,DRMid,Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL"/>
 			<property name="Faction" value="bandits"/>
@@ -3646,7 +3646,7 @@
 			<property name="AIPackages" value="NPCModCoreNoChat, NPCModHostileMeleeBasic, NPCModHostileRangedBasic"/> 
 		</entity_class>
 		
-		<entity_class name="npcHarleyTRifle" extends="npcTRifleTemplate"> 
+		<entity_class name="npcHarleyTRifle" extends="npcAdvancedTRifleTemplate"> 
 			<property name="UserSpawnType" value="Menu"/> 
  			<property name="Tags" value="entity,female,npc,walker,ranged,voiceharley,bandit,DRMid,Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL"/>
 			<property name="Faction" value="bandits"/>
@@ -3672,7 +3672,7 @@
 			<property name="AIPackages" value="NPCModCoreNoChat, NPCModHostileMeleeBasic, NPCModHostileRangedBasic"/> 
 		</entity_class>		
 		
-		<entity_class name="npcHarleyHRifle" extends="npcHRifleTemplate"> 
+		<entity_class name="npcHarleyHRifle" extends="npcAdvancedHRifleTemplate"> 
 			<property name="UserSpawnType" value="Menu"/> 
  			<property name="Tags" value="entity,female,npc,walker,ranged,voiceharley,bandit,DRMid,Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL"/>
 			<property name="Faction" value="bandits"/>
@@ -3698,7 +3698,7 @@
 			<property name="AIPackages" value="NPCModCoreNoChat, NPCModHostileMeleeBasic, NPCModHostileRangedBasic"/> 
 		</entity_class>
 
-		<entity_class name="npcHarleySRifle" extends="npcSRifleTemplate">
+		<entity_class name="npcHarleySRifle" extends="npcAdvancedSRifleTemplate">
 			<property name="UserSpawnType" value="Menu"/> 
  			<property name="Tags" value="entity,female,npc,walker,ranged,voiceharley,bandit,DRMid,Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL" />
 			<property name="Faction" value="bandits" />
@@ -3724,7 +3724,7 @@
 			<property name="AIPackages" value="NPCModCoreNoChat, NPCModHostileMeleeBasic, NPCModHostileRangedBasic"/> 
 		</entity_class>
 
-		<entity_class name="npcHarleyPShotgun" extends="npcPShotgunTemplate"> 
+		<entity_class name="npcHarleyPShotgun" extends="npcAdvancedPShotgunTemplate"> 
 			<property name="UserSpawnType" value="Menu"/> 
  			<property name="Tags" value="entity,female,npc,walker,ranged,voiceharley,bandit,DRMid,Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL"/>
 			<property name="Faction" value="bandits"/>
@@ -3750,7 +3750,7 @@
 			<property name="AIPackages" value="NPCModCoreNoChat, NPCModHostileMeleeBasic, NPCModHostileRangedBasic"/> 
         </entity_class>   
 
-		<entity_class name="npcHarleyAShotgun" extends="npcAShotgunTemplate"> 
+		<entity_class name="npcHarleyAShotgun" extends="npcAdvancedAShotgunTemplate"> 
 			<property name="UserSpawnType" value="Menu"/> 
  			<property name="Tags" value="entity,female,npc,walker,ranged,voiceharley,bandit,DRMid,Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL"/>
 			<property name="Faction" value="bandits"/>
@@ -3776,7 +3776,7 @@
 			<property name="AIPackages" value="NPCModCoreNoChat, NPCModHostileMeleeBasic, NPCModHostileRangedBasic"/> 
         </entity_class>   	
 		
-		<entity_class name="npcHarleyLBow" extends="npcLBowTemplate"> 
+		<entity_class name="npcHarleyLBow" extends="npcAdvancedLBowTemplate"> 
 			<property name="UserSpawnType" value="Menu"/> 
  			<property name="Tags" value="entity,female,npc,walker,ranged,voiceharley,bandit,DRMid,Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL"/>
 			<property name="Faction" value="bandits"/>
@@ -3802,7 +3802,7 @@
 			<property name="AIPackages" value="NPCModCoreNoChat, NPCModHostileMeleeBasic, NPCModHostileRangedBasic"/> 
 		</entity_class> 
 
-		<entity_class name="npcHarleyXBow" extends="npcXBowTemplate"> 
+		<entity_class name="npcHarleyXBow" extends="npcAdvancedXBowTemplate"> 
 			<property name="UserSpawnType" value="Menu"/> 
  			<property name="Tags" value="entity,female,npc,walker,ranged,voiceharley,bandit,DRMid,Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL"/>
 			<property name="Faction" value="bandits"/>
@@ -3827,7 +3827,7 @@
 			<property name="LootDropProb" value="0.2"/> 
 			<property name="AIPackages" value="NPCModCoreNoChat, NPCModHostileMeleeBasic, NPCModHostileRangedBasic"/> 
 		</entity_class>	
-		<entity_class name="npcHarleyRocketL" extends="npcRocketLTemplate"> 
+		<entity_class name="npcHarleyRocketL" extends="npcAdvancedRocketLTemplate"> 
 			<property name="UserSpawnType" value="Menu"/> 
  			<property name="Tags" value="entity,female,npc,walker,ranged,voiceharley,bandit,DRMid,Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL"/>
 			<property name="Faction" value="bandits"/>
