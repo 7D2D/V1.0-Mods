@@ -15,166 +15,69 @@
 	-->
 	<insertAfter xpath="/gamestages/group[last()]">
 		<!-- Bandits gamestage groups -->
-		<group name="S_-Group_NPC_Bandits_All" emptyChance="0" decoyChance="0" decoy1hpChance="0">
-			<spawner name="NPCBanditsAllHorde" count="5,6" />
-		</group>
-		<group name="S_-Group_NPC_Bandits_Melee" emptyChance="0" decoyChance="0" decoy1hpChance="0">
-			<spawner name="NPCBanditsMeleeHorde" count="5,6" />
-		</group>
-		<group name="S_-Group_NPC_Bandits_Ranged" emptyChance="0" decoyChance="0" decoy1hpChance="0">
-			<spawner name="NPCBanditsRangedHorde" count="5,6" />
-		</group>
-		<group name="S_-Group_NPC_Bandits_Boss" emptyChance="0" decoyChance="0" decoy1hpChance="0">
-			<spawner name="NPCBanditsBossHorde" count="5,6" />
-		</group>
+		<group name="S_-Group_NPC_Bandits_All" spawner="NPCBanditsAllHorde"/>
+		<group name="S_-Group_NPC_Bandits_Melee" spawner="NPCBanditsMeleeHorde"/>
+		<group name="S_-Group_NPC_Bandits_Ranged" spawner="NPCBanditsRangedHorde"/>
+		<group name="S_-Group_NPC_Bandits_Boss" spawner="NPCBanditsBossHorde"/>
 		<!-- Duke gamestage groups -->
-		<group name="S_-Group_NPC_Duke_All" emptyChance="0" decoyChance="0" decoy1hpChance="0">
-			<spawner name="NPCDukeAllHorde" count="5,6" />
-		</group>
-		<group name="S_-Group_NPC_Duke_Melee" emptyChance="0" decoyChance="0" decoy1hpChance="0">
-			<spawner name="NPCDukeMeleeHorde" count="5,6" />
-		</group>
-		<group name="S_-Group_NPC_Duke_Ranged" emptyChance="0" decoyChance="0" decoy1hpChance="0">
-			<spawner name="NPCDukeRangedHorde" count="5,6" />
-		</group>
-		<group name="S_-Group_NPC_Duke_Boss" emptyChance="0" decoyChance="0" decoy1hpChance="0">
-			<spawner name="NPCDukeBossHorde" count="5,6" />
-		</group>
+		<group name="S_-Group_NPC_Duke_All" spawner="NPCDukeAllHorde"/>
+		<group name="S_-Group_NPC_Duke_Melee" spawner="NPCDukeMeleeHorde"/>
+		<group name="S_-Group_NPC_Duke_Ranged" spawner="NPCDukeRangedHorde"/>
+		<group name="S_-Group_NPC_Duke_Boss" spawner="NPCDukeBossHorde"/>
 		<!-- Military gamestage groups -->
-		<group name="S_-Group_NPC_Military_All" emptyChance="0" decoyChance="0" decoy1hpChance="0">
-			<spawner name="NPCMilitaryAllHorde" count="5,6" />
-		</group>
-		<group name="S_-Group_NPC_Military_Melee" emptyChance="0" decoyChance="0" decoy1hpChance="0">
-			<spawner name="NPCMilitaryMeleeHorde" count="5,6" />
-		</group>
-		<group name="S_-Group_NPC_Military_Ranged" emptyChance="0" decoyChance="0" decoy1hpChance="0">
-			<spawner name="NPCMilitaryRangedHorde" count="5,6" />
-		</group>
-		<group name="S_-Group_NPC_Military_Boss" emptyChance="0" decoyChance="0" decoy1hpChance="0">
-			<spawner name="NPCMilitaryBossHorde" count="5,6" />
-		</group>
+		<group name="S_-Group_NPC_Military_All" spawner="NPCMilitaryAllHorde"/>
+		<group name="S_-Group_NPC_Military_Melee" spawner="NPCMilitaryMeleeHorde"/>
+		<group name="S_-Group_NPC_Military_Ranged" spawner="NPCMilitaryRangedHorde"/>
+		<group name="S_-Group_NPC_Military_Boss" spawner="NPCMilitaryBossHorde"/>
 		<!-- Vault gamestage groups -->
-		<group name="S_-Group_NPC_Vault_All" emptyChance="0" decoyChance="0" decoy1hpChance="0">
-			<spawner name="NPCVaultAllHorde" count="5,6" />
-		</group>
-		<group name="S_-Group_NPC_Vault_Melee" emptyChance="0" decoyChance="0" decoy1hpChance="0">
-			<spawner name="NPCVaultMeleeHorde" count="5,6" />
-		</group>
-		<group name="S_-Group_NPC_Vault_Ranged" emptyChance="0" decoyChance="0" decoy1hpChance="0">
-			<spawner name="NPCVaultRangedHorde" count="5,6" />
-		</group>
-		<group name="S_-Group_NPC_Vault_Boss" emptyChance="0" decoyChance="0" decoy1hpChance="0">
-			<spawner name="NPCVaultBossHorde" count="5,6" />
-		</group>
+		<group name="S_-Group_NPC_Vault_All" spawner="NPCVaultAllHorde"/>
+		<group name="S_-Group_NPC_Vault_Melee" spawner="NPCVaultMeleeHorde"/>
+		<group name="S_-Group_NPC_Vault_Ranged" spawner="NPCVaultRangedHorde"/>
+		<group name="S_-Group_NPC_Vault_Boss" spawner="NPCVaultBossHorde"/>
 		<!-- Whisperers gamestage groups -->
-		<group name="S_-Group_NPC_Whisperers_All" emptyChance="0" decoyChance="0" decoy1hpChance="0">
-			<spawner name="NPCWhisperersAllHorde" count="5,6" />
-		</group>
-		<group name="S_-Group_NPC_Whisperers_Melee" emptyChance="0" decoyChance="0" decoy1hpChance="0">
-			<spawner name="NPCWhisperersMeleeHorde" count="5,6" />
-		</group>
-		<group name="S_-Group_NPC_Whisperers_Ranged" emptyChance="0" decoyChance="0" decoy1hpChance="0">
-			<spawner name="NPCWhisperersRangedHorde" count="5,6" />
-		</group>
-		<group name="S_-Group_NPC_Whisperers_Boss" emptyChance="0" decoyChance="0" decoy1hpChance="0">
-			<spawner name="NPCWhisperersBossHorde" count="5,6" />
-		</group>
+		<group name="S_-Group_NPC_Whisperers_All" spawner="NPCWhisperersAllHorde"/>
+		<group name="S_-Group_NPC_Whisperers_Melee" spawner="NPCWhisperersMeleeHorde"/>
+		<group name="S_-Group_NPC_Whisperers_Ranged" spawner="NPCWhisperersRangedHorde"/>
+		<group name="S_-Group_NPC_Whisperers_Boss" spawner="NPCWhisperersBossHorde"/>
 		<!-- Whiteriver gamestage groups -->
-		<group name="S_-Group_NPC_Whiteriver_All" emptyChance="0" decoyChance="0" decoy1hpChance="0">
-			<spawner name="NPCWhiteriverAllHorde" count="5,6" />
-		</group>
-		<group name="S_-Group_NPC_Whiteriver_Melee" emptyChance="0" decoyChance="0" decoy1hpChance="0">
-			<spawner name="NPCWhiteriverMeleeHorde" count="5,6" />
-		</group>
-		<group name="S_-Group_NPC_Whiteriver_Ranged" emptyChance="0" decoyChance="0" decoy1hpChance="0">
-			<spawner name="NPCWhiteriverRangedHorde" count="5,6" />
-		</group>
-		<group name="S_-Group_NPC_Whiteriver_Boss" emptyChance="0" decoyChance="0" decoy1hpChance="0">
-			<spawner name="NPCWhiteriverBossHorde" count="5,6" />
-		</group>
+		<group name="S_-Group_NPC_Whiteriver_All" spawner="NPCWhiteriverAllHorde"/>
+		<group name="S_-Group_NPC_Whiteriver_Melee" spawner="NPCWhiteriverMeleeHorde"/>
+		<group name="S_-Group_NPC_Whiteriver_Ranged" spawner="NPCWhiteriverRangedHorde"/>
+		<group name="S_-Group_NPC_Whiteriver_Boss" spawner="NPCWhiteriverBossHorde"/>
 		<!-- Enemy gamestage groups - when the type of enemy doesn't matter -->
-		<group name="S_-Group_NPC_Enemy_All" emptyChance="0" decoyChance="0" decoy1hpChance="0">
-			<spawner name="NPCEnemyAllHorde" count="5,6" />
-		</group>
-		<group name="S_-Group_NPC_Enemy_Melee" emptyChance="0" decoyChance="0" decoy1hpChance="0">
-			<spawner name="NPCEnemyMeleeHorde" count="5,6" />
-		</group>
-		<group name="S_-Group_NPC_Enemy_Ranged" emptyChance="0" decoyChance="0" decoy1hpChance="0">
-			<spawner name="NPCEnemyRangedHorde" count="5,6" />
-		</group>
-		<group name="S_-Group_NPC_Enemy_Boss" emptyChance="0" decoyChance="0" decoy1hpChance="0">
-			<spawner name="NPCEnemyBossHorde" count="5,6" />
-		</group>
+		<group name="S_-Group_NPC_Enemy_All" spawner="NPCEnemyAllHorde"/>
+		<group name="S_-Group_NPC_Enemy_Melee" spawner="NPCEnemyMeleeHorde"/>
+		<group name="S_-Group_NPC_Enemy_Ranged" spawner="NPCEnemyRangedHorde"/>
+		<group name="S_-Group_NPC_Enemy_Boss" spawner="NPCEnemyBossHorde"/>
 		<!-- Friendly gamestage groups - when the type of friendly NPC doesn't matter -->
-		<group name="S_-Group_NPC_Friendly_All" emptyChance="0" decoyChance="0" decoy1hpChance="0">
-			<spawner name="NPCFriendlyAllHorde" count="5,6" />
-		</group>
-		<group name="S_-Group_NPC_Friendly_Melee" emptyChance="0" decoyChance="0" decoy1hpChance="0">
-			<spawner name="NPCFriendlyMeleeHorde" count="5,6" />
-		</group>
-		<group name="S_-Group_NPC_Friendly_Ranged" emptyChance="0" decoyChance="0" decoy1hpChance="0">
-			<spawner name="NPCFriendlyRangedHorde" count="5,6" />
-		</group>
-		<group name="S_-Group_NPC_Friendly_Boss" emptyChance="0" decoyChance="0" decoy1hpChance="0">
-			<spawner name="NPCFriendlyBossHorde" count="5,6" />
-		</group>
+		<group name="S_-Group_NPC_Friendly_All" spawner="NPCFriendlyAllHorde"/>
+		<group name="S_-Group_NPC_Friendly_Melee" spawner="NPCFriendlyMeleeHorde"/>
+		<group name="S_-Group_NPC_Friendly_Ranged" spawner="NPCFriendlyRangedHorde"/>
+		<group name="S_-Group_NPC_Friendly_Boss" spawner="NPCFriendlyBossHorde"/>		
 		<!-- Mechanical NPC (robot, cyborg, etc.) gamestage groups -->
-		<group name="S_-Group_NPC_Mech_All" emptyChance="0" decoyChance="0" decoy1hpChance="0">
-			<spawner name="NPCMechAllHorde" count="5,6" />
-		</group>
-		<group name="S_-Group_NPC_Mech_Melee" emptyChance="0" decoyChance="0" decoy1hpChance="0">
-			<spawner name="NPCMechMeleeHorde" count="5,6" />
-		</group>
-		<group name="S_-Group_NPC_Mech_Ranged" emptyChance="0" decoyChance="0" decoy1hpChance="0">
-			<spawner name="NPCMechRangedHorde" count="5,6" />
-		</group>
-		<group name="S_-Group_NPC_Mech_Boss" emptyChance="0" decoyChance="0" decoy1hpChance="0">
-			<spawner name="NPCMechBossHorde" count="5,6" />
-		</group>
+		<group name="S_-Group_NPC_Mech_All" spawner="NPCMechAllHorde"/>
+		<group name="S_-Group_NPC_Mech_Melee" spawner="NPCMechMeleeHorde"/>
+		<group name="S_-Group_NPC_Mech_Ranged" spawner="NPCMechRangedHorde"/>
+		<group name="S_-Group_NPC_Mech_Boss" spawner="NPCMechBossHorde"/>
 		<!-- Fantasy NPC (orc, goblin, etc.) gamestage groups -->
-		<group name="S_-Group_NPC_Fantasy_All" emptyChance="0" decoyChance="0" decoy1hpChance="0">
-			<spawner name="NPCFantasyAllHorde" count="5,6" />
-		</group>
-		<group name="S_-Group_NPC_Fantasy_Melee" emptyChance="0" decoyChance="0" decoy1hpChance="0">
-			<spawner name="NPCFantasyMeleeHorde" count="5,6" />
-		</group>
-		<group name="S_-Group_NPC_Fantasy_Ranged" emptyChance="0" decoyChance="0" decoy1hpChance="0">
-			<spawner name="NPCFantasyRangedHorde" count="5,6" />
-		</group>
-		<group name="S_-Group_NPC_Fantasy_Boss" emptyChance="0" decoyChance="0" decoy1hpChance="0">
-			<spawner name="NPCFantasyBossHorde" count="5,6" />
-		</group>
+		<group name="S_-Group_NPC_Fantasy_All" spawner="NPCFantasyAllHorde"/>
+		<group name="S_-Group_NPC_Fantasy_Melee" spawner="NPCFantasyMeleeHorde"/>
+		<group name="S_-Group_NPC_Fantasy_Ranged" spawner="NPCFantasyRangedHorde"/>
+		<group name="S_-Group_NPC_Fantasy_Boss" spawner="NPCFantasyBossHorde"/>
         <!-- Enemy animals gamestage groups -->
-		<group name="S_-Group_NPC_Enemy_Animals_All" emptyChance="0" decoyChance="0" decoy1hpChance="0">
-			<spawner name="NPCEnemyAnimalsAllHorde" count="5,6" />
-		</group>
-		<group name="S_-Group_NPC_Enemy_Animals_Boss" emptyChance="0" decoyChance="0" decoy1hpChance="0">
-			<spawner name="NPCEnemyAnimalsBossHorde" count="5,6" />
-		</group>
+		<group name="S_-Group_NPC_Enemy_Animals_All" spawner="NPCEnemyAnimalsAllHorde"/>
+		<group name="S_-Group_NPC_Enemy_Animals_Boss" spawner="NPCEnemyAnimalsBossHorde"/>
         <!-- Friendly animals gamestage groups -->
-		<group name="S_-Group_NPC_FriendlyAnimals_All" emptyChance="0" decoyChance="0" decoy1hpChance="0">
-			<spawner name="NPCFriendlyAnimalsAllHorde" count="5,6" />
-		</group>
-		<group name="S_-Group_NPC_FriendlyAnimals_Domestic" emptyChance="0" decoyChance="0" decoy1hpChance="0">
-			<spawner name="NPCFriendlyAnimalsDomesticHorde" count="5,6" />
-		</group>
-		<group name="S_-Group_NPC_FriendlyAnimals_Farm" emptyChance="0" decoyChance="0" decoy1hpChance="0">
-			<spawner name="NPCFriendlyAnimalsFarmHorde" count="5,6" />
-		</group>
+		<group name="S_-Group_NPC_FriendlyAnimals_All" spawner="NPCFriendlyAnimalsAllHorde"/>
+		<group name="S_-Group_NPC_FriendlyAnimals_Domestic" spawner="NPCFriendlyAnimalsDomesticHorde"/>
+		<group name="S_-Group_NPC_FriendlyAnimals_Farm" spawner="NPCFriendlyAnimalsFarmHorde"/>
         <!-- Arachnids (spiders, scorpions) gamestage groups -->
-		<group name="S_-Group_NPC_Arachnids_All" emptyChance="0" decoyChance="0" decoy1hpChance="0">
-			<spawner name="NPCArachnidsAllHorde" count="5,6" />
-		</group>
-		<group name="S_-Group_NPC_Arachnids_Boss" emptyChance="0" decoyChance="0" decoy1hpChance="0">
-			<spawner name="NPCArachnidsBossHorde" count="5,6" />
-		</group>
+		<group name="S_-Group_NPC_Arachnids_All" spawner="NPCArachnidsAllHorde"/>
+		<group name="S_-Group_NPC_Arachnids_Boss" spawner="NPCArachnidsBossHorde"/>
         <!-- Flyers (birds, bats, etc.) gamestage groups -->
-		<group name="S_-Group_NPC_Flyers_All" emptyChance="0" decoyChance="0" decoy1hpChance="0">
-			<spawner name="NPCFlyersAllHorde" count="5,6" />
-		</group>
-		<group name="S_-Group_NPC_Flyers_Boss" emptyChance="0" decoyChance="0" decoy1hpChance="0">
-			<spawner name="NPCFlyersBossHorde" count="5,6" />
-		</group>
+		<group name="S_-Group_NPC_Flyers_All" spawner="NPCFlyersAllHorde"/>		
+		<group name="S_-Group_NPC_Flyers_Boss" spawner="NPCFlyersBossHorde"/>
+		
         <!--
             Deco spawners.
 
@@ -183,17 +86,11 @@
             They are named after how they are used in Age of Oblivion.
         -->
         <!-- Trap deco group: hostiles -->
-		<group name="S_-Group_NPC_Deco_Trap" emptyChance="0" decoyChance="0" decoy1hpChance="0">
-			<spawner name="NPCDecoTrapHorde" count="5,6" />
-		</group>
+		<group name="S_-Group_NPC_Deco_Trap" spawner="NPCDecoTrapHorde"/>
         <!-- Rescue deco group: friendlies -->
-		<group name="S_-Group_NPC_Deco_Rescue" emptyChance="0" decoyChance="0" decoy1hpChance="0">
-			<spawner name="NPCDecoRescueHorde" count="5,6" />
-		</group>
+		<group name="S_-Group_NPC_Deco_Rescue" spawner="NPCDecoRescueHorde"/>
 		<!-- Trader deco group -->
-		<group name="S_-Group_NPC_Deco_Trader" emptyChance="0" decoyChance="0" decoy1hpChance="0">
-			<spawner name="NPCDecoTraderHorde" count="5,6" />
-		</group>
+		<group name="S_-Group_NPC_Deco_Trader" spawner="NPCDecoTraderHorde"/>
 	</insertAfter>
 
 	<!-- 

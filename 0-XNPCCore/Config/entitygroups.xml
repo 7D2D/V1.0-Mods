@@ -190,7 +190,6 @@
 		npcHarleyAK47, 0.05 
 		npcHarleyHRifle, 0.05 
 		npcHarleyPistol, 0.05 
-		npcHarleyLBow, 0.05 
 		npcHarleyTRifle, 0.05 	
 		npcHarleyM60, 0.025 
 		npcHarleyDPistol, 0.05 
@@ -218,7 +217,6 @@
 		npcHarleyAK47, 0.05 
 		npcHarleyHRifle, 0.05 
 		npcHarleyPistol, 0.05 
-		npcHarleyLBow, 0.05 
 		npcHarleyTRifle, 0.05 	
 		npcHarleyM60, 0.025 
 		npcHarleyDPistol, 0.05 
@@ -245,7 +243,6 @@
 		npcHarleyAK47, 0.05 
 		npcHarleyHRifle, 0.05 
 		npcHarleyPistol, 0.05 
-		npcHarleyLBow, 0.05 
 		npcHarleyTRifle, 0.05 	
 		npcHarleyM60, 0.025 
 		npcHarleyDPistol, 0.05 
@@ -353,7 +350,6 @@
 			npcHarleyEmptyHand, 0.05 
 			npcHarleyHRifle, 0.05 
 			npcHarleyKnife, 0.05 
-			npcHarleyLBow, 0.05 
 			npcHarleyM60, 0.05 
 			npcHarleyMachete, 0.05 
 			npcHarleyPipeMG, 0.05 
@@ -379,7 +375,6 @@
 			npcHarleyEmptyHand, 0.05 
 			npcHarleyHRifle, 0.05 
 			npcHarleyKnife, 0.05 
-			npcHarleyLBow, 0.05 
 			npcHarleyM60, 0.05 
 			npcHarleyMachete, 0.05 
 			npcHarleyPipeMG, 0.05 
@@ -406,7 +401,6 @@
 			npcHarleyEmptyHand, 0.05 
 			npcHarleyHRifle, 0.05 
 			npcHarleyKnife, 0.05 
-			npcHarleyLBow, 0.05 
 			npcHarleyM60, 0.05 
 			npcHarleyMachete, 0.05 
 			npcHarleyPipeMG, 0.05 
@@ -433,7 +427,6 @@
 			npcHarleyEmptyHand, 0.05 
 			npcHarleyHRifle, 0.05 
 			npcHarleyKnife, 0.05 
-			npcHarleyLBow, 0.05 
 			npcHarleyM60, 0.05 
 			npcHarleyMachete, 0.05 
 			npcHarleyPipeMG, 0.05 
@@ -460,7 +453,6 @@
 			npcHarleyEmptyHand, 0.05 
 			npcHarleyHRifle, 0.05 
 			npcHarleyKnife, 0.05 
-			npcHarleyLBow, 0.05 
 			npcHarleyM60, 0.05 
 			npcHarleyMachete, 0.05 
 			npcHarleyPipeMG, 0.05 
@@ -482,7 +474,6 @@
 			npcHarleyAShotgun, 0.05 
 			npcHarleyDPistol, 0.05 
 			npcHarleyHRifle, 0.05 
-			npcHarleyLBow, 0.3 
 			npcHarleyM60, 0.05 
 			npcHarleyPipeMG, 0.05 
 			npcHarleyPipePistol, 0.3 
@@ -558,7 +549,6 @@
 			npcHarleyAShotgun, 0.05 
 			npcHarleyDPistol, 0.05 
 			npcHarleyHRifle, 0.05 
-			npcHarleyLBow, 0.05 
 			npcHarleyM60, 0.05 
 			npcHarleyPipeMG, 0.05 
 			npcHarleyPipePistol, 0.05 
@@ -577,7 +567,6 @@
 			npcHarleyAShotgun, 0.05 
 			npcHarleyDPistol, 0.05 
 			npcHarleyHRifle, 0.05 
-			npcHarleyLBow, 0.05 
 			npcHarleyM60, 0.05 
 			npcHarleyPipeMG, 0.05 
 			npcHarleyPipePistol, 0.05 
@@ -597,7 +586,6 @@
 			npcHarleyAShotgun, 0.05 
 			npcHarleyDPistol, 0.05 
 			npcHarleyHRifle, 0.05 
-			npcHarleyLBow, 0.05 
 			npcHarleyM60, 0.05 
 			npcHarleyPipeMG, 0.05 
 			npcHarleyPipePistol, 0.05 
@@ -617,7 +605,6 @@
 			npcHarleyAShotgun, 0.05 
 			npcHarleyDPistol, 0.05 
 			npcHarleyHRifle, 0.05 
-			npcHarleyLBow, 0.05 
 			npcHarleyM60, 0.05 
 			npcHarleyPipeMG, 0.05 
 			npcHarleyPipePistol, 0.05 
@@ -637,7 +624,6 @@
 			npcHarleyAShotgun, 0.05 
 			npcHarleyDPistol, 0.05 
 			npcHarleyHRifle, 0.05 
-			npcHarleyLBow, 0.05 
 			npcHarleyM60, 0.05 
 			npcHarleyPipeMG, 0.05 
 			npcHarleyPipePistol, 0.05 
@@ -756,7 +742,6 @@
 			npcHarleyEmptyHand, 0.01 
 			npcHarleyHRifle, 0.006 
 			npcHarleyKnife, 0.01 
-			npcHarleyLBow, 0.007 
 			npcHarleyM60, 0.004 
 			npcHarleyMachete, 0.01 
 			npcHarleyPipeMG, 0.006 
@@ -782,7 +767,6 @@
 			npcHarleyEmptyHand, 0.008 
 			npcHarleyHRifle, 0.006 
 			npcHarleyKnife, 0.008 
-			npcHarleyLBow, 0.006 
 			npcHarleyM60, 0.004 
 			npcHarleyMachete, 0.008 
 			npcHarleyPipeMG, 0.006 
@@ -809,7 +793,6 @@
 			npcHarleyEmptyHand, 0.006 
 			npcHarleyHRifle, 0.005 
 			npcHarleyKnife, 0.006 
-			npcHarleyLBow, 0.005 
 			npcHarleyM60, 0.005 
 			npcHarleyMachete, 0.006 
 			npcHarleyPipeMG, 0.005 
@@ -836,7 +819,6 @@
 			npcHarleyEmptyHand, 0.004 
 			npcHarleyHRifle, 0.005 
 			npcHarleyKnife, 0.004 
-			npcHarleyLBow, 0.005 
 			npcHarleyM60, 0.005 
 			npcHarleyMachete, 0.004 
 			npcHarleyPipeMG, 0.005 
@@ -863,7 +845,6 @@
 			npcHarleyEmptyHand, 0.002 
 			npcHarleyHRifle, 0.004 
 			npcHarleyKnife, 0.002 
-			npcHarleyLBow, 0.004 
 			npcHarleyM60, 0.006 
 			npcHarleyMachete, 0.002 
 			npcHarleyPipeMG, 0.004 
@@ -885,7 +866,6 @@
 			npcHarleyAShotgun, 0.006 
 			npcHarleyDPistol, 0.005 
 			npcHarleyHRifle, 0.004 
-			npcHarleyLBow, 0.003 
 			npcHarleyM60, 0.006 
 			npcHarleyPipeMG, 0.004 
 			npcHarleyPipePistol, 0.003 
@@ -961,7 +941,6 @@
 			npcHarleyAShotgun, 0.005 
 			npcHarleyDPistol, 0.006 
 			npcHarleyHRifle, 0.008 
-			npcHarleyLBow, 0.009 
 			npcHarleyM60, 0.005 
 			npcHarleyPipeMG, 0.008 
 			npcHarleyPipePistol, 0.009 
@@ -980,7 +959,6 @@
 			npcHarleyAShotgun, 0.005 
 			npcHarleyDPistol, 0.005 
 			npcHarleyHRifle, 0.007 
-			npcHarleyLBow, 0.008 
 			npcHarleyM60, 0.005 
 			npcHarleyPipeMG, 0.007 
 			npcHarleyPipePistol, 0.007 
@@ -1000,7 +978,6 @@
 			npcHarleyAShotgun, 0.005 
 			npcHarleyDPistol, 0.005 
 			npcHarleyHRifle, 0.006 
-			npcHarleyLBow, 0.006 
 			npcHarleyM60, 0.005 
 			npcHarleyPipeMG, 0.006 
 			npcHarleyPipePistol, 0.006 
@@ -1020,7 +997,6 @@
 			npcHarleyAShotgun, 0.005 
 			npcHarleyDPistol, 0.005 
 			npcHarleyHRifle, 0.004 
-			npcHarleyLBow, 0.004 
 			npcHarleyM60, 0.005 
 			npcHarleyPipeMG, 0.004 
 			npcHarleyPipePistol, 0.004 
@@ -1040,7 +1016,6 @@
 			npcHarleyAShotgun, 0.005 
 			npcHarleyDPistol, 0.005 
 			npcHarleyHRifle, 0.003 
-			npcHarleyLBow, 0.002 
 			npcHarleyM60, 0.005 
 			npcHarleyPipeMG, 0.003 
 			npcHarleyPipePistol, 0.003 
@@ -1965,7 +1940,6 @@
 			npcHarleyEmptyHand, 0.01 
 			npcHarleyHRifle, 0.006 
 			npcHarleyKnife, 0.01 
-			npcHarleyLBow, 0.007 
 			npcHarleyM60, 0.004 
 			npcHarleyMachete, 0.01 
 			npcHarleyPipeMG, 0.006 
@@ -1991,7 +1965,6 @@
 			npcHarleyEmptyHand, 0.008 
 			npcHarleyHRifle, 0.006 
 			npcHarleyKnife, 0.008 
-			npcHarleyLBow, 0.006 
 			npcHarleyM60, 0.004 
 			npcHarleyMachete, 0.008 
 			npcHarleyPipeMG, 0.006 
@@ -2045,7 +2018,6 @@
 			npcHarleyEmptyHand, 0.004 
 			npcHarleyHRifle, 0.005 
 			npcHarleyKnife, 0.004 
-			npcHarleyLBow, 0.005 
 			npcHarleyM60, 0.005 
 			npcHarleyMachete, 0.004 
 			npcHarleyPipeMG, 0.005 
@@ -2072,7 +2044,6 @@
 			npcHarleyEmptyHand, 0.002 
 			npcHarleyHRifle, 0.004 
 			npcHarleyKnife, 0.002 
-			npcHarleyLBow, 0.004 
 			npcHarleyM60, 0.006 
 			npcHarleyMachete, 0.002 
 			npcHarleyPipeMG, 0.004 
@@ -2094,7 +2065,6 @@
 			npcHarleyAShotgun, 0.006 
 			npcHarleyDPistol, 0.005 
 			npcHarleyHRifle, 0.004 
-			npcHarleyLBow, 0.003 
 			npcHarleyM60, 0.006 
 			npcHarleyPipeMG, 0.004 
 			npcHarleyPipePistol, 0.003 

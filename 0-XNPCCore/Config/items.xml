@@ -943,7 +943,7 @@
 			<property name="SoundUnholster" value="weapon_unholster"/>
 			<property name="SoundHolster" value="weapon_holster"/>
 			<property class="Action0">
-				<property name="Class" value="Melee"/>
+				<property name="Class" value="MeleeSDX, SCore"/>
 				<property name="Delay" value=".8" /> 
 				<property name="Range" value="1.65" />
 				<property name="Sphere" value="1.2"/> 
@@ -978,10 +978,10 @@
 			</property>
 			<effect_group name="gunHandgunT3SMG5">
 				<passive_effect name="MaxRange" operation="base_set" value="15" tags="perkGunslinger,9mmGun"/>
-				<passive_effect name="EntityDamage" operation="perc_add" value="0,.4"/> <!-- Simulate random number of mods added -->
+				<passive_effect name="EntityDamage" operation="perc_add" value="0,.2"/>  <!-- Simulate random number of mods added -->
 				<passive_effect name="DamageFalloffRange" operation="base_set" value="10" tags="perkGunslinger,9mmGun"/>
 				<passive_effect name="DamageFalloffRange" operation="perc_add" value="-.2,.2" tags="perkGunslinger,9mmGun"/> <!-- random effective rng -->
-				<passive_effect name="EntityDamage" operation="base_add" value="3" tags="perkGunslinger"/> <!-- damage offset -->
+	<!--			<passive_effect name="EntityDamage" operation="base_add" value="3" tags="perkGunslinger"/> damage offset -->
 				<passive_effect name="RoundsPerMinute" operation="base_set" value="480" tags="perkGunslinger"/>
 				<passive_effect name="BurstRoundCount" operation="base_set" value="1000" tags="perkGunslinger"/><!--  no effect  -->
 	<!--		<passive_effect name="MagazineSize" operation="base_set" value="30" tags="perkGunslinger"/> We set this in template  -->
@@ -989,8 +989,8 @@
 				<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
 				<passive_effect name="ModPowerBonus" operation="perc_add" value=".10" tags="EntityDamage,BlockDamage"/>
 				<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
-				<passive_effect name="EntityDamage" operation="perc_add" value="-.15,.15" tags="perkGunslinger"/> <!-- random EntityDmg -->
-				<passive_effect name="EntityDamage" operation="perc_add" value=".1,.5" tier="2,6" tags="perkGunslinger"/> <!-- tier bonus -->
+				<!-- <passive_effect name="EntityDamage" operation="perc_add" value="-.15,.15" tags="perkGunslinger"/> 
+				<passive_effect name="EntityDamage" operation="perc_add" value=".1,.5" tier="2,6" tags="perkGunslinger"/>  tier bonus -->
 				<passive_effect name="BlockDamage" operation="perc_add" value="-.15,.15" tags="perkGunslinger"/> <!-- random BlockDmg -->
 				<passive_effect name="BlockDamage" operation="perc_add" value=".1,.5" tier="2,6" tags="perkGunslinger"/> <!-- tier bonus -->
 
@@ -999,8 +999,8 @@
 	<!--		<passive_effect name="MagazineSize" operation="perc_add" value="-.122,.122"/>  dont want random MagazineSize mess up reloading -->
 				<passive_effect name="WeaponHandling" operation="perc_add" value="-.08,.08" tags="perkGunslinger"/> <!-- random WeaponHandling -->
 
-				<passive_effect name="SpreadDegreesVertical" operation="base_set" value="2" tags="perkGunslinger"/>
-				<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="2" tags="perkGunslinger"/>
+				<passive_effect name="SpreadDegreesVertical" operation="base_set" value="20" tags="perkGunslinger"/>
+				<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="20" tags="perkGunslinger"/>
 				<passive_effect name="SpreadMultiplierAiming" operation="base_set" value=".35" tags="perkGunslinger"/>
 				<passive_effect name="SpreadMultiplierCrouching" operation="base_set" value=".8" tags="perkGunslinger"/>
 				<passive_effect name="SpreadMultiplierWalking" operation="base_set" value="1.5" tags="perkGunslinger"/>
@@ -1035,8 +1035,14 @@
 				<triggered_effect trigger="onSelfEquipStart" action="RemoveBuff" buff="RocketLUser" /> 
 				<requirement name="HasBuff" target="self" buff="RocketLUser"/>
 			</effect_group>
+			 <effect_group name="Melee pushback / knockdown">
+				<requirement name="!EntityTagCompare" target="other" tags="trader,animal,crawler"/>
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="100"/> 
+			<!--	 <triggered_effect trigger="onSelfSecondaryActionRayHit" action="Ragdoll" target="other" duration=".2" force="200"/> -->
+				<requirement name="IsPrimaryAttack" />
+				<triggered_effect trigger="onSelfDamagedOther" action="Ragdoll" target="other" duration=".1" force="25"/>
+			</effect_group> 
 		</item>	
-		
 		
 		<item name="gunNPCPipePistol">
 			<property name="Extends" value="gunNPCSMG5"/> 
@@ -1064,7 +1070,7 @@
 			<property name="SoundUnholster" value="weapon_unholster"/>
 			<property name="SoundHolster" value="weapon_holster"/>
 			<property class="Action0">
-				<property name="Class" value="Melee"/>
+				<property name="Class" value="MeleeSDX, SCore"/>
 				<property name="DamageEntity" value="15"/>
 				<property name="DamageBlock" value="15"/>
 				<property name="Range" value="1.65"/>
@@ -1094,7 +1100,6 @@
 			</property>
 			<effect_group name="gunHandgunT0PipePistol">
 				<passive_effect name="MaxRange" operation="base_set" value="15" tags="perkGunslinger,9mmGun"/>
-				<passive_effect name="EntityDamage" operation="perc_add" value="0,.4"/> <!-- Simulate random number of mods added -->
 				<passive_effect name="DamageFalloffRange" operation="base_set" value="10" tags="perkGunslinger,9mmGun"/>
 				<passive_effect name="DamageFalloffRange" operation="perc_add" value="-.2,.2" tags="perkGunslinger,9mmGun"/> <!-- random effective rng -->
 
@@ -1107,11 +1112,10 @@
 
 				<passive_effect name="BlockDamage" operation="base_add" value="-2.1" tags="perkGunslinger"/>  
 
-				<passive_effect name="EntityDamage" operation="perc_add" value=".1,.5" tier="2,6" tags="perkGunslinger"/> <!-- tier bonus -->
 				<passive_effect name="BlockDamage" operation="perc_add" value=".1,.5" tier="2,6" tags="perkGunslinger"/> <!-- tier bonus -->
 
-				<passive_effect name="SpreadDegreesVertical" operation="base_set" value="3" tags="perkGunslinger"/>
-				<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="3" tags="perkGunslinger"/>
+				<passive_effect name="SpreadDegreesVertical" operation="base_set" value="30" tags="perkGunslinger"/>
+				<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="30" tags="perkGunslinger"/>
 				<passive_effect name="SpreadMultiplierAiming" operation="base_set" value=".4" tags="perkGunslinger"/>
 				<passive_effect name="SpreadMultiplierCrouching" operation="base_set" value=".8" tags="perkGunslinger"/>
 				<passive_effect name="SpreadMultiplierWalking" operation="base_set" value="1.5" tags="perkGunslinger"/>
@@ -1146,6 +1150,12 @@
 				<triggered_effect trigger="onSelfEquipStart" action="RemoveBuff" buff="RocketLUser" /> 
 				<requirement name="HasBuff" target="self" buff="RocketLUser"/>
 			</effect_group>
+			 <effect_group name="Melee pushback / knockdown">
+				<requirement name="!EntityTagCompare" target="other" tags="trader,animal,crawler"/>
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="50"/> 
+				<requirement name="IsPrimaryAttack" />
+				<triggered_effect trigger="onSelfDamagedOther" action="Ragdoll" target="other" duration=".1" force="25"/>
+			</effect_group> 
 		</item>				
 		
 		<item name="gunNPCPipePistol2">
@@ -1213,7 +1223,6 @@
 			</property>
 			<effect_group name="gunHandgunT0PipePistol">
 				<passive_effect name="MaxRange" operation="base_set" value="15" tags="perkGunslinger,9mmGun"/>
-				<passive_effect name="EntityDamage" operation="perc_add" value="0,.4"/> <!-- Simulate random number of mods added -->
 				<passive_effect name="DamageFalloffRange" operation="base_set" value="10" tags="perkGunslinger,9mmGun"/>
 				<passive_effect name="DamageFalloffRange" operation="perc_add" value="-.2,.2" tags="perkGunslinger,9mmGun"/> <!-- random effective rng -->
 
@@ -1226,11 +1235,10 @@
 
 				<passive_effect name="BlockDamage" operation="base_add" value="-2.1" tags="perkGunslinger"/>  
 
-				<passive_effect name="EntityDamage" operation="perc_add" value=".1,.5" tier="2,6" tags="perkGunslinger"/> <!-- tier bonus -->
 				<passive_effect name="BlockDamage" operation="perc_add" value=".1,.5" tier="2,6" tags="perkGunslinger"/> <!-- tier bonus -->
 
-				<passive_effect name="SpreadDegreesVertical" operation="base_set" value="3" tags="perkGunslinger"/>
-				<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="3" tags="perkGunslinger"/>
+				<passive_effect name="SpreadDegreesVertical" operation="base_set" value="30" tags="perkGunslinger"/>
+				<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="30" tags="perkGunslinger"/>
 				<passive_effect name="SpreadMultiplierAiming" operation="base_set" value=".4" tags="perkGunslinger"/>
 				<passive_effect name="SpreadMultiplierCrouching" operation="base_set" value=".8" tags="perkGunslinger"/>
 				<passive_effect name="SpreadMultiplierWalking" operation="base_set" value="1.5" tags="perkGunslinger"/>
@@ -1265,6 +1273,12 @@
 				<triggered_effect trigger="onSelfEquipStart" action="RemoveBuff" buff="RocketLUser" /> 
 				<requirement name="HasBuff" target="self" buff="RocketLUser"/>
 			</effect_group>
+			 <effect_group name="Melee pushback / knockdown">
+				<requirement name="!EntityTagCompare" target="other" tags="trader,animal,crawler"/>
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="50"/> 
+				<requirement name="IsPrimaryAttack" />
+				<triggered_effect trigger="onSelfDamagedOther" action="Ragdoll" target="other" duration=".1" force="25"/>
+			</effect_group> 
 		</item>				
 			
 		<item name="gunNPCPipeShotgun">
@@ -1293,7 +1307,7 @@
 			<property name="SoundUnholster" value="weapon_unholster"/>
 			<property name="SoundHolster" value="weapon_holster"/>
 			<property class="Action0">
-				<property name="Class" value="Melee"/>
+				<property name="Class" value="MeleeSDX, SCore"/>
 				<property name="DamageEntity" value="20"/>
 				<property name="DamageBlock" value="20"/>
 				<property name="Range" value="1.65"/>
@@ -1324,19 +1338,13 @@
 				<property name="DamageBlock" value="10"/> 				
 			</property>
 			<effect_group name="gunShotgunT0PipeShotgun">
-				<passive_effect name="EntityDamage" operation="perc_add" value="0,.4"/> <!-- Simulate random number of mods added -->
 				<passive_effect name="RoundsPerMinute" operation="base_set" value="60" tags="perkBoomstick"/>
 				<passive_effect name="BurstRoundCount" operation="base_set" value="1" tags="perkBoomstick"/>
 
-				<!-- <passive_effect name="MagazineSize" operation="base_set" value="1" tags="perkBoomstick"/> -->
-				<!-- <passive_effect name="ReloadSpeedMultiplier" operation="base_set" value="1" tags="perkBoomstick"/>2.3s -->
 				<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
 				<passive_effect name="ModPowerBonus" operation="perc_add" value=".10" tags="EntityDamage,BlockDamage"/>
 				<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
 
-				<passive_effect name="EntityDamage" operation="base_add" value="-2.24" tags="perkBoomstick"/> <!-- damage offset -->
-
-				<passive_effect name="EntityDamage" operation="perc_add" value=".1,.5" tier="2,6" tags="perkBoomstick"/> <!-- tier bonus -->
 				<passive_effect name="BlockDamage" operation="perc_add" value=".1,.5" tier="2,6" tags="perkBoomstick"/> <!-- tier bonus -->
 
 				<passive_effect name="KickDegreesVerticalMin" operation="base_set" value="4.2" tags="perkBoomstick"/>
@@ -1358,8 +1366,8 @@
 				<passive_effect name="DamageFalloffRange" operation="base_set" value="4" tags="perkBoomstick"/>
 				<passive_effect name="EntityPenetrationCount" operation="base_set" value="2" tags="perkBoomstick"/>
 				<passive_effect name="BlockPenetrationFactor" operation="base_set" value="51" tags="perkBoomstick"/>
-				<passive_effect name="SpreadDegreesVertical" operation="base_set" value="6" tags="perkBoomstick"/>
-				<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="6" tags="perkBoomstick"/>
+				<passive_effect name="SpreadDegreesVertical" operation="base_set" value="60" tags="perkBoomstick"/>
+				<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="60" tags="perkBoomstick"/>
 				<passive_effect name="SpreadMultiplierAiming" operation="perc_add" value="-.13" tags="perkBoomstick"/>
 				<passive_effect name="SpreadMultiplierCrouching" operation="perc_add" value="-.05" tags="perkBoomstick"/>
 				<passive_effect name="SpreadMultiplierWalking" operation="perc_add" value=".15" tags="perkBoomstick"/>
@@ -1384,6 +1392,12 @@
 				<triggered_effect trigger="onSelfEquipStart" action="RemoveBuff" buff="RocketLUser" /> 
 				<requirement name="HasBuff" target="self" buff="RocketLUser"/>
 			</effect_group>
+			 <effect_group name="Melee pushback / knockdown">
+				<requirement name="!EntityTagCompare" target="other" tags="trader,animal,crawler"/>
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="50"/> 
+				<requirement name="IsPrimaryAttack" />
+				<triggered_effect trigger="onSelfDamagedOther" action="Ragdoll" target="other" duration=".1" force="35"/>
+			</effect_group> 			
 		</item>			
 		
 		<item name="gunNPCPipeRifle">
@@ -1412,7 +1426,7 @@
 			<property name="SoundUnholster" value="weapon_unholster"/>
 			<property name="SoundHolster" value="weapon_holster"/>
 			<property class="Action0">
-				<property name="Class" value="Melee"/>
+				<property name="Class" value="MeleeSDX, SCore"/>
 				<property name="DamageEntity" value="20"/>
 				<property name="DamageBlock" value="20"/>
 				<property name="Range" value="1.65"/>
@@ -1436,12 +1450,11 @@
 				<property name="Sound_empty" value="dryfire"/>
 				<property name="Sound_reload" value="hunting_rifle_reload"/>
 				<property name="Particles_muzzle_fire" value="gunfire_pistol"/>
-				<property name="DamageEntity" value="32"/> <!--  This is base damage per ray that hits) -->
-				<property name="DamageBlock" value="32"/> 				
+				<property name="DamageEntity" value="20"/> <!--  This is base damage per ray that hits) -->
+				<property name="DamageBlock" value="20"/> 				
 			</property>
 			<effect_group name="gunRifleT0PipeRifle">
 				<passive_effect name="MaxRange" operation="base_set" value="25" tags="perkDeadEye"/>
-				<passive_effect name="EntityDamage" operation="perc_add" value="0,.4"/> <!-- Simulate random number of mods added -->
 
 				<passive_effect name="DamageFalloffRange" operation="base_set" value="20" tags="perkDeadEye"/>
 				<passive_effect name="BlockDamage" operation="base_add" value="-2" tags="perkDeadEye"/> <!-- damage offset -->
@@ -1450,14 +1463,13 @@
 				<passive_effect name="BurstRoundCount" operation="base_set" value="1" tags="perkDeadEye"/>
 
 				<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
-				<passive_effect name="ModPowerBonus" operation="perc_add" value=".10" tags="EntityDamage,BlockDamage"/>
+				<passive_effect name="ModPowerBonus" operation="perc_add" value=".0" tags="EntityDamage,BlockDamage"/>
 				<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
 
-				<passive_effect name="EntityDamage" operation="perc_add" value=".1,.5" tier="2,6" tags="perkDeadEye"/> <!-- tier bonus -->
 				<passive_effect name="BlockDamage" operation="perc_add" value=".1,.5" tier="2,6" tags="perkDeadEye"/> <!-- tier bonus -->
 
-				<passive_effect name="SpreadDegreesVertical" operation="base_set" value="1" tags="perkDeadEye"/>
-				<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="1" tags="perkDeadEye"/>
+				<passive_effect name="SpreadDegreesVertical" operation="base_set" value="10" tags="perkDeadEye"/>
+				<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="10" tags="perkDeadEye"/>
 				<passive_effect name="SpreadMultiplierAiming" operation="base_set" value=".09" tags="perkDeadEye"/>
 				<passive_effect name="SpreadMultiplierCrouching" operation="base_set" value=".8" tags="perkDeadEye"/>
 				<passive_effect name="SpreadMultiplierWalking" operation="base_set" value="1.5" tags="perkDeadEye"/>
@@ -1492,6 +1504,12 @@
 				<triggered_effect trigger="onSelfEquipStart" action="RemoveBuff" buff="RocketLUser" /> 
 				<requirement name="HasBuff" target="self" buff="RocketLUser"/>
 			</effect_group>
+			 <effect_group name="Melee pushback / knockdown">
+				<requirement name="!EntityTagCompare" target="other" tags="trader,animal,crawler"/>
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="70"/> 
+				<requirement name="IsPrimaryAttack" />
+				<triggered_effect trigger="onSelfDamagedOther" action="Ragdoll" target="other" duration=".1" force="50"/>
+			</effect_group> 			
 		</item>			
 		
 		<item name="gunNPCPipeMG">
@@ -1507,7 +1525,7 @@
 			<property name="SoundUnholster" value="weapon_unholster"/>
 			<property name="SoundHolster" value="weapon_holster"/>
 			<property class="Action0">
-				<property name="Class" value="Melee"/>
+				<property name="Class" value="MeleeSDX, SCore"/>
 				<property name="DamageEntity" value="20"/>
 				<property name="DamageBlock" value="20"/>
 				<property name="Range" value="1.65"/>
@@ -1538,13 +1556,10 @@
 			
 			<effect_group name="gunMGT0PipeMachineGun">
 				<passive_effect name="MaxRange" operation="base_set" value="25" tags="perkMachineGunner"/>
-				<passive_effect name="EntityDamage" operation="perc_add" value="0,.4"/> <!-- Simulate random number of mods added -->
 
 				<passive_effect name="DamageFalloffRange" operation="base_set" value="20" tags="perkMachineGunner"/>
 				<passive_effect name="DamageFalloffRange" operation="perc_add" value="-.2,.2" tags="perkMachineGunner"/> <!-- random effective rng -->
 
-				<passive_effect name="EntityDamage" operation="perc_add" value="-.15,.15" tags="perkMachineGunner"/> <!-- random EntityDmg -->
-				<passive_effect name="EntityDamage" operation="perc_add" value=".1,.5" tier="2,6" tags="perkMachineGunner"/> <!-- tier bonus -->
 				<passive_effect name="BlockDamage" operation="perc_add" value="-.15,.15" tags="perkMachineGunner"/> <!-- random BlockDmg -->
 				<passive_effect name="BlockDamage" operation="perc_add" value=".1,.5" tier="2,6" tags="perkMachineGunner"/> <!-- tier bonus -->
 
@@ -1556,8 +1571,8 @@
 				<passive_effect name="BurstRoundCount" operation="base_set" value="1000" tags="perkMachineGunner"/>
 				<passive_effect name="ReloadSpeedMultiplier" operation="base_set" value="1" tags="perkMachineGunner"/> <!--x.xs -->
 
-				<passive_effect name="SpreadDegreesVertical" operation="base_set" value="4" tags="perkMachineGunner"/>
-				<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="4" tags="perkMachineGunner"/>
+				<passive_effect name="SpreadDegreesVertical" operation="base_set" value="40" tags="perkMachineGunner"/>
+				<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="40" tags="perkMachineGunner"/>
 				<passive_effect name="SpreadMultiplierAiming" operation="base_set" value=".22" tags="perkMachineGunner"/>
 				<passive_effect name="SpreadMultiplierCrouching" operation="base_set" value=".8" tags="perkMachineGunner"/>
 				<passive_effect name="SpreadMultiplierWalking" operation="base_set" value="1.5" tags="perkMachineGunner"/>
@@ -1596,6 +1611,12 @@
 				<triggered_effect trigger="onSelfEquipStart" action="RemoveBuff" buff="RocketLUser" /> 
 				<requirement name="HasBuff" target="self" buff="RocketLUser"/>
 			</effect_group>
+			 <effect_group name="Melee pushback / knockdown">
+				<requirement name="!EntityTagCompare" target="other" tags="trader,animal,crawler"/>
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="50"/> 
+				<requirement name="IsPrimaryAttack" />
+				<triggered_effect trigger="onSelfDamagedOther" action="Ragdoll" target="other" duration=".1" force="40"/>
+			</effect_group> 			
 		</item>			
 		
 		<item name="gunNPCM60">
@@ -1624,7 +1645,7 @@
 			<property name="SoundUnholster" value="weapon_unholster"/>
 			<property name="SoundHolster" value="weapon_holster"/>
 			<property class="Action0">
-				<property name="Class" value="Melee"/>
+				<property name="Class" value="MeleeSDX, SCore"/>
 				<property name="DamageEntity" value="20"/>
 				<property name="DamageBlock" value="20"/>
 				<property name="Range" value="1.65"/>
@@ -1655,14 +1676,11 @@
 			</property>
 			<effect_group name="gunMGT3M60">
 				<passive_effect name="MaxRange" operation="base_set" value="25" tags="perkMachineGunner"/>
-				<passive_effect name="EntityDamage" operation="perc_add" value="0,.4"/> <!-- Simulate random number of mods added -->
 				<passive_effect name="DamageFalloffRange" operation="base_set" value="20" tags="perkMachineGunner"/>
 				<passive_effect name="DamageFalloffRange" operation="perc_add" value="-.2,.2" tags="perkMachineGunner"/> <!-- random effective rng -->
-				<passive_effect name="EntityDamage" operation="base_add" value="-3" tags="perkMachineGunner"/> <!-- damage offset -->
+
 				<passive_effect name="BlockDamage" operation="base_add" value="-2" tags="perkMachineGunner"/> <!-- damage offset -->
 
-				<passive_effect name="EntityDamage" operation="perc_add" value="-.15,.15" tags="perkMachineGunner"/> <!-- random EntityDmg -->
-				<passive_effect name="EntityDamage" operation="perc_add" value=".1,.5" tier="2,6" tags="perkMachineGunner"/> <!-- tier bonus -->
 				<passive_effect name="BlockDamage" operation="perc_add" value="-.15,.15" tags="perkMachineGunner"/> <!-- random BlockDmg -->
 				<passive_effect name="BlockDamage" operation="perc_add" value=".1,.5" tier="2,6" tags="perkMachineGunner"/> <!-- tier bonus -->
 
@@ -1673,8 +1691,8 @@
 				<passive_effect name="BurstRoundCount" operation="base_set" value="1000" tags="perkMachineGunner"/>
 				<passive_effect name="ReloadSpeedMultiplier" operation="base_set" value="1" tags="perkMachineGunner"/>
 
-				<passive_effect name="SpreadDegreesVertical" operation="base_set" value="2" tags="perkMachineGunner"/>
-				<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="2" tags="perkMachineGunner"/>
+				<passive_effect name="SpreadDegreesVertical" operation="base_set" value="20" tags="perkMachineGunner"/>
+				<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="20" tags="perkMachineGunner"/>
 				<passive_effect name="SpreadMultiplierAiming" operation="base_set" value=".33" tags="perkMachineGunner"/>
 				<passive_effect name="SpreadMultiplierCrouching" operation="base_set" value=".8" tags="perkMachineGunner"/>
 				<passive_effect name="SpreadMultiplierWalking" operation="base_set" value="1.5" tags="perkMachineGunner"/>
@@ -1713,6 +1731,12 @@
 				<triggered_effect trigger="onSelfEquipStart" action="RemoveBuff" buff="RocketLUser" /> 
 				<requirement name="HasBuff" target="self" buff="RocketLUser"/>
 			</effect_group>
+			 <effect_group name="Melee pushback / knockdown">
+				<requirement name="!EntityTagCompare" target="other" tags="trader,animal,crawler"/>
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="80"/> 
+				<requirement name="IsPrimaryAttack" />
+				<triggered_effect trigger="onSelfDamagedOther" action="Ragdoll" target="other" duration=".1" force="50"/>
+			</effect_group> 			
 		</item>	
 
 		<item name="gunNPCPistol">
@@ -1741,7 +1765,7 @@
 			<property name="SoundUnholster" value="weapon_unholster"/>
 			<property name="SoundHolster" value="weapon_holster"/>
 			<property class="Action0">
-				<property name="Class" value="Melee"/>
+				<property name="Class" value="MeleeSDX, SCore"/>
 				<property name="DamageEntity" value="15"/>
 				<property name="DamageBlock" value="15"/>
 				<property name="Range" value="1.65"/>
@@ -1786,8 +1810,6 @@
 				<passive_effect name="ModPowerBonus" operation="perc_add" value=".10" tags="EntityDamage,BlockDamage"/>
 				<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
 
-				<passive_effect name="EntityDamage" operation="perc_add" value="-.15,.15" tags="perkGunslinger"/> <!-- random EntityDmg -->
-				<passive_effect name="EntityDamage" operation="perc_add" value=".1,.5" tier="2,6" tags="perkGunslinger"/> <!-- tier bonus -->
 				<passive_effect name="BlockDamage" operation="perc_add" value="-.15,.15" tags="perkGunslinger"/> <!-- random BlockDmg -->
 				<passive_effect name="BlockDamage" operation="perc_add" value=".1,.5" tier="2,6" tags="perkGunslinger"/> <!-- tier bonus -->
 
@@ -1796,8 +1818,8 @@
 				<!-- <passive_effect name="MagazineSize" operation="perc_add" value="-.122,.122"/> -->
 				<passive_effect name="WeaponHandling" operation="perc_add" value="-.08,.08" tags="perkGunslinger"/> <!-- random WeaponHandling -->
 
-				<passive_effect name="SpreadDegreesVertical" operation="base_set" value="3" tags="perkGunslinger"/>
-				<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="3" tags="perkGunslinger"/>
+				<passive_effect name="SpreadDegreesVertical" operation="base_set" value="30" tags="perkGunslinger"/>
+				<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="30" tags="perkGunslinger"/>
 				<passive_effect name="SpreadMultiplierAiming" operation="base_set" value=".4" tags="perkGunslinger"/>
 				<passive_effect name="SpreadMultiplierCrouching" operation="base_set" value=".8" tags="perkGunslinger"/>
 				<passive_effect name="SpreadMultiplierWalking" operation="base_set" value="1.5" tags="perkGunslinger"/>
@@ -1832,6 +1854,12 @@
 				<triggered_effect trigger="onSelfEquipStart" action="RemoveBuff" buff="RocketLUser" /> 
 				<requirement name="HasBuff" target="self" buff="RocketLUser"/>
 			</effect_group>
+			 <effect_group name="Melee pushback / knockdown">
+				<requirement name="!EntityTagCompare" target="other" tags="trader,animal,crawler"/>
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="50"/> 
+				<requirement name="IsPrimaryAttack" />
+				<triggered_effect trigger="onSelfDamagedOther" action="Ragdoll" target="other" duration=".1" force="25"/>
+			</effect_group> 			
 		</item>	
 
 		<item name="gunNPCPistolHidden"> <!-- Using as default for ranged mechs  -->
@@ -1854,7 +1882,7 @@
 				<property name="Block_range" value="1.65"/>
 			</property>
 			<effect_group name="gunHandgunT1Pistol">
-				<passive_effect name="MaxRange" operation="base_set" value="25" tags="perkGunslinger,9mmGun"/>
+				<passive_effect name="MaxRange" operation="base_set" value="15" tags="perkGunslinger,9mmGun"/>
 				<passive_effect name="DamageFalloffRange" operation="base_set" value="23.3" tags="perkGunslinger,9mmGun"/>
 				<passive_effect name="DamageFalloffRange" operation="perc_add" value="-.2,.2" tags="perkGunslinger,9mmGun"/> 
 				<passive_effect name="RoundsPerMinute" operation="base_set" value="180" tags="perkGunslinger"/>
@@ -1862,15 +1890,14 @@
 				<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
 				<passive_effect name="ModPowerBonus" operation="perc_add" value=".10" tags="EntityDamage,BlockDamage"/>
 				<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
-				<passive_effect name="EntityDamage" operation="perc_add" value="-.15,.15" tags="perkGunslinger"/> 
-				<passive_effect name="EntityDamage" operation="perc_add" value=".1,.5" tier="2,6" tags="perkGunslinger"/> 
+
 				<passive_effect name="BlockDamage" operation="perc_add" value="-.15,.15" tags="perkGunslinger"/> 
 				<passive_effect name="BlockDamage" operation="perc_add" value=".1,.5" tier="2,6" tags="perkGunslinger"/> 
 				<passive_effect name="DegradationMax" operation="perc_add" value="-.2,.2" tags="perkGunslinger"/> 
 				<passive_effect name="RoundsPerMinute" operation="perc_add" value="-.05,.05" tags="perkGunslinger"/>  
 				<passive_effect name="WeaponHandling" operation="perc_add" value="-.08,.08" tags="perkGunslinger"/> 
-				<passive_effect name="SpreadDegreesVertical" operation="base_set" value="3" tags="perkGunslinger"/>
-				<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="3" tags="perkGunslinger"/>
+				<passive_effect name="SpreadDegreesVertical" operation="base_set" value="30" tags="perkGunslinger"/>
+				<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="30" tags="perkGunslinger"/>
 				<passive_effect name="SpreadMultiplierAiming" operation="base_set" value=".4" tags="perkGunslinger"/>
 				<passive_effect name="SpreadMultiplierCrouching" operation="base_set" value=".8" tags="perkGunslinger"/>
 				<passive_effect name="SpreadMultiplierWalking" operation="base_set" value="1.5" tags="perkGunslinger"/>
@@ -1949,15 +1976,13 @@
 				<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
 				<passive_effect name="ModPowerBonus" operation="perc_add" value=".10" tags="EntityDamage,BlockDamage"/>
 				<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
-				<passive_effect name="EntityDamage" operation="perc_add" value="-.15,.15" tags="perkGunslinger"/> 
-				<passive_effect name="EntityDamage" operation="perc_add" value=".1,.5" tier="2,6" tags="perkGunslinger"/> 
 				<passive_effect name="BlockDamage" operation="perc_add" value="-.15,.15" tags="perkGunslinger"/> 
 				<passive_effect name="BlockDamage" operation="perc_add" value=".1,.5" tier="2,6" tags="perkGunslinger"/> 
 				<passive_effect name="DegradationMax" operation="perc_add" value="-.2,.2" tags="perkGunslinger"/> 
 				<passive_effect name="RoundsPerMinute" operation="perc_add" value="-.05,.05" tags="perkGunslinger"/>  
 				<passive_effect name="WeaponHandling" operation="perc_add" value="-.08,.08" tags="perkGunslinger"/> 
-				<passive_effect name="SpreadDegreesVertical" operation="base_set" value="2" tags="perkGunslinger"/>
-				<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="2" tags="perkGunslinger"/>
+				<passive_effect name="SpreadDegreesVertical" operation="base_set" value="20" tags="perkGunslinger"/>
+				<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="20" tags="perkGunslinger"/>
 				<passive_effect name="SpreadMultiplierAiming" operation="base_set" value=".4" tags="perkGunslinger"/>
 				<passive_effect name="SpreadMultiplierCrouching" operation="base_set" value=".8" tags="perkGunslinger"/>
 				<passive_effect name="SpreadMultiplierWalking" operation="base_set" value="1.5" tags="perkGunslinger"/>
@@ -2004,7 +2029,7 @@
 			<property name="SoundUnholster" value="weapon_unholster"/>
 			<property name="SoundHolster" value="weapon_holster"/>
 			<property class="Action0">
-				<property name="Class" value="Melee"/>
+				<property name="Class" value="MeleeSDX, SCore"/>
 				<property name="DamageEntity" value="15"/>
 				<property name="DamageBlock" value="15"/>
 				<property name="Range" value="1.65"/>
@@ -2033,7 +2058,7 @@
 			</property>
 			<effect_group name="gunHandgunT3DesertVulture">
 				<passive_effect name="MaxRange" operation="base_set" value="15" tags="perkGunslinger"/>
-				<passive_effect name="EntityDamage" operation="perc_add" value="0,.4"/> <!-- Simulate random number of mods added -->
+
 				<passive_effect name="DamageFalloffRange" operation="base_set" value="12.3" tags="perkGunslinger"/>
 				<passive_effect name="DamageFalloffRange" operation="perc_add" value="-.2,.2" tags="perkGunslinger"/> <!-- random effective rng -->
 
@@ -2045,8 +2070,6 @@
 				<passive_effect name="ModPowerBonus" operation="perc_add" value=".10" tags="EntityDamage,BlockDamage"/>
 				<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
 
-				<passive_effect name="EntityDamage" operation="perc_add" value="-.15,.15" tags="perkGunslinger"/> <!-- random EntityDmg -->
-				<passive_effect name="EntityDamage" operation="perc_add" value=".1,.5" tier="2,6" tags="perkGunslinger"/> <!-- tier bonus -->
 				<passive_effect name="BlockDamage" operation="perc_add" value="-.15,.15" tags="perkGunslinger"/> <!-- random BlockDmg -->
 				<passive_effect name="BlockDamage" operation="perc_add" value=".1,.5" tier="2,6" tags="perkGunslinger"/> <!-- tier bonus -->
 
@@ -2054,8 +2077,8 @@
 				<passive_effect name="RoundsPerMinute" operation="perc_add" value="-.05,.05" tags="perkGunslinger"/> <!-- random APM -->
 				<passive_effect name="WeaponHandling" operation="perc_add" value="-.08,.08" tags="perkGunslinger"/> <!-- random WeaponHandling -->
 
-				<passive_effect name="SpreadDegreesVertical" operation="base_set" value="3" tags="perkGunslinger"/>
-				<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="3" tags="perkGunslinger"/>
+				<passive_effect name="SpreadDegreesVertical" operation="base_set" value="30" tags="perkGunslinger"/>
+				<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="30" tags="perkGunslinger"/>
 				<passive_effect name="SpreadMultiplierAiming" operation="base_set" value=".35" tags="perkGunslinger"/>
 				<passive_effect name="SpreadMultiplierCrouching" operation="base_set" value=".8" tags="perkGunslinger"/>
 				<passive_effect name="SpreadMultiplierWalking" operation="base_set" value="1.5" tags="perkGunslinger"/>
@@ -2090,6 +2113,12 @@
 				<triggered_effect trigger="onSelfEquipStart" action="RemoveBuff" buff="RocketLUser" /> 
 				<requirement name="HasBuff" target="self" buff="RocketLUser"/>
 			</effect_group>
+			 <effect_group name="Melee pushback / knockdown">
+				<requirement name="!EntityTagCompare" target="other" tags="trader,animal,crawler"/>
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="50"/> 
+				<requirement name="IsPrimaryAttack" />
+				<triggered_effect trigger="onSelfDamagedOther" action="Ragdoll" target="other" duration=".1" force="25"/>
+			</effect_group> 			
 		</item>			
 		
 		<item name="gunNPCAk47">
@@ -2105,7 +2134,7 @@
 			<property name="SoundUnholster" value="weapon_unholster"/>
 			<property name="SoundHolster" value="weapon_holster"/>
 			<property class="Action0">
-				<property name="Class" value="Melee"/>
+				<property name="Class" value="MeleeSDX, SCore"/>
 				<property name="DamageEntity" value="20"/>
 				<property name="DamageBlock" value="20"/>
 				<property name="Range" value="1.65"/>
@@ -2135,14 +2164,10 @@
 			</property>
 			<effect_group name="gunMGT1AK47">
 				<passive_effect name="MaxRange" operation="base_set" value="25" tags="perkMachineGunner"/>
-				<passive_effect name="EntityDamage" operation="perc_add" value="0,.4"/> <!-- Simulate random number of mods added -->
 				<passive_effect name="DamageFalloffRange" operation="base_set" value="20" tags="perkMachineGunner"/>
 				<passive_effect name="DamageFalloffRange" operation="perc_add" value="-.2,.2" tags="perkMachineGunner"/> <!-- random effective rng -->
-				<passive_effect name="EntityDamage" operation="base_add" value="-5" tags="perkMachineGunner"/> <!-- damage offset -->
 				<passive_effect name="BlockDamage" operation="base_add" value="-3" tags="perkMachineGunner"/> <!-- damage offset -->
 
-				<passive_effect name="EntityDamage" operation="perc_add" value="-.15,.15" tags="perkMachineGunner"/> <!-- random EntityDmg -->
-				<passive_effect name="EntityDamage" operation="perc_add" value=".1,.5" tier="2,6" tags="perkMachineGunner"/> <!-- tier bonus -->
 				<passive_effect name="BlockDamage" operation="perc_add" value="-.15,.15" tags="perkMachineGunner"/> <!-- random BlockDmg -->
 				<passive_effect name="BlockDamage" operation="perc_add" value=".1,.5" tier="2,6" tags="perkMachineGunner"/> <!-- tier bonus -->
 
@@ -2154,8 +2179,8 @@
 				<passive_effect name="BurstRoundCount" operation="base_set" value="1000" tags="perkMachineGunner"/>
 				<passive_effect name="ReloadSpeedMultiplier" operation="base_set" value="1" tags="perkMachineGunner"/> <!-- 2.85s -->
 
-				<passive_effect name="SpreadDegreesVertical" operation="base_set" value="2" tags="perkMachineGunner"/>
-				<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="2" tags="perkMachineGunner"/>
+				<passive_effect name="SpreadDegreesVertical" operation="base_set" value="20" tags="perkMachineGunner"/>
+				<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="20" tags="perkMachineGunner"/>
 				<passive_effect name="SpreadMultiplierAiming" operation="base_set" value=".22" tags="perkMachineGunner"/>
 				<passive_effect name="SpreadMultiplierCrouching" operation="base_set" value=".8" tags="perkMachineGunner"/>
 				<passive_effect name="SpreadMultiplierWalking" operation="base_set" value="1.5" tags="perkMachineGunner"/>
@@ -2194,6 +2219,12 @@
 				<triggered_effect trigger="onSelfEquipStart" action="RemoveBuff" buff="RocketLUser" /> 
 				<requirement name="HasBuff" target="self" buff="RocketLUser"/>
 			</effect_group>
+			 <effect_group name="Melee pushback / knockdown">
+				<requirement name="!EntityTagCompare" target="other" tags="trader,animal,crawler"/>
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="50"/> 
+				<requirement name="IsPrimaryAttack" />
+				<triggered_effect trigger="onSelfDamagedOther" action="Ragdoll" target="other" duration=".1" force="40"/>
+			</effect_group> 
 		</item>	
 		
 		<item name="gunNPCTRifle">
@@ -2209,7 +2240,7 @@
 			<property name="SoundUnholster" value="weapon_unholster"/>
 			<property name="SoundHolster" value="weapon_holster"/>
 			<property class="Action0">
-				<property name="Class" value="Melee"/>
+				<property name="Class" value="MeleeSDX, SCore"/>
 				<property name="DamageEntity" value="20"/>
 				<property name="DamageBlock" value="20"/>
 				<property name="Range" value="1.65"/>
@@ -2237,13 +2268,10 @@
 			</property>
 			<effect_group name="gunMGT2TacticalAR">
 				<passive_effect name="MaxRange" operation="base_set" value="25" tags="perkMachineGunner"/>
-				<passive_effect name="EntityDamage" operation="perc_add" value="0,.4"/> <!-- Simulate random number of mods added -->
 				<passive_effect name="DamageFalloffRange" operation="base_set" value="20" tags="perkMachineGunner"/>
 				<passive_effect name="DamageFalloffRange" operation="perc_add" value="-.2,.2" tags="perkMachineGunner"/> <!-- random effective rng -->
 				<passive_effect name="BlockDamage" operation="base_add" value="-2" tags="perkMachineGunner"/> <!-- damage offset -->
 
-				<passive_effect name="EntityDamage" operation="perc_add" value="-.15,.15" tags="perkMachineGunner"/> <!-- random EntityDmg -->
-				<passive_effect name="EntityDamage" operation="perc_add" value=".1,.5" tier="2,6" tags="perkMachineGunner"/> <!-- tier bonus -->
 				<passive_effect name="BlockDamage" operation="perc_add" value="-.15,.15" tags="perkMachineGunner"/> <!-- random BlockDmg -->
 				<passive_effect name="BlockDamage" operation="perc_add" value=".1,.5" tier="2,6" tags="perkMachineGunner"/> <!-- tier bonus -->
 
@@ -2255,8 +2283,8 @@
 				<passive_effect name="BurstRoundCount" operation="base_set" value="3" tags="perkMachineGunner"/>
 				<passive_effect name="ReloadSpeedMultiplier" operation="base_set" value=".7" tags="perkMachineGunner"/> <!-- 3.8s -->
 
-				<passive_effect name="SpreadDegreesVertical" operation="base_set" value="2" tags="perkMachineGunner"/>
-				<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="2" tags="perkMachineGunner"/>
+				<passive_effect name="SpreadDegreesVertical" operation="base_set" value="20" tags="perkMachineGunner"/>
+				<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="20" tags="perkMachineGunner"/>
 				<passive_effect name="SpreadMultiplierAiming" operation="base_set" value=".22" tags="perkMachineGunner"/>
 				<passive_effect name="SpreadMultiplierCrouching" operation="base_set" value=".8" tags="perkMachineGunner"/>
 				<passive_effect name="SpreadMultiplierWalking" operation="base_set" value="1.5" tags="perkMachineGunner"/>
@@ -2295,6 +2323,12 @@
 				<triggered_effect trigger="onSelfEquipStart" action="RemoveBuff" buff="RocketLUser" /> 
 				<requirement name="HasBuff" target="self" buff="RocketLUser"/>
 			</effect_group>
+			 <effect_group name="Melee pushback / knockdown">
+				<requirement name="!EntityTagCompare" target="other" tags="trader,animal,crawler"/>
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="70"/> 
+				<requirement name="IsPrimaryAttack" />
+				<triggered_effect trigger="onSelfDamagedOther" action="Ragdoll" target="other" duration=".1" force="40"/>
+			</effect_group> 			
 		</item>	
 		
 		<item name="gunNPCHRifle">
@@ -2323,7 +2357,7 @@
 			<property name="SoundUnholster" value="weapon_unholster"/>
 			<property name="SoundHolster" value="weapon_holster"/>
 			<property class="Action0">
-				<property name="Class" value="Melee"/>
+				<property name="Class" value="MeleeSDX, SCore"/>
 				<property name="DamageEntity" value="20"/>
 				<property name="DamageBlock" value="20"/>
 				<property name="Range" value="1.65"/>
@@ -2352,7 +2386,7 @@
 			</property>
 			<effect_group name="gunRifleT1HuntingRifle">
 				<passive_effect name="MaxRange" operation="base_set" value="35" tags="perkDeadEye"/>
-				<passive_effect name="EntityDamage" operation="perc_add" value="0,.4"/> <!-- Simulate random number of mods added -->
+
 				<passive_effect name="DamageFalloffRange" operation="base_set" value="33.3" tags="perkDeadEye"/>
 				<passive_effect name="DamageFalloffRange" operation="perc_add" value="-.2,.2" tags="perkDeadEye"/> <!-- random effective rng -->
 
@@ -2362,8 +2396,7 @@
 				<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
 				<passive_effect name="ModPowerBonus" operation="perc_add" value=".10" tags="EntityDamage,BlockDamage"/>
 				<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
-				<passive_effect name="EntityDamage" operation="perc_add" value="-.15,.15" tags="perkDeadEye"/> <!-- random EntityDmg -->
-				<passive_effect name="EntityDamage" operation="perc_add" value=".1,.5" tier="2,6" tags="perkDeadEye"/> <!-- tier bonus -->
+
 				<passive_effect name="BlockDamage" operation="perc_add" value="-.15,.15" tags="perkDeadEye"/> <!-- random BlockDmg -->
 				<passive_effect name="BlockDamage" operation="perc_add" value=".1,.5" tier="2,6" tags="perkDeadEye"/> <!-- tier bonus -->
 
@@ -2371,8 +2404,8 @@
 				<passive_effect name="RoundsPerMinute" operation="perc_add" value="-.05,.05" tags="perkDeadEye"/> <!-- random APM -->
 				<passive_effect name="WeaponHandling" operation="perc_add" value="-.08,.08" tags="perkDeadEye"/> <!-- random WeaponHandling -->
 
-				<passive_effect name="SpreadDegreesVertical" operation="base_set" value="1" tags="perkDeadEye"/>
-				<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="1" tags="perkDeadEye"/>
+				<passive_effect name="SpreadDegreesVertical" operation="base_set" value="10" tags="perkDeadEye"/>
+				<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="10" tags="perkDeadEye"/>
 				<passive_effect name="SpreadMultiplierAiming" operation="base_set" value=".08" tags="perkDeadEye"/>
 				<passive_effect name="SpreadMultiplierCrouching" operation="base_set" value=".8" tags="perkDeadEye"/>
 				<passive_effect name="SpreadMultiplierWalking" operation="base_set" value="1.5" tags="perkDeadEye"/>
@@ -2408,6 +2441,12 @@
 				<triggered_effect trigger="onSelfEquipStart" action="RemoveBuff" buff="RocketLUser" /> 
 				<requirement name="HasBuff" target="self" buff="RocketLUser"/>
 			</effect_group>
+			 <effect_group name="Melee pushback / knockdown">
+				<requirement name="!EntityTagCompare" target="other" tags="trader,animal,crawler"/>
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="70"/> 
+				<requirement name="IsPrimaryAttack" />
+				<triggered_effect trigger="onSelfDamagedOther" action="Ragdoll" target="other" duration=".1" force="40"/>
+			</effect_group> 			
 		</item>	
 		
 		<item name="gunNPCSRifle">
@@ -2436,7 +2475,7 @@
 			<property name="SoundUnholster" value="weapon_unholster"/>
 			<property name="SoundHolster" value="weapon_holster"/>
 			<property class="Action0">
-				<property name="Class" value="Melee"/>
+				<property name="Class" value="MeleeSDX, SCore"/>
 				<property name="DamageEntity" value="20"/>
 				<property name="DamageBlock" value="20"/>
 				<property name="Range" value="1.65"/>
@@ -2465,7 +2504,7 @@
 			</property>
 			<effect_group name="gunRifleT3SniperRifle">
 				<passive_effect name="MaxRange" operation="base_set" value="35" tags="perkDeadEye"/>
-				<passive_effect name="EntityDamage" operation="perc_add" value="0,.4"/> <!-- Simulate random number of mods added -->
+
 				<passive_effect name="DamageFalloffRange" operation="base_set" value="35" tags="perkDeadEye"/>
 				<passive_effect name="DamageFalloffRange" operation="perc_add" value="-.2,.2" tags="perkDeadEye"/> <!-- random effective rng -->
 
@@ -2476,8 +2515,7 @@
 				<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
 				<passive_effect name="ModPowerBonus" operation="perc_add" value=".10" tags="EntityDamage,BlockDamage"/>
 				<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
-				<passive_effect name="EntityDamage" operation="perc_add" value="-.15,.15" tags="perkDeadEye"/> <!-- random EntityDmg -->
-				<passive_effect name="EntityDamage" operation="perc_add" value=".1,.5" tier="2,6" tags="perkDeadEye"/> <!-- tier bonus -->
+
 				<passive_effect name="BlockDamage" operation="perc_add" value="-.15,.15" tags="perkDeadEye"/> <!-- random BlockDmg -->
 				<passive_effect name="BlockDamage" operation="perc_add" value=".1,.5" tier="2,6" tags="perkDeadEye"/> <!-- tier bonus -->
 
@@ -2486,8 +2524,8 @@
 				
 				<passive_effect name="WeaponHandling" operation="perc_add" value="-.08,.08" tags="perkDeadEye"/> <!-- random WeaponHandling -->
 
-				<passive_effect name="SpreadDegreesVertical" operation="base_set" value="3.5" tags="perkDeadEye"/>
-				<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="3.5" tags="perkDeadEye"/>
+				<passive_effect name="SpreadDegreesVertical" operation="base_set" value="35" tags="perkDeadEye"/>
+				<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="35" tags="perkDeadEye"/>
 				<passive_effect name="SpreadMultiplierAiming" operation="base_set" value=".06" tags="perkDeadEye"/>
 				<passive_effect name="SpreadMultiplierCrouching" operation="base_set" value=".8" tags="perkDeadEye"/>
 				<passive_effect name="SpreadMultiplierWalking" operation="base_set" value="1.5" tags="perkDeadEye"/>
@@ -2522,6 +2560,12 @@
 				<triggered_effect trigger="onSelfEquipStart" action="RemoveBuff" buff="RocketLUser" /> 
 				<requirement name="HasBuff" target="self" buff="RocketLUser"/>
 			</effect_group>
+			 <effect_group name="Melee pushback / knockdown">
+				<requirement name="!EntityTagCompare" target="other" tags="trader,animal,crawler"/>
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="70"/> 
+				<requirement name="IsPrimaryAttack" />
+				<triggered_effect trigger="onSelfDamagedOther" action="Ragdoll" target="other" duration=".1" force="40"/>
+			</effect_group> 			
 		</item>
 		
 		<item name="gunNPCLBow"> 
@@ -2543,7 +2587,7 @@
 			<property name="SoundUnholster" value="weapon_unholster"/>
 			<property name="SoundHolster" value="weapon_holster"/>
 			<property class="Action0">
-				<property name="Class" value="Melee"/>
+				<property name="Class" value="MeleeSDX, SCore"/>
 				<property name="DamageEntity" value="15"/>
 				<property name="DamageBlock" value="15"/>
 				<property name="Range" value="1.65"/>
@@ -2573,15 +2617,12 @@
 				<property name="DamageBlock" value="30"/> 				
 			</property>
 			<effect_group name="gunBowT3CompoundBow">
-				<passive_effect name="EntityDamage" operation="perc_add" value="0,.4"/> <!-- Simulate random number of mods added -->
 
 				<passive_effect name="ProjectileVelocity" operation="perc_add" value=".2" tags="perkArchery"/>
 				<passive_effect name="DamageFalloffRange" operation="base_set" value="20" tags="perkArchery"/>
 				<passive_effect name="DamageFalloffRange" operation="perc_add" value="-.2,.2" tags="perkArchery"/> <!-- random effective rng -->
 				<passive_effect name="MaxRange" operation="base_set" value="25" tags="perkArchery"/>
 
-				<passive_effect name="EntityDamage" operation="perc_add" value="-.15,.15" tags="perkArchery"/> <!-- random EntityDmg -->
-				<passive_effect name="EntityDamage" operation="perc_add" value=".1,.5" tier="2,6" tags="perkArchery"/> <!-- tier bonus -->
 				<passive_effect name="BlockDamage" operation="perc_add" value="-.15,.15" tags="perkArchery"/> <!-- random BlockDmg -->
 				<passive_effect name="BlockDamage" operation="perc_add" value=".1,.5" tier="2,6" tags="perkArchery"/> <!-- tier bonus -->
 				<passive_effect name="ProjectileVelocity" operation="perc_add" value="-.08,.08" tags="perkArchery"/> <!-- random Veloc -->
@@ -2589,8 +2630,8 @@
 				<passive_effect name="DegradationMax" operation="perc_add" value="-.2,.2" tags="perkArchery"/> <!-- random DegMax -->
 				<passive_effect name="WeaponHandling" operation="perc_add" value="-.08,.08" tags="perkArchery"/> <!-- random WeaponHandling -->
 
-				<passive_effect name="SpreadDegreesVertical" operation="base_set" value="1" tags="perkArchery"/>
-				<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="1" tags="perkArchery"/>
+				<passive_effect name="SpreadDegreesVertical" operation="base_set" value="10" tags="perkArchery"/>
+				<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="10" tags="perkArchery"/>
 				<passive_effect name="SpreadMultiplierAiming" operation="base_set" value=".15" tags="perkArchery"/>
 				<passive_effect name="SpreadMultiplierCrouching" operation="base_set" value=".8" tags="perkArchery"/>
 				<passive_effect name="SpreadMultiplierWalking" operation="base_set" value="1.5" tags="perkArchery"/>
@@ -2632,6 +2673,12 @@
 				<triggered_effect trigger="onSelfEquipStart" action="RemoveBuff" buff="RocketLUser" />
 				<requirement name="HasBuff" target="self" buff="RocketLUser"/>
 			</effect_group>
+			 <effect_group name="Melee pushback / knockdown">
+				<requirement name="!EntityTagCompare" target="other" tags="trader,animal,crawler"/>
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="30"/> 
+				<requirement name="IsPrimaryAttack" />
+				<triggered_effect trigger="onSelfDamagedOther" action="Ragdoll" target="other" duration=".1" force="25"/>
+			</effect_group> 			
 			<!--<effect_group name="sneak damage bonus">
 				<requirement name="CVarCompare" cvar="_crouching" operation="Equals" value="1"/>
 				<requirement name="CVarCompare" cvar="_notAlerted" operation="GT" value="0" target="other"/>
@@ -2659,7 +2706,7 @@
 			<property name="SoundUnholster" value="weapon_unholster"/>
 			<property name="SoundHolster" value="weapon_holster"/>
 			<property class="Action0">
-				<property name="Class" value="Melee"/>
+				<property name="Class" value="MeleeSDX, SCore"/>
 				<property name="DamageEntity" value="15"/>
 				<property name="DamageBlock" value="15"/>
 				<property name="Range" value="1.65"/>
@@ -2703,7 +2750,6 @@
 				<property name="Auto_fire" value="true" /> 
 			</property> -->
 			<effect_group name="gunBowT1IronCrossbow">
-				<passive_effect name="EntityDamage" operation="perc_add" value="0,.4"/> <!-- Simulate random number of mods added -->
 
 				<passive_effect name="DamageFalloffRange" operation="base_set" value="25" tags="perkArchery"/>
 				<passive_effect name="DamageFalloffRange" operation="perc_add" value="-.2,.2" tags="perkArchery"/> <!-- random effective rng -->
@@ -2711,8 +2757,6 @@
 				
 				<passive_effect name="ProjectileVelocity" operation="perc_add" value="-.1" tags="perkArchery"/>
 
-				<passive_effect name="EntityDamage" operation="perc_add" value="-.15,.15" tags="perkArchery"/> <!-- random EntityDmg -->
-				<passive_effect name="EntityDamage" operation="perc_add" value=".1,.5" tier="2,6" tags="perkArchery"/> <!-- tier bonus -->
 				<passive_effect name="BlockDamage" operation="perc_add" value="-.15,.15" tags="perkArchery"/> <!-- random BlockDmg -->
 				<passive_effect name="BlockDamage" operation="perc_add" value=".1,.5" tier="2,6" tags="perkArchery"/> <!-- tier bonus -->
 				<passive_effect name="ProjectileVelocity" operation="perc_add" value="-.08,.08" tags="perkArchery"/> <!-- random Veloc -->
@@ -2720,8 +2764,8 @@
 				<passive_effect name="DegradationMax" operation="perc_add" value="-.2,.2" tags="perkArchery"/> <!-- random DegMax -->
 				<passive_effect name="WeaponHandling" operation="perc_add" value="-.08,.08" tags="perkArchery"/> <!-- random WeaponHandling -->
 
-				<passive_effect name="SpreadDegreesVertical" operation="base_set" value="2" tags="perkArchery"/>
-				<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="2" tags="perkArchery"/>
+				<passive_effect name="SpreadDegreesVertical" operation="base_set" value="20" tags="perkArchery"/>
+				<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="20" tags="perkArchery"/>
 				<passive_effect name="SpreadMultiplierAiming" operation="base_set" value=".10" tags="perkArchery"/>
 				<passive_effect name="SpreadMultiplierCrouching" operation="base_set" value=".8" tags="perkArchery"/>
 				<passive_effect name="SpreadMultiplierWalking" operation="base_set" value="1.5" tags="perkArchery"/>
@@ -2762,6 +2806,12 @@
 				<triggered_effect trigger="onSelfEquipStart" action="RemoveBuff" buff="RocketLUser" />
 				<requirement name="HasBuff" target="self" buff="RocketLUser"/>
 			</effect_group>
+			 <effect_group name="Melee pushback / knockdown">
+				<requirement name="!EntityTagCompare" target="other" tags="trader,animal,crawler"/>
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="50"/> 
+				<requirement name="IsPrimaryAttack" />
+				<triggered_effect trigger="onSelfDamagedOther" action="Ragdoll" target="other" duration=".1" force="30"/>
+			</effect_group> 			
 			<!--<effect_group name="sneak damage bonus">
 				<requirement name="CVarCompare" cvar="_crouching" operation="Equals" value="1"/>
 				<requirement name="CVarCompare" cvar="_notAlerted" operation="GT" value="0" target="other"/>
@@ -2797,7 +2847,7 @@
 			<property name="SoundUnholster" value="weapon_unholster"/>
 			<property name="SoundHolster" value="weapon_holster"/>
 			<property class="Action0">
-				<property name="Class" value="Melee"/>
+				<property name="Class" value="MeleeSDX, SCore"/>
 				<property name="DamageEntity" value="20"/>
 				<property name="DamageBlock" value="20"/>
 				<property name="Range" value="1.65"/>
@@ -2828,15 +2878,12 @@
 				<property name="DamageBlock" value="10"/> 				
 			</property>
 			<effect_group name="gunShotgunT2PumpShotgun">
-				<passive_effect name="EntityDamage" operation="perc_add" value="0,.4"/> <!-- Simulate random number of mods added -->
 				<passive_effect name="RoundsPerMinute" operation="base_set" value="60" tags="perkBoomstick"/>
 				<passive_effect name="BurstRoundCount" operation="base_set" value="1" tags="perkBoomstick"/>
 				<passive_effect name="ReloadSpeedMultiplier" operation="base_set" value="1" tags="perkBoomstick"/> <!-- 2.3s -->
 				<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
 				<passive_effect name="ModPowerBonus" operation="perc_add" value=".10" tags="EntityDamage,BlockDamage"/>
 				<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
-				<passive_effect name="EntityDamage" operation="perc_add" value="-.15,.15" tags="perkBoomstick"/> <!-- random EntityDmg -->
-				<passive_effect name="EntityDamage" operation="perc_add" value=".1,.5" tier="2,6" tags="perkBoomstick"/> <!-- tier bonus -->
 				<passive_effect name="BlockDamage" operation="perc_add" value="-.15,.15" tags="perkBoomstick"/> <!-- random BlockDmg -->
 				<passive_effect name="BlockDamage" operation="perc_add" value=".1,.5" tier="2,6" tags="perkBoomstick"/> <!-- tier bonus -->
 
@@ -2861,8 +2908,8 @@
 				<passive_effect name="DamageFalloffRange" operation="base_set" value="7" tags="perkBoomstick"/>
 				<passive_effect name="EntityPenetrationCount" operation="base_set" value="2" tags="perkBoomstick"/>
 				<passive_effect name="BlockPenetrationFactor" operation="base_set" value="51" tags="perkBoomstick"/>
-				<passive_effect name="SpreadDegreesVertical" operation="base_set" value="6" tags="perkBoomstick"/>
-				<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="6" tags="perkBoomstick"/>
+				<passive_effect name="SpreadDegreesVertical" operation="base_set" value="60" tags="perkBoomstick"/>
+				<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="60" tags="perkBoomstick"/>
 				<passive_effect name="SpreadMultiplierAiming" operation="perc_add" value="-.13" tags="perkBoomstick"/>
 				<passive_effect name="SpreadMultiplierCrouching" operation="perc_add" value="-.05" tags="perkBoomstick"/>
 				<passive_effect name="SpreadMultiplierWalking" operation="perc_add" value=".15" tags="perkBoomstick"/>
@@ -2887,6 +2934,12 @@
 				<triggered_effect trigger="onSelfEquipStart" action="RemoveBuff" buff="RocketLUser" /> 
 				<requirement name="HasBuff" target="self" buff="RocketLUser"/>
 			</effect_group>
+			 <effect_group name="Melee pushback / knockdown">
+				<requirement name="!EntityTagCompare" target="other" tags="trader,animal,crawler"/>
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="50"/> 
+				<requirement name="IsPrimaryAttack" />
+				<triggered_effect trigger="onSelfDamagedOther" action="Ragdoll" target="other" duration=".1" force="30"/>
+			</effect_group> 			
 		</item>	
 	
 		<item name="gunNPCAShotgun">
@@ -2915,7 +2968,7 @@
 			<property name="SoundUnholster" value="weapon_unholster"/>
 			<property name="SoundHolster" value="weapon_holster"/>
 			<property class="Action0">
-				<property name="Class" value="Melee"/>
+				<property name="Class" value="MeleeSDX, SCore"/>
 				<property name="DamageEntity" value="20"/>
 				<property name="DamageBlock" value="20"/>
 				<property name="Range" value="1.65"/>
@@ -2945,7 +2998,6 @@
 				<property name="DamageBlock" value="10"/> 				
 			</property>
 			<effect_group name="gunShotgunT3AutoShotgun">
-				<passive_effect name="EntityDamage" operation="perc_add" value="0,.4"/> <!-- Simulate random number of mods added -->
 				<passive_effect name="RoundsPerMinute" operation="base_set" value="70" tags="perkBoomstick"/>
 				<passive_effect name="BurstRoundCount" operation="base_set" value="1" tags="perkBoomstick"/>
 
@@ -2953,8 +3005,6 @@
 				<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
 				<passive_effect name="ModPowerBonus" operation="perc_add" value=".10" tags="EntityDamage,BlockDamage"/>
 				<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
-				<passive_effect name="EntityDamage" operation="perc_add" value="-.15,.15" tags="perkBoomstick"/> <!-- random EntityDmg -->
-				<passive_effect name="EntityDamage" operation="perc_add" value=".1,.5" tier="2,6" tags="perkBoomstick"/> <!-- tier bonus -->
 				<passive_effect name="BlockDamage" operation="perc_add" value="-.15,.15" tags="perkBoomstick"/> <!-- random BlockDmg -->
 				<passive_effect name="BlockDamage" operation="perc_add" value=".1,.5" tier="2,6" tags="perkBoomstick"/> <!-- tier bonus -->
 
@@ -2979,8 +3029,8 @@
 				<passive_effect name="DamageFalloffRange" operation="base_set" value="7" tags="perkBoomstick"/>
 				<passive_effect name="EntityPenetrationCount" operation="base_set" value="2" tags="perkBoomstick"/>
 				<passive_effect name="BlockPenetrationFactor" operation="base_set" value="51" tags="perkBoomstick"/>
-				<passive_effect name="SpreadDegreesVertical" operation="base_set" value="6" tags="perkBoomstick"/>
-				<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="6" tags="perkBoomstick"/>
+				<passive_effect name="SpreadDegreesVertical" operation="base_set" value="60" tags="perkBoomstick"/>
+				<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="60" tags="perkBoomstick"/>
 				<passive_effect name="SpreadMultiplierAiming" operation="perc_add" value="-.13" tags="perkBoomstick"/>
 				<passive_effect name="SpreadMultiplierCrouching" operation="perc_add" value="-.05" tags="perkBoomstick"/>
 				<passive_effect name="SpreadMultiplierWalking" operation="perc_add" value=".15" tags="perkBoomstick"/>
@@ -3005,6 +3055,12 @@
 				<triggered_effect trigger="onSelfEquipStart" action="RemoveBuff" buff="RocketLUser" /> 
 				<requirement name="HasBuff" target="self" buff="RocketLUser"/>
 			</effect_group>
+			 <effect_group name="Melee pushback / knockdown">
+				<requirement name="!EntityTagCompare" target="other" tags="trader,animal,crawler"/>
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="50"/> 
+				<requirement name="IsPrimaryAttack" />
+				<triggered_effect trigger="onSelfDamagedOther" action="Ragdoll" target="other" duration=".1" force="35"/>
+			</effect_group> 			
 		</item>		
 
 		<item name="gunNPCRocketLauncher">
@@ -3033,7 +3089,7 @@
 			<property name="SoundUnholster" value="weapon_unholster"/>
 			<property name="SoundHolster" value="weapon_holster"/>
 			<property class="Action0">
-				<property name="Class" value="Melee"/>
+				<property name="Class" value="MeleeSDX, SCore"/>
 				<property name="DamageEntity" value="25"/>
 				<property name="DamageBlock" value="25"/>
 				<property name="Range" value="1.65"/>
@@ -3068,8 +3124,6 @@
 				<passive_effect name="DamageFalloffRange" operation="base_set" value="35" tags="perkDemolitionsExpert"/>
 				<passive_effect name="DamageFalloffRange" operation="perc_add" value="-.2,.2" tags="perkDemolitionsExpert"/>
 				
-				<passive_effect name="EntityDamage" operation="perc_add" value="-.15,.15" tags="perkDemolitionsExpert"/> <!-- random EntityDmg -->
-				<passive_effect name="EntityDamage" operation="perc_add" value=".1,.5" tier="2,6" tags="perkDemolitionsExpert"/> <!-- tier bonus -->
 				
 				<passive_effect name="BlockDamage" operation="perc_add" value="-.15,.15" tags="perkDemolitionsExpert"/> <!-- random BlockDmg -->
 				<passive_effect name="BlockDamage" operation="perc_add" value=".1,.5" tier="2,6" tags="perkDemolitionsExpert"/> <!-- tier bonus -->
@@ -3122,6 +3176,12 @@
 			<effect_group name="Launcher Fix">
 				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="RocketLUser" /> <!-- Rocket Launcher blocks the "E" prompt  -->
 			</effect_group>
+			 <effect_group name="Melee pushback / knockdown">
+				<requirement name="!EntityTagCompare" target="other" tags="trader,animal,crawler"/>
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="70"/> 
+				<requirement name="IsPrimaryAttack" />
+				<triggered_effect trigger="onSelfDamagedOther" action="Ragdoll" target="other" duration=".2" force="100"/>
+			</effect_group> 			
 		</item>		
 	
 	<!--  Ammo for spawned NPC weapons  -->	

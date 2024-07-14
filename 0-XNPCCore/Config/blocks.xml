@@ -71,6 +71,16 @@
 		<property name="ModelOffset" value="0,0,0"/>
 	</block>
 	
-  </append>
+	<block name="TestMatReplace">
+		<property name="Model" value="#@modfolder:Resources/XythNPCs.unity3d?placementfemale"/>
+		<property name="ModelOffset" value="0,0,0"/>
+		<property name="Extends" value="cntDomedTrashCanEmpty"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="Class" value="Loot"/>
+	<property name="LootList" value="garbage"/>
+	<property name="SwapMats" value="@:Entities/Zombies/Zombies/Materials/HD_Arlene2.mat"/>
+	</block>	
+	
+	</append>
 
 </configs>

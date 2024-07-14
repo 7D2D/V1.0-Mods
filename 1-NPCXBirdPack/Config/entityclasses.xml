@@ -12,7 +12,7 @@
 			<property name="MaxTurnSpeed" value="190"/>
 			<property name="DeadBodyHitPoints" value="100"/>
 			<property name="SizeScale" value="1.1"/>
-			<property name="SoundRandomTime" value="10.0"/>
+			<property name="SoundRandomTime" value="10"/>
 			<property name="SoundRandom" value="RobinSounds" />
 			<property name="SoundAlert" value="RobinSounds"/>
 			<property name="SoundHurt" value=""/>
@@ -35,7 +35,7 @@
 			<property name="Mesh" value="#@modfolder:Resources/XythBirds.unity3d?Crow_X" />
 			<property name="Tags" value="entity,cp,animal,timid,animalCrow"/>
 			<property name="Faction" value="animals"/>
-			<property name="SoundRandomTime" value="10.0"/>
+			<property name="SoundRandomTime" value="10"/>
 			<property name="SoundRandom" value="CrowRandom" />
 			<property name="SoundAlert" value="CrowRandom"/>
 			<property name="SoundHurt" value="CrowAttack"/>
@@ -54,7 +54,7 @@
 			<property name="Mesh" value="#@modfolder:Resources/XythBirds.unity3d?Bat_X" />
 			<property name="Tags" value="entity,cp,animal,timid,animalBat"/>
 			<property name="Faction" value="animals"/>		
-			<property name="SoundRandomTime" value="10.0"/>
+			<property name="SoundRandomTime" value="10"/>
 			<property name="SoundRandom" value="BatRandom" />
 			<property name="SoundAlert" value="BatRandom"/>
 			<property name="SoundHurt" value=""/>
@@ -73,7 +73,7 @@
 			<property name="UserSpawnType" value="Menu"/>		
 			<property name="Tags" value="entity,cp,animal,timid,animalBats"/>
 			<property name="Faction" value="animals"/>		
-			<property name="SoundRandomTime" value="10.0"/>
+			<property name="SoundRandomTime" value="10"/>
 			<property name="SoundRandom" value="BatRandom" />
 			<property name="SoundAlert" value="BatRandom"/>
 			<property name="SoundHurt" value=""/>
@@ -92,7 +92,7 @@
 			<property name="Mesh" value="#@modfolder:Resources/XythBirds.unity3d?Eagle_X" />
 			<property name="Tags" value="entity,cp,animal,timid,animalEagle"/>
 			<property name="Faction" value="animals"/>					
-			<property name="SoundRandomTime" value="10.0"/>
+			<property name="SoundRandomTime" value="10"/>
 			<property name="SoundRandom" value="EagleSound" />
 			<property name="SoundAlert" value="EagleSound"/>
 			<property name="SoundHurt" value=""/>
@@ -114,7 +114,7 @@
 			<property name="Mesh" value="#@modfolder:Resources/XythBirds.unity3d?Alcatraz_X" />
 			<property name="Tags" value="entity,cp,animal,timid,animalAlcatraz"/>
 			<property name="Faction" value="animals"/>					
-			<property name="SoundRandomTime" value="10.0"/>
+			<property name="SoundRandomTime" value="10"/>
 			<property name="SoundRandom" value="AlcatrazSound" />
 			<property name="SoundAlert" value="AlcatrazSound"/>
 			<property name="SoundHurt" value=""/>

@@ -1,0 +1,10 @@
+﻿<configs>
+	<!-- Adds to the news screen -->
+	 <conditional>
+		<if cond="!mod_loaded('0-XNPCCore')">
+			<append xpath="//windows/window[@name='newsScreen']/rect[@name='continue']">
+				<label name="Missingmodlet" pos="100,-100" width="400" height="50" pivot="center" text="0-XNPCCore Mod is missing!" font_size="24" upper_case="true" color="255,255,0,150"/>
+			</append>
+		</if>
+	</conditional> 
+</configs>

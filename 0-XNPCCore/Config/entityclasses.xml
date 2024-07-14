@@ -196,7 +196,11 @@
 				</property> -->
 			
 	</append>
-
+	
+	<!-- Add the Control button to player toolbelt on entering game -->
+	<set xpath="//entity_class[@name='playerMale']/property[@name='ItemsOnEnterGame.GameModeSurvival']/@value">drinkJarBoiledWater=2,foodCanChili,medicalFirstAidBandage,meleeToolTorch,noteDuke01,itemNPCModMode</set>	
+	<set xpath="//entity_class[@name='playerMale']/property[@name='ItemsOnEnterGame.GameModeSurvivalSP']/@value">drinkJarBoiledWater,foodCanChili,medicalFirstAidBandage,meleeToolTorch,itemNPCModMode</set> 
+	<set xpath="//entity_class[@name='playerMale']/property[@name='ItemsOnEnterGame.GameModeSurvivalMP']/@value">drinkJarBoiledWater,foodCanChili,medicalFirstAidBandage,meleeToolTorch,itemNPCModMode</set> 
 
 	<append xpath="/entity_classes">
 	
@@ -263,8 +267,8 @@
 			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
 			<property name="SoundSleeperSense" value="sleepersense"/>
 			<property name="SoundSleeperBackToSleep" value="sleeperbacktosleep"/>
-			<property name="SoundAlertTime" value="25.0"/>
-			<property name="SoundRandomTime" value="200.0"/>
+			<property name="SoundAlertTime" value="25"/>
+			<property name="SoundRandomTime" value="200"/>
 			<property name="RootMotion" value="true"/>
 			<property name="HasDeathAnim" value="true"/>
 			<property name="ParticleOnDeath" value="blood_death"/>
@@ -300,7 +304,7 @@
 			<property name="ChestExplosionDamageMultiplier" value="1"/>
 			<property name="PainResistPerHit" value=".55"/> <!-- Added when hit. Caps at 3. Decay .2 per second. At 1 movement is not slowed by pain -->
 			<property name="MaxViewAngle" value="360"/> 
-			<property name="SightRange" value="40"/>
+			<property name="SightRange" value="60"/>
 			<property name="SightLightThreshold" value="-2,150"/> 
 			<property name="SleeperWakeupSightDetectionMin" value="-40,5"/> 
 			<property name="SleeperWakeupSightDetectionMax" value="340,480"/> 
@@ -323,8 +327,6 @@
 			<property name="ExperienceGain" value="600"/> 
 			<property name="LootDropProb" value="0.2" /> 
 			<property name="LootDropEntityClass" value="EntityNPCLootContainer" />
-			<!--<property name="LootDropEntityClass" value="EntityLootContainerNPC"/>-->
-			<!--<property name="MapIcon" value="ui_game_symbol_bullet_point"/> -->
 			<property name="Names" value="" />
 			<property name="Titles" value="" />
 			<property name="Beds" value="mattressFlat" />
@@ -332,7 +334,7 @@
 			<property name="HomeBlocks" value="cntNPCHomeBlock"/>
 			<property name="HireCurrency" value="casinoCoin" />
 			<property name="HireCost" value="1000" />
-			<property name="TimeStayAfterDeath" value="5"/>
+			<property name="TimeStayAfterDeath" value="30"/>
 			<property name="DeadBodyHitPoints" value="1000"/>
 			<effect_group name="Base Effects">
 				<passive_effect name="DistractionResistance" operation="base_set" value="0,0"/>
@@ -563,34 +565,17 @@
 				Territorial|
 				ApproachDistraction|
 				RunawayWhenHurt runChance=0.1;healthPer=0.2;healthPerMax=0.5|
-				ApproachAndAttackTarget class=EntityAlive,0|
+				ApproachAndAttackTarget class=EntityPlayer,0,EntityEnemyAnimal,0,EntityNPC,0|
 				ApproachSpot|
 				Look|
 				Wander|
 				"/>
 			<property name="AITarget" value="
-				SetAsTargetIfHurt class=EntityAlive,0,0|
+				SetAsTargetIfHurt class=EntityPlayer,0,0,EntityEnemyAnimal,0,-10,EntityNPC,0,0|
 				BlockingTargetTask|
-				SetNearestEntityAsTarget class=EntityAlive,0,0|
+				SetNearestEntityAsTarget class=EntityPlayer,0,0,EntityEnemyAnimal,0,-10,EntityNPC,0,0|
 				"/>
 		</entity_class>	
-
-			<!--<property name="AITask-1" value="BreakBlock"/>
-			<property name="AITask-2" value="DestroyArea"/>
-			<property name="AITask-3" value="Territorial"/>
-			<property name="AITask-4" value="ApproachDistraction"/>
-			<property name="AITask-5" value="RunawayWhenHurt" data="runChance=0.3;healthPer=0.3;healthPerMax=0.7"/>
-			<property name="AITask-6" value="ApproachAndAttackTarget" data="class=EntityAlive,0" />
-			<property name="AITask-7" value="ApproachSpot"/> 
-			<property name="AITask-8" value="Look"/>
-			<property name="AITask-9" value="Wander"/>
-			<property name="AITask-10" value="" />	
-			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityAlive,0,0" /> -->
-			<!-- <property name="AITarget-1" value="SetAsTargetIfHurtSDX, SCore" data="class=EntityAlive"/>	-->	
-			<!--<property name="AITarget-2" value="BlockingTargetTask"	/>
-			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityAlive,0,0" />			
-			<property name="AITarget-4" value=""/> -->
-			
 		
 		<entity_class name="npcRangedBanditTemplate" extends="npcMeleeBanditTemplate" ignore="AIPackages"> <!-- kinda works but not used in this mod -->
 			<property name="UserSpawnType" value="None"/>
@@ -603,43 +588,18 @@
 			<property name="AITask-3" value="Look"/>
 			<property name="AITask-4" value="ApproachDistraction"/>
 			<property name="AITask-5" value="RangedAttackTarget" data="itemType=1;cooldown=4;duration=6"/>
-			<property name="AITask-6" value="ApproachAndAttackTarget" data="class=EntityAlive,0" />
+			<property name="AITask-6" value="ApproachAndAttackTarget" data="class=EntityPlayer,0,EntityEnemyAnimal,0,EntityNPC,0" />
 			<property name="AITask-7" value="Territorial"/>
 			<property name="AITask-8" value="ApproachSpot"/> 
 			<property name="AITask-9" value="Wander"/>
 			<property name="AITask-10" value=""/>
 			
-			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityAlive,0,0" />	
+			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityPlayer,0,0,EntityEnemyAnimal,0,-10,EntityNPC,0,0" />	
 			<property name="AITarget-2" value="BlockingTargetTask"	/>
-			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityAlive,0,0" />			
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,0,0,EntityEnemyAnimal,0,-10,EntityNPC,0,0" />			
 			<property name="AITarget-4" value=""/> 
 		</entity_class>		
-
-		<entity_class name="npcRanged2BanditTemplate" extends="npcRangedBanditTemplate" ignore="AIPackages"> <!-- needs a lot of work  -->
-			<property name="UserSpawnType" value="None"/>
-			<property name="Class" value="EntityBandit" />  
-			<property name="Tags" value="entity,male,npc,walker,ranged,bandit,DRMid"/> 
-			<property name="Faction" value="bandits"/>
-			<property name="HandItem" value="gunNPCPipePistol"/>
-			<property name="AITask-1" value="BreakBlock"/>
-			<property name="AITask-2" value="RunawayWhenHurt" data="runChance=0.33;healthPer=0.3;healthPerMax=0.6"/>
-			<property name="AITask-3" value="Look"/>
-			<property name="AITask-4" value="ApproachDistraction"/>
-			<property name="AITask-5" value="RangedAttackTargetSDX, SCore" data="itemType=1;attackPeriod=10"/> 
-			<!-- <property name="AITask-5" value="RangedAttackTarget" data="itemType=1;attackPeriod=10"/> -->
-			<property name="AITask-6" value="ApproachAndAttackTarget" data="class=EntityAlive,0" />
-			<property name="AITask-7" value="ApproachSpot"/> 
-			<property name="AITask-8" value="Territorial"/>
-			<property name="AITask-9" value="Wander"/>
-			<property name="AITask-10" value=""/>
-			
-			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityAlive,0,0" />	
-			<property name="AITarget-2" value="BlockingTargetTask"	/>
-			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityAlive,0,0" />				
-			<property name="AITarget-4" value=""/> 
-		</entity_class>	
-
-			
+	
 		<!--  Ranged Template , change faction on character -->
 		
 		<entity_class name="npcRangedTemplate" extends="npcMeleeTemplate"> 	
@@ -1092,18 +1052,6 @@
 			<property name="RightHandJointName" value="PipePistol" />
 			<property name="AITask-5" value="RangedAttackTarget" data="itemType=1;cooldown=4;duration=6;minRange=2;maxRange=15;unreachableRange=40"/>  <!-- set duration == rounds?  -->
 			<property name="LootDropEntityClass" value="EntityNPCLootContainerPipePisol" />
-		</entity_class>	
-		
-		<entity_class name="npcBanditPipePistolTemplate2" extends="npcRanged2BanditTemplate"> <!--  EAI testing on PipePistol  -->
-			<property name="UserSpawnType" value="None"/>
-			<property name="Tags" value="entity,male,npc,walker,ranged"/>
-			<property name="Names" value="Template" />	
-			<property name="Faction" value="bandits"/>
-			<property name="IsEnemyEntity" value="true"/> 
-			<property name="Class" value="EntityBandit" /> 
-			<property name="HandItem" value="gunNPCPipePistol"/>
-			<property name="RightHandJointName" value="PipePistol" />
-			<property name="LootDropEntityClass" value="EntityNPCLootContainerPipePistol" />
 		</entity_class>	
 		
 
@@ -2014,7 +1962,7 @@
 			<property name="IsEntityAnimal" value="true"/>
 			<property name="IsEnemyEntity" value="false"/> <!-- Set this if you want this entity to be spawned when user chooses 'enemy entities off' -->
 			<property name="Faction" value="animals"/>
-			<property name="SoundRandomTime" value="10.0"/>
+			<property name="SoundRandomTime" value="10"/>
 			<property name="SoundRandom" value="" />
 			<property name="SoundAlert" value=""/>
 			<property name="SoundHurt" value=""/>
@@ -2139,9 +2087,12 @@
 				<property name="Ragdoll" data="weight=0.2"/>
 			</property>
 			<property name="WalkType" value="7"/>
-			<property name="SoundRandomTime" value="60.0"/> 
+	
+			<!-- <property name="SoundRandom" value="zombiemaleroam"/> -->
+	
+			<property name="SoundRandomTime" value="60"/> 
 			<property name="SoundRandom" value="Enemies/Base_Zombie_Male/zombiemaleroam"/>
-			<property name="SoundAlertTime" value="25.0"/> 
+			<property name="SoundAlertTime" value="25"/> 
 			<property name="SoundAlert" value="Enemies/Base_Zombie_Male/zombiemalealert"/>
 			<property name="SoundSense" value="Enemies/Base_Zombie_Male/zombiemalesense"/>
 			<property name="SoundHurt" value="Enemies/Base_Zombie_Male/zombiemalepain"/>
@@ -2474,6 +2425,7 @@
 		<!--  NPC Mech templates  -->
 		
 		<entity_class name="npcMechMeleeTemplate" extends="npcMeleeTemplate" >
+			<property name="Class" value="EntityNPCBandit, SCore" /> 
 			<property name="Mesh" value="#@modfolder:Resources/XythMechs.unity3d?Drone_X"/>
 			<property name="UserSpawnType" value="None"/>
 			<property name="EntityType" value="Player"/>
@@ -2504,10 +2456,10 @@
 			<property name="RightHandJointName" value="GunJoint" />  	
 			<property name="AIPathCostScale" value=".9, 1"/>
 			<property name="AINoiseSeekDist" value="20"/>
-			<property name="MaxViewAngle" value="210"/>
-			<property name="SightRange" value="70"/>
+			<property name="MaxViewAngle" value="270"/>
+			<property name="SightRange" value="90"/>
 			<property name="JumpMaxDistance" value="3.0, 4.0"/>
-			<property name="SoundRandomTime" value="20.0"/>
+			<property name="SoundRandomTime" value="20"/>
 			<property name="SoundRandom" value="DroneRandom" />
 			<property name="SoundAlert" value="DroneRandom" />
 			<property name="SoundAttack" value="DroneRandom" />
@@ -2538,19 +2490,11 @@
 				<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffRadiatedRegen"/>
 			</effect_group>					
 			<property name="LootDropProb" value=".1"/> 
-			<property name="LootDropEntityClass" value="EntityLootContainerStrong"/>	
 			<!--<property name="MapIcon" value="ui_game_symbol_bullet_point"/> -->
 			<property name="Names" value="KITT,HK-47,ED-209,Clank,Johnny5,Roboto,Marvin,Robbie,Rosie,HAL9000,GLaDOS,Bender" />		
 			<property name="HireCurrency" value="carBattery" />
 			<property name="HireCost" value="1" />
 			<property name="LootDropEntityClass" value="EntityNPCLootContainerMech" />
-		</entity_class> 
-		
-		<entity_class name="NPCMechMeleeTemplate" extends="npcMechMeleeTemplate" > <!-- for backwards compatibility  -->
-			<property name="Tags" value="entity,npc,mech"/>	
-			<property name="UserSpawnType" value="None"/>
-			<property name="Faction" value="mechs"/>
-			<property name="Names" value="KITT,HK-47,ED-209,Clank,Johnny5,Roboto,Marvin,Robbie,Rosie,HAL9000,GLaDOS,Bender" />		
 		</entity_class> 
 
 	<!--  End Of Template Section  -->
@@ -2587,10 +2531,11 @@
 			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
 			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
 			<property name="SoundRandom" value="Player_Female/player2stamina" />
-			<property name="SoundRandomTime" value="60.0"/>
+			<property name="SoundRandomTime" value="60"/>
 			<property name="SoundAlert" value="Player_Female/player2stamina"/>
 			<property name="SoundAttack" value="Player_Female/player2stamina"/>
 			<property name="SoundSense" value="Player_Female/player2stamina"/>	
+			<!-- <property name="AltMats" value="@:Entities/Zombies/Zombies/Materials/HD_Arlene2.mat,@:Entities/Zombies/Zombies/Materials/HD_Arlene3.mat"/> -->
 		</entity_class>	
 		
 		<entity_class name="npcNurseClub" extends="npcAdvancedClubTemplate"> 
@@ -2614,7 +2559,7 @@
 			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
 			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
 			<property name="SoundRandom" value="Player_Female/player2stamina" />
-			<property name="SoundRandomTime" value="60.0"/>
+			<property name="SoundRandomTime" value="60"/>
 			<property name="SoundAlert" value="Player_Female/player2stamina"/>
 			<property name="SoundAttack" value="Player_Female/player2stamina"/>
 			<property name="SoundSense" value="Player_Female/player2stamina"/>		
@@ -2641,7 +2586,7 @@
 			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
 			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
 			<property name="SoundRandom" value="Player_Female/player2stamina" />
-			<property name="SoundRandomTime" value="60.0"/>
+			<property name="SoundRandomTime" value="60"/>
 			<property name="SoundAlert" value="Player_Female/player2stamina"/>
 			<property name="SoundAttack" value="Player_Female/player2stamina"/>
 			<property name="SoundSense" value="Player_Female/player2stamina"/>	
@@ -2668,7 +2613,7 @@
 			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
 			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
 			<property name="SoundRandom" value="Player_Female/player2stamina" />
-			<property name="SoundRandomTime" value="60.0"/>
+			<property name="SoundRandomTime" value="60"/>
 			<property name="SoundAlert" value="Player_Female/player2stamina"/>
 			<property name="SoundAttack" value="Player_Female/player2stamina"/>
 			<property name="SoundSense" value="Player_Female/player2stamina"/>	
@@ -2695,7 +2640,7 @@
 			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
 			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
 			<property name="SoundRandom" value="Player_Female/player2stamina" />
-			<property name="SoundRandomTime" value="60.0"/>
+			<property name="SoundRandomTime" value="60"/>
 			<property name="SoundAlert" value="Player_Female/player2stamina"/>
 			<property name="SoundAttack" value="Player_Female/player2stamina"/>
 			<property name="SoundSense" value="Player_Female/player2stamina"/>	
@@ -2723,7 +2668,7 @@
 			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
 			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
 			<property name="SoundRandom" value="Player_Female/player2stamina" />
-			<property name="SoundRandomTime" value="60.0"/>
+			<property name="SoundRandomTime" value="60"/>
 			<property name="SoundAlert" value="Player_Female/player2stamina"/>
 			<property name="SoundAttack" value="Player_Female/player2stamina"/>
 			<property name="SoundSense" value="Player_Female/player2stamina"/>
@@ -2750,7 +2695,7 @@
 			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
 			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
 			<property name="SoundRandom" value="Player_Female/player2stamina" />
-			<property name="SoundRandomTime" value="60.0"/>
+			<property name="SoundRandomTime" value="60"/>
 			<property name="SoundAlert" value="Player_Female/player2stamina"/>
 			<property name="SoundAttack" value="Player_Female/player2stamina"/>
 			<property name="SoundSense" value="Player_Female/player2stamina"/>	
@@ -2777,7 +2722,7 @@
 			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
 			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
 			<property name="SoundRandom" value="Player_Female/player2stamina" />
-			<property name="SoundRandomTime" value="60.0"/>
+			<property name="SoundRandomTime" value="60"/>
 			<property name="SoundAlert" value="Player_Female/player2stamina"/>
 			<property name="SoundAttack" value="Player_Female/player2stamina"/>
 			<property name="SoundSense" value="Player_Female/player2stamina"/>		
@@ -2805,7 +2750,7 @@
 			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
 			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
 			<property name="SoundRandom" value="Player_Female/player2stamina" />
-			<property name="SoundRandomTime" value="60.0"/>
+			<property name="SoundRandomTime" value="60"/>
 			<property name="SoundAlert" value="Player_Female/player2stamina"/>
 			<property name="SoundAttack" value="Player_Female/player2stamina"/>
 			<property name="SoundSense" value="Player_Female/player2stamina"/>	
@@ -2832,7 +2777,7 @@
 			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
 			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
 			<property name="SoundRandom" value="Player_Female/player2stamina" />
-			<property name="SoundRandomTime" value="60.0"/>
+			<property name="SoundRandomTime" value="60"/>
 			<property name="SoundAlert" value="Player_Female/player2stamina"/>
 			<property name="SoundAttack" value="Player_Female/player2stamina"/>
 			<property name="SoundSense" value="Player_Female/player2stamina"/>
@@ -2859,7 +2804,7 @@
 			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
 			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
 			<property name="SoundRandom" value="Player_Female/player2stamina" />
-			<property name="SoundRandomTime" value="60.0"/>
+			<property name="SoundRandomTime" value="60"/>
 			<property name="SoundAlert" value="Player_Female/player2stamina"/>
 			<property name="SoundAttack" value="Player_Female/player2stamina"/>
 			<property name="SoundSense" value="Player_Female/player2stamina"/>	
@@ -2887,7 +2832,7 @@
 			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
 			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
 			<property name="SoundRandom" value="Player_Female/player2stamina" />
-			<property name="SoundRandomTime" value="60.0"/>
+			<property name="SoundRandomTime" value="60"/>
 			<property name="SoundAlert" value="Player_Female/player2stamina"/>
 			<property name="SoundAttack" value="Player_Female/player2stamina"/>
 			<property name="SoundSense" value="Player_Female/player2stamina"/>	
@@ -2914,7 +2859,7 @@
 			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
 			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
 			<property name="SoundRandom" value="Player_Female/player2stamina" />
-			<property name="SoundRandomTime" value="60.0"/>
+			<property name="SoundRandomTime" value="60"/>
 			<property name="SoundAlert" value="Player_Female/player2stamina"/>
 			<property name="SoundAttack" value="Player_Female/player2stamina"/>
 			<property name="SoundSense" value="Player_Female/player2stamina"/>
@@ -2941,7 +2886,7 @@
 			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
 			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
 			<property name="SoundRandom" value="Player_Female/player2stamina" />
-			<property name="SoundRandomTime" value="60.0"/>
+			<property name="SoundRandomTime" value="60"/>
 			<property name="SoundAlert" value="Player_Female/player2stamina"/>
 			<property name="SoundAttack" value="Player_Female/player2stamina"/>
 			<property name="SoundSense" value="Player_Female/player2stamina"/>
@@ -2968,7 +2913,7 @@
 			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
 			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
 			<property name="SoundRandom" value="Player_Female/player2stamina" />
-			<property name="SoundRandomTime" value="60.0"/>
+			<property name="SoundRandomTime" value="60"/>
 			<property name="SoundAlert" value="Player_Female/player2stamina"/>
 			<property name="SoundAttack" value="Player_Female/player2stamina"/>
 			<property name="SoundSense" value="Player_Female/player2stamina"/>
@@ -2995,7 +2940,7 @@
 			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
 			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
 			<property name="SoundRandom" value="Player_Female/player2stamina" />
-			<property name="SoundRandomTime" value="60.0"/>
+			<property name="SoundRandomTime" value="60"/>
 			<property name="SoundAlert" value="Player_Female/player2stamina"/>
 			<property name="SoundAttack" value="Player_Female/player2stamina"/>
 			<property name="SoundSense" value="Player_Female/player2stamina"/>	
@@ -3024,7 +2969,7 @@
 			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
 			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
 			<property name="SoundRandom" value="Player_Female/player2stamina" />
-			<property name="SoundRandomTime" value="60.0"/>
+			<property name="SoundRandomTime" value="60"/>
 			<property name="SoundAlert" value="Player_Female/player2stamina"/>
 			<property name="SoundAttack" value="Player_Female/player2stamina"/>
 			<property name="SoundSense" value="Player_Female/player2stamina"/>	
@@ -3052,7 +2997,7 @@
 			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
 			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
 			<property name="SoundRandom" value="Player_Female/player2stamina" />
-			<property name="SoundRandomTime" value="60.0"/>
+			<property name="SoundRandomTime" value="60"/>
 			<property name="SoundAlert" value="Player_Female/player2stamina"/>
 			<property name="SoundAttack" value="Player_Female/player2stamina"/>
 			<property name="SoundSense" value="Player_Female/player2stamina"/>	
@@ -3080,7 +3025,7 @@
 			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
 			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
 			<property name="SoundRandom" value="Player_Female/player2stamina" />
-			<property name="SoundRandomTime" value="60.0"/>
+			<property name="SoundRandomTime" value="60"/>
 			<property name="SoundAlert" value="Player_Female/player2stamina"/>
 			<property name="SoundAttack" value="Player_Female/player2stamina"/>
 			<property name="SoundSense" value="Player_Female/player2stamina"/>
@@ -3107,7 +3052,7 @@
 			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
 			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
 			<property name="SoundRandom" value="Player_Female/player2stamina" />
-			<property name="SoundRandomTime" value="60.0"/>
+			<property name="SoundRandomTime" value="60"/>
 			<property name="SoundAlert" value="Player_Female/player2stamina"/>
 			<property name="SoundAttack" value="Player_Female/player2stamina"/>
 			<property name="SoundSense" value="Player_Female/player2stamina"/>
@@ -3134,7 +3079,7 @@
 			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
 			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
 			<property name="SoundRandom" value="Player_Female/player2stamina" />
-			<property name="SoundRandomTime" value="60.0"/>
+			<property name="SoundRandomTime" value="60"/>
 			<property name="SoundAlert" value="Player_Female/player2stamina"/>
 			<property name="SoundAttack" value="Player_Female/player2stamina"/>
 			<property name="SoundSense" value="Player_Female/player2stamina"/>	
@@ -3161,7 +3106,7 @@
 			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
 			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
 			<property name="SoundRandom" value="Player_Female/player2stamina" />
-			<property name="SoundRandomTime" value="60.0"/>
+			<property name="SoundRandomTime" value="60"/>
 			<property name="SoundAlert" value="Player_Female/player2stamina"/>
 			<property name="SoundAttack" value="Player_Female/player2stamina"/>
 			<property name="SoundSense" value="Player_Female/player2stamina"/>	
@@ -3188,7 +3133,7 @@
 			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
 			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
 			<property name="SoundRandom" value="Player_Female/player2stamina" />
-			<property name="SoundRandomTime" value="60.0"/>
+			<property name="SoundRandomTime" value="60"/>
 			<property name="SoundAlert" value="Player_Female/player2stamina"/>
 			<property name="SoundAttack" value="Player_Female/player2stamina"/>
 			<property name="SoundSense" value="Player_Female/player2stamina"/>	
@@ -3215,7 +3160,7 @@
 			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
 			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
 			<property name="SoundRandom" value="Player_Female/player2stamina" />
-			<property name="SoundRandomTime" value="60.0"/>
+			<property name="SoundRandomTime" value="60"/>
 			<property name="SoundAlert" value="Player_Female/player2stamina"/>
 			<property name="SoundAttack" value="Player_Female/player2stamina"/>
 			<property name="SoundSense" value="Player_Female/player2stamina"/>
@@ -3241,7 +3186,7 @@
 			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
 			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
 			<property name="SoundRandom" value="HarleyRandom" />
-			<property name="SoundRandomTime" value="60.0"/>
+			<property name="SoundRandomTime" value="60"/>
 			<property name="SoundAlert" value="HarleyAlert"/>
 			<property name="SoundAttack" value="HarleyAttack"/>
 			<property name="SoundSense" value="HarleySense"/>
@@ -3276,7 +3221,7 @@
 			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
 			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
 			<property name="SoundRandom" value="HarleyRandom" />
-			<property name="SoundRandomTime" value="60.0"/>
+			<property name="SoundRandomTime" value="60"/>
 			<property name="SoundAlert" value="HarleyAlert"/>
 			<property name="SoundAttack" value="HarleyAttack"/>
 			<property name="SoundSense" value="HarleySense"/>
@@ -3301,7 +3246,7 @@
 			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
 			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
 			<property name="SoundRandom" value="HarleyRandom" />
-			<property name="SoundRandomTime" value="60.0"/>
+			<property name="SoundRandomTime" value="60"/>
 			<property name="SoundAlert" value="HarleyAlert"/>
 			<property name="SoundAttack" value="HarleyAttack"/>
 			<property name="SoundSense" value="HarleySense"/>
@@ -3326,7 +3271,7 @@
 			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
 			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
 			<property name="SoundRandom" value="HarleyRandom" />
-			<property name="SoundRandomTime" value="60.0"/>
+			<property name="SoundRandomTime" value="60"/>
 			<property name="SoundAlert" value="HarleyAlert"/>
 			<property name="SoundAttack" value="HarleyAttack"/>
 			<property name="SoundSense" value="HarleySense"/>
@@ -3351,7 +3296,7 @@
 			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
 			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
 			<property name="SoundRandom" value="HarleyRandom" />
-			<property name="SoundRandomTime" value="60.0"/>
+			<property name="SoundRandomTime" value="60"/>
 			<property name="SoundAlert" value="HarleyAlert"/>
 			<property name="SoundAttack" value="HarleyAttack"/>
 			<property name="SoundSense" value="HarleySense"/>
@@ -3377,7 +3322,7 @@
 			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
 			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
 			<property name="SoundRandom" value="HarleyRandom" />
-			<property name="SoundRandomTime" value="60.0"/>
+			<property name="SoundRandomTime" value="60"/>
 			<property name="SoundAlert" value="HarleyAlert"/>
 			<property name="SoundAttack" value="HarleyAttack"/>
 			<property name="SoundSense" value="HarleySense"/>
@@ -3402,14 +3347,14 @@
 			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
 			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
 			<property name="SoundRandom" value="HarleyRandom" />
-			<property name="SoundRandomTime" value="60.0"/>
+			<property name="SoundRandomTime" value="60"/>
 			<property name="SoundAlert" value="HarleyAlert"/>
 			<property name="SoundAttack" value="HarleyAttack"/>
 			<property name="SoundSense" value="HarleySense"/>
 			<property name="LootDropProb" value="0.2"/> 
 		</entity_class>			
 		
-		<entity_class name="npcHarleyPipePistol" extends="npcAdvancedPipePistolTemplate"> 
+		<entity_class name="npcHarleyPipePistol" extends="npcPipePistolTemplate"> 
 		<!-- <entity_class name="npcHarleyPipePistol" extends="npcBanditPipePistolTemplate"> -->
 		<!-- <entity_class name="npcHarleyPipePistol" extends="npcBanditPipePistolTemplate2"> -->
 			<property name="UserSpawnType" value="Menu"/> 
@@ -3429,15 +3374,20 @@
 			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
 			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
 			<property name="SoundRandom" value="HarleyRandom" />
-			<property name="SoundRandomTime" value="60.0"/>
+			<property name="SoundRandomTime" value="60"/>
 			<property name="SoundAlert" value="HarleyAlert"/>
 			<property name="SoundAttack" value="HarleyAttack"/>
 			<property name="SoundSense" value="HarleySense"/>
 			<property name="LootDropProb" value="0.2"/> 
-			<property name="AIPackages" value="NPCModCoreNoChat, NPCModHostileMeleeBasic, NPCModHostileRangedBasic"/> 
+			<property name="AIPackages" value="NPCModCoreNoChat, NPCModHostileMeleeBasic, NPCModHostileRangedBasic"/>
+			<!-- <property name="LootListAlive" value="traderNPC"/>
+			<property name="NPCID" value="spheretest"/> 
+			<property name="Hirable" value="false" /> -->
+			<property name="Class" value="EntityNPCBandit, SCore" /> 
+			
 		</entity_class>	
 		
-		<entity_class name="npcHarleyPipeRifle" extends="npcAdvancedPipeRifleTemplate"> 
+		<entity_class name="npcHarleyPipeRifle" extends="npcPipeRifleTemplate"> 
 			<property name="UserSpawnType" value="Menu"/> 
  			<property name="Tags" value="entity,female,npc,walker,ranged,voiceharley,bandit,DRMid,Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL"/>
 			<property name="Faction" value="bandits"/>
@@ -3455,15 +3405,16 @@
 			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
 			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
 			<property name="SoundRandom" value="HarleyRandom" />
-			<property name="SoundRandomTime" value="60.0"/>
+			<property name="SoundRandomTime" value="60"/>
 			<property name="SoundAlert" value="HarleyAlert"/>
 			<property name="SoundAttack" value="HarleyAttack"/>
 			<property name="SoundSense" value="HarleySense"/>
 			<property name="LootDropProb" value="0.2"/> 
-			<property name="AIPackages" value="NPCModCoreNoChat, NPCModHostileMeleeBasic, NPCModHostileRangedBasic"/> 
+			<property name="AIPackages" value="NPCModCoreNoChat, NPCModHostileMeleeBasic, NPCModHostileRangedBasic"/>
+			<property name="Class" value="EntityNPCBandit, SCore" /> 
 		</entity_class>	
 		
-		<entity_class name="npcHarleyPipeMG" extends="npcAdvancedPipeMGTemplate"> 
+		<entity_class name="npcHarleyPipeMG" extends="npcPipeMGTemplate"> 
 			<property name="UserSpawnType" value="Menu"/> 
  			<property name="Tags" value="entity,female,npc,walker,ranged,voiceharley,bandit,DRMid,Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL"/>
 			<property name="Faction" value="bandits"/>
@@ -3481,15 +3432,16 @@
 			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
 			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
 			<property name="SoundRandom" value="HarleyRandom" />
-			<property name="SoundRandomTime" value="60.0"/>
+			<property name="SoundRandomTime" value="60"/>
 			<property name="SoundAlert" value="HarleyAlert"/>
 			<property name="SoundAttack" value="HarleyAttack"/>
 			<property name="SoundSense" value="HarleySense"/>
 			<property name="LootDropProb" value="0.2"/> 
-			<property name="AIPackages" value="NPCModCoreNoChat, NPCModHostileMeleeBasic, NPCModHostileRangedBasic"/> 
+			<property name="AIPackages" value="NPCModCoreNoChat, NPCModHostileMeleeBasic, NPCModHostileRangedBasic"/>
+			<property name="Class" value="EntityNPCBandit, SCore" /> 
 		</entity_class>				
 		
-		<entity_class name="npcHarleyPipeShotgun" extends="npcAdvancedPipeShotgunTemplate"> 
+		<entity_class name="npcHarleyPipeShotgun" extends="npcPipeShotgunTemplate"> 
 			<property name="UserSpawnType" value="Menu"/> 
  			<property name="Tags" value="entity,female,npc,walker,ranged,voiceharley,bandit,DRMid,Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL"/>
 			<property name="Faction" value="bandits"/>
@@ -3507,16 +3459,16 @@
 			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
 			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
 			<property name="SoundRandom" value="HarleyRandom" />
-			<property name="SoundRandomTime" value="60.0"/>
+			<property name="SoundRandomTime" value="60"/>
 			<property name="SoundAlert" value="HarleyAlert"/>
 			<property name="SoundAttack" value="HarleyAttack"/>
 			<property name="SoundSense" value="HarleySense"/>
 			<property name="LootDropProb" value="0.2"/> 
-			<property name="AIPackages" value="NPCModCoreNoChat, NPCModHostileMeleeBasic, NPCModHostileRangedBasic"/> 
-			<property name="MaxViewAngle" value="270"/> 
+			<property name="AIPackages" value="NPCModCoreNoChat, NPCModHostileMeleeBasic, NPCModHostileRangedBasic"/>
+			<property name="Class" value="EntityNPCBandit, SCore" /> 
 		</entity_class>	
 
-		<entity_class name="npcHarleySMG" extends="npcAdvancedSMGTemplate"> 
+		<entity_class name="npcHarleySMG" extends="npcSMGTemplate"> 
 			<property name="UserSpawnType" value="Menu"/> 
  			<property name="Tags" value="entity,female,npc,walker,ranged,voiceharley,bandit,DRMid,Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL"/>
 			<property name="Faction" value="bandits"/>
@@ -3534,15 +3486,16 @@
 			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
 			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
 			<property name="SoundRandom" value="HarleyRandom" />
-			<property name="SoundRandomTime" value="60.0"/>
+			<property name="SoundRandomTime" value="60"/>
 			<property name="SoundAlert" value="HarleyAlert"/>
 			<property name="SoundAttack" value="HarleyAttack"/>
 			<property name="SoundSense" value="HarleySense"/>
 			<property name="LootDropProb" value="0.2"/> 
-			<property name="AIPackages" value="NPCModCoreNoChat, NPCModHostileMeleeBasic, NPCModHostileRangedBasic"/> 
+			<property name="AIPackages" value="NPCModCoreNoChat, NPCModHostileMeleeBasic, NPCModHostileRangedBasic"/>
+			<property name="Class" value="EntityNPCBandit, SCore" /> 
 		</entity_class>	
 		
-		<entity_class name="npcHarleyM60" extends="npcAdvancedM60Template"> 
+		<entity_class name="npcHarleyM60" extends="npcM60Template"> 
 			<property name="UserSpawnType" value="Menu"/> 
  			<property name="Tags" value="entity,female,npc,walker,ranged,voiceharley,bandit,DRMid,Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL"/>
 			<property name="Faction" value="bandits"/>
@@ -3560,15 +3513,16 @@
 			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
 			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
 			<property name="SoundRandom" value="HarleyRandom" />
-			<property name="SoundRandomTime" value="60.0"/>
+			<property name="SoundRandomTime" value="60"/>
 			<property name="SoundAlert" value="HarleyAlert"/>
 			<property name="SoundAttack" value="HarleyAttack"/>
 			<property name="SoundSense" value="HarleySense"/>
 			<property name="LootDropProb" value="0.2"/> 
-			<property name="AIPackages" value="NPCModCoreNoChat, NPCModHostileMeleeBasic, NPCModHostileRangedBasic"/> 
+			<property name="AIPackages" value="NPCModCoreNoChat, NPCModHostileMeleeBasic, NPCModHostileRangedBasic"/>
+			<property name="Class" value="EntityNPCBandit, SCore" /> 
 		</entity_class>			
 		
-		<entity_class name="npcHarleyPistol" extends="npcAdvancedPistolTemplate"> 
+		<entity_class name="npcHarleyPistol" extends="npcPistolTemplate"> 
 			<property name="UserSpawnType" value="Menu"/> 
  			<property name="Tags" value="entity,female,npc,walker,ranged,voiceharley,bandit,DRMid,Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL"/>
 			<property name="Faction" value="bandits"/>
@@ -3586,15 +3540,16 @@
 			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
 			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
 			<property name="SoundRandom" value="HarleyRandom" />
-			<property name="SoundRandomTime" value="60.0"/>
+			<property name="SoundRandomTime" value="60"/>
 			<property name="SoundAlert" value="HarleyAlert"/>
 			<property name="SoundAttack" value="HarleyAttack"/>
 			<property name="SoundSense" value="HarleySense"/>
 			<property name="LootDropProb" value="0.2"/> 
-			<property name="AIPackages" value="NPCModCoreNoChat, NPCModHostileMeleeBasic, NPCModHostileRangedBasic"/> 
+			<property name="AIPackages" value="NPCModCoreNoChat, NPCModHostileMeleeBasic, NPCModHostileRangedBasic"/>
+			<property name="Class" value="EntityNPCBandit, SCore" /> 
 		</entity_class>				
 		
-		<entity_class name="npcHarleyDPistol" extends="npcAdvancedDPistolTemplate"> 
+		<entity_class name="npcHarleyDPistol" extends="npcDPistolTemplate"> 
 			<property name="UserSpawnType" value="Menu"/> 
  			<property name="Tags" value="entity,female,npc,walker,ranged,voiceharley,bandit,DRMid,Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL"/>
 			<property name="Faction" value="bandits"/>
@@ -3612,15 +3567,16 @@
 			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
 			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
 			<property name="SoundRandom" value="HarleyRandom" />
-			<property name="SoundRandomTime" value="60.0"/>
+			<property name="SoundRandomTime" value="60"/>
 			<property name="SoundAlert" value="HarleyAlert"/>
 			<property name="SoundAttack" value="HarleyAttack"/>
 			<property name="SoundSense" value="HarleySense"/>
 			<property name="LootDropProb" value="0.2"/> 
 			<property name="AIPackages" value="NPCModCoreNoChat, NPCModHostileMeleeBasic, NPCModHostileRangedBasic"/> 
+			<property name="Class" value="EntityNPCBandit, SCore" /> 
 		</entity_class>				
 
-		<entity_class name="npcHarleyAK47" extends="npcAdvancedAK47Template"> 
+		<entity_class name="npcHarleyAK47" extends="npcAK47Template"> 
 			<property name="UserSpawnType" value="Menu"/> 
  			<property name="Tags" value="entity,female,npc,walker,ranged,voiceharley,bandit,DRMid,Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL"/>
 			<property name="Faction" value="bandits"/>
@@ -3638,15 +3594,16 @@
 			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
 			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
 			<property name="SoundRandom" value="HarleyRandom" />
-			<property name="SoundRandomTime" value="60.0"/>
+			<property name="SoundRandomTime" value="60"/>
 			<property name="SoundAlert" value="HarleyAlert"/>
 			<property name="SoundAttack" value="HarleyAttack"/>
 			<property name="SoundSense" value="HarleySense"/>
 			<property name="LootDropProb" value="0.2"/> 
-			<property name="AIPackages" value="NPCModCoreNoChat, NPCModHostileMeleeBasic, NPCModHostileRangedBasic"/> 
+			<property name="AIPackages" value="NPCModCoreNoChat, NPCModHostileMeleeBasic, NPCModHostileRangedBasic"/>
+			<property name="Class" value="EntityNPCBandit, SCore" /> 
 		</entity_class>
 		
-		<entity_class name="npcHarleyTRifle" extends="npcAdvancedTRifleTemplate"> 
+		<entity_class name="npcHarleyTRifle" extends="npcTRifleTemplate"> 
 			<property name="UserSpawnType" value="Menu"/> 
  			<property name="Tags" value="entity,female,npc,walker,ranged,voiceharley,bandit,DRMid,Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL"/>
 			<property name="Faction" value="bandits"/>
@@ -3664,15 +3621,16 @@
 			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
 			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
 			<property name="SoundRandom" value="HarleyRandom" />
-			<property name="SoundRandomTime" value="60.0"/>
+			<property name="SoundRandomTime" value="60"/>
 			<property name="SoundAlert" value="HarleyAlert"/>
 			<property name="SoundAttack" value="HarleyAttack"/>
 			<property name="SoundSense" value="HarleySense"/>
 			<property name="LootDropProb" value="0.2"/> 
 			<property name="AIPackages" value="NPCModCoreNoChat, NPCModHostileMeleeBasic, NPCModHostileRangedBasic"/> 
+			<property name="Class" value="EntityNPCBandit, SCore" /> 
 		</entity_class>		
 		
-		<entity_class name="npcHarleyHRifle" extends="npcAdvancedHRifleTemplate"> 
+		<entity_class name="npcHarleyHRifle" extends="npcHRifleTemplate"> 
 			<property name="UserSpawnType" value="Menu"/> 
  			<property name="Tags" value="entity,female,npc,walker,ranged,voiceharley,bandit,DRMid,Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL"/>
 			<property name="Faction" value="bandits"/>
@@ -3690,15 +3648,16 @@
 			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
 			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
 			<property name="SoundRandom" value="HarleyRandom" />
-			<property name="SoundRandomTime" value="60.0"/>
+			<property name="SoundRandomTime" value="60"/>
 			<property name="SoundAlert" value="HarleyAlert"/>
 			<property name="SoundAttack" value="HarleyAttack"/>
 			<property name="SoundSense" value="HarleySense"/>
 			<property name="LootDropProb" value="0.2"/> 
-			<property name="AIPackages" value="NPCModCoreNoChat, NPCModHostileMeleeBasic, NPCModHostileRangedBasic"/> 
+			<property name="AIPackages" value="NPCModCoreNoChat, NPCModHostileMeleeBasic, NPCModHostileRangedBasic"/>
+			<property name="Class" value="EntityNPCBandit, SCore" /> 
 		</entity_class>
 
-		<entity_class name="npcHarleySRifle" extends="npcAdvancedSRifleTemplate">
+		<entity_class name="npcHarleySRifle" extends="npcSRifleTemplate">
 			<property name="UserSpawnType" value="Menu"/> 
  			<property name="Tags" value="entity,female,npc,walker,ranged,voiceharley,bandit,DRMid,Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL" />
 			<property name="Faction" value="bandits" />
@@ -3716,15 +3675,16 @@
 			<property name="SoundLandHard" value="Player_Male/player2LandHard" />
 			<property name="SoundPlayerLandThump" value="PlayerLandThump" />
 			<property name="SoundRandom" value="HarleyRandom" />
-			<property name="SoundRandomTime" value="60.0" />
+			<property name="SoundRandomTime" value="60" />
 			<property name="SoundAlert" value="HarleyAlert" />
 			<property name="SoundAttack" value="HarleyAttack" />
 			<property name="SoundSense" value="HarleySense" />
 			<property name="LootDropProb" value="0.2" />
 			<property name="AIPackages" value="NPCModCoreNoChat, NPCModHostileMeleeBasic, NPCModHostileRangedBasic"/> 
+			<property name="Class" value="EntityNPCBandit, SCore" /> 
 		</entity_class>
 
-		<entity_class name="npcHarleyPShotgun" extends="npcAdvancedPShotgunTemplate"> 
+		<entity_class name="npcHarleyPShotgun" extends="npcPShotgunTemplate"> 
 			<property name="UserSpawnType" value="Menu"/> 
  			<property name="Tags" value="entity,female,npc,walker,ranged,voiceharley,bandit,DRMid,Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL"/>
 			<property name="Faction" value="bandits"/>
@@ -3742,15 +3702,16 @@
 			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
 			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
 			<property name="SoundRandom" value="HarleyRandom" />
-			<property name="SoundRandomTime" value="60.0"/>
+			<property name="SoundRandomTime" value="60"/>
 			<property name="SoundAlert" value="HarleyAlert"/>
 			<property name="SoundAttack" value="HarleyAttack"/>
 			<property name="SoundSense" value="HarleySense"/>
 			<property name="LootDropProb" value="0.2"/> 
 			<property name="AIPackages" value="NPCModCoreNoChat, NPCModHostileMeleeBasic, NPCModHostileRangedBasic"/> 
+			<property name="Class" value="EntityNPCBandit, SCore" /> 
         </entity_class>   
 
-		<entity_class name="npcHarleyAShotgun" extends="npcAdvancedAShotgunTemplate"> 
+		<entity_class name="npcHarleyAShotgun" extends="npcAShotgunTemplate"> 
 			<property name="UserSpawnType" value="Menu"/> 
  			<property name="Tags" value="entity,female,npc,walker,ranged,voiceharley,bandit,DRMid,Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL"/>
 			<property name="Faction" value="bandits"/>
@@ -3768,15 +3729,16 @@
 			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
 			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
 			<property name="SoundRandom" value="HarleyRandom" />
-			<property name="SoundRandomTime" value="60.0"/>
+			<property name="SoundRandomTime" value="60"/>
 			<property name="SoundAlert" value="HarleyAlert"/>
 			<property name="SoundAttack" value="HarleyAttack"/>
 			<property name="SoundSense" value="HarleySense"/>
 			<property name="LootDropProb" value="0.2"/> 
 			<property name="AIPackages" value="NPCModCoreNoChat, NPCModHostileMeleeBasic, NPCModHostileRangedBasic"/> 
+			<property name="Class" value="EntityNPCBandit, SCore" /> 
         </entity_class>   	
 		
-		<entity_class name="npcHarleyLBow" extends="npcAdvancedLBowTemplate"> 
+		<entity_class name="npcHarleyLBow" extends="npcLBowTemplate"> 
 			<property name="UserSpawnType" value="Menu"/> 
  			<property name="Tags" value="entity,female,npc,walker,ranged,voiceharley,bandit,DRMid,Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL"/>
 			<property name="Faction" value="bandits"/>
@@ -3794,15 +3756,16 @@
 			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
 			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
 			<property name="SoundRandom" value="HarleyRandom" />
-			<property name="SoundRandomTime" value="60.0"/>
+			<property name="SoundRandomTime" value="60"/>
 			<property name="SoundAlert" value="HarleyAlert"/>
 			<property name="SoundAttack" value="HarleyAttack"/>
 			<property name="SoundSense" value="HarleySense"/>
 			<property name="LootDropProb" value="0.2"/> 
 			<property name="AIPackages" value="NPCModCoreNoChat, NPCModHostileMeleeBasic, NPCModHostileRangedBasic"/> 
+			<property name="Class" value="EntityNPCBandit, SCore" /> 
 		</entity_class> 
 
-		<entity_class name="npcHarleyXBow" extends="npcAdvancedXBowTemplate"> 
+		<entity_class name="npcHarleyXBow" extends="npcXBowTemplate"> 
 			<property name="UserSpawnType" value="Menu"/> 
  			<property name="Tags" value="entity,female,npc,walker,ranged,voiceharley,bandit,DRMid,Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL"/>
 			<property name="Faction" value="bandits"/>
@@ -3820,14 +3783,15 @@
 			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
 			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
 			<property name="SoundRandom" value="HarleyRandom" />
-			<property name="SoundRandomTime" value="60.0"/>
+			<property name="SoundRandomTime" value="60"/>
 			<property name="SoundAlert" value="HarleyAlert"/>
 			<property name="SoundAttack" value="HarleyAttack"/>
 			<property name="SoundSense" value="HarleySense"/>
 			<property name="LootDropProb" value="0.2"/> 
 			<property name="AIPackages" value="NPCModCoreNoChat, NPCModHostileMeleeBasic, NPCModHostileRangedBasic"/> 
+			<property name="Class" value="EntityNPCBandit, SCore" /> 
 		</entity_class>	
-		<entity_class name="npcHarleyRocketL" extends="npcAdvancedRocketLTemplate"> 
+		<entity_class name="npcHarleyRocketL" extends="npcRocketLTemplate"> 
 			<property name="UserSpawnType" value="Menu"/> 
  			<property name="Tags" value="entity,female,npc,walker,ranged,voiceharley,bandit,DRMid,Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL"/>
 			<property name="Faction" value="bandits"/>
@@ -3845,63 +3809,14 @@
 			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
 			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
 			<property name="SoundRandom" value="HarleyRandom" />
-			<property name="SoundRandomTime" value="60.0"/>
+			<property name="SoundRandomTime" value="60"/>
 			<property name="SoundAlert" value="HarleyAlert"/>
 			<property name="SoundAttack" value="HarleyAttack"/>
 			<property name="SoundSense" value="HarleySense"/>
 			<property name="LootDropProb" value="0.2"/> 
 			<property name="AIPackages" value="NPCModCoreNoChat, NPCModHostileMeleeBasic, NPCModHostileRangedBasic"/> 
+			<property name="Class" value="EntityNPCBandit, SCore" /> 
 		</entity_class>	
-		<entity_class name="npcHarleyVomitHand" extends="npcMeleeTemplate"> <!-- testing -->
-			<property name="UserSpawnType" value="Menu"/> 
- 			<property name="Tags" value="entity,female,npc,walker,ranged,voiceharley,bandit,DRMid,Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL"/>
-			<property name="Faction" value="bandits"/>
-			<!--<property name="Class" value="EntityBandit" /> -->
-			<property name="Names" value="Harley, Quinn, HarleyQuinn" />
-			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Quinn_X"/>
-			<property name="SoundHurt" value="HarleyHurt"/>
-			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
-			<property name="SoundDeath" value="HarleyDie"/>
-			<property name="SoundStamina" value="Player_Female/player2stamina"/>
-			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
-			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
-			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
-			<property name="SoundJump" value="Player_Male/player2Jump"/>
-			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
-			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
-			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
-			<property name="SoundRandom" value="HarleyRandom" />
-			<property name="SoundRandomTime" value="60.0"/>
-			<property name="SoundAlert" value="HarleyAlert"/>
-			<property name="SoundAttack" value="HarleyAttack"/>
-			<property name="SoundSense" value="HarleySense"/>
-			<property name="SoundExplodeWarn" value="HarleyInfected"/>
-			<!--<property name="AIPackages" value="NPCModCoreMeleeNoChat, NPCModNPCShortRangedVomit"/>-->
-			<property name="HandItem" value="meleeHandVomit"/> 
-<!--			<property name="ItemsOnEnterGame.GameModeSurvival" value="meleeHandVomit,ammoProjectileZombieVomit"/>
-			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="meleeHandVomit,ammoProjectileZombieVomit"/>
-			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="meleeHandVomit,ammoProjectileZombieVomit"/> -->
-			<property name="HireCurrency" value="casinoCoin" />
-			<property name="HireCost" value="750" />
-			<property name="ExperienceGain" value="600"/> 
-			<property name="RightHandJointName" value="Head" />
-			<property name="AllEntitiesUseFactionTargeting" value="true" />
-			<effect_group name="WeaponType"> 
-				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="EmptyHandUser"/>
-			</effect_group>
-				<property name="AITask-1" value="Territorial"/>
-				<property name="AITask-2" value="ApproachDistraction"/>
-				<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityAlive,0,EntityZombie,0"/>
-				<property name="AITask-4" value="RangedAttackTarget" data="itemType=1;cooldown=4;duration=3;minRange=1;maxRange=15"/>
-				<!--<property name="AITask-5" value="ApproachSpot"/>
-				<property name="AITask-6" value="Look"/> -->
-				<property name="AITask-5" value="Wander"/>
-				<property name="AITask-6" value=""/>
-				<property name="AITarget-1" value="SetAsTargetIfHurt"/>
-				<property name="AITarget-2" value="BlockingTargetTask"/>
-				<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityAlive,0,0,EntityZombie,0,0"/> 
-				<property name="AITarget-4" value=""/>
-		</entity_class>			
 						
 		
 		<!--  Baker  -->
@@ -3919,6 +3834,8 @@
 			<effect_group name="IsTimid"> <!-- This activates the Timid behavior -->
 			<!--	<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="Timid"/>		-->
 			</effect_group>	
+			<!-- <property name="AltMats" value="@:Entities/Zombies/Zombies/Materials/HD_Arlene2.mat,@:Entities/Zombies/Zombies/Materials/HD_Arlene3.mat"/> -->
+			
 		</entity_class>	
 
 		<entity_class name="npcBakerClub" extends="npcAdvancedClubTemplate"> 
@@ -3946,6 +3863,7 @@
 			<property name="Names" value="Bob,Billy,Beau,Ben,Brody,Byron,Brian,Bruce" />				
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Baker_X"/> 
 			<property name="PickUpItem" value="bakerPickUpNPC" />
+	<!--		<property name="CanCollideWithLeader" value="false" /> -->
 		</entity_class>				
 		
 		<entity_class name="npcBakerMachete" extends="npcAdvancedMacheteTemplate"> 
@@ -4330,7 +4248,7 @@
 		<entity_class name="animalFox" extends="animalTemplateHostileWalking">
 			<property name="UserSpawnType" value="Menu"/> 
  			<property name="Tags" value="entity,animal,perkAT02,perkAT03,animalFox"/>
-			<property name="Faction" value="aggressiveanimalssmall"/> 
+			<property name="Faction" value="passiveanimalssmall"/> 
 			<property name="MapIcon" value="ui_game_symbol_tracking_wolf"/>
 			<property name="TrackerIcon" value="ui_game_symbol_tracking_wolf"/>
 			<property name="LookAtAngle" value="0"/> 
@@ -4344,6 +4262,10 @@
 			<property name="SizeScale" value="1.3"/> 
 			<property name="Weight" value="5"/> 
 			<property name="Mass" value="30"/> 
+			<property name="MoveSpeed" value=".4"/>
+			<property name="MoveSpeedAggro" value="1.5, 1.5"/> 
+			<property name="MoveSpeedRand" value="-.1, .2"/>
+			<property name="MoveSpeedPanic" value="1.5"/>
 			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityAnimalRabbit,18"/>
 			<property name="AITarget-1" value="SetAsTargetIfHurt"/>
 			<property name="AITarget-2" value="BlockingTargetTask"/>
@@ -4373,20 +4295,24 @@
 		<entity_class name="animalJeerkoa" extends="animalTemplateHostileWalking">
 			<property name="UserSpawnType" value="Menu"/> 
  			<property name="Tags" value="entity,animal,perkAT02,perkAT03"/>
-			<property name="Faction" value="aggressiveanimalssmall"/> 
+			<property name="Faction" value="passiveanimalssmall"/> 
 			<property name="MapIcon" value="ui_game_symbol_tracking_wolf"/>
 			<property name="TrackerIcon" value="ui_game_symbol_tracking_wolf"/>
 			<property name="LookAtAngle" value="0"/> 
-			<property name="HasRagdoll" value="false"/>
+			<property name="HasRagdoll" value="true"/>
 			<property name="HasDeathAnim" value="true"/>
 			<property name="RootMotion" value="true"/>
-			<property name="PhysicsBody" value="ArcticFox"/>
-			<property name="IsEnemyEntity" value="true"/> 			
+			<property name="PhysicsBody" value="Jeerkoa"/>
+			<property name="IsEnemyEntity" value="false"/> 			
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Jeerkoa_X"/>
 			<property name="HandItem" value="meleeHandAnimalJeerkoa"/>
-			<property name="SizeScale" value="1.3"/> 
+			<property name="SizeScale" value="1.5"/> 
 			<property name="Weight" value="5"/> 
 			<property name="Mass" value="30"/> 
+			<property name="MoveSpeed" value=".4"/>
+			<property name="MoveSpeedAggro" value="1.5, 1.5"/> 
+			<property name="MoveSpeedRand" value="-.1, .2"/>
+			<property name="MoveSpeedPanic" value="1.5"/>
 			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityAnimalRabbit,18"/>
 			<property name="AITarget-1" value="SetAsTargetIfHurt"/>
 			<property name="AITarget-2" value="BlockingTargetTask"/>
@@ -4410,11 +4336,13 @@
 			<drop event="Harvest" name="foodRawMeat" count="1" tag="WasteTreasuresCompleteHarvest"/>
 			<drop event="Harvest" name="resourceLeather" count="1" tag="WasteTreasuresCompleteHarvest"/>
 			<drop event="Harvest" name="resourceBone" count="1" tag="WasteTreasuresCompleteHarvest"/>
+			<effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="500"/>
+                <passive_effect name="PhysicalDamageResist" operation="base_set" value="10" />
+            </effect_group> 
 		</entity_class>
 		
-		
-
-		
+	
 		<!--  Zombies  -->
 		<!-- Tutorial Zombie -->
 		
@@ -4690,7 +4618,7 @@
     </append>
 	
 	<append xpath="/entity_classes/entity_class[@name='npcMechMeleeTemplate']">
-        <property name="AIPackages" value="NPCModMechCore, NPCModNPCMeleeBasic"/>
-    </append>			<!-- add NPCModNPCHired if your making mechs a hireable faction  -->
+        <property name="AIPackages" value="NPCModMechCoreNoChat, NPCModHostileMeleeBasic"/>
+    </append>			
 	
 </configs>
