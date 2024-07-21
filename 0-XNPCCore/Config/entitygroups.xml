@@ -9,31 +9,6 @@
 		zombieFemaleTutorialT6, 0.0125
 		zombieFemaleTutorialT7, 0.0125
 		zombieFemaleTutorialT22, 0.0125		
-		npcBakerEmptyHand, 0.025
-		npcBakerClub, 0.025 
-		npcBakerKnife, 0.025 
-		npcBakerBat, 0.0125 
-		npcBakerMachete, 0.0125 
-		npcBakerSMG, 0.0125 
-		npcBakerAK47, 0.0125 
-		npcBakerHRifle, 0.0125 
-		npcBakerPistol, 0.0125 
-		npcBakerLBow, 0.0125 
-		npcNurseEmptyHand, 0.025 
-		npcNurseClub, 0.025 
-		npcNurseKnife, 0.025 
-		npcNursePistol, 0.0125 
-		npcNurseLBow, 0.0125 
-		npcAnimalFox, 0.025 
-		npcHarleyClub, 0.0125 
-		npcHarleyBat, 0.0125 
-		npcHarleyKnife, 0.0125 	
-		npcHarleyMachete, 0.0125 
-		npcHarleySpear, 0.0125 	
-		npcHarleyAxe, 0.0125 		
-		npcHarleyPipePistol, 0.005 
-		npcHarleyPipeRifle, 0.005 		
-		npcHarleyPipeShotgun, 0.005 
 	</csv>
 	
 	<csv xpath="/entitygroups/entitygroup[@name='ZombiesNight']/text()" delim="\n" op="add" >
@@ -45,31 +20,6 @@
 		zombieFemaleTutorialT6, 0.0125
 		zombieFemaleTutorialT7, 0.0125
 		zombieFemaleTutorialT22, 0.0125
-		npcBakerEmptyHand, 0.01 
-		npcBakerClub, 0.01 
-		npcBakerKnife, 0.0125 
-		npcBakerBat, 0.0125 
-		npcBakerMachete, 0.0125 
-		npcBakerSMG, 0.0125 
-		npcBakerAK47, 0.0125 
-		npcBakerHRifle, 0.0125 
-		npcBakerPistol, 0.0125 
-		npcBakerLBow, 0.0125 
-		npcNurseEmptyHand, 0.01 
-		npcNurseClub, 0.01 
-		npcNurseKnife, 0.0125 
-		npcNursePistol, 0.0125 
-		npcNurseLBow, 0.0125 
-		npcAnimalFox, 0.025 
-		npcHarleyClub, 0.0125 
-		npcHarleyBat, 0.0125 
-		npcHarleyKnife, 0.0125 	
-		npcHarleyMachete, 0.0125 
-		npcHarleySpear, 0.0125 	
-		npcHarleyAxe, 0.0125 		
-		npcHarleyPipePistol, 0.0125 
-		npcHarleyPipeRifle, 0.0125 		
-		npcHarleyPipeShotgun, 0.0125 
 	</csv>
 	
 	<csv xpath="/entitygroups/entitygroup[@name='ZombiesForestDowntown']/text()" delim="\n" op="add" >
@@ -81,31 +31,6 @@
 		zombieFemaleTutorialT6, 0.0125
 		zombieFemaleTutorialT7, 0.0125
 		zombieFemaleTutorialT22, 0.0125		
-		npcBakerEmptyHand, 0.025
-		npcBakerClub, 0.025 
-		npcBakerKnife, 0.025 
-		npcBakerBat, 0.0125 
-		npcBakerMachete, 0.0125 
-		npcBakerSMG, 0.0125 
-		npcBakerAK47, 0.0125 
-		npcBakerHRifle, 0.0125 
-		npcBakerPistol, 0.0125 
-		npcBakerLBow, 0.0125 
-		npcNurseEmptyHand, 0.025 
-		npcNurseClub, 0.025 
-		npcNurseKnife, 0.025 
-		npcNursePistol, 0.0125 
-		npcNurseLBow, 0.0125 
-		npcAnimalFox, 0.025 
-		npcHarleyClub, 0.0125 
-		npcHarleyBat, 0.0125 
-		npcHarleyKnife, 0.0125 	
-		npcHarleyMachete, 0.0125 
-		npcHarleySpear, 0.0125 	
-		npcHarleyAxe, 0.0125 		
-		npcHarleyPipePistol, 0.005 
-		npcHarleyPipeRifle, 0.005 		
-		npcHarleyPipeShotgun, 0.005 
 	</csv>
 	
 	<csv xpath="/entitygroups/entitygroup[@name='ZombiesForestDowntownNight']/text()" delim="\n" op="add" >
@@ -117,24 +42,6 @@
 		zombieFemaleTutorialT6, 0.0125
 		zombieFemaleTutorialT7, 0.0125
 		zombieFemaleTutorialT22, 0.0125
-		npcBakerBat, 0.0125 
-		npcBakerMachete, 0.0125 
-		npcBakerSMG, 0.0125 
-		npcBakerAK47, 0.0125 
-		npcBakerHRifle, 0.0125 
-		npcBakerPistol, 0.0125 
-		npcBakerLBow, 0.0125 
-		npcNursePistol, 0.0125 
-		npcNurseLBow, 0.0125 
-		npcHarleyClub, 0.0125 
-		npcHarleyBat, 0.0125 
-		npcHarleyKnife, 0.0125 	
-		npcHarleyMachete, 0.0125 
-		npcHarleySpear, 0.0125 	
-		npcHarleyAxe, 0.0125 		
-		npcHarleyPipePistol, 0.005 
-		npcHarleyPipeRifle, 0.005 		
-		npcHarleyPipeShotgun, 0.005 
 	</csv>
 	
 	<csv xpath="/entitygroups/entitygroup[@name='ZombiesDowntown']/text()" delim="\n" op="add" >
@@ -146,30 +53,6 @@
 		zombieFemaleTutorialT6, 0.0125
 		zombieFemaleTutorialT7, 0.0125
 		zombieFemaleTutorialT22, 0.0125
-		npcBakerClub, 0.025 
-		npcBakerKnife, 0.025 
-		npcBakerBat, 0.0125 
-		npcBakerMachete, 0.0125 
-		npcBakerSMG, 0.0125 
-		npcBakerAK47, 0.0125 
-		npcBakerHRifle, 0.0125 
-		npcBakerPistol, 0.0125 
-		npcBakerLBow, 0.0125 
-		npcNurseEmptyHand, 0.025 
-		npcNurseClub, 0.025 
-		npcNurseKnife, 0.025 
-		npcNursePistol, 0.0125 
-		npcNurseLBow, 0.0125 
-		npcAnimalFox, 0.025 
-		npcHarleyClub, 0.0125 
-		npcHarleyBat, 0.0125 
-		npcHarleyKnife, 0.0125 	
-		npcHarleyMachete, 0.0125 
-		npcHarleySpear, 0.0125 	
-		npcHarleyAxe, 0.0125 		
-		npcHarleyPipePistol, 0.005 
-		npcHarleyPipeRifle, 0.005 		
-		npcHarleyPipeShotgun, 0.005 
 	</csv>
 	
 	<csv xpath="/entitygroups/entitygroup[@name='ZombiesWasteland']/text()" delim="\n" op="add" >
@@ -181,22 +64,6 @@
 		zombieFemaleTutorialT6, 0.0125
 		zombieFemaleTutorialT7, 0.0125
 		zombieFemaleTutorialT22, 0.0125
-		npcHarleyBat, 0.05 
-		npcHarleyKnife, 0.05 	
-		npcHarleyMachete, 0.05 
-		npcHarleyPipePistol, 0.05 
-		npcHarleyPipeRifle, 0.05 	
-		npcHarleySMG, 0.05 
-		npcHarleyAK47, 0.05 
-		npcHarleyHRifle, 0.05 
-		npcHarleyPistol, 0.05 
-		npcHarleyTRifle, 0.05 	
-		npcHarleyM60, 0.025 
-		npcHarleyDPistol, 0.05 
-		npcHarleyPShotgun, 0.05 	
-		npcHarleyAShotgun, 0.05 
-		npcHarleyXBow, 0.05 
-		npcHarleyRocketL, 0.02 
 	</csv>
 
 	<csv xpath="/entitygroups/entitygroup[@name='ZombiesWastelandNight']/text()" delim="\n" op="add" >
@@ -208,22 +75,6 @@
 		zombieFemaleTutorialT6, 0.0125
 		zombieFemaleTutorialT7, 0.0125
 		zombieFemaleTutorialT22, 0.0125
-		npcHarleyBat, 0.05 
-		npcHarleyKnife, 0.05 	
-		npcHarleyMachete, 0.05 
-		npcHarleyPipePistol, 0.05 
-		npcHarleyPipeRifle, 0.05 	
-		npcHarleySMG, 0.05 
-		npcHarleyAK47, 0.05 
-		npcHarleyHRifle, 0.05 
-		npcHarleyPistol, 0.05 
-		npcHarleyTRifle, 0.05 	
-		npcHarleyM60, 0.025 
-		npcHarleyDPistol, 0.05 
-		npcHarleyPShotgun, 0.05 	
-		npcHarleyAShotgun, 0.05 
-		npcHarleyXBow, 0.05 
-		npcHarleyRocketL, 0.02 
 	</csv>
 	<csv xpath="/entitygroups/entitygroup[@name='ZombiesWastelandDowntown']/text()" delim="\n" op="add" >
 		zombieFemaleTutorialT1, 0.0125
@@ -234,24 +85,7 @@
 		zombieFemaleTutorialT6, 0.0125
 		zombieFemaleTutorialT7, 0.0125
 		zombieFemaleTutorialT22, 0.0125
-		npcHarleyBat, 0.05 
-		npcHarleyKnife, 0.05 	
-		npcHarleyMachete, 0.05 
-		npcHarleyPipePistol, 0.05 
-		npcHarleyPipeRifle, 0.05 	
-		npcHarleySMG, 0.05 
-		npcHarleyAK47, 0.05 
-		npcHarleyHRifle, 0.05 
-		npcHarleyPistol, 0.05 
-		npcHarleyTRifle, 0.05 	
-		npcHarleyM60, 0.025 
-		npcHarleyDPistol, 0.05 
-		npcHarleyPShotgun, 0.05 	
-		npcHarleyAShotgun, 0.05 
-		npcHarleyXBow, 0.05 
-		npcHarleyRocketL, 0.02 
 	</csv>
-	
 	<csv xpath="/entitygroups/entitygroup[@name='ZombiesHoard']/text()" delim="\n" op="add" >
 		zombieFemaleTutorialT1, 0.125
 		zombieFemaleTutorialT2, 0.125
@@ -262,7 +96,6 @@
 		zombieFemaleTutorialT7, 0.125
 		zombieFemaleTutorialT22, 0.125		
 	</csv>
-	
 
 	<!--
         Sleeper Volume Entity Groups
@@ -338,80 +171,165 @@
 			</insertAfter>
 			...etc.
     -->
+	
+	
+	
+		<!-- Spawning for Core characters   -->
 	<insertAfter xpath="/entitygroups/entitygroup[last()]">
+		<entitygroup name="npcHarleyGroupGS01">
+			npcHarleyAxe, .25
+			npcHarleyBat, .5
+			npcHarleyClub, .25 
+			npcHarleyEmptyHand, .25 
+			npcHarleyKnife, .25
+			npcHarleyMachete, .25
+			npcHarleySpear, .25
+			none, 98.0
+		</entitygroup>
+		<entitygroup name="npcHarleyGroupGS50">
+			npcHarleyAxe, .25 
+			npcHarleyBat, .5
+			npcHarleyKnife, .25 
+			npcHarleyMachete, .25 
+			npcHarleyPipeMG, .25
+			npcHarleyPipePistol, .25 
+			npcHarleyPipeRifle, .25 
+			npcHarleyPipeShotgun, .25 
+			npcHarleySpear, .25 
+			npcHarleyXBow, .25 
+			none, 97.0
+		</entitygroup>
+		<entitygroup name="npcHarleyGroupGS100">
+			npcHarleyAK47, .25 
+			npcHarleyAShotgun, .25
+			npcHarleyBat, .5
+			npcHarleyDPistol, .25 
+			npcHarleyHRifle, .25 
+			npcHarleyM60, .25
+			npcHarleyMachete, .25 
+			npcHarleyPistol, .25 
+			npcHarleyPShotgun, .25 
+			npcHarleyRocketL, .25 
+			npcHarleySMG, .25 
+			npcHarleySRifle, .25 
+			npcHarleyTRifle, .25 
+			npcHarleyXBow, .25
+			none, 96.0
+		</entitygroup>
+		<entitygroup name="npcFriendlyCoreGroupGS01">
+			npcBakerAxe, .2
+			npcBakerBat, .1
+			npcBakerClub, .2
+			npcBakerEmptyHand , .1
+			npcBakerKnife, .2
+			npcBakerMachete, .2
+			npcBakerSpear, .2
+			npcNurseAxe, .2
+			npcNurseBat, .1
+			npcNurseClub, .2
+			npcNurseEmptyHand, .1
+			npcNurseKnife , .2
+			npcNurseMachete, .2
+			npcNurseSpear, .1
+			npcAnimalFox, .3
+			animalFox, .4
+			none, 97.0
+		</entitygroup>
+		<entitygroup name="npcFriendlyCoreGroupGS50">
+			npcBakerAxe, .2 
+			npcBakerBat, .1
+			npcBakerKnife, .1 
+			npcBakerMachete, .2 
+			npcBakerPipeMG, .1
+			npcBakerPipePistol, .1
+			npcBakerPipeRifle, .1 
+			npcBakerPipeShotgun, .1
+			npcBakerSpear, .1
+			npcNurseAxe, .1
+			npcNurseBat, .2 
+			npcNurseEmptyHand, .1 
+			npcNurseKnife, .2
+			npcNurseMachete, .2
+			npcNursePipeMG, .1 
+			npcNursePipePistol, .2
+			npcNursePipeRifle, .1
+			npcNursePipeShotgun, .1
+			npcNurseSpear, .1
+			npcNurseXBow, .1
+			npcAnimalFox, .4
+			none, 97.0
+		</entitygroup>
+		<entitygroup name="npcFriendlyCoreGroupGS100">
+			npcBakerAK47, .1
+			npcBakerAShotgun, .1 
+			npcBakerBat, .1
+			npcBakerDPistol, .1 
+			npcBakerHRifle, .1 
+			npcBakerLBow, .1
+			npcBakerM60, .05 
+			npcBakerMachete, .1 
+			npcBakerPistol, .1
+			npcBakerPShotgun, .1 
+			npcBakerRocketL, .05 
+			npcBakerSMG, .1
+			npcBakerSRifle, .1 
+			npcBakerTRifle, .1
+			npcBakerXBow, .1
+			npcNurseAK47, .1
+			npcNurseAShotgun, .1
+			npcNurseBat, .1 
+			npcNurseDPistol, .1 
+			npcNurseHRifle, .1
+			npcNurseLBow, .1
+			npcNurseM60, .05
+			npcNurseMachete, .1
+			npcNursePistol, .1
+			npcNursePShotgun, .1
+			npcNurseRocketL, .05
+			npcNurseSMG, .1
+			npcNurseSRifle, .1
+			npcNurseTRifle, .1
+			npcNurseXBow, .1
+			animalJeerkoa, .3
+			none, 97.0
+		</entitygroup>	
+		
 		<!-- Bandits NPC entity groups -->
 		<entitygroup name="npcBanditsAllGroupGS01">
-			npcHarleyAK47, 0.05 
-			npcHarleyAShotgun, 0.05 
 			npcHarleyAxe, 0.05 
 			npcHarleyBat, 0.05 
 			npcHarleyClub, 0.05 
-			npcHarleyDPistol, 0.05 
 			npcHarleyEmptyHand, 0.05 
-			npcHarleyHRifle, 0.05 
 			npcHarleyKnife, 0.05 
-			npcHarleyM60, 0.05 
 			npcHarleyMachete, 0.05 
-			npcHarleyPipeMG, 0.05 
-			npcHarleyPipePistol, 0.05 
-			npcHarleyPipeRifle, 0.05 
-			npcHarleyPipeShotgun, 0.05 
-			npcHarleyPistol, 0.05 
-			npcHarleyPShotgun, 0.05 
-			npcHarleySMG, 0.05 
 			npcHarleySpear, 0.05 
-			npcHarleySRifle, 0.05 
-			npcHarleyTRifle, 0.05 
-			npcHarleyXBow, 0.05 
 			none, 0.001
 		</entitygroup>
 		<entitygroup name="npcBanditsAllGroupGS50">
-			npcHarleyAK47, 0.05 
-			npcHarleyAShotgun, 0.05 
 			npcHarleyAxe, 0.05 
 			npcHarleyBat, 0.05 
-			npcHarleyClub, 0.05 
-			npcHarleyDPistol, 0.05 
-			npcHarleyEmptyHand, 0.05 
-			npcHarleyHRifle, 0.05 
 			npcHarleyKnife, 0.05 
-			npcHarleyM60, 0.05 
 			npcHarleyMachete, 0.05 
 			npcHarleyPipeMG, 0.05 
 			npcHarleyPipePistol, 0.05 
 			npcHarleyPipeRifle, 0.05 
 			npcHarleyPipeShotgun, 0.05 
-			npcHarleyPistol, 0.05 
-			npcHarleyPShotgun, 0.05 
-			npcHarleyRocketL, 0.05 
-			npcHarleySMG, 0.05 
 			npcHarleySpear, 0.05 
-			npcHarleySRifle, 0.05 
-			npcHarleyTRifle, 0.05 
 			npcHarleyXBow, 0.05 
 			none, 0.001
 		</entitygroup>
 		<entitygroup name="npcBanditsAllGroupGS100">
 			npcHarleyAK47, 0.05 
-			npcHarleyAShotgun, 0.05 
-			npcHarleyAxe, 0.05 
+			npcHarleyAShotgun, 0.05
 			npcHarleyBat, 0.05 
-			npcHarleyClub, 0.05 
 			npcHarleyDPistol, 0.05 
-			npcHarleyEmptyHand, 0.05 
 			npcHarleyHRifle, 0.05 
-			npcHarleyKnife, 0.05 
-			npcHarleyM60, 0.05 
+			npcHarleyM60, 0.05
 			npcHarleyMachete, 0.05 
-			npcHarleyPipeMG, 0.05 
-			npcHarleyPipePistol, 0.05 
-			npcHarleyPipeRifle, 0.05 
-			npcHarleyPipeShotgun, 0.05 
 			npcHarleyPistol, 0.05 
 			npcHarleyPShotgun, 0.05 
 			npcHarleyRocketL, 0.05 
 			npcHarleySMG, 0.05 
-			npcHarleySpear, 0.05 
 			npcHarleySRifle, 0.05 
 			npcHarleyTRifle, 0.05 
 			npcHarleyXBow, 0.05 
@@ -3442,151 +3360,75 @@
 
 		<!-- Friendly NPC entity groups -->
 		<entitygroup name="npcFriendlyAllGroupGS01">
-			npcBakerAK47, 0.05 
-			npcBakerAShotgun, 0.05 
 			npcBakerAxe, 0.05 
 			npcBakerBat, 0.05 
 			npcBakerClub, 0.05 
-			npcBakerDPistol, 0.05 
 			npcBakerEmptyHand, 0.05 
-			npcBakerHRifle, 0.05 
 			npcBakerKnife, 0.05 
-			npcBakerLBow, 0.05 
-			npcBakerM60, 0.05 
 			npcBakerMachete, 0.05 
-			npcBakerPipeMG, 0.05 
-			npcBakerPipePistol, 0.05 
-			npcBakerPipeRifle, 0.05 
-			npcBakerPipeShotgun, 0.05 
-			npcBakerPistol, 0.05 
-			npcBakerPShotgun, 0.05 
-			npcBakerSMG, 0.05 
 			npcBakerSpear, 0.05 
-			npcBakerSRifle, 0.05 
-			npcBakerTRifle, 0.05 
-			npcBakerXBow, 0.05 
-			npcNurseAK47, 0.05 
-			npcNurseAShotgun, 0.05 
 			npcNurseAxe, 0.05 
 			npcNurseBat, 0.05 
 			npcNurseClub, 0.05 
-			npcNurseDPistol, 0.05 
 			npcNurseEmptyHand, 0.05 
-			npcNurseHRifle, 0.05 
 			npcNurseKnife, 0.05 
-			npcNurseLBow, 0.05 
-			npcNurseM60, 0.05 
 			npcNurseMachete, 0.05 
-			npcNursePipeMG, 0.05 
-			npcNursePipePistol, 0.05 
-			npcNursePipeRifle, 0.05 
-			npcNursePipeShotgun, 0.05 
-			npcNursePistol, 0.05 
-			npcNursePShotgun, 0.05 
-			npcNurseSMG, 0.05 
 			npcNurseSpear, 0.05 
-			npcNurseSRifle, 0.05 
-			npcNurseTRifle, 0.05 
-			npcNurseXBow, 0.05 
 			none, 0.001
 		</entitygroup>
 		<entitygroup name="npcFriendlyAllGroupGS50">
-			npcBakerAK47, 0.05 
-			npcBakerAShotgun, 0.05 
 			npcBakerAxe, 0.05 
 			npcBakerBat, 0.05 
-			npcBakerClub, 0.05 
-			npcBakerDPistol, 0.05 
-			npcBakerEmptyHand, 0.05 
-			npcBakerHRifle, 0.05 
 			npcBakerKnife, 0.05 
-			npcBakerLBow, 0.05 
-			npcBakerM60, 0.05 
 			npcBakerMachete, 0.05 
 			npcBakerPipeMG, 0.05 
 			npcBakerPipePistol, 0.05 
 			npcBakerPipeRifle, 0.05 
 			npcBakerPipeShotgun, 0.05 
-			npcBakerPistol, 0.05 
-			npcBakerPShotgun, 0.05 
-			npcBakerRocketL, 0.05 
-			npcBakerSMG, 0.05 
 			npcBakerSpear, 0.05 
-			npcBakerSRifle, 0.05 
-			npcBakerTRifle, 0.05 
-			npcBakerXBow, 0.05 
-			npcNurseAK47, 0.05 
-			npcNurseAShotgun, 0.05 
 			npcNurseAxe, 0.05 
 			npcNurseBat, 0.05 
-			npcNurseClub, 0.05 
-			npcNurseDPistol, 0.05 
 			npcNurseEmptyHand, 0.05 
-			npcNurseHRifle, 0.05 
-			npcNurseKnife, 0.05 
-			npcNurseLBow, 0.05 
-			npcNurseM60, 0.05 
+			npcNurseKnife, 0.05
 			npcNurseMachete, 0.05 
 			npcNursePipeMG, 0.05 
 			npcNursePipePistol, 0.05 
 			npcNursePipeRifle, 0.05 
 			npcNursePipeShotgun, 0.05 
-			npcNursePistol, 0.05 
-			npcNursePShotgun, 0.05 
-			npcNurseRocketL, 0.05 
-			npcNurseSMG, 0.05 
 			npcNurseSpear, 0.05 
-			npcNurseSRifle, 0.05 
-			npcNurseTRifle, 0.05 
 			npcNurseXBow, 0.05 
 			none, 0.001
 		</entitygroup>
 		<entitygroup name="npcFriendlyAllGroupGS100">
 			npcBakerAK47, 0.05 
 			npcBakerAShotgun, 0.05 
-			npcBakerAxe, 0.05 
 			npcBakerBat, 0.05 
-			npcBakerClub, 0.05 
 			npcBakerDPistol, 0.05 
-			npcBakerEmptyHand, 0.05 
 			npcBakerHRifle, 0.05 
 			npcBakerKnife, 0.05 
 			npcBakerLBow, 0.05 
 			npcBakerM60, 0.05 
 			npcBakerMachete, 0.05 
-			npcBakerPipeMG, 0.05 
-			npcBakerPipePistol, 0.05 
-			npcBakerPipeRifle, 0.05 
-			npcBakerPipeShotgun, 0.05 
 			npcBakerPistol, 0.05 
 			npcBakerPShotgun, 0.05 
 			npcBakerRocketL, 0.05 
 			npcBakerSMG, 0.05 
-			npcBakerSpear, 0.05 
 			npcBakerSRifle, 0.05 
 			npcBakerTRifle, 0.05 
 			npcBakerXBow, 0.05 
 			npcNurseAK47, 0.05 
-			npcNurseAShotgun, 0.05 
-			npcNurseAxe, 0.05 
+			npcNurseAShotgun, 0.05
 			npcNurseBat, 0.05 
-			npcNurseClub, 0.05 
 			npcNurseDPistol, 0.05 
-			npcNurseEmptyHand, 0.05 
 			npcNurseHRifle, 0.05 
 			npcNurseKnife, 0.05 
 			npcNurseLBow, 0.05 
-			npcNurseM60, 0.05 
+			npcNurseM60, 0.01
 			npcNurseMachete, 0.05 
-			npcNursePipeMG, 0.05 
-			npcNursePipePistol, 0.05 
-			npcNursePipeRifle, 0.05 
-			npcNursePipeShotgun, 0.05 
 			npcNursePistol, 0.05 
 			npcNursePShotgun, 0.05 
-			npcNurseRocketL, 0.05 
+			npcNurseRocketL, 0.05
 			npcNurseSMG, 0.05 
-			npcNurseSpear, 0.05 
 			npcNurseSRifle, 0.05 
 			npcNurseTRifle, 0.05 
 			npcNurseXBow, 0.05 

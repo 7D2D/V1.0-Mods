@@ -1,0 +1,84 @@
+<configs>
+
+	<append xpath="/spawning/biome[@name='pine_forest']">
+		<spawn maxcount="1" respawndelay="1" time="Day" entitygroup="npcHarleyGroupGS01" notags="commercial,industrial,downtown" />
+		<spawn maxcount="1" respawndelay="1" time="Night" entitygroup="npcHarleyGroupGS50" notags="commercial,industrial,downtown" />
+		<spawn maxcount="1" respawndelay="1" time="Day" entitygroup="npcHarleyGroupGS01" tags="commercial,industrial" notags="downtown" />
+		<spawn maxcount="1" respawndelay="1" time="Night" entitygroup="npcHarleyGroupGS100" tags="commercial,industrial" notags="downtown" />
+		<spawn maxcount="1" respawndelay="1" time="Day" entitygroup="npcHarleyGroupGS50" tags="downtown" />
+		<spawn maxcount="1" respawndelay="1" time="Night" entitygroup="npcHarleyGroupGS100" tags="downtown" />
+		
+		<spawn maxcount="1" respawndelay="1" time="Day" entitygroup="npcFriendlyCoreGroupGS01" notags="commercial,industrial,downtown" />
+		<spawn maxcount="1" respawndelay="1" time="Night" entitygroup="npcFriendlyCoreGroupGS50" notags="commercial,industrial,downtown" />
+		<spawn maxcount="1" respawndelay="1" time="Day" entitygroup="npcFriendlyCoreGroupGS01" tags="commercial,industrial" notags="downtown" />
+		<spawn maxcount="1" respawndelay="1" time="Night" entitygroup="npcFriendlyCoreGroupGS100" tags="commercial,industrial" notags="downtown" />
+		<spawn maxcount="1" respawndelay="1" time="Day" entitygroup="npcFriendlyCoreGroupGS50" tags="downtown" />
+		<spawn maxcount="1" respawndelay="1" time="Night" entitygroup="npcFriendlyCoreGroupGS100" tags="downtown" />
+		<!-- <spawn maxcount="1" respawndelay="3.2" time="Any" entitygroup="EnemyAnimalsForest" spawnDeadChance="0" /> -->
+	</append>
+	
+	<append xpath="/spawning/biome[@name='burnt_forest']">
+		<spawn maxcount="1" respawndelay="1" time="Day" entitygroup="npcHarleyGroupGS01" notags="commercial,industrial,downtown" />
+		<spawn maxcount="1" respawndelay="1" time="Night" entitygroup="npcHarleyGroupGS50" notags="commercial,industrial,downtown" />
+		<spawn maxcount="1" respawndelay="1" time="Day" entitygroup="npcHarleyGroupGS01" tags="commercial,industrial" notags="downtown" />
+		<spawn maxcount="1" respawndelay="1" time="Night" entitygroup="npcHarleyGroupGS100" tags="commercial,industrial" notags="downtown" />
+		<spawn maxcount="1" respawndelay="1" time="Day" entitygroup="npcHarleyGroupGS50" tags="downtown" />
+		<spawn maxcount="1" respawndelay="1" time="Night" entitygroup="npcHarleyGroupGS100" tags="downtown" />
+		
+		<spawn maxcount="1" respawndelay="1" time="Day" entitygroup="npcFriendlyCoreGroupGS01" notags="commercial,industrial,downtown" />
+		<spawn maxcount="1" respawndelay="1" time="Night" entitygroup="npcFriendlyCoreGroupGS50" notags="commercial,industrial,downtown" />
+		<spawn maxcount="1" respawndelay="1" time="Day" entitygroup="npcFriendlyCoreGroupGS01" tags="commercial,industrial" notags="downtown" />
+		<spawn maxcount="1" respawndelay="1" time="Night" entitygroup="npcFriendlyCoreGroupGS100" tags="commercial,industrial" notags="downtown" />
+		<spawn maxcount="1" respawndelay="1" time="Day" entitygroup="npcFriendlyCoreGroupGS50" tags="downtown" />
+		<spawn maxcount="1" respawndelay="1" time="Night" entitygroup="npcFriendlyCoreGroupGS100" tags="downtown" />
+	</append>
+	
+	<append xpath="/spawning/biome[@name='desert']">
+		<spawn maxcount="1" respawndelay="1" time="Day" entitygroup="npcHarleyGroupGS01" notags="commercial,industrial,downtown" />
+		<spawn maxcount="1" respawndelay="1" time="Night" entitygroup="npcHarleyGroupGS50" notags="commercial,industrial,downtown" />
+		<spawn maxcount="1" respawndelay="1" time="Day" entitygroup="npcHarleyGroupGS01" tags="commercial,industrial" notags="downtown" />
+		<spawn maxcount="1" respawndelay="1" time="Night" entitygroup="npcHarleyGroupGS100" tags="commercial,industrial" notags="downtown" />
+		<spawn maxcount="1" respawndelay="1" time="Day" entitygroup="npcHarleyGroupGS50" tags="downtown" />
+		<spawn maxcount="1" respawndelay="1" time="Night" entitygroup="npcHarleyGroupGS100" tags="downtown" />
+		
+		<spawn maxcount="1" respawndelay="1" time="Day" entitygroup="npcFriendlyCoreGroupGS01" notags="commercial,industrial,downtown" />
+		<spawn maxcount="1" respawndelay="1" time="Night" entitygroup="npcFriendlyCoreGroupGS50" notags="commercial,industrial,downtown" />
+		<spawn maxcount="1" respawndelay="1" time="Day" entitygroup="npcFriendlyCoreGroupGS01" tags="commercial,industrial" notags="downtown" />
+		<spawn maxcount="1" respawndelay="1" time="Night" entitygroup="npcFriendlyCoreGroupGS100" tags="commercial,industrial" notags="downtown" />
+		<spawn maxcount="1" respawndelay="1" time="Day" entitygroup="npcFriendlyCoreGroupGS50" tags="downtown" />
+		<spawn maxcount="1" respawndelay="1" time="Night" entitygroup="npcFriendlyCoreGroupGS100" tags="downtown" />
+	</append>	
+	
+	<append xpath="/spawning/biome[@name='snow']">
+		<spawn maxcount="1" respawndelay="1" time="Day" entitygroup="npcHarleyGroupGS01" notags="commercial,industrial,downtown" />
+		<spawn maxcount="1" respawndelay="1" time="Night" entitygroup="npcHarleyGroupGS50" notags="commercial,industrial,downtown" />
+		<spawn maxcount="1" respawndelay="1" time="Day" entitygroup="npcHarleyGroupGS01" tags="commercial,industrial" notags="downtown" />
+		<spawn maxcount="1" respawndelay="1" time="Night" entitygroup="npcHarleyGroupGS100" tags="commercial,industrial" notags="downtown" />
+		<spawn maxcount="1" respawndelay="1" time="Day" entitygroup="npcHarleyGroupGS50" tags="downtown" />
+		<spawn maxcount="1" respawndelay="1" time="Night" entitygroup="npcHarleyGroupGS100" tags="downtown" />
+		
+		<spawn maxcount="1" respawndelay="1" time="Day" entitygroup="npcFriendlyCoreGroupGS01" notags="commercial,industrial,downtown" />
+		<spawn maxcount="1" respawndelay="1" time="Night" entitygroup="npcFriendlyCoreGroupGS50" notags="commercial,industrial,downtown" />
+		<spawn maxcount="1" respawndelay="1" time="Day" entitygroup="npcFriendlyCoreGroupGS01" tags="commercial,industrial" notags="downtown" />
+		<spawn maxcount="1" respawndelay="1" time="Night" entitygroup="npcFriendlyCoreGroupGS100" tags="commercial,industrial" notags="downtown" />
+		<spawn maxcount="1" respawndelay="1" time="Day" entitygroup="npcFriendlyCoreGroupGS50" tags="downtown" />
+		<spawn maxcount="1" respawndelay="1" time="Night" entitygroup="npcFriendlyCoreGroupGS100" tags="downtown" />
+	</append>	
+	
+	<append xpath="/spawning/biome[@name='wasteland']">
+		<spawn maxcount="1" respawndelay="1" time="Day" entitygroup="npcHarleyGroupGS01" notags="commercial,industrial,downtown" />
+		<spawn maxcount="1" respawndelay="1" time="Night" entitygroup="npcHarleyGroupGS50" notags="commercial,industrial,downtown" />
+		<spawn maxcount="1" respawndelay="1" time="Day" entitygroup="npcHarleyGroupGS01" tags="commercial,industrial" notags="downtown" />
+		<spawn maxcount="1" respawndelay="1" time="Night" entitygroup="npcHarleyGroupGS100" tags="commercial,industrial" notags="downtown" />
+		<spawn maxcount="1" respawndelay="1" time="Day" entitygroup="npcHarleyGroupGS50" tags="downtown" />
+		<spawn maxcount="1" respawndelay="1" time="Night" entitygroup="npcHarleyGroupGS100" tags="downtown" />
+		
+		<spawn maxcount="1" respawndelay="1" time="Day" entitygroup="npcFriendlyCoreGroupGS01" notags="commercial,industrial,downtown" />
+		<spawn maxcount="1" respawndelay="1" time="Night" entitygroup="npcFriendlyCoreGroupGS50" notags="commercial,industrial,downtown" />
+		<spawn maxcount="1" respawndelay="1" time="Day" entitygroup="npcFriendlyCoreGroupGS01" tags="commercial,industrial" notags="downtown" />
+		<spawn maxcount="1" respawndelay="1" time="Night" entitygroup="npcFriendlyCoreGroupGS100" tags="commercial,industrial" notags="downtown" />
+		<spawn maxcount="1" respawndelay="1" time="Day" entitygroup="npcFriendlyCoreGroupGS50" tags="downtown" />
+		<spawn maxcount="1" respawndelay="1" time="Night" entitygroup="npcFriendlyCoreGroupGS100" tags="downtown" />
+	</append>	
+	
+</configs>

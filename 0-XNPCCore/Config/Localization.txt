@@ -122,9 +122,9 @@ responseID_1101680756,Quest,Dialogs,,,OK Bye,,,,,,分かりました、さよう
 
 itemNPCModHelp,items,Item,,,NPC Action: Help,,,,Action PNJ: Aide,,NPCアクション： 手助け,,,,,,,
 itemNPCModStop,items,Item,,,NPC Action: Stop,,,,Action PNJ: Arrêt,,NPCアクション： 停止,,,,,,,
+itemNPCModStopDesc,items,Item,,,"Select Stop button in your toolbar. Command NPCs in your party using [action:local:Primary] to switch between Default Active Mode (Follow orders, engage etc.) and Stop Mode (Disengage from hostiles and return to owner).\n\nOpen the Character Status Effects window then click on the icons (left side) for more information.",,,,,,,,,,,,,
 itemNPCModMode,items,Item,,,NPC Action: Mode,,,,Action PNJ: Mode,,NPCアクション： モード,,,,,,,
-
-spherePickUpNPC,items,Item,,,Placeable NPC,,,,PNJ plaçable,,,,,,,,,,
+itemNPCModModeDesc,items,Item,,,"Select MODE button in your toolbar. Command NPCs in your party using [action:local:Primary] to switch between Hunting Mode (engage hostile targets) and Full Control Mode (only engage if leader attacks or takes damage from hostiles).\n\nOpen the Character Status Effects window then click on H or F icons (left side) for more information.",,,,,,,,,,,,,
 
 buffNPCModHaltDisplayName,items,Item,,,Halt,,,,Arrêter,,,,,,,,,
 buffNPCModHaltDisplayDesc,items,Item,,,"While in either Threat or Full Control Mode, your hired NPCs will not engage until you tell them to Resume",,,,"Tant que vos PNJs seront en mode de contrôle complet ou de menaces, ils n'initieront pas le combat tant que vous le leur disiez de Reprendre",,,,,,,,,
@@ -136,6 +136,14 @@ buffNPCModThreatControlModeDisplayName,items,Item,,,Threat Control Mode,,,,Mode 
 buffNPCModThreatControlModeDisplayDesc,items,Item,,,"While in this mode, your hired NPCs will not engage with hostile animals (including zombies animals), unless:\n • You attack\n • You get attacked and took damage",,,,"Dans ce mode, vos your PNJs embauchés n'initieront pas le combat avec des animaux hostiles (incluant les animaux zombies), à moins que:\n • Vous attaquiez\n • Vous vous fassiez attaquer et prenez du dommage",,,,,,,,,
 buffNPCModFullControlModeDisplayName,items,Item,,,Full Control Mode,,,,Mode de contrôle complet,,,,,,,,,
 buffNPCModFullControlModeDisplayDesc,items,Item,,,"While in this mode, your hired NPCs will not engage, unless:\n • You attack\n • You get attacked and took damage",,,,"Dans ce mode, vos your PNJs embauchés n'initieront pas le combat, à moins que:\n • Vous attaquiez\n • Vous vous fassiez attaquer et prenez du dommage",,,,,,,,,
+
+spherePickUpNPC,items,Item,,,Placeable NPC,,,,PNJ plaçable,,,,,,,,,,
+bakerPickUpNPC,items,item,,,Baker (Resting),,,,,,,,,,,,,
+bakerPickUpNPCDesc,items,item,,,"You are carrying your hired baker helper. Put him in your active toolbelt slot to place him down using [action:local:Secondary].",,,,,,,,,,,,,
+nursePickUpNPC,items,item,,,Nurse (Resting),,,,,,,,,,,,,
+nursePickUpNPCDesc,items,item,,,"You are carrying your hired nurse helper. Put her in your active toolbelt slot to place her down [action:local:Secondary]..",,,,,,,,,,,,,
+foxPickUpNPC,items,item,,,Friendly Fox (Resting),,,,,,,,,,,,,
+foxPickUpNPCDesc,items,item,,,"You are carrying your friendly fox. Put it in your active toolbelt slot to place it down [action:local:Secondary]..",,,,,,,,,,,,,
 
 GenericNPC_start,Quest,Dialogs,,,"Hello friend, how can I help you?",,,,"Bonjour ami, comment puis-je vous aider?",,こんにちは友達、どのようにあなたを助けることができますか？,,,,,,,
 GenericNPC_Command Menu,Quest,Dialogs,,,Command Menu,,,,Menu de commandes,,コマンドメニュー,,,,,,,
@@ -190,6 +198,8 @@ GenericNPC_PShotgun,Quest,Dialogs,,,Use Shotgun,,,,Utilisez un fusil à pompe,,�
 GenericNPC_AShotgun,Quest,Dialogs,,,Use AutoShotgun,,,,Utilisez un fusil à pompe automatique,,オートショットガンを使う,,,,,,,
 GenericNPC_RLauncher,Quest,Dialogs,,,Use RLauncher,,,,Utilisez un lance-roquettes,,ロケットランチャーを使う,,,,,,,
 GenericNPC_done,Quest,Dialogs,,,Nevermind.,,,,Peu importe.,,気にしないでください。,,,,,,,
+
+BackpackNPC,entityclasses,Entity,,,NPC Backpack,,,,,,,,,,,,,
 
 EntityLootContainerNPC,entityclasses,Entity Info,,,Dropped Loot,,Fallengelassene Beute,Botín abandonado,Butin abandonné,Bottino caduto,落ちている略奪品,떨어진 약탈품,Upuszczony łup,Espólio caído,Выпавшие вещи,Düşürülmüş Ganimet,掉落的战利品,掉落戰利品
 EntityNPCLootContainer,entityclasses,Entity Info,,,Dropped Loot,,Fallengelassene Beute,Botín abandonado,Butin abandonné,Bottino caduto,落ちている略奪品,떨어진 약탈품,Upuszczony łup,Espólio caído,Выпавшие вещи,Düşürülmüş Ganimet,掉落的战利品,掉落戰利品

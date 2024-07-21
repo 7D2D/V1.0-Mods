@@ -67,7 +67,7 @@
 			<property name="UserSpawnType" value="Menu"/>		
 			<property name="Tags" value="entity,cp,mech,npc,floating"/>
 			<property name="Faction" value="mechs"/>		
-			<!-- <property name="AltMats" value="#@modfolder:Resources/RustyDroidMat.unity3d?RustyDroid,#@modfolder:Resources/RustyDroidMat.unity3d?RustyDroid"/> -->
+			<property name="AltMats" value="#@modfolder:Resources/RustyDroidMat.unity3d?RustyDroid,#@modfolder:Resources/RustyDroidMat.unity3d?RustyDroid"/> 
 			<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
 			<drop event="Harvest" name="resourceMechanicalParts" tag="salvageHarvest" count="10"/> 
 			<drop event="Harvest" name="resourceScrapIron" tag="salvageHarvest" count="9"/>
@@ -154,21 +154,6 @@
 			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunNPCPistolHidden,ammoNPC9mmBulletBall"/> 	
 			<property name="AIPackages" value="NPCModMechCoreNoChat, NPCModHostileMeleeBasic, NPCModHostileRangedBasic"/>
 		</entity_class>		
-		<entity_class name="npcMechRobotArmy" extends="npcMechRobot" >
-			<property name="UserSpawnType" value="Menu"/>		
-			<property name="Mesh" value="#@modfolder:Resources/XythMechs.unity3d?Robot_X" />
-			<property name="Tags" value="entity,cp,mech,npc"/>
-			<property name="Faction" value="mechs"/>		
-			<property name="HireCurrency" value="carBattery" />
-			<property name="HireCost" value="2" />
-			<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
-			<drop event="Harvest" name="resourceMechanicalParts" tag="salvageHarvest" count="10"/> 
-			<drop event="Harvest" name="resourceScrapIron" tag="salvageHarvest" count="9"/>
-			<drop event="Harvest" name="resourceElectricParts" tag="salvageHarvest" count="12"/> 
-			<drop event="Harvest" name="resourceScrapPolymers" tag="salvageHarvest" count="9"/>						
-			<property name="AltMats" value="#@modfolder:Resources/RobotArmyMat.unity3d?metal_albedo,#@modfolder:Resources/RobotArmyMat.unity3d?paint_albedo,#@modfolder:Resources/RobotArmyMat.unity3d?rubber_albedo"/>
-			
-		</entity_class>					
 		<entity_class name="npcMechSphereI" extends="npcMechMeleeTemplate" >
 			<property name="UserSpawnType" value="Menu"/>		
 			<property name="Mesh" value="#@modfolder:Resources/XythMechs.unity3d?SphereI_X" />	<!-- Free CC model by 3DHaupt -->

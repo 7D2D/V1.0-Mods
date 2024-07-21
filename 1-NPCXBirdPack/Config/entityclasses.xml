@@ -7,7 +7,7 @@
 			<property name="UserSpawnType" value="Menu"/>
 			<property name="Mesh" value="#@modfolder:Resources/XythBirds.unity3d?Robin_X" />
 			<property name="Tags" value="entity,cp,animal,timid,animalRobin"/>
-			<property name="Faction" value="animals"/>
+			<property name="Faction" value="passiveanimalssmall"/>
 			<property name="HandItem" value="meleeHandAnimalRobin"/>
 			<property name="MaxTurnSpeed" value="190"/>
 			<property name="DeadBodyHitPoints" value="100"/>
@@ -34,7 +34,7 @@
 			<property name="UserSpawnType" value="Menu"/>
 			<property name="Mesh" value="#@modfolder:Resources/XythBirds.unity3d?Crow_X" />
 			<property name="Tags" value="entity,cp,animal,timid,animalCrow"/>
-			<property name="Faction" value="animals"/>
+			<property name="Faction" value="passiveanimalssmall"/>
 			<property name="SoundRandomTime" value="10"/>
 			<property name="SoundRandom" value="CrowRandom" />
 			<property name="SoundAlert" value="CrowRandom"/>
@@ -53,7 +53,7 @@
 			<property name="UserSpawnType" value="Menu"/>		
 			<property name="Mesh" value="#@modfolder:Resources/XythBirds.unity3d?Bat_X" />
 			<property name="Tags" value="entity,cp,animal,timid,animalBat"/>
-			<property name="Faction" value="animals"/>		
+			<property name="Faction" value="passiveanimalssmall"/>		
 			<property name="SoundRandomTime" value="10"/>
 			<property name="SoundRandom" value="BatRandom" />
 			<property name="SoundAlert" value="BatRandom"/>
@@ -72,7 +72,7 @@
 			<property name="Mesh" value="#@modfolder:Resources/XythBirds.unity3d?Bats_X" />
 			<property name="UserSpawnType" value="Menu"/>		
 			<property name="Tags" value="entity,cp,animal,timid,animalBats"/>
-			<property name="Faction" value="animals"/>		
+			<property name="Faction" value="passiveanimalssmall"/>		
 			<property name="SoundRandomTime" value="10"/>
 			<property name="SoundRandom" value="BatRandom" />
 			<property name="SoundAlert" value="BatRandom"/>
@@ -91,7 +91,7 @@
 			<property name="UserSpawnType" value="Menu"/>		
 			<property name="Mesh" value="#@modfolder:Resources/XythBirds.unity3d?Eagle_X" />
 			<property name="Tags" value="entity,cp,animal,timid,animalEagle"/>
-			<property name="Faction" value="animals"/>					
+			<property name="Faction" value="passiveanimalssmall"/>					
 			<property name="SoundRandomTime" value="10"/>
 			<property name="SoundRandom" value="EagleSound" />
 			<property name="SoundAlert" value="EagleSound"/>
@@ -113,7 +113,7 @@
 			<property name="UserSpawnType" value="Menu"/>		
 			<property name="Mesh" value="#@modfolder:Resources/XythBirds.unity3d?Alcatraz_X" />
 			<property name="Tags" value="entity,cp,animal,timid,animalAlcatraz"/>
-			<property name="Faction" value="animals"/>					
+			<property name="Faction" value="passiveanimalssmall"/>					
 			<property name="SoundRandomTime" value="10"/>
 			<property name="SoundRandom" value="AlcatrazSound" />
 			<property name="SoundAlert" value="AlcatrazSound"/>
@@ -135,7 +135,7 @@
 			<property name="UserSpawnType" value="Menu"/>		
 			<property name="Mesh" value="#@modfolder:Resources/XythPenguin.unity3d?Penguin_X"/>
 			<property name="Tags" value="entity,animal,timid,perkAT02,perkAT03"/>
-			<property name="Faction" value="animals"/>	
+			<property name="Faction" value="passiveanimalssmall"/>	
 			<property name="Weight" value="20"/>
 			<property name="Mass" value="20"/>
 			<property name="PhysicsBody" value="Penguin"/>
@@ -157,7 +157,6 @@
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="80"/>
 			</effect_group>
-		</entity_class>		
-
+		</entity_class>	
 	</append>
 </configs>

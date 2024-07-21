@@ -5,11 +5,32 @@
 		animalSpider02, 10
 		animalSpider03, 10
 	</csv>
+	<csv xpath="/entitygroups/entitygroup[@name='EnemyAnimalsWastelandNight']/text()" delim="\n" op="add" >
+		animalSpider01, 10
+		animalSpider02, 10
+		animalSpider03, 10
+	</csv>
 	<csv xpath="/entitygroups/entitygroup[@name='EnemyAnimalsDesert']/text()" delim="\n" op="add" >
 		animalSpider01, 5
 		animalSpider02, 5
 		animalSpider03, 5
 	</csv>
+	<csv xpath="/entitygroups/entitygroup[@name='EnemyAnimalsDesertNight']/text()" delim="\n" op="add" >
+		animalSpider01, 5
+		animalSpider02, 5
+		animalSpider03, 5
+	</csv>
+	<csv xpath="/entitygroups/entitygroup[@name='EnemyAnimalsBurntForestAny']/text()" delim="\n" op="add" >	
+		animalSpider01, 5
+		animalSpider02, 5
+		animalSpider03, 5
+	</csv>
+	<csv xpath="/entitygroups/entitygroup[@name='EnemyAnimalsBurntForestNight']/text()" delim="\n" op="add" >		
+		animalSpider01, 5
+		animalSpider02, 5
+		animalSpider03, 5
+	</csv>
+
 	<!--
 		Entity groups used by spawners for sleeper volumes
 		TODO:

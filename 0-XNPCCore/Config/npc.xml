@@ -227,6 +227,9 @@
 			<relationship name="trader" value="neutral"/>
 			<relationship name="undead" value="hate"/>
 			<relationship name="*" value="hate"/>
+			<relationship name="passiveanimalssmall" value="neutral"/>
+			<relationship name="passiveanimalsmedium" value="neutral"/>
+			<relationship name="passiveanimalslarge" value="neutral"/>
 		</faction>	
 
 		<faction name="allymechs"> <!-- placeholder  -->
@@ -237,6 +240,9 @@
 			<relationship name="aggressiveanimalssmall" value="hate"/>
 			<relationship name="aggressiveanimalsmedium" value="hate"/>
 			<relationship name="aggressiveanimalslarge" value="hate"/>
+			<relationship name="passiveanimalssmall" value="neutral"/>
+			<relationship name="passiveanimalsmedium" value="neutral"/>
+			<relationship name="passiveanimalslarge" value="neutral"/>
             <relationship name="zombieanimals" value="hate" />
 		</faction>		
 		

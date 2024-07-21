@@ -546,7 +546,7 @@
 		
 		<entity_class name="npcMeleeBloodmoonTemplate" extends="npcMeleeTemplate"> 
 			<property name="UserSpawnType" value="None"/>
-			<property name="Class" value="EntityEnemySDX, SCore" /> 
+			<property name="Class" value="EntityNPCBandit, SCore" /> 
 			<property name="Tags" value="entity,male,npc,walker,melee"/> 
 			<property name="Faction" value="whiteriver"/>
 		</entity_class>	
@@ -555,7 +555,7 @@
 		
 		<entity_class name="npcMeleeBanditTemplate" extends="npcMeleeTemplate" ignore="AIPackages"> <!--  Works very well  -->
 			<property name="UserSpawnType" value="None"/>
-			<property name="Class" value="EntityBandit" /> 
+			<property name="Class" value="EntityNPCBandit, SCore" /> 
 			<property name="Tags" value="entity,male,npc,walker,melee,bandit,DRMid"/> 
 			<property name="Faction" value="bandits"/>
 			<property name="HandItem" value="meleeNPCClubWood"/>
@@ -579,25 +579,25 @@
 		
 		<entity_class name="npcRangedBanditTemplate" extends="npcMeleeBanditTemplate" ignore="AIPackages"> <!-- kinda works but not used in this mod -->
 			<property name="UserSpawnType" value="None"/>
-			<property name="Class" value="EntityBandit" />  
+			<property name="Class" value="EntityNPCBandit, SCore" />  
 			<property name="Tags" value="entity,male,npc,walker,ranged,bandit,DRMid"/> 
 			<property name="Faction" value="bandits"/>
 			<property name="HandItem" value="gunNPCPipePistol"/>
-			<property name="AITask-1" value="BreakBlock"/>
-			<property name="AITask-2" value="RunawayWhenHurt" data="runChance=0.9;healthPer=0.3;healthPerMax=0.6"/>
-			<property name="AITask-3" value="Look"/>
-			<property name="AITask-4" value="ApproachDistraction"/>
-			<property name="AITask-5" value="RangedAttackTarget" data="itemType=1;cooldown=4;duration=6"/>
-			<property name="AITask-6" value="ApproachAndAttackTarget" data="class=EntityPlayer,0,EntityEnemyAnimal,0,EntityNPC,0" />
-			<property name="AITask-7" value="Territorial"/>
-			<property name="AITask-8" value="ApproachSpot"/> 
-			<property name="AITask-9" value="Wander"/>
-			<property name="AITask-10" value=""/>
-			
-			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityPlayer,0,0,EntityEnemyAnimal,0,-10,EntityNPC,0,0" />	
-			<property name="AITarget-2" value="BlockingTargetTask"	/>
-			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,0,0,EntityEnemyAnimal,0,-10,EntityNPC,0,0" />			
-			<property name="AITarget-4" value=""/> 
+			<property name="AITask" value="
+				BreakBlock|
+				ApproachDistraction|
+				RangedAttackTarget itemType=1;cooldown=4;duration=5|
+				ApproachAndAttackTarget class=EntityPlayer,0,EntityEnemyAnimal,0,EntityNPC|
+				ApproachSpot|
+				Look|
+				Wander|
+				"/>
+			<property name="AITarget" value="
+				SetAsTargetIfHurt class=EntityPlayer,EntityEnemyAnimal,EntityNPC|
+				BlockingTargetTask|
+				SetNearestCorpseAsTarget flags=edible|
+				SetNearestEntityAsTarget class=EntityPlayer,0,0,EntityNPC,0,0|
+				"/>
 		</entity_class>		
 	
 		<!--  Ranged Template , change faction on character -->
@@ -615,7 +615,7 @@
 		
 		<entity_class name="npcRangedBloodmoonTemplate" extends="npcRangedTemplate"> 
 			<property name="UserSpawnType" value="None"/>
-			<property name="Class" value="EntityEnemySDX, SCore" /> 
+			<property name="Class" value="EntityNPCBandit, SCore" /> 
 			<property name="Tags" value="entity,male,npc,walker,ranged"/> 
 			<property name="Faction" value="whiteriver"/>
 		</entity_class>	
@@ -680,7 +680,7 @@
 			<property name="Names" value="Template" />	
 			<property name="Faction" value="whiteriver"/>
 			<property name="IsEnemyEntity" value="true"/> 
-			<property name="Class" value="EntityEnemySDX, SCore" /> 
+			<property name="Class" value="EntityNPCBandit, SCore" /> 
 		</entity_class>	
 		
 		<!-- EmptyHand "weapon" template for bandits -->
@@ -734,7 +734,7 @@
 			<property name="Tags" value="entity,male,npc,walker,melee"/>
 			<property name="Names" value="Template" />	
 			<property name="Faction" value="whiteriver"/>
-			<property name="Class" value="EntityEnemySDX, SCore" /> 
+			<property name="Class" value="EntityNPCBandit, SCore" /> 
 		</entity_class>	
 		
 		
@@ -787,7 +787,7 @@
 			<property name="Tags" value="entity,male,npc,walker,melee"/>
 			<property name="Names" value="Template" />	
 			<property name="Faction" value="whiteriver"/>
-			<property name="Class" value="EntityEnemySDX, SCore" /> 
+			<property name="Class" value="EntityNPCBandit, SCore" /> 
 		</entity_class>	
 		
 		<entity_class name="npcBanditKnifeTemplate" extends="npcMeleeBanditTemplate">
@@ -836,7 +836,7 @@
 			<property name="Tags" value="entity,male,npc,walker,melee"/>
 			<property name="Names" value="Template" />	
 			<property name="Faction" value="whiteriver"/>
-			<property name="Class" value="EntityEnemySDX, SCore" /> 
+			<property name="Class" value="EntityNPCBandit, SCore" /> 
 		</entity_class>	
 		
 		
@@ -890,7 +890,7 @@
 			<property name="Tags" value="entity,male,npc,walker,melee"/>
 			<property name="Names" value="Template" />	
 			<property name="Faction" value="whiteriver"/>
-			<property name="Class" value="EntityEnemySDX, SCore" /> 
+			<property name="Class" value="EntityNPCBandit, SCore" /> 
 		</entity_class>	
 		
 		
@@ -940,7 +940,7 @@
 			<property name="Tags" value="entity,male,npc,walker,melee"/>
 			<property name="Names" value="Template" />	
 			<property name="Faction" value="whiteriver"/>
-			<property name="Class" value="EntityEnemySDX, SCore" /> 
+			<property name="Class" value="EntityNPCBandit, SCore" /> 
 		</entity_class>	
 		
 		<entity_class name="npcBanditSpearTemplate" extends="npcMeleeBanditTemplate">
@@ -989,7 +989,7 @@
 			<property name="Tags" value="entity,male,npc,walker,melee"/>
 			<property name="Names" value="Template" />	
 			<property name="Faction" value="whiteriver"/>
-			<property name="Class" value="EntityEnemySDX, SCore" /> 
+			<property name="Class" value="EntityNPCBandit, SCore" /> 
 		</entity_class>	
 		
 		<entity_class name="npcBanditMacheteTemplate" extends="npcMeleeBanditTemplate">
@@ -1038,7 +1038,7 @@
 			<property name="Tags" value="entity,male,npc,walker,ranged"/>
 			<property name="Names" value="Template" />	
 			<property name="Faction" value="whiteriver"/>
-			<property name="Class" value="EntityEnemySDX, SCore" /> 
+			<property name="Class" value="EntityNPCBandit, SCore" /> 
 		</entity_class>	
 		
 		<entity_class name="npcBanditPipePistolTemplate" extends="npcRangedBanditTemplate"> <!--  EAI testing on PipePistol  -->
@@ -1089,7 +1089,7 @@
 			<property name="Tags" value="entity,male,npc,walker,ranged"/>
 			<property name="Names" value="Template" />	
 			<property name="Faction" value="whiteriver"/>
-			<property name="Class" value="EntityEnemySDX, SCore" /> 
+			<property name="Class" value="EntityNPCBandit, SCore" /> 
 		</entity_class>	
 
 		<!-- Weapon template for advanced, hireable characters  -->
@@ -1127,7 +1127,7 @@
 			<property name="Tags" value="entity,male,npc,walker,ranged"/>
 			<property name="Names" value="Template" />	
 			<property name="Faction" value="whiteriver"/>
-			<property name="Class" value="EntityEnemySDX, SCore" /> 
+			<property name="Class" value="EntityNPCBandit, SCore" /> 
 		</entity_class>	
 
 		<!-- Weapon template for advanced, hireable characters  -->
@@ -1166,7 +1166,7 @@
 			<property name="Tags" value="entity,male,npc,walker,ranged"/>
 			<property name="Names" value="Template" />	
 			<property name="Faction" value="whiteriver"/>
-			<property name="Class" value="EntityEnemySDX, SCore" /> 
+			<property name="Class" value="EntityNPCBandit, SCore" /> 
 		</entity_class>	
 
 		<!-- Weapon template for advanced, hireable characters  -->
@@ -1205,7 +1205,7 @@
 			<property name="Tags" value="entity,male,npc,walker,ranged"/>
 			<property name="Names" value="Template" />	
 			<property name="Faction" value="whiteriver"/>
-			<property name="Class" value="EntityEnemySDX, SCore" /> 
+			<property name="Class" value="EntityNPCBandit, SCore" /> 
 		</entity_class>	
 
 		<!-- Weapon template for advanced, hireable characters  -->
@@ -1242,7 +1242,7 @@
 			<property name="Tags" value="entity,male,npc,walker,ranged"/>
 			<property name="Names" value="Template" />	
 			<property name="Faction" value="whiteriver"/>
-			<property name="Class" value="EntityEnemySDX, SCore" /> 
+			<property name="Class" value="EntityNPCBandit, SCore" /> 
 		</entity_class>	
 
 		<!-- Weapon template for advanced, hireable characters  -->
@@ -1279,7 +1279,7 @@
 			<property name="Tags" value="entity,male,npc,walker,ranged"/>
 			<property name="Names" value="Template" />	
 			<property name="Faction" value="whiteriver"/>
-			<property name="Class" value="EntityEnemySDX, SCore" /> 
+			<property name="Class" value="EntityNPCBandit, SCore" /> 
 		</entity_class>	
 
 		<!-- Weapon template for advanced, hireable characters  -->
@@ -1317,7 +1317,7 @@
 			<property name="Tags" value="entity,male,npc,walker,ranged"/>
 			<property name="Names" value="Template" />	
 			<property name="Faction" value="whiteriver"/>
-			<property name="Class" value="EntityEnemySDX, SCore" /> 
+			<property name="Class" value="EntityNPCBandit, SCore" /> 
 		</entity_class>	
 
 		<!-- Weapon template for advanced, hireable characters  -->
@@ -1355,7 +1355,7 @@
 			<property name="Tags" value="entity,male,npc,walker,ranged"/>
 			<property name="Names" value="Template" />	
 			<property name="Faction" value="whiteriver"/>
-			<property name="Class" value="EntityEnemySDX, SCore" /> 
+			<property name="Class" value="EntityNPCBandit, SCore" /> 
 		</entity_class>	
 
 		<!-- Weapon template for advanced, hireable characters  -->
@@ -1392,7 +1392,7 @@
 			<property name="Tags" value="entity,male,npc,walker,ranged"/>
 			<property name="Names" value="Template" />	
 			<property name="Faction" value="whiteriver"/>
-			<property name="Class" value="EntityEnemySDX, SCore" /> 
+			<property name="Class" value="EntityNPCBandit, SCore" /> 
 		</entity_class>	
 
 		<!-- Weapon template for advanced, hireable characters  -->
@@ -1429,7 +1429,7 @@
 			<property name="Tags" value="entity,male,npc,walker,ranged"/>
 			<property name="Names" value="Template" />	
 			<property name="Faction" value="whiteriver"/>
-			<property name="Class" value="EntityEnemySDX, SCore" /> 
+			<property name="Class" value="EntityNPCBandit, SCore" /> 
 		</entity_class>	
 
 		<!-- Weapon template for advanced, hireable characters  -->
@@ -1466,7 +1466,7 @@
 			<property name="Tags" value="entity,male,npc,walker,ranged"/>
 			<property name="Names" value="Template" />	
 			<property name="Faction" value="whiteriver"/>
-			<property name="Class" value="EntityEnemySDX, SCore" /> 
+			<property name="Class" value="EntityNPCBandit, SCore" /> 
 		</entity_class>	
 
 		<!-- Weapon template for advanced, hireable characters  -->
@@ -1503,7 +1503,7 @@
 			<property name="Tags" value="entity,male,npc,walker,ranged"/>
 			<property name="Names" value="Template" />	
 			<property name="Faction" value="whiteriver"/>
-			<property name="Class" value="EntityEnemySDX, SCore" /> 
+			<property name="Class" value="EntityNPCBandit, SCore" /> 
 		</entity_class>	
 
 		<!-- Weapon template for advanced, hireable characters  -->
@@ -1540,7 +1540,7 @@
 			<property name="Tags" value="entity,male,npc,walker,ranged"/>
 			<property name="Names" value="Template" />	
 			<property name="Faction" value="whiteriver"/>
-			<property name="Class" value="EntityEnemySDX, SCore" /> 
+			<property name="Class" value="EntityNPCBandit, SCore" /> 
 		</entity_class>	
 
 		<!-- Weapon template for advanced, hireable characters  -->
@@ -1577,7 +1577,7 @@
 			<property name="Tags" value="entity,male,npc,walker,ranged"/>
 			<property name="Names" value="Template" />	
 			<property name="Faction" value="whiteriver"/>
-			<property name="Class" value="EntityEnemySDX, SCore" /> 
+			<property name="Class" value="EntityNPCBandit, SCore" /> 
 		</entity_class>	
 
 		<!-- Weapon template for advanced, hireable characters  -->
@@ -1618,7 +1618,7 @@
 			<property name="Tags" value="entity,male,npc,walker,ranged"/>
 			<property name="Names" value="Template" />	
 			<property name="Faction" value="whiteriver"/>
-			<property name="Class" value="EntityEnemySDX, SCore" /> 
+			<property name="Class" value="EntityNPCBandit, SCore" /> 
 		</entity_class>	
 
 		<!-- Weapon template for advanced, hireable characters  -->
@@ -1657,7 +1657,7 @@
 			<property name="Tags" value="entity,male,npc,walker,ranged"/>
 			<property name="Names" value="Template" />	
 			<property name="Faction" value="whiteriver"/>
-			<property name="Class" value="EntityEnemySDX, SCore" /> 
+			<property name="Class" value="EntityNPCBandit, SCore" /> 
 		</entity_class>	
 
 		<!-- Weapon template for advanced, hireable characters  -->
@@ -1758,7 +1758,7 @@
 		</entity_class>
 		
 		<!-- Dumb Animal Templates  -->	
-
+		
 		<entity_class name="animalTemplateHostileWalking" >
 			<property name="UserSpawnType" value="None"/>
 			<property name="Tags" value="entity,animal,hostile,template"/>
@@ -1986,14 +1986,14 @@
 			</effect_group>
 		</entity_class> 
 		
-		<entity_class name="animalTemplateHostileFlying" extends="animalTemplateTimidFlying">
+		<entity_class name="animalTemplateHostileFlying" extends="animalZombieVulture">
 			<property name="UserSpawnType" value="None"/>
 			<property name="Class" value="EntityVulture"/>
 			<property name="Mesh" value="#@modfolder:Resources/XythAnimals.unity3d?Robin_X" />
 			<property name="Tags" value="entity,animal,hostile,template"/>
-			<property name="Faction" value="animals"/>
+			<property name="Faction" value="aggressiveanimalsmedium"/>
 			<property name="AvatarController" value="AvatarAnimalController"/> 
-			<property name="HandItem" value="meleeHandAnimalBear"/>
+			<property name="HandItem" value="meleeHandAnimalCoyote"/>
 			<property name="IsEnemyEntity" value="true"/>
 			<property name="MaxViewAngle" value="240"/>
 			<property name="SightRange" value="90"/>
@@ -2004,6 +2004,13 @@
 				<passive_effect name="HealthMax" operation="base_set" value="100"/>
 				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
 			</effect_group>
+			<property name="AITask-1" value=""/>
+			<property name="AITarget-1" value=""/>
+			<property name="HasRagdoll" value="true"/> 
+			<property name="HasDeathAnim" value="true"/>
+			<property name="RootMotion" value="false"/><!-- In A21, animals seem to need root motion animations for walk and run.  RootMotion and HasDeathAnim set to true in the xml, HasRagdoll set to false if you don't have a ragdoll, otherwise the death anim does not work consistently, if you do have a ragdoll set it to true.   -->
+			<property name="RagdollOnDeathChance" value="0"/>
+			<property name="PhysicsBody" value=""/>
 		</entity_class> 
 
 	
@@ -3194,15 +3201,6 @@
 			<!-- <property name="AIPackages" value="NPCModCoreNoChat, NPCModHostileMeleeBasic, NPCModHostileRangedBasic"/> -->
 		</entity_class>	
 		
-		<entity_class name="npcHarleyBMEmptyHand" extends="npcHarleyEmptyHand"> <!--  example of a bloodmoon version  -->
-			<property name="UserSpawnType" value="Menu"/> 
- 			<property name="Tags" value="entity,female,npc,walker,melee,voiceharley,bandit,DRMid,Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL"/>
-			<property name="Faction" value="bandits"/>
-			<property name="Names" value="Harley, Quinn, HarleyQuinn" />
-			<property name="Class" value="EntityEnemySDX, SCore" />
-			<property name="IsEnemyEntity" value="true"/> 
-		</entity_class>	
-
 		<entity_class name="npcHarleyClub" extends="npcBanditClubTemplate"  > 
 			<property name="UserSpawnType" value="Menu"/> 
  			<property name="Tags" value="entity,female,npc,walker,melee,voiceharley,bandit,DRMid,Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL"/>
@@ -3355,8 +3353,6 @@
 		</entity_class>			
 		
 		<entity_class name="npcHarleyPipePistol" extends="npcPipePistolTemplate"> 
-		<!-- <entity_class name="npcHarleyPipePistol" extends="npcBanditPipePistolTemplate"> -->
-		<!-- <entity_class name="npcHarleyPipePistol" extends="npcBanditPipePistolTemplate2"> -->
 			<property name="UserSpawnType" value="Menu"/> 
  			<property name="Tags" value="entity,female,npc,walker,ranged,voiceharley,bandit,DRMid,Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL"/>
 			<property name="Faction" value="bandits"/>
@@ -4225,13 +4221,13 @@
                 <property name="BoundaryBox" value=".2,.3,1.1" />
                 <property name="Center" value="0,.15,0"/>
             </property>
-			<property name="MoveSpeed" value="0.1"/> 
-			<property name="MoveSpeedAggro" value="1.0, 1.0"/> 
-			<property name="MoveSpeedPanic" value="1.0"/>
+			<property name="MoveSpeed" value="0.5"/> 
+			<property name="MoveSpeedAggro" value="1.2, 1.2"/> 
+			<property name="MoveSpeedPanic" value="1.2"/>
 			<property name="MoveSpeedRand" value="-.05, .05"/> 
 			<effect_group>
 				<passive_effect name="WalkSpeed" operation="base_set" value=".5"/>
-				<passive_effect name="RunSpeed" operation="base_set" value="1.0"/> 
+				<passive_effect name="RunSpeed" operation="base_set" value="1.2"/> 
 				<passive_effect name="HealthChangeOT" operation="base_set" value="0.1"/>  <!-- heal x point of (red) health / minute -->
 				<passive_effect name="DamageModifier" operation="perc_set" value="1"/>
 				<passive_effect name="DamageModifier" operation="perc_add" value="1" tags="head"/>

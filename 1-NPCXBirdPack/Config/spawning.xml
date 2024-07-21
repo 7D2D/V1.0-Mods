@@ -1,0 +1,29 @@
+<configs>
+
+	<append xpath="/spawning/biome[@name='pine_forest']">
+		<spawn maxcount="3" respawndelay="1" time="Day" entitygroup="FlyingBirds" notags="downtown" />
+		<spawn maxcount="3" respawndelay="1" time="Night" entitygroup="Bats" notags="downtown" />
+	</append>
+	
+	<append xpath="/spawning/biome[@name='burnt_forest']">
+		<spawn maxcount="3" respawndelay="1" time="Day" entitygroup="FlyingBirds" notags="downtown" />
+		<spawn maxcount="3" respawndelay="1" time="Night" entitygroup="Bats" notags="downtown" />
+	</append>
+	
+	<append xpath="/spawning/biome[@name='desert']">
+		<spawn maxcount="3" respawndelay="1" time="Day" entitygroup="FlyingBirds" notags="downtown" />
+		<spawn maxcount="3" respawndelay="1" time="Night" entitygroup="Bats" notags="downtown" />
+	</append>	
+	
+	<append xpath="/spawning/biome[@name='snow']">
+		<spawn maxcount="3" respawndelay="1" time="Day" entitygroup="FlyingBirds" notags="downtown" />
+		<spawn maxcount="3" respawndelay="1" time="Night" entitygroup="Bats" notags="downtown" />
+		<spawn maxcount="1" respawndelay="1" time="Any" entitygroup="OtherBirds" notags="downtown" />
+	</append>	
+	
+	<append xpath="/spawning/biome[@name='wasteland']">
+		<spawn maxcount="3" respawndelay="1" time="Day" entitygroup="FlyingBirds" notags="downtown" />
+		<spawn maxcount="3" respawndelay="1" time="Night" entitygroup="Bats" notags="downtown" />
+	</append>	
+	
+</configs>
