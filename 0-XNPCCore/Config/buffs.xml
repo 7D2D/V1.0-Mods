@@ -662,7 +662,7 @@
 		</buff>		
 		<buff name="buffHitStun" hidden="true">
 			<stack_type value="ignore"/>
-			<duration value="7"/> 
+			<duration value="5"/> 
 		</buff>	
 	
 		<!--  Character mesh activation buffs  -->
