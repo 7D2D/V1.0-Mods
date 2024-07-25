@@ -519,28 +519,7 @@
 			<property name="IsQuestGiver" value="false" /> <!--  If you want quest giving, add this property set to true to that specific character  -->
 			<property name="IsEnemyEntity" value="false"/> 
 			<property name="Faction" value="whiteriver"/>
-	</entity_class>			
-
-
-		<!--  Zed reference  -->
-		<!--	<property name="AITask" value="
-			BreakBlock|
-			DestroyArea|
-			Territorial|
-			ApproachDistraction|
-			ApproachAndAttackTarget class=EntityPlayer,0,EntityBandit,0,EntityEnemyAnimal,0,EntityAnimal|
-			ApproachSpot|
-			Look|
-			Wander|
-			"/>
-			<property name="AITarget" value="
-			SetAsTargetIfHurt class=EntityPlayer,EntityBandit,EntityEnemyAnimal|
-			BlockingTargetTask|
-			SetNearestCorpseAsTarget flags=edible|
-			SetNearestEntityAsTarget class=EntityPlayer,0,0,EntityBandit,0,-10|
-			"/> -->
-				
-	
+		</entity_class>			
 		
 		<!--  Template converting the above melee template to Bloodmoon spawnable , change faction on character -->
 		
@@ -565,15 +544,15 @@
 				Territorial|
 				ApproachDistraction|
 				RunawayWhenHurt runChance=0.1;healthPer=0.2;healthPerMax=0.5|
-				ApproachAndAttackTarget class=EntityPlayer,0,EntityEnemyAnimal,0,EntityNPC,0|
+				ApproachAndAttackTarget class=EntityPlayer,0,EntityZombie,0,EntityEnemyAnimal,0,EntityNPC,0|
 				ApproachSpot|
 				Look|
 				Wander|
 				"/>
 			<property name="AITarget" value="
-				SetAsTargetIfHurt class=EntityPlayer,0,0,EntityEnemyAnimal,0,-10,EntityNPC,0,0|
+				SetAsTargetIfHurt class=EntityPlayer,0,0,EntityZombie,0,0,EntityEnemyAnimal,0,-10,EntityNPC,0,0|
 				BlockingTargetTask|
-				SetNearestEntityAsTarget class=EntityPlayer,0,0,EntityEnemyAnimal,0,-10,EntityNPC,0,0|
+				SetNearestEntityAsTarget class=EntityPlayer,0,0,EntityZombie,0,0,EntityEnemyAnimal,0,-10,EntityNPC,0,0|
 				"/>
 		</entity_class>	
 		
@@ -587,16 +566,15 @@
 				BreakBlock|
 				ApproachDistraction|
 				RangedAttackTarget itemType=1;cooldown=4;duration=5|
-				ApproachAndAttackTarget class=EntityPlayer,0,EntityEnemyAnimal,0,EntityNPC|
+				ApproachAndAttackTarget class=EntityPlayer,0,EntityZombie,0,EntityEnemyAnimal,0,EntityNPC|
 				ApproachSpot|
 				Look|
 				Wander|
 				"/>
 			<property name="AITarget" value="
-				SetAsTargetIfHurt class=EntityPlayer,EntityEnemyAnimal,EntityNPC|
+				SetAsTargetIfHurt class=EntityPlayer,0,0,EntityZombie,0,0,EntityEnemyAnimal,0,-10,EntityNPC,0,0|
 				BlockingTargetTask|
-				SetNearestCorpseAsTarget flags=edible|
-				SetNearestEntityAsTarget class=EntityPlayer,0,0,EntityNPC,0,0|
+				SetNearestEntityAsTarget class=EntityPlayer,0,0,EntityZombie,0,0,EntityNPC,0,0|
 				"/>
 		</entity_class>		
 	
@@ -691,7 +669,6 @@
 			<property name="Names" value="Template" />	
 			<property name="Faction" value="bandits"/>
 			<property name="IsEnemyEntity" value="true"/> 
-			<property name="Class" value="EntityBandit" /> 
 			<property name="HandItem" value="meleeNPCEmptyHand"/>
 		</entity_class>			
 		
@@ -744,7 +721,6 @@
 			<property name="Names" value="Template" />	
 			<property name="Faction" value="bandits"/>
 			<property name="IsEnemyEntity" value="true"/> 
-			<property name="Class" value="EntityBandit" /> 
 			<property name="HandItem" value="meleeNPCClubWood"/>
 			<property name="RightHandJointName" value="Club" />
 			<property name="LootDropEntityClass" value="EntityNPCLootContainerClub" />
@@ -796,7 +772,6 @@
 			<property name="Names" value="Template" />	
 			<property name="Faction" value="bandits"/>
 			<property name="IsEnemyEntity" value="true"/> 
-			<property name="Class" value="EntityBandit" /> 
 			<property name="HandItem" value="meleeNPCKnife"/>
 			<property name="RightHandJointName" value="Knife" />
 			<property name="LootDropEntityClass" value="EntityNPCLootContainerKnife" />
@@ -846,7 +821,6 @@
 			<property name="Names" value="Template" />	
 			<property name="Faction" value="bandits"/>
 			<property name="IsEnemyEntity" value="true"/> 
-			<property name="Class" value="EntityBandit" /> 
 			<property name="HandItem" value="meleeNPCBatWood"/>
 			<property name="RightHandJointName" value="Bat" />
 			<property name="LootDropEntityClass" value="EntityNPCLootContainerBat" />
@@ -900,7 +874,6 @@
 			<property name="Names" value="Template" />	
 			<property name="Faction" value="bandits"/>
 			<property name="IsEnemyEntity" value="true"/> 
-			<property name="Class" value="EntityBandit" /> 
 			<property name="HandItem" value="meleeNPCAxe"/>
 			<property name="RightHandJointName" value="Axe" />
 			<property name="LootDropEntityClass" value="EntityNPCLootContainerAxe" />
@@ -949,7 +922,6 @@
 			<property name="Names" value="Template" />	
 			<property name="Faction" value="bandits"/>
 			<property name="IsEnemyEntity" value="true"/> 
-			<property name="Class" value="EntityBandit" /> 
 			<property name="HandItem" value="meleeNPCSpear"/>
 			<property name="RightHandJointName" value="Spear" />
 			<property name="LootDropEntityClass" value="EntityNPCLootContainerSpear" />
@@ -998,7 +970,6 @@
 			<property name="Names" value="Template" />	
 			<property name="Faction" value="bandits"/>
 			<property name="IsEnemyEntity" value="true"/> 
-			<property name="Class" value="EntityBandit" /> 
 			<property name="HandItem" value="meleeNPCMachete"/>
 			<property name="RightHandJointName" value="Machete" />
 			<property name="LootDropEntityClass" value="EntityNPCLootContainerMachete" />
@@ -1047,7 +1018,6 @@
 			<property name="Names" value="Template" />	
 			<property name="Faction" value="bandits"/>
 			<property name="IsEnemyEntity" value="true"/> 
-			<property name="Class" value="EntityBandit" /> 
 			<property name="HandItem" value="gunNPCPipePistol"/>
 			<property name="RightHandJointName" value="PipePistol" />
 			<property name="AITask-5" value="RangedAttackTarget" data="itemType=1;cooldown=4;duration=6;minRange=2;maxRange=15;unreachableRange=40"/>  <!-- set duration == rounds?  -->

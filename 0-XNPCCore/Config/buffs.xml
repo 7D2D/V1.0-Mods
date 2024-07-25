@@ -655,13 +655,14 @@
 			<duration value="0"/>
 			<update_rate value=".1"/>
 			<effect_group>
-				<requirement name="CVarCompare" cvar="_stunned" operation="GT" value="0"/> 			
+				<requirement name="CVarCompare" cvar="_stunned" operation="GT" value="0"/> 
+				<requirement name="!HasBuff" buff="buffHitStun"/>
 				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffHitStun" /> 
 			</effect_group>					
 		</buff>		
 		<buff name="buffHitStun" hidden="true">
 			<stack_type value="ignore"/>
-			<duration value="5"/> 
+			<duration value="7"/> 
 		</buff>	
 	
 		<!--  Character mesh activation buffs  -->

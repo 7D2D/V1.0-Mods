@@ -79,7 +79,23 @@
 	<property name="Class" value="Loot"/>
 	<property name="LootList" value="garbage"/>
 	<property name="SwapMats" value="@:Entities/Zombies/Zombies/Materials/HD_Arlene2.mat"/>
-	</block>	
+	</block>
+	
+
+<block name="testplayerSignWood2x5">
+	<property name="Extends" value="playerSignWood1x1"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="playerSignWood1x1"/>
+	<property name="DisplayType" value="blockMulti"/>
+	<property name="Model" value="#@modfolder:Resources/testsign01.unity3d?testsign"/>
+	<property name="MultiBlockDim" value="5,2,1"/>
+	<property name="OnlySimpleRotations" value="true"/>
+	<property name="SortOrder2" value="0002"/>
+</block>
+
+
+
+	
 	
 	</append>
 
