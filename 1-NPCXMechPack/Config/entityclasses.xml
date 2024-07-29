@@ -256,7 +256,8 @@
 			<property name="IsQuestGiver" value="false" />
 			<property name="SurfaceCategory" value="metal"/>
 			<property name="TimeStayAfterDeath" value="30"/>
-			<property name="DeadBodyHitPoints" value="500"/>			
+			<property name="DeadBodyHitPoints" value="500"/>
+			<property name="PainResistPerHit" value="0"/>  
 			<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
 			<drop event="Harvest" name="resourceMechanicalParts" tag="salvageHarvest" count="10"/> 
 			<drop event="Harvest" name="resourceScrapIron" tag="salvageHarvest" count="9"/>
@@ -294,7 +295,7 @@
 			<property name="IsEnemyEntity" value="true"/>
 			<property name="MaxViewAngle" value="230"/>
 			<property name="SightLightThreshold" value="-2,150"/>
-			<property name="PainResistPerHit" value=".6"/>
+			<property name="PainResistPerHit" value="0"/>
 			<property name="MaxTurnSpeed" value="280"/>
 			<property name="MoveSpeed" value=".3"/>
 			<property name="MoveSpeedAggro" value="1.15, 1.2"/>

@@ -1,4 +1,39 @@
 <configs>
+
+	<insertAfter xpath="/entitygroups/entitygroup[last()]">
+		<entitygroup name="XMechEnemyGroupGS01">
+			npcMechDrone,.5
+			npcMechRustyDrone,.2
+			npcMechRobot,.3
+			none, 99.0
+		</entitygroup>
+		<entitygroup name="XMechEnemyGroupGS50">
+			npcMechDrone,.3
+			npcMechRustyDrone,.2
+			npcMechRobot,.4
+			npcMechSphereI,.3
+			npcMechSphereII,.3
+			npcMechRangedRobot,.3
+			npcMechBee,.2
+			none, 98.0
+		</entitygroup>
+		<entitygroup name="XMechEnemyGroupGS100">
+			npcMechDrone,.2
+			npcMechRustyDrone,.2
+			npcMechRobot,.2
+			npcMechSphereI,.2
+			npcMechSphereII,.2
+			npcMechGunBot,.8
+			npcMechRangedRobot,.7
+			npcMechBee,.5
+			none, 97.0
+		</entitygroup>
+		<entitygroup name="XMechCompanion">
+			npcMechCompanion,1.0
+			none, 99.0
+		</entitygroup>
+	</insertAfter>	
+
 	<csv xpath="/entitygroups/entitygroup[ starts-with(@name, 'npcMech')]/text()" delim="\n" op="add">
 		npcMechDrone,.03
 		npcMechRustyDrone,.02
@@ -27,88 +62,6 @@
 	<csv xpath="/entitygroups/entitygroup[ starts-with(@name, 'npcEnemyRanged')]/text()" delim="\n" op="add">
 		npcMechRangedRobot,.3
 		npcMechGunBot,.3
-	</csv>
-
-	<csv xpath="/entitygroups/entitygroup[@name='ZombiesAll']/text()" delim="\n" op="add" >
-		npcMechCompanion,.05
-		npcMechDrone,.02
-		npcMechRustyDrone,.02
-		npcMechRobot,.05
-		npcMechSphereI,.02
-		npcMechSphereII,.02
-		npcMechBee,.02
-		npcMechGunBot,.01
-	</csv>
-	
-	<csv xpath="/entitygroups/entitygroup[@name='ZombiesNight']/text()" delim="\n" op="add" >
-		npcMechDrone,.3
-		npcMechRustyDrone,.2
-		npcMechRobot,.3
-		npcMechSphereI,.2
-		npcMechSphereII,.2
-		npcMechBee,.1
-		npcMechGunBot,.1
-	</csv>
-	
-	<csv xpath="/entitygroups/entitygroup[@name='ZombiesForestDowntown']/text()" delim="\n" op="add" >
-		npcMechCompanion,.1
-		npcMechDrone,.3
-		npcMechRustyDrone,.3
-		npcMechRobot,.3
-		npcMechSphereI,.1
-		npcMechSphereII,.1
-		npcMechBee,.05
-		npcMechGunBot,.05
-	</csv>
-	
-	<csv xpath="/entitygroups/entitygroup[@name='ZombiesForestDowntownNight']/text()" delim="\n" op="add" >
-		npcMechDrone,.3
-		npcMechRustyDrone,.2
-		npcMechRobot,.3
-		npcMechSphereI,.2
-		npcMechSphereII,.2
-		npcMechBee,.1
-		npcMechGunBot,.1
-	</csv>
-	
-	<csv xpath="/entitygroups/entitygroup[@name='ZombiesDowntown']/text()" delim="\n" op="add" >
-		npcMechCompanion,.1
-		npcMechDrone,.2
-		npcMechRustyDrone,.2
-		npcMechRobot,.3
-		npcMechSphereI,.2
-		npcMechSphereII,.2
-		npcMechBee,.1
-		npcMechGunBot,.1
-	</csv>
-	
-	<csv xpath="/entitygroups/entitygroup[@name='ZombiesWasteland']/text()" delim="\n" op="add" >
-		npcMechDrone,.3
-		npcMechRustyDrone,.2
-		npcMechRobot,.3
-		npcMechSphereI,.2
-		npcMechSphereII,.2
-		npcMechBee,.1
-		npcMechGunBot,.3
-	</csv>
-
-	<csv xpath="/entitygroups/entitygroup[@name='ZombiesWastelandNight']/text()" delim="\n" op="add" >
-		npcMechDrone,.2
-		npcMechRustyDrone,.3
-		npcMechRobot,.3
-		npcMechSphereI,.2
-		npcMechSphereII,.2
-		npcMechBee,.1
-		npcMechGunBot,.5
-	</csv>
-	<csv xpath="/entitygroups/entitygroup[@name='ZombiesWastelandDowntown']/text()" delim="\n" op="add" >
-		npcMechDrone,.2
-		npcMechRustyDrone,.3
-		npcMechRobot,.3
-		npcMechSphereI,.2
-		npcMechSphereII,.2
-		npcMechBee,.1
-		npcMechGunBot,.5
 	</csv>
 
 </configs>

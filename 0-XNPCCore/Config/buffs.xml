@@ -664,6 +664,16 @@
 			<stack_type value="ignore"/>
 			<duration value="5"/> 
 		</buff>	
+		<buff name="buffNPCPain0" hidden="true">	
+			<stack_type value="ignore"/>
+			<duration value="0"/>
+			<update_rate value="1"/>
+			<effect_group>
+				<!-- <requirement name="EntityTagCompare" tags="npc"/>	-->
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="PainResistPerHit" operation="set" value="0" /> 
+			</effect_group>					
+		</buff>	
+		
 	
 		<!--  Character mesh activation buffs  -->
 

@@ -72,10 +72,6 @@
 		<set xpath="//entity_class[starts-with(@name, 'animalCoyote')]/property[@value='ApproachAndAttackTarget']/@data">class=EntityAnimalRabbit,8,EntityPlayer,10,EntityNPC,10</set> 
 		
 		<set xpath="//entity_class[starts-with(@name, 'animalCoyote')]/property[@value='SetNearestEntityAsTarget']/@data">class=EntityPlayer,15,10,EntityAnimalRabbit,0,18,EntityNPC,15,10</set> 		
-		
-		<!-- <set xpath="//entity_class[starts-with(@name, 'animalDireWolf')]/property[@value='ApproachAndAttackTarget']/@data">class=EntityAnimalStag,30,EntityPlayer,30,EntityZombie,20,EntityNPC,30</set> -->
-		
-		<!-- <set xpath="//entity_class[starts-with(@name, 'animalDireWolf')]/property[@value='SetNearestEntityAsTarget']/@data">class=EntityPlayer,29,24,EntityAnimalStag,0,0,EntityZombie,0,0,EntityNPC,29,24</set> -->	
 
 		<set xpath="/entity_classes/entity_class[@name='animalDireWolf']/property[@name='AITask']/@value">
 			BreakBlock|
@@ -198,9 +194,9 @@
 	</append>
 	
 	<!-- Add the Control button to player toolbelt on entering game -->
-	<set xpath="//entity_class[@name='playerMale']/property[@name='ItemsOnEnterGame.GameModeSurvival']/@value">drinkJarBoiledWater=2,foodCanChili,medicalFirstAidBandage,meleeToolTorch,noteDuke01,itemNPCModMode</set>	
-	<set xpath="//entity_class[@name='playerMale']/property[@name='ItemsOnEnterGame.GameModeSurvivalSP']/@value">drinkJarBoiledWater,foodCanChili,medicalFirstAidBandage,meleeToolTorch,itemNPCModMode</set> 
-	<set xpath="//entity_class[@name='playerMale']/property[@name='ItemsOnEnterGame.GameModeSurvivalMP']/@value">drinkJarBoiledWater,foodCanChili,medicalFirstAidBandage,meleeToolTorch,itemNPCModMode</set> 
+	<set xpath="//entity_class[@name='playerMale']/property[@name='ItemsOnEnterGame.GameModeSurvival']/@value">drinkJarBoiledWater=2,foodCanChili,medicalFirstAidBandage,meleeToolTorch,noteDuke01,itemNPCModMode,itemNPCModStop</set>	
+	<set xpath="//entity_class[@name='playerMale']/property[@name='ItemsOnEnterGame.GameModeSurvivalSP']/@value">drinkJarBoiledWater,foodCanChili,medicalFirstAidBandage,meleeToolTorch,itemNPCModMode,itemNPCModStop</set> 
+	<set xpath="//entity_class[@name='playerMale']/property[@name='ItemsOnEnterGame.GameModeSurvivalMP']/@value">drinkJarBoiledWater,foodCanChili,medicalFirstAidBandage,meleeToolTorch,itemNPCModMode,itemNPCModStop</set> 
 
 	<append xpath="/entity_classes">
 	
@@ -302,7 +298,7 @@
 			<property name="ArmsExplosionDamageMultiplier" value="0"/><!-- 1 when fixed  -->
 			<property name="HeadExplosionDamageMultiplier" value="1"/>
 			<property name="ChestExplosionDamageMultiplier" value="1"/>
-			<property name="PainResistPerHit" value=".55"/> <!-- Added when hit. Caps at 3. Decay .2 per second. At 1 movement is not slowed by pain -->
+			<property name="PainResistPerHit" value="0"/> <!-- Added when hit. Caps at 3. Decay .2 per second. At 1 movement is not slowed by pain -->
 			<property name="MaxViewAngle" value="360"/> 
 			<property name="SightRange" value="60"/>
 			<property name="SightLightThreshold" value="-2,150"/> 
@@ -356,6 +352,7 @@
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="NPCHit"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="WeaponUser"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="buffEntitySpawnHeal"/>
+				<!-- <triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="buffNPCPain0"/> -->
 			</effect_group>	
 			<property name="RotateToGround" value="false"/>	
 			<property name="PushFactor" value="1"/>	
@@ -3147,7 +3144,7 @@
 		
 		<entity_class name="npcHarleyEmptyHand" extends="npcBanditEmptyHandTemplate"> 
 			<property name="UserSpawnType" value="Menu"/> 
- 			<property name="Tags" value="entity,female,npc,walker,melee,voiceharley,bandit,DRMid,Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL"/>
+ 			<property name="Tags" value="entity,female,npc,walker,melee,voiceharley,bandit,DRLow,Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Names" value="Harley, Quinn, HarleyQuinn" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Quinn_X"/>
@@ -3173,7 +3170,7 @@
 		
 		<entity_class name="npcHarleyClub" extends="npcBanditClubTemplate"  > 
 			<property name="UserSpawnType" value="Menu"/> 
- 			<property name="Tags" value="entity,female,npc,walker,melee,voiceharley,bandit,DRMid,Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL"/>
+ 			<property name="Tags" value="entity,female,npc,walker,melee,voiceharley,bandit,DRLow,Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Names" value="Harley, Quinn, HarleyQuinn" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Quinn_X"/>
@@ -3198,7 +3195,7 @@
 		
 		<entity_class name="npcHarleyKnife" extends="npcBanditKnifeTemplate"> 
 			<property name="UserSpawnType" value="Menu"/> 
- 			<property name="Tags" value="entity,female,npc,walker,melee,voiceharley,bandit,DRMid,Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL"/>
+ 			<property name="Tags" value="entity,female,npc,walker,melee,voiceharley,bandit,DRLow,Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Names" value="Harley, Quinn, HarleyQuinn" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Quinn_X"/>
@@ -3223,7 +3220,7 @@
 		
 		<entity_class name="npcHarleyBat" extends="npcBanditBatTemplate"> 
 			<property name="UserSpawnType" value="Menu"/> 
- 			<property name="Tags" value="entity,female,npc,walker,melee,voiceharley,bandit,DRMid,Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL"/>
+ 			<property name="Tags" value="entity,female,npc,walker,melee,voiceharley,bandit,DRLow,Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Names" value="Harley, Quinn, HarleyQuinn" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Quinn_X"/>
@@ -3248,7 +3245,7 @@
 	
 		<entity_class name="npcHarleyMachete" extends="npcBanditMacheteTemplate"> 
 			<property name="UserSpawnType" value="Menu"/> 
- 			<property name="Tags" value="entity,female,npc,walker,melee,voiceharley,bandit,DRMid,Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL"/>
+ 			<property name="Tags" value="entity,female,npc,walker,melee,voiceharley,bandit,DRLow,Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Names" value="Harley, Quinn, HarleyQuinn" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Quinn_X"/>
@@ -3274,7 +3271,7 @@
 
 		<entity_class name="npcHarleyAxe" extends="npcBanditAxeTemplate"> 
 			<property name="UserSpawnType" value="Menu"/> 
- 			<property name="Tags" value="entity,female,npc,walker,melee,voiceharley,bandit,DRMid,Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL"/>
+ 			<property name="Tags" value="entity,female,npc,walker,melee,voiceharley,bandit,DRLow,Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Names" value="Harley, Quinn, HarleyQuinn" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Quinn_X"/>
@@ -3299,7 +3296,7 @@
 		
 		<entity_class name="npcHarleySpear" extends="npcBanditSpearTemplate"> 
 			<property name="UserSpawnType" value="Menu"/> 
- 			<property name="Tags" value="entity,female,npc,walker,melee,voiceharley,bandit,DRMid,Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL"/>
+ 			<property name="Tags" value="entity,female,npc,walker,melee,voiceharley,bandit,DRLow,Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Names" value="Harley, Quinn, HarleyQuinn" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Quinn_X"/>
@@ -3324,7 +3321,7 @@
 		
 		<entity_class name="npcHarleyPipePistol" extends="npcPipePistolTemplate"> 
 			<property name="UserSpawnType" value="Menu"/> 
- 			<property name="Tags" value="entity,female,npc,walker,ranged,voiceharley,bandit,DRMid,Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL"/>
+ 			<property name="Tags" value="entity,female,npc,walker,ranged,voiceharley,bandit,DRLow,Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Names" value="Harley, Quinn, HarleyQuinn" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Quinn_X"/>
@@ -3355,7 +3352,7 @@
 		
 		<entity_class name="npcHarleyPipeRifle" extends="npcPipeRifleTemplate"> 
 			<property name="UserSpawnType" value="Menu"/> 
- 			<property name="Tags" value="entity,female,npc,walker,ranged,voiceharley,bandit,DRMid,Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL"/>
+ 			<property name="Tags" value="entity,female,npc,walker,ranged,voiceharley,bandit,DRLow,Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Names" value="Harley, Quinn, HarleyQuinn" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Quinn_X"/>
@@ -3382,7 +3379,7 @@
 		
 		<entity_class name="npcHarleyPipeMG" extends="npcPipeMGTemplate"> 
 			<property name="UserSpawnType" value="Menu"/> 
- 			<property name="Tags" value="entity,female,npc,walker,ranged,voiceharley,bandit,DRMid,Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL"/>
+ 			<property name="Tags" value="entity,female,npc,walker,ranged,voiceharley,bandit,DRLow,Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Names" value="Harley, Quinn, HarleyQuinn" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Quinn_X"/>
@@ -3409,7 +3406,7 @@
 		
 		<entity_class name="npcHarleyPipeShotgun" extends="npcPipeShotgunTemplate"> 
 			<property name="UserSpawnType" value="Menu"/> 
- 			<property name="Tags" value="entity,female,npc,walker,ranged,voiceharley,bandit,DRMid,Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL"/>
+ 			<property name="Tags" value="entity,female,npc,walker,ranged,voiceharley,bandit,DRLow,Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Names" value="Harley, Quinn, HarleyQuinn" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Quinn_X"/>
@@ -3436,7 +3433,7 @@
 
 		<entity_class name="npcHarleySMG" extends="npcSMGTemplate"> 
 			<property name="UserSpawnType" value="Menu"/> 
- 			<property name="Tags" value="entity,female,npc,walker,ranged,voiceharley,bandit,DRMid,Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL"/>
+ 			<property name="Tags" value="entity,female,npc,walker,ranged,voiceharley,bandit,DRLow,Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Names" value="Harley, Quinn, HarleyQuinn" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Quinn_X"/>
@@ -3463,7 +3460,7 @@
 		
 		<entity_class name="npcHarleyM60" extends="npcM60Template"> 
 			<property name="UserSpawnType" value="Menu"/> 
- 			<property name="Tags" value="entity,female,npc,walker,ranged,voiceharley,bandit,DRMid,Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL"/>
+ 			<property name="Tags" value="entity,female,npc,walker,ranged,voiceharley,bandit,DRLow,Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Names" value="Harley, Quinn, HarleyQuinn" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Quinn_X"/>
@@ -3490,7 +3487,7 @@
 		
 		<entity_class name="npcHarleyPistol" extends="npcPistolTemplate"> 
 			<property name="UserSpawnType" value="Menu"/> 
- 			<property name="Tags" value="entity,female,npc,walker,ranged,voiceharley,bandit,DRMid,Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL"/>
+ 			<property name="Tags" value="entity,female,npc,walker,ranged,voiceharley,bandit,DRLow,Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Names" value="Harley, Quinn, HarleyQuinn" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Quinn_X"/>
@@ -3517,7 +3514,7 @@
 		
 		<entity_class name="npcHarleyDPistol" extends="npcDPistolTemplate"> 
 			<property name="UserSpawnType" value="Menu"/> 
- 			<property name="Tags" value="entity,female,npc,walker,ranged,voiceharley,bandit,DRMid,Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL"/>
+ 			<property name="Tags" value="entity,female,npc,walker,ranged,voiceharley,bandit,DRLow,Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Names" value="Harley, Quinn, HarleyQuinn" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Quinn_X"/>
@@ -3544,7 +3541,7 @@
 
 		<entity_class name="npcHarleyAK47" extends="npcAK47Template"> 
 			<property name="UserSpawnType" value="Menu"/> 
- 			<property name="Tags" value="entity,female,npc,walker,ranged,voiceharley,bandit,DRMid,Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL"/>
+ 			<property name="Tags" value="entity,female,npc,walker,ranged,voiceharley,bandit,DRLow,Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Names" value="Harley, Quinn, HarleyQuinn" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Quinn_X"/>
@@ -3571,7 +3568,7 @@
 		
 		<entity_class name="npcHarleyTRifle" extends="npcTRifleTemplate"> 
 			<property name="UserSpawnType" value="Menu"/> 
- 			<property name="Tags" value="entity,female,npc,walker,ranged,voiceharley,bandit,DRMid,Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL"/>
+ 			<property name="Tags" value="entity,female,npc,walker,ranged,voiceharley,bandit,DRLow,Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Names" value="Harley, Quinn, HarleyQuinn" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Quinn_X"/>
@@ -3598,7 +3595,7 @@
 		
 		<entity_class name="npcHarleyHRifle" extends="npcHRifleTemplate"> 
 			<property name="UserSpawnType" value="Menu"/> 
- 			<property name="Tags" value="entity,female,npc,walker,ranged,voiceharley,bandit,DRMid,Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL"/>
+ 			<property name="Tags" value="entity,female,npc,walker,ranged,voiceharley,bandit,DRLow,Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Names" value="Harley, Quinn, HarleyQuinn" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Quinn_X"/>
@@ -3625,7 +3622,7 @@
 
 		<entity_class name="npcHarleySRifle" extends="npcSRifleTemplate">
 			<property name="UserSpawnType" value="Menu"/> 
- 			<property name="Tags" value="entity,female,npc,walker,ranged,voiceharley,bandit,DRMid,Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL" />
+ 			<property name="Tags" value="entity,female,npc,walker,ranged,voiceharley,bandit,DRLow,Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL" />
 			<property name="Faction" value="bandits" />
 			<property name="Names" value="Harley, Quinn, HarleyQuinn" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Quinn_X" />
@@ -3652,7 +3649,7 @@
 
 		<entity_class name="npcHarleyPShotgun" extends="npcPShotgunTemplate"> 
 			<property name="UserSpawnType" value="Menu"/> 
- 			<property name="Tags" value="entity,female,npc,walker,ranged,voiceharley,bandit,DRMid,Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL"/>
+ 			<property name="Tags" value="entity,female,npc,walker,ranged,voiceharley,bandit,DRLow,Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Names" value="Harley, Quinn, HarleyQuinn" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Quinn_X"/>
@@ -3679,7 +3676,7 @@
 
 		<entity_class name="npcHarleyAShotgun" extends="npcAShotgunTemplate"> 
 			<property name="UserSpawnType" value="Menu"/> 
- 			<property name="Tags" value="entity,female,npc,walker,ranged,voiceharley,bandit,DRMid,Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL"/>
+ 			<property name="Tags" value="entity,female,npc,walker,ranged,voiceharley,bandit,DRLow,Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Names" value="Harley, Quinn, HarleyQuinn" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Quinn_X"/>
@@ -3706,7 +3703,7 @@
 		
 		<entity_class name="npcHarleyLBow" extends="npcLBowTemplate"> 
 			<property name="UserSpawnType" value="Menu"/> 
- 			<property name="Tags" value="entity,female,npc,walker,ranged,voiceharley,bandit,DRMid,Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL"/>
+ 			<property name="Tags" value="entity,female,npc,walker,ranged,voiceharley,bandit,DRLow,Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Names" value="Harley, Quinn, HarleyQuinn" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Quinn_X"/>
@@ -3733,7 +3730,7 @@
 
 		<entity_class name="npcHarleyXBow" extends="npcXBowTemplate"> 
 			<property name="UserSpawnType" value="Menu"/> 
- 			<property name="Tags" value="entity,female,npc,walker,ranged,voiceharley,bandit,DRMid,Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL"/>
+ 			<property name="Tags" value="entity,female,npc,walker,ranged,voiceharley,bandit,DRLow,Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Names" value="Harley, Quinn, HarleyQuinn" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Quinn_X"/>
@@ -3759,7 +3756,7 @@
 		</entity_class>	
 		<entity_class name="npcHarleyRocketL" extends="npcRocketLTemplate"> 
 			<property name="UserSpawnType" value="Menu"/> 
- 			<property name="Tags" value="entity,female,npc,walker,ranged,voiceharley,bandit,DRMid,Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL"/>
+ 			<property name="Tags" value="entity,female,npc,walker,ranged,voiceharley,bandit,DRLow,Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Names" value="Harley, Quinn, HarleyQuinn" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Quinn_X"/>
