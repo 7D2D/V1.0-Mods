@@ -1,9 +1,133 @@
 <configs>
 
+<!--  
+=================================================================
+Biome Spawning your Add On Pack Entities for The NPC Mod for V1.0
+=================================================================
+The NPC Mod is a community modding project that provides players with the means to release entity Add On Packs.
+These can include zombies, NPC helpers, NPC hostiles, animals, and even mech types.
+These Add On Packs are factional, and can help, hinder, or remain neutral towards players and each other.
+
+=================================================================
+Bringing your Add On Pack entities into Game
+=================================================================
+There are two primary mechanisms to bring your Add On Pack entities into game:
+
+- Biome Spawning
+NPC Mod entities can be spawned directly into the biomes in the same way as regular entities.
+V1.0 places entities into their own unique spawning system (spawning.xml) which calls on their associated entity groups (entitygroups.xml).
+This allows your Add On Pack to be added to the biomes as an additional spawning layer rather than competing with existing or custom spawning groups.
+Biome spawning for the NPC Mod is identical to how it is performed for default game entities.
+It closely resembles animal spawning groups that use 'none' as an entity to regulate appearances.
+This ensures your Add On Pack entities remain the exception in comparison to regular zombies in order to enhance, rather than flood, the biomes.
+
+- POI Sleeper Spawning
+NPC Mod entities can be spawned directly into custom POIs. V1.0 allows POI sleeper groups and individuals to be added to POI sleeper volumes.
+This spawning system is governed by game stages (gamestages.xml) which calls on game staged entity groups (entitygroups.xml).
+Check the NPC Mod Prefab Pack Mod for more information on that.
+
+This guide introduces just the Biome Spawning mechanism. Here are examples of how we can set up your Add On Pack entities for Biome Spawning.
+
+=================================================================
+Biome Spawning
+=================================================================
+Entities brought into the biomes (Pine Forest, Desert, etc.) are governed by spawning.xml and entitygroups.xml.
+
+spawning.xml governs:
+=================================================================
+- Where the entities can appear (<append xpath="/spawning/biome[@name='pine_forest']"> allows entities to appear in the Pine Forest)
+- How many entities will appear for each spawning instance (maxcount="1" allows a single entity to appear)
+- How often they can reappear (respawndelay="1" allows entities to reappear every 60 minutes [Real Life minutes, not in game time])
+- When they can appear (time="Day" allows entities to appear in the day time with "Night" and "Any" being other used options)
+- Who can appear (entitygroup="XythSpiddiesDay" allows an entitygroups.xml group called "XythSpiddiesDay" to appear)
+- Restrictions or special locations (notags="commercial,industrial,downtown" allows the entities to only appear away from POIs with these tags)
+
+Here is a working example for the 1-NPCXSpiderColonyExpansionPack Add On Pack for the Pine Forest biome in spawning.xml.
+
 	<append xpath="/spawning/biome[@name='pine_forest']">
-		<spawn maxcount="1" respawndelay="1" time="Day" entitygroup="npcHarleyGroupGS01" notags="commercial,industrial,downtown" />
-		<spawn maxcount="1" respawndelay="1" time="Night" entitygroup="npcHarleyGroupGS50" notags="commercial,industrial,downtown" />
-		<spawn maxcount="1" respawndelay="1" time="Day" entitygroup="npcHarleyGroupGS01" tags="commercial,industrial" notags="downtown" />
+		<spawn maxcount="1" respawndelay="1" time="Day" entitygroup="XythSpiddiesDay" notags="commercial,industrial,downtown" />
+		<spawn maxcount="1" respawndelay="1" time="Night" entitygroup="XythSpiddiesNight" notags="commercial,industrial,downtown" />
+		<spawn maxcount="1" respawndelay="3" time="Day" entitygroup="XythSpiddiesDay" tags="commercial,industrial" notags="downtown" />
+		<spawn maxcount="1" respawndelay="3" time="Night" entitygroup="XythSpiddiesNight" tags="commercial,industrial" notags="downtown" />
+		<spawn maxcount="1" respawndelay="3" time="Day" entitygroup="XythSpiddiesNight" tags="downtown" />
+		<spawn maxcount="1" respawndelay="3" time="Night" entitygroup="XythSpiddiesNight" tags="downtown" />
+	</append>
+
+Based on the above criteria, this tells us that the XythSpiddiesDay entity group (entitygroups.xml) can appear in the Pine Forest biomes.
+
+The last line tells us that 1 entity (maxcount="1") can respawn every 180 minutes (respawndelay="3") at Night (time="Night") Down Town (tags="downtown").
+This 1 entity is pulled into the Pine Forest from XythSpiddiesNight entity group (entitygroup="XythSpiddiesNight").
+It has a special restriction of only appearing around Down Town City POIs (tags="downtown").
+This last lime limits respawning to 3 (180 minutes) because the default zombies will appear here in much greater amount and frequency over time.
+Allowing just a token gesture appearance, if any at all, from the NPC Mod Add On Pack ensures it does not become overwhelmed with opposite factions and degrade server performance.
+
+The above working example is comprehensive and covers all scenarios. This closely resembles a default spawning.xml entry for a particular biome.
+If you wanted to be more generic and restrict to just the biome, it would be enough to use the following entry instead:
+
+	<append xpath="/spawning/biome[@name='pine_forest']">
+		<spawn maxcount="1" respawndelay="1" time="Any" entitygroup="WildernessRobotDronesAny" notags="commercial,industrial,downtown" />
+	</append>
+	
+This allows 1 entity to appear in only the Pine Forest biome once every 60 minutes from WildernessRobotDronesAny entity group at any time of the day.
+As the 'Wilderness Robot Done Any' name suggests, it is kept out of the POI tiling system for the most part.
+
+entitygroups.xml governs:
+=================================================================
+- Exactly who can appear from a list
+- How often they can be selected from a list
+- How they will be throttled using a 'none' entity which staggers appearances of Add On Pack entities to ensure they don't flood the biomes.
+
+Based on observational testing, an entity brought into the biomes from spawning.xml can spawn approximately every 40-50 blocks.
+This is what we can generally observe for default zombies. This would be far too often for NPC Mod Add On Pack entities under normal circumstances.
+We can regulate this by adding a 'none' entity at the bottom of the entity group list. This is already used in default animal entity groups.
+	
+Here is a working example for the 1-NPCXSpiderColonyExpansionPack Add On Pack for the XythSpiddiesDay group in entitygroups.xml.  -->
+
+	<!-- Adding up to a total of 100 for conformity -->
+	<!-- *** DAY -->
+	
+<!--<entitygroup name="XythSpiddiesDay">
+		animalSpider01Mini, 1
+		animalSpider02Mini, 1
+		animalSpider03Mini, 1
+		animalSpider01, 1
+		animalSpider02, 1
+		animalSpider03, 1
+		animalSpider01Feral, .5
+		animalSpider02Feral, .5
+		animalSpider03Feral, .5
+		animalSpider01Radiated, .3
+		animalSpider02Radiated, .3
+		animalSpider03Radiated, .3
+		animalSpider01Queen, .2
+		animalSpider02Queen, .2
+		animalSpider03Queen, .2
+		none, 91
+	</entitygroup>
+	
+This entity group entry shows us the contents of the XythSpiddiesDay list. We can see the name of the entity along with its probability to be selected.
+Since this group will appear in the Pine Forest in the Day, it is kept relatively calm with low HP mini spiders appearing more often than high HP queen spiders.
+Notice how 'none, 91' appears at the bottom of the list. Ensure 'none' is never placed at the top as the game requires a regular entity to be placed there.
+This allows it to understand the type of group. By default, 'none' is placed at the bottom. This can be observed in the default entitygroups.xml for animals.
+
+Considerations:
+- Keep 'none' at a minimum of 90. NPC Mod Core entities typically have a 'none' entity for 96 or higher and they are certainly not strangers in the biomes.
+- Allow the sum total of all probabilites to equal 100. This is for good practice and compliance. A total over 100 will be normalize back to 100, but a total under will not.
+- Be careful with spawning.xml maxcount on any value greater than 1. Allowing 2 to appear can noticably reduce the distance between appearances and flood the biomes.
+
+=================================================================
+SUMMARY
+=================================================================
+This method of allowing your NPC Mod Add On Pack entities to appear in the biomes allows us to layer on top, rather that replace.
+It has been tested comprehensively and performs very effectively when carefully regulated.
+By following the above recommendations and guidelines, your Add On Pack will remain balanced and complement multiple Add On Packs at the same time.
+Refer to the default spawning.xml and entitygroups.xml for further explanations and examples since the game devs add explanatory comments in the code.
+================================================================= -->
+
+	<append xpath="/spawning/biome[@name='pine_forest']">
+	<!-- <spawn maxcount="1" respawndelay="3" time="Day" entitygroup="npcHarleyGroupGS01" notags="commercial,industrial,downtown" /> Not noob friendly -->
+		<spawn maxcount="1" respawndelay="2" time="Night" entitygroup="npcHarleyGroupGS50" notags="commercial,industrial,downtown" />
+		<spawn maxcount="1" respawndelay="2" time="Day" entitygroup="npcHarleyGroupGS01" tags="commercial,industrial" notags="downtown" />
 		<spawn maxcount="1" respawndelay="1" time="Night" entitygroup="npcHarleyGroupGS100" tags="commercial,industrial" notags="downtown" />
 		<spawn maxcount="1" respawndelay="1" time="Day" entitygroup="npcHarleyGroupGS50" tags="downtown" />
 		<spawn maxcount="1" respawndelay="1" time="Night" entitygroup="npcHarleyGroupGS100" tags="downtown" />

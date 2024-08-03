@@ -510,6 +510,7 @@
 			<!-- removing these two properties removes the E when alive and on death but disables the inventory  -->	
 			<property name="LootListAlive" value=""/> 
 			<property name="NPCID" value=""/> 
+			<property name="NeverScaleAI" value="true" /> <!-- AI has a delay added when 8M away from a player, so dont do that sh*t on NPCs. -->
 			
 			<!--  Defaults for basic, dumb characters  -->
 			<property name="Hirable" value="false" /> <!--  This was added to all advanced tempates, Note: you still need the UAI Hired package  -->
@@ -3165,6 +3166,7 @@
 			<property name="SoundAttack" value="HarleyAttack"/>
 			<property name="SoundSense" value="HarleySense"/>
 			<property name="LootDropProb" value="0.2"/> 
+			<property name="AlwaysJiggle" value="true" />
 			<!-- <property name="AIPackages" value="NPCModCoreNoChat, NPCModHostileMeleeBasic, NPCModHostileRangedBasic"/> -->
 		</entity_class>	
 		
@@ -3191,6 +3193,7 @@
 			<property name="SoundAttack" value="HarleyAttack"/>
 			<property name="SoundSense" value="HarleySense"/>
 			<property name="LootDropProb" value="0.2"/> 
+			<property name="AlwaysJiggle" value="true" />
 		</entity_class>
 		
 		<entity_class name="npcHarleyKnife" extends="npcBanditKnifeTemplate"> 
@@ -3216,6 +3219,7 @@
 			<property name="SoundAttack" value="HarleyAttack"/>
 			<property name="SoundSense" value="HarleySense"/>
 			<property name="LootDropProb" value="0.2"/> 
+			<property name="AlwaysJiggle" value="true" />
 		</entity_class>	
 		
 		<entity_class name="npcHarleyBat" extends="npcBanditBatTemplate"> 
@@ -3241,6 +3245,7 @@
 			<property name="SoundAttack" value="HarleyAttack"/>
 			<property name="SoundSense" value="HarleySense"/>
 			<property name="LootDropProb" value="0.2"/> 
+			<property name="AlwaysJiggle" value="true" />
 		</entity_class>			
 	
 		<entity_class name="npcHarleyMachete" extends="npcBanditMacheteTemplate"> 
@@ -3266,6 +3271,7 @@
 			<property name="SoundAttack" value="HarleyAttack"/>
 			<property name="SoundSense" value="HarleySense"/>
 			<property name="LootDropProb" value="0.2"/> 
+			<property name="AlwaysJiggle" value="true" />
 		</entity_class>		
 
 
@@ -3292,6 +3298,7 @@
 			<property name="SoundAttack" value="HarleyAttack"/>
 			<property name="SoundSense" value="HarleySense"/>
 			<property name="LootDropProb" value="0.2"/> 
+			<property name="AlwaysJiggle" value="true" />
 		</entity_class>	
 		
 		<entity_class name="npcHarleySpear" extends="npcBanditSpearTemplate"> 
@@ -3317,6 +3324,7 @@
 			<property name="SoundAttack" value="HarleyAttack"/>
 			<property name="SoundSense" value="HarleySense"/>
 			<property name="LootDropProb" value="0.2"/> 
+			<property name="AlwaysJiggle" value="true" />
 		</entity_class>			
 		
 		<entity_class name="npcHarleyPipePistol" extends="npcPipePistolTemplate"> 
@@ -3343,11 +3351,8 @@
 			<property name="SoundSense" value="HarleySense"/>
 			<property name="LootDropProb" value="0.2"/> 
 			<property name="AIPackages" value="NPCModCoreNoChat, NPCModHostileMeleeBasic, NPCModHostileRangedBasic"/>
-			<!-- <property name="LootListAlive" value="traderNPC"/>
-			<property name="NPCID" value="spheretest"/> 
-			<property name="Hirable" value="false" /> -->
 			<property name="Class" value="EntityNPCBandit, SCore" /> 
-			
+			<property name="AlwaysJiggle" value="true" />
 		</entity_class>	
 		
 		<entity_class name="npcHarleyPipeRifle" extends="npcPipeRifleTemplate"> 
@@ -3374,7 +3379,8 @@
 			<property name="SoundSense" value="HarleySense"/>
 			<property name="LootDropProb" value="0.2"/> 
 			<property name="AIPackages" value="NPCModCoreNoChat, NPCModHostileMeleeBasic, NPCModHostileRangedBasic"/>
-			<property name="Class" value="EntityNPCBandit, SCore" /> 
+			<property name="Class" value="EntityNPCBandit, SCore" />
+			<property name="AlwaysJiggle" value="true" />
 		</entity_class>	
 		
 		<entity_class name="npcHarleyPipeMG" extends="npcPipeMGTemplate"> 
@@ -3402,6 +3408,7 @@
 			<property name="LootDropProb" value="0.2"/> 
 			<property name="AIPackages" value="NPCModCoreNoChat, NPCModHostileMeleeBasic, NPCModHostileRangedBasic"/>
 			<property name="Class" value="EntityNPCBandit, SCore" /> 
+			<property name="AlwaysJiggle" value="true" />
 		</entity_class>				
 		
 		<entity_class name="npcHarleyPipeShotgun" extends="npcPipeShotgunTemplate"> 
@@ -3428,7 +3435,8 @@
 			<property name="SoundSense" value="HarleySense"/>
 			<property name="LootDropProb" value="0.2"/> 
 			<property name="AIPackages" value="NPCModCoreNoChat, NPCModHostileMeleeBasic, NPCModHostileRangedBasic"/>
-			<property name="Class" value="EntityNPCBandit, SCore" /> 
+			<property name="Class" value="EntityNPCBandit, SCore" />
+			<property name="AlwaysJiggle" value="true" />
 		</entity_class>	
 
 		<entity_class name="npcHarleySMG" extends="npcSMGTemplate"> 
@@ -3456,6 +3464,7 @@
 			<property name="LootDropProb" value="0.2"/> 
 			<property name="AIPackages" value="NPCModCoreNoChat, NPCModHostileMeleeBasic, NPCModHostileRangedBasic"/>
 			<property name="Class" value="EntityNPCBandit, SCore" /> 
+			<property name="AlwaysJiggle" value="true" />
 		</entity_class>	
 		
 		<entity_class name="npcHarleyM60" extends="npcM60Template"> 
@@ -3483,6 +3492,7 @@
 			<property name="LootDropProb" value="0.2"/> 
 			<property name="AIPackages" value="NPCModCoreNoChat, NPCModHostileMeleeBasic, NPCModHostileRangedBasic"/>
 			<property name="Class" value="EntityNPCBandit, SCore" /> 
+			<property name="AlwaysJiggle" value="true" />
 		</entity_class>			
 		
 		<entity_class name="npcHarleyPistol" extends="npcPistolTemplate"> 
@@ -3510,6 +3520,7 @@
 			<property name="LootDropProb" value="0.2"/> 
 			<property name="AIPackages" value="NPCModCoreNoChat, NPCModHostileMeleeBasic, NPCModHostileRangedBasic"/>
 			<property name="Class" value="EntityNPCBandit, SCore" /> 
+			<property name="AlwaysJiggle" value="true" />
 		</entity_class>				
 		
 		<entity_class name="npcHarleyDPistol" extends="npcDPistolTemplate"> 
@@ -3537,6 +3548,7 @@
 			<property name="LootDropProb" value="0.2"/> 
 			<property name="AIPackages" value="NPCModCoreNoChat, NPCModHostileMeleeBasic, NPCModHostileRangedBasic"/> 
 			<property name="Class" value="EntityNPCBandit, SCore" /> 
+			<property name="AlwaysJiggle" value="true" />
 		</entity_class>				
 
 		<entity_class name="npcHarleyAK47" extends="npcAK47Template"> 
@@ -3564,6 +3576,7 @@
 			<property name="LootDropProb" value="0.2"/> 
 			<property name="AIPackages" value="NPCModCoreNoChat, NPCModHostileMeleeBasic, NPCModHostileRangedBasic"/>
 			<property name="Class" value="EntityNPCBandit, SCore" /> 
+			<property name="AlwaysJiggle" value="true" />
 		</entity_class>
 		
 		<entity_class name="npcHarleyTRifle" extends="npcTRifleTemplate"> 
@@ -3591,6 +3604,7 @@
 			<property name="LootDropProb" value="0.2"/> 
 			<property name="AIPackages" value="NPCModCoreNoChat, NPCModHostileMeleeBasic, NPCModHostileRangedBasic"/> 
 			<property name="Class" value="EntityNPCBandit, SCore" /> 
+			<property name="AlwaysJiggle" value="true" />
 		</entity_class>		
 		
 		<entity_class name="npcHarleyHRifle" extends="npcHRifleTemplate"> 
@@ -3618,6 +3632,7 @@
 			<property name="LootDropProb" value="0.2"/> 
 			<property name="AIPackages" value="NPCModCoreNoChat, NPCModHostileMeleeBasic, NPCModHostileRangedBasic"/>
 			<property name="Class" value="EntityNPCBandit, SCore" /> 
+			<property name="AlwaysJiggle" value="true" />
 		</entity_class>
 
 		<entity_class name="npcHarleySRifle" extends="npcSRifleTemplate">
@@ -3645,6 +3660,7 @@
 			<property name="LootDropProb" value="0.2" />
 			<property name="AIPackages" value="NPCModCoreNoChat, NPCModHostileMeleeBasic, NPCModHostileRangedBasic"/> 
 			<property name="Class" value="EntityNPCBandit, SCore" /> 
+			<property name="AlwaysJiggle" value="true" />
 		</entity_class>
 
 		<entity_class name="npcHarleyPShotgun" extends="npcPShotgunTemplate"> 
@@ -3672,6 +3688,7 @@
 			<property name="LootDropProb" value="0.2"/> 
 			<property name="AIPackages" value="NPCModCoreNoChat, NPCModHostileMeleeBasic, NPCModHostileRangedBasic"/> 
 			<property name="Class" value="EntityNPCBandit, SCore" /> 
+			<property name="AlwaysJiggle" value="true" />
         </entity_class>   
 
 		<entity_class name="npcHarleyAShotgun" extends="npcAShotgunTemplate"> 
@@ -3699,6 +3716,7 @@
 			<property name="LootDropProb" value="0.2"/> 
 			<property name="AIPackages" value="NPCModCoreNoChat, NPCModHostileMeleeBasic, NPCModHostileRangedBasic"/> 
 			<property name="Class" value="EntityNPCBandit, SCore" /> 
+			<property name="AlwaysJiggle" value="true" />
         </entity_class>   	
 		
 		<entity_class name="npcHarleyLBow" extends="npcLBowTemplate"> 
@@ -3726,6 +3744,7 @@
 			<property name="LootDropProb" value="0.2"/> 
 			<property name="AIPackages" value="NPCModCoreNoChat, NPCModHostileMeleeBasic, NPCModHostileRangedBasic"/> 
 			<property name="Class" value="EntityNPCBandit, SCore" /> 
+			<property name="AlwaysJiggle" value="true" />
 		</entity_class> 
 
 		<entity_class name="npcHarleyXBow" extends="npcXBowTemplate"> 
@@ -3753,6 +3772,7 @@
 			<property name="LootDropProb" value="0.2"/> 
 			<property name="AIPackages" value="NPCModCoreNoChat, NPCModHostileMeleeBasic, NPCModHostileRangedBasic"/> 
 			<property name="Class" value="EntityNPCBandit, SCore" /> 
+			<property name="AlwaysJiggle" value="true" />
 		</entity_class>	
 		<entity_class name="npcHarleyRocketL" extends="npcRocketLTemplate"> 
 			<property name="UserSpawnType" value="Menu"/> 
@@ -3778,7 +3798,8 @@
 			<property name="SoundSense" value="HarleySense"/>
 			<property name="LootDropProb" value="0.2"/> 
 			<property name="AIPackages" value="NPCModCoreNoChat, NPCModHostileMeleeBasic, NPCModHostileRangedBasic"/> 
-			<property name="Class" value="EntityNPCBandit, SCore" /> 
+			<property name="Class" value="EntityNPCBandit, SCore" />
+			<property name="AlwaysJiggle" value="true" />
 		</entity_class>	
 						
 		
@@ -4229,7 +4250,7 @@
 			<property name="MoveSpeedAggro" value="1.5, 1.5"/> 
 			<property name="MoveSpeedRand" value="-.1, .2"/>
 			<property name="MoveSpeedPanic" value="1.5"/>
-			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityAnimalRabbit,18"/>
+			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityAnimalRabbit,18"/>
 			<property name="AITarget-1" value="SetAsTargetIfHurt"/>
 			<property name="AITarget-2" value="BlockingTargetTask"/>
 			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityAnimalRabbit,0,0"/>
@@ -4259,6 +4280,7 @@
 			<property name="UserSpawnType" value="Menu"/> 
  			<property name="Tags" value="entity,animal,perkAT02,perkAT03"/>
 			<property name="Faction" value="passiveanimalssmall"/> 
+			<!-- <property name="MinimumJiggleDistance" value="400" /> -->
 			<property name="MapIcon" value="ui_game_symbol_tracking_wolf"/>
 			<property name="TrackerIcon" value="ui_game_symbol_tracking_wolf"/>
 			<property name="LookAtAngle" value="0"/> 
@@ -4276,7 +4298,13 @@
 			<property name="MoveSpeedAggro" value="1.5, 1.5"/> 
 			<property name="MoveSpeedRand" value="-.1, .2"/>
 			<property name="MoveSpeedPanic" value="1.5"/>
-			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityAnimalRabbit,18"/>
+			<property name="AITask-1" value="BreakBlock"/>
+			<property name="AITask-2" value="Territorial"/>
+			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityAnimalRabbit,18"/>
+			<property name="AITask-4" value="ApproachSpot"/>
+			<property name="AITask-5" value="Look"/>
+			<property name="AITask-6" value="Wander"/>
+			<property name="AITask-7" value=""/>
 			<property name="AITarget-1" value="SetAsTargetIfHurt"/>
 			<property name="AITarget-2" value="BlockingTargetTask"/>
 			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityAnimalRabbit,0,0"/>
@@ -4303,6 +4331,7 @@
                 <passive_effect name="HealthMax" operation="base_set" value="500"/>
                 <passive_effect name="PhysicalDamageResist" operation="base_set" value="10" />
             </effect_group> 
+			<property name="AlwaysJiggle" value="true" />
 		</entity_class>
 		
 	

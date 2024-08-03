@@ -177,14 +177,14 @@
 		<!-- Spawning for Core characters   -->
 	<insertAfter xpath="/entitygroups/entitygroup[last()]">
 		<entitygroup name="npcHarleyGroupGS01">
-			npcHarleyAxe, .25
-			npcHarleyBat, .5
-			npcHarleyClub, .25 
-			npcHarleyEmptyHand, .25 
-			npcHarleyKnife, .25
-			npcHarleyMachete, .25
-			npcHarleySpear, .25
-			none, 98.0
+			npcHarleyAxe, .1
+			npcHarleyBat, .1
+			npcHarleyClub, .2 
+			npcHarleyEmptyHand, .2 
+			npcHarleyKnife, .2
+			npcHarleyMachete, .1
+			npcHarleySpear, .1
+			none, 99.0
 		</entitygroup>
 		<entitygroup name="npcHarleyGroupGS50">
 			npcHarleyAxe, .25 
