@@ -1,0 +1,47 @@
+<configs>
+	<append xpath="/spawning/biome[@name='pine_forest']">
+		<spawn maxcount="1" respawndelay="1" time="Day" entitygroup="NPCDarkSoldierGroupGS01" notags="commercial,industrial,downtown" />
+		<spawn maxcount="1" respawndelay="1" time="Night" entitygroup="NPCDarkSoldierGroupGS50" notags="commercial,industrial,downtown" />
+		<spawn maxcount="1" respawndelay="1" time="Day" entitygroup="NPCDarkSoldierGroupGS01" tags="commercial,industrial" notags="downtown" />
+		<spawn maxcount="1" respawndelay="1" time="Night" entitygroup="NPCDarkSoldierGroupGS100" tags="commercial,industrial" notags="downtown" />
+		<spawn maxcount="1" respawndelay="1" time="Day" entitygroup="NPCDarkSoldierGroupGS50" tags="downtown" />
+		<spawn maxcount="1" respawndelay="1" time="Night" entitygroup="NPCDarkSoldierGroupGS100" tags="downtown" />
+	</append>
+	
+	<append xpath="/spawning/biome[@name='burnt_forest']">
+		<spawn maxcount="1" respawndelay="1" time="Day" entitygroup="NPCDarkSoldierGroupGS01" notags="commercial,industrial,downtown" />
+		<spawn maxcount="1" respawndelay="1" time="Night" entitygroup="NPCDarkSoldierGroupGS50" notags="commercial,industrial,downtown" />
+		<spawn maxcount="1" respawndelay="1" time="Day" entitygroup="NPCDarkSoldierGroupGS01" tags="commercial,industrial" notags="downtown" />
+		<spawn maxcount="1" respawndelay="1" time="Night" entitygroup="NPCDarkSoldierGroupGS100" tags="commercial,industrial" notags="downtown" />
+		<spawn maxcount="1" respawndelay="1" time="Day" entitygroup="NPCDarkSoldierGroupGS50" tags="downtown" />
+		<spawn maxcount="1" respawndelay="1" time="Night" entitygroup="NPCDarkSoldierGroupGS100" tags="downtown" />
+	</append>
+	
+	<append xpath="/spawning/biome[@name='desert']">
+		<spawn maxcount="1" respawndelay="1" time="Day" entitygroup="NPCDarkSoldierGroupGS01" notags="commercial,industrial,downtown" />
+		<spawn maxcount="1" respawndelay="1" time="Night" entitygroup="NPCDarkSoldierGroupGS50" notags="commercial,industrial,downtown" />
+		<spawn maxcount="1" respawndelay="1" time="Day" entitygroup="NPCDarkSoldierGroupGS01" tags="commercial,industrial" notags="downtown" />
+		<spawn maxcount="1" respawndelay="1" time="Night" entitygroup="NPCDarkSoldierGroupGS100" tags="commercial,industrial" notags="downtown" />
+		<spawn maxcount="1" respawndelay="1" time="Day" entitygroup="NPCDarkSoldierGroupGS50" tags="downtown" />
+		<spawn maxcount="1" respawndelay="1" time="Night" entitygroup="NPCDarkSoldierGroupGS100" tags="downtown" />
+	</append>	
+	
+	<append xpath="/spawning/biome[@name='snow']">
+		<spawn maxcount="1" respawndelay="1" time="Day" entitygroup="NPCDarkSoldierGroupGS01" notags="commercial,industrial,downtown" />
+		<spawn maxcount="1" respawndelay="1" time="Night" entitygroup="NPCDarkSoldierGroupGS50" notags="commercial,industrial,downtown" />
+		<spawn maxcount="1" respawndelay="1" time="Day" entitygroup="NPCDarkSoldierGroupGS01" tags="commercial,industrial" notags="downtown" />
+		<spawn maxcount="1" respawndelay="1" time="Night" entitygroup="NPCDarkSoldierGroupGS100" tags="commercial,industrial" notags="downtown" />
+		<spawn maxcount="1" respawndelay="1" time="Day" entitygroup="NPCDarkSoldierGroupGS50" tags="downtown" />
+		<spawn maxcount="1" respawndelay="1" time="Night" entitygroup="NPCDarkSoldierGroupGS100" tags="downtown" />
+	</append>	
+	
+	<append xpath="/spawning/biome[@name='wasteland']">
+		<spawn maxcount="1" respawndelay="1" time="Day" entitygroup="NPCDarkSoldierGroupGS01" notags="commercial,industrial,downtown" />
+		<spawn maxcount="1" respawndelay="1" time="Night" entitygroup="NPCDarkSoldierGroupGS50" notags="commercial,industrial,downtown" />
+		<spawn maxcount="1" respawndelay="1" time="Day" entitygroup="NPCDarkSoldierGroupGS01" tags="commercial,industrial" notags="downtown" />
+		<spawn maxcount="1" respawndelay="1" time="Night" entitygroup="NPCDarkSoldierGroupGS100" tags="commercial,industrial" notags="downtown" />
+		<spawn maxcount="1" respawndelay="1" time="Day" entitygroup="NPCDarkSoldierGroupGS50" tags="downtown" />
+		<spawn maxcount="1" respawndelay="1" time="Night" entitygroup="NPCDarkSoldierGroupGS100" tags="downtown" />
+	</append>	
+	
+</configs>

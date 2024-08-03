@@ -1,0 +1,53 @@
+<configs>
+	<insertAfter xpath="/entitygroups/entitygroup[last()]">
+		<entitygroup name="NPCDarkSoldierGroupGS01">
+			npcSoldierGBDAxe, 0.2
+			npcSoldierGBDKnife, 0.2
+			npcSoldierGDAxe, 0.2
+			npcSoldierGDKnife, 0.2
+			npcSoldierGHDAxe, 0.2
+			npcSoldierGHDKnife, 0.2 
+			npcSoldierHD1Axe, 0.2
+			npcSoldierHD1Knife, 0.2 
+			npcSoldierHD2Axe, 0.2
+			npcSoldierHD2Knife, 0.2
+			none, 98.0
+		</entitygroup>
+		<entitygroup name="NPCDarkSoldierGroupGS50">
+			npcSoldierGBDAxe, 0.02
+			npcSoldierGBDKnife, 0.02
+			npcSoldierGBDPistol, 0.02
+			npcSoldierGDAxe, 0.02
+			npcSoldierGDKnife, 0.02
+			npcSoldierGDPistol, 0.02
+			npcSoldierGHDAxe, 0.02
+			npcSoldierGHDKnife, 0.02 
+			npcSoldierGHDPistol, 0.02
+			npcSoldierHD1Axe, 0.02
+			npcSoldierHD1Knife, 0.02 
+			npcSoldierHD1Pistol, 0.02
+			npcSoldierHD2Axe, 0.02
+			npcSoldierHD2Knife, 0.02 
+			npcSoldierHD2Pistol, 0.02
+			none, 97.0
+		</entitygroup>
+		<entitygroup name="NPCDarkSoldierGroupGS100">
+			npcSoldierGBDPistol, 0.02 
+			npcSoldierGBDTRifle, 0.02 
+			npcSoldierGBDM60, 0.02 
+			npcSoldierGDPistol, 0.02 
+			npcSoldierGDTRifle, 0.02 
+			npcSoldierGDM60, 0.02 
+			npcSoldierGHDPistol, 0.02 
+			npcSoldierGHDTRifle, 0.02 
+			npcSoldierGHDM60, 0.02 
+			npcSoldierHD1Pistol, 0.02 
+			npcSoldierHD1TRifle, 0.02 
+			npcSoldierHD1M60, 0.02 
+			npcSoldierHD2Pistol, 0.02 
+			npcSoldierHD2TRifle, 0.02 
+			npcSoldierHD2M60, 0.02 
+			none, 97.0
+		</entitygroup>
+	</insertAfter>
+</configs>

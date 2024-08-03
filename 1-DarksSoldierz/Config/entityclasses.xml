@@ -1,0 +1,251 @@
+<configs>
+
+
+
+	<append xpath="/entity_classes">
+
+         <!-- Modular military character models by Slayver purchased for use in NPC Mod -->
+
+            <entity_class name="npcSoldierGBDAxe" extends="npcAdvancedAxeTemplate"> 
+			<property name="UserSpawnType" value="Menu"/><property name="Tags" value="entity,male,npc,walker,melee,UMA2,DRMid,Axe,Knife,Pistol,TRifle,M60,RocketL"/>
+			<property name="Faction" value="whiteriver"/>
+                        <property name="LookAtAngle" value="0"/>
+			<property name="Names" value="Lt Dan,Cpt Price,Lt Green,Cpt Easy,Lt Brooks,Cpt Hernandez,Lt Rollins,Cpt Clarke" />				
+			<property name="Mesh" value="#@modfolder:Resources/DarksSoldierz.unity3d?SoldierGasBeretDark"/> 
+		</entity_class>	
+		
+                 <entity_class name="npcSoldierGBDKnife" extends="npcAdvancedKnifeTemplate"> 
+			<property name="UserSpawnType" value="Menu"/><property name="Tags" value="entity,male,npc,walker,melee,UMA2,DRMid,Axe,Knife,Pistol,TRifle,M60,RocketL"/>
+			<property name="Faction" value="whiteriver"/>
+                        <property name="LookAtAngle" value="0"/>
+			<property name="Names" value="Lt Dan,Cpt Price,Lt Green,Cpt Easy,Lt Brooks,Cpt Hernandez,Lt Rollins,Cpt Clarke" />				
+			<property name="Mesh" value="#@modfolder:Resources/DarksSoldierz.unity3d?SoldierGasBeretDark"/> 
+		</entity_class>	
+
+		<entity_class name="npcSoldierGBDPistol" extends="npcAdvancedPistolTemplate"> 
+			<property name="UserSpawnType" value="Menu"/><property name="Tags" value="entity,male,npc,walker,ranged,UMA2,DRMid,Axe,Knife,Pistol,TRifle,M60,RocketL"/>
+			<property name="Faction" value="whiteriver"/>
+                        <property name="LookAtAngle" value="0"/>
+			<property name="Names" value="Lt Dan,Cpt Price,Lt Green,Cpt Easy,Lt Brooks,Cpt Hernandez,Lt Rollins,Cpt Clarke" />			
+			<property name="Mesh" value="#@modfolder:Resources/DarksSoldierz.unity3d?SoldierGasBeretDark"/> 
+		</entity_class>		
+
+                <entity_class name="npcSoldierGBDTRifle" extends="npcAdvancedTRifleTemplate"> 
+			<property name="UserSpawnType" value="Menu"/><property name="Tags" value="entity,male,npc,walker,ranged,UMA2,DRMid,Axe,Knife,Pistol,TRifle,M60,RocketL"/>
+			<property name="Faction" value="whiteriver"/>
+                        <property name="LookAtAngle" value="0"/>
+			<property name="Names" value="Lt Dan,Cpt Price,Lt Green,Cpt Easy,Lt Brooks,Cpt Hernandez,Lt Rollins,Cpt Clarke" />				
+			<property name="Mesh" value="#@modfolder:Resources/DarksSoldierz.unity3d?SoldierGasBeretDark"/> 
+		</entity_class>		
+
+                <entity_class name="npcSoldierGBDM60" extends="npcAdvancedM60Template"> 
+			<property name="UserSpawnType" value="Menu"/><property name="Tags" value="entity,male,npc,walker,ranged,UMA2,DRMid,Axe,Knife,Pistol,TRifle,M60,RocketL"/>
+			<property name="Faction" value="whiteriver"/>
+                        <property name="LookAtAngle" value="0"/>
+			<property name="Names" value="Lt Dan,Cpt Price,Lt Green,Cpt Easy,Lt Brooks,Cpt Hernandez,Lt Rollins,Cpt Clarke" />				
+			<property name="Mesh" value="#@modfolder:Resources/DarksSoldierz.unity3d?SoldierGasBeretDark"/> 
+		</entity_class>		
+
+                <entity_class name="npcSoldierGBDRocketL" extends="npcAdvancedRocketLTemplate"> 
+			<property name="UserSpawnType" value="Menu"/><property name="Tags" value="entity,male,npc,walker,ranged,UMA2,DRMid,Axe,Knife,Pistol,TRifle,M60,RocketL"/>
+			<property name="Faction" value="whiteriver"/>
+                        <property name="LookAtAngle" value="0"/>
+			<property name="Names" value="Lt Dan,Cpt Price,Lt Green,Cpt Easy,Lt Brooks,Cpt Hernandez,Lt Rollins,Cpt Clarke" />				
+			<property name="Mesh" value="#@modfolder:Resources/DarksSoldierz.unity3d?SoldierGasBeretDark"/> 
+		</entity_class>		
+                
+                  <entity_class name="npcSoldierGDAxe" extends="npcAdvancedAxeTemplate"> 
+			<property name="UserSpawnType" value="Menu"/><property name="Tags" value="entity,male,npc,walker,melee,UMA2,DRMid,Axe,Knife,Pistol,TRifle,M60,RocketL"/>
+			<property name="Faction" value="whiteriver"/>
+                        <property name="LookAtAngle" value="0"/>
+			<property name="Names" value="Pvt Brady,Pvt Vargas,Pvt Hayes,Pvt Pile,Pvt Terrell,Pvt King,Pvt Elliot" />				
+			<property name="Mesh" value="#@modfolder:Resources/DarksSoldierz.unity3d?SoldierGasDark"/> 
+		</entity_class>	
+		
+                 <entity_class name="npcSoldierGDKnife" extends="npcAdvancedKnifeTemplate"> 
+			<property name="UserSpawnType" value="Menu"/><property name="Tags" value="entity,male,npc,walker,melee,UMA2,DRMid,Axe,Knife,Pistol,TRifle,M60,RocketL"/>
+			<property name="Faction" value="whiteriver"/>
+                        <property name="LookAtAngle" value="0"/>
+			<property name="Names" value="Pvt Brady,Pvt Vargas,Pvt Hayes,Pvt Pile,Pvt Terrell,Pvt King,Pvt Elliot" />				
+			<property name="Mesh" value="#@modfolder:Resources/DarksSoldierz.unity3d?SoldierGasDark"/> 
+		</entity_class>	
+
+		<entity_class name="npcSoldierGDPistol" extends="npcAdvancedPistolTemplate"> 
+			<property name="UserSpawnType" value="Menu"/><property name="Tags" value="entity,male,npc,walker,ranged,UMA2,DRMid,Axe,Knife,Pistol,TRifle,M60,RocketL"/>
+			<property name="Faction" value="whiteriver"/>
+                        <property name="LookAtAngle" value="0"/>
+			<property name="Names" value="Pvt Brady,Pvt Vargas,Pvt Hayes,Pvt Pile,Pvt Terrell,Pvt King,Pvt Elliot" />			
+			<property name="Mesh" value="#@modfolder:Resources/DarksSoldierz.unity3d?SoldierGasDark"/> 
+		</entity_class>		
+
+                <entity_class name="npcSoldierGDTRifle" extends="npcAdvancedTRifleTemplate"> 
+			<property name="UserSpawnType" value="Menu"/><property name="Tags" value="entity,male,npc,walker,ranged,UMA2,DRMid,Axe,Knife,Pistol,TRifle,M60,RocketL"/>
+			<property name="Faction" value="whiteriver"/>
+                        <property name="LookAtAngle" value="0"/>
+			<property name="Names" value="Pvt Brady,Pvt Vargas,Pvt Hayes,Pvt Pile,Pvt Terrell,Pvt King,Pvt Elliot" />				
+			<property name="Mesh" value="#@modfolder:Resources/DarksSoldierz.unity3d?SoldierGasDark"/> 
+		</entity_class>		
+
+                <entity_class name="npcSoldierGDM60" extends="npcAdvancedM60Template"> 
+			<property name="UserSpawnType" value="Menu"/><property name="Tags" value="entity,male,npc,walker,ranged,UMA2,DRMid,Axe,Knife,Pistol,TRifle,M60,RocketL"/>
+			<property name="Faction" value="whiteriver"/>
+                         <property name="LookAtAngle" value="0"/>
+			<property name="Names" value="Pvt Brady,Pvt Vargas,Pvt Hayes,Pvt Pile,Pvt Terrell,Pvt King,Pvt Elliot" />				
+			<property name="Mesh" value="#@modfolder:Resources/DarksSoldierz.unity3d?SoldierGasDark"/> 
+		</entity_class>		
+
+                <entity_class name="npcSoldierGDRocketL" extends="npcAdvancedRocketLTemplate"> 
+			<property name="UserSpawnType" value="Menu"/><property name="Tags" value="entity,male,npc,walker,ranged,UMA2,DRMid,Axe,Knife,Pistol,TRifle,M60,RocketL"/>
+			<property name="Faction" value="whiteriver"/>
+                        <property name="LookAtAngle" value="0"/>
+			<property name="Names" value="Pvt Brady,Pvt Vargas,Pvt Hayes,Pvt Pile,Pvt Terrell,Pvt King,Pvt Elliot" />				
+			<property name="Mesh" value="#@modfolder:Resources/DarksSoldierz.unity3d?SoldierGasDark"/> 
+		</entity_class>		
+
+                  <entity_class name="npcSoldierGHDAxe" extends="npcAdvancedAxeTemplate"> 
+			<property name="UserSpawnType" value="Menu"/><property name="Tags" value="entity,male,npc,walker,melee,UMA2,DRMid,Axe,Knife,Pistol,TRifle,M60,RocketL"/>
+			<property name="Faction" value="whiteriver"/>
+                         <property name="LookAtAngle" value="0"/>
+			<property name="Names" value="Lt Dan,Cpt Price,Beau,Ben,Brody,Byron,Brian,Bruce" />				
+			<property name="Mesh" value="#@modfolder:Resources/DarksSoldierz.unity3d?SoldierGasHelmDark"/> 
+		</entity_class>	
+		
+                 <entity_class name="npcSoldierGHDKnife" extends="npcAdvancedKnifeTemplate"> 
+			<property name="UserSpawnType" value="Menu"/><property name="Tags" value="entity,male,npc,walker,melee,UMA2,DRMid,Axe,Knife,Pistol,TRifle,M60,RocketL"/>
+			<property name="Faction" value="whiteriver"/>
+                        <property name="LookAtAngle" value="0"/>
+			<property name="Names" value="Pvt Brady,Pvt Vargas,Pvt Hayes,Pvt Pile,Pvt Terrell,Pvt King,Pvt Elliot" />				
+			<property name="Mesh" value="#@modfolder:Resources/DarksSoldierz.unity3d?SoldierGasHelmDark"/> 
+		</entity_class>	
+
+		<entity_class name="npcSoldierGHDPistol" extends="npcAdvancedPistolTemplate"> 
+			<property name="UserSpawnType" value="Menu"/><property name="Tags" value="entity,male,npc,walker,ranged,UMA2,DRMid,Axe,Knife,Pistol,TRifle,M60,RocketL"/>
+			<property name="Faction" value="whiteriver"/>
+                        <property name="LookAtAngle" value="0"/>
+			<property name="Names" value="Pvt Brady,Pvt Vargas,Pvt Hayes,Pvt Pile,Pvt Terrell,Pvt King,Pvt Elliot" />			
+			<property name="Mesh" value="#@modfolder:Resources/DarksSoldierz.unity3d?SoldierGasHelmDark"/> 
+		</entity_class>		
+
+                <entity_class name="npcSoldierGHDTRifle" extends="npcAdvancedTRifleTemplate"> 
+			<property name="UserSpawnType" value="Menu"/><property name="Tags" value="entity,male,npc,walker,ranged,UMA2,DRMid,Axe,Knife,Pistol,TRifle,M60,RocketL"/>
+			<property name="Faction" value="whiteriver"/>
+                        <property name="LookAtAngle" value="0"/>
+			<property name="Names" value="Pvt Brady,Pvt Vargas,Pvt Hayes,Pvt Pile,Pvt Terrell,Pvt King,Pvt Elliot" />				
+			<property name="Mesh" value="#@modfolder:Resources/DarksSoldierz.unity3d?SoldierGasHelmDark"/> 
+		</entity_class>		
+
+                <entity_class name="npcSoldierGHDM60" extends="npcAdvancedM60Template"> 
+			<property name="UserSpawnType" value="Menu"/><property name="Tags" value="entity,male,npc,walker,ranged,UMA2,DRMid,Axe,Knife,Pistol,TRifle,M60,RocketL"/>
+			<property name="Faction" value="whiteriver"/>
+                        
+			<property name="Names" value="Pvt Brady,Pvt Vargas,Pvt Hayes,Pvt Pile,Pvt Terrell,Pvt King,Pvt Elliot" />				
+			<property name="Mesh" value="#@modfolder:Resources/DarksSoldierz.unity3d?SoldierGasHelmDark"/> 
+		</entity_class>		
+
+                <entity_class name="npcSoldierGHDRocketL" extends="npcAdvancedRocketLTemplate"> 
+			<property name="UserSpawnType" value="Menu"/><property name="Tags" value="entity,male,npc,walker,ranged,UMA2,DRMid,Axe,Knife,Pistol,TRifle,M60,RocketL"/>
+			<property name="Faction" value="whiteriver"/>
+                        <property name="LookAtAngle" value="0"/> 
+			<property name="Names" value="Pvt Brady,Pvt Vargas,Pvt Hayes,Pvt Pile,Pvt Terrell,Pvt King,Pvt Elliot" />				
+			<property name="Mesh" value="#@modfolder:Resources/DarksSoldierz.unity3d?SoldierGasHelmDark"/> 
+		</entity_class>	
+
+	          <entity_class name="npcSoldierHD1Axe" extends="npcAdvancedAxeTemplate"> 
+			<property name="UserSpawnType" value="Menu"/><property name="Tags" value="entity,male,npc,walker,melee,UMA2,DRMid,Axe,Knife,Pistol,TRifle,M60,RocketL"/>
+			<property name="Faction" value="whiteriver"/>
+                        <property name="LookAtAngle" value="0"/>
+			<property name="Names" value="Sgt Reese,Sgt Rock,Sgt Barnes,Sgt Hamilton,Sgt Benton,Sgt Knox,Sgt Dixon,Sgt Wolfe" />				
+			<property name="Mesh" value="#@modfolder:Resources/DarksSoldierz.unity3d?SoldierHelm1Dark"/> 
+		</entity_class>	
+		
+                 <entity_class name="npcSoldierHD1Knife" extends="npcAdvancedKnifeTemplate"> 
+			<property name="UserSpawnType" value="Menu"/><property name="Tags" value="entity,male,npc,walker,melee,UMA2,DRMid,Axe,Knife,Pistol,TRifle,M60,RocketL"/>
+			<property name="Faction" value="whiteriver"/>
+                        <property name="LookAtAngle" value="0"/> 
+			<property name="Names" value="Sgt Reese,Sgt Rock,Sgt Barnes,Sgt Hamilton,Sgt Benton,Sgt Knox,Sgt Dixon,Sgt Wolfe" />				
+			<property name="Mesh" value="#@modfolder:Resources/DarksSoldierz.unity3d?SoldierHelm1Dark"/> 
+		</entity_class>	
+
+		<entity_class name="npcSoldierHD1Pistol" extends="npcAdvancedPistolTemplate"> 
+			<property name="UserSpawnType" value="Menu"/><property name="Tags" value="entity,male,npc,walker,ranged,UMA2,DRMid,Axe,Knife,Pistol,TRifle,M60,RocketL"/>
+			<property name="Faction" value="whiteriver"/>
+                        <property name="LookAtAngle" value="0"/>
+			<property name="Names" value="Sgt Reese,Sgt Rock,Sgt Barnes,Sgt Hamilton,Sgt Benton,Sgt Knox,Sgt Dixon,Sgt Wolfe" />			
+			<property name="Mesh" value="#@modfolder:Resources/DarksSoldierz.unity3d?SoldierHelm1Dark"/> 
+		</entity_class>		
+
+                <entity_class name="npcSoldierHD1TRifle" extends="npcAdvancedTRifleTemplate"> 
+			<property name="UserSpawnType" value="Menu"/><property name="Tags" value="entity,male,npc,walker,ranged,UMA2,DRMid,Axe,Knife,Pistol,TRifle,M60,RocketL"/>
+			<property name="Faction" value="whiteriver"/>
+                        <property name="LookAtAngle" value="0"/>
+			<property name="Names" value="Sgt Reese,Sgt Rock,Sgt Barnes,Sgt Hamilton,Sgt Benton,Sgt Knox,Sgt Dixon,Sgt Wolfe" />				
+			<property name="Mesh" value="#@modfolder:Resources/DarksSoldierz.unity3d?SoldierHelm1Dark"/> 
+		</entity_class>		
+
+                <entity_class name="npcSoldierHD1M60" extends="npcAdvancedM60Template"> 
+			<property name="UserSpawnType" value="Menu"/><property name="Tags" value="entity,male,npc,walker,ranged,UMA2,DRMid,Axe,Knife,Pistol,TRifle,M60,RocketL"/>
+			<property name="Faction" value="whiteriver"/>
+                        <property name="LookAtAngle" value="0"/>
+			<property name="Names" value="Sgt Reese,Sgt Rock,Sgt Barnes,Sgt Hamilton,Sgt Benton,Sgt Knox,Sgt Dixon,Sgt Wolfe" />				
+			<property name="Mesh" value="#@modfolder:Resources/DarksSoldierz.unity3d?SoldierHelm1Dark"/> 
+		</entity_class>		
+
+                <entity_class name="npcSoldierHD1RocketL" extends="npcAdvancedRocketLTemplate"> 
+			<property name="UserSpawnType" value="Menu"/><property name="Tags" value="entity,male,npc,walker,ranged,UMA2,DRMid,Axe,Knife,Pistol,TRifle,M60,RocketL"/>
+			<property name="Faction" value="whiteriver"/>
+                        <property name="LookAtAngle" value="0"/>
+			<property name="Names" value="Sgt Reese,Sgt Rock,Sgt Barnes,Sgt Hamilton,Sgt Benton,Sgt Knox,Sgt Dixon,Sgt Wolfe" />				
+			<property name="Mesh" value="#@modfolder:Resources/DarksSoldierz.unity3d?SoldierHelm1Dark"/> 
+		</entity_class>	
+
+                  <entity_class name="npcSoldierHD2Axe" extends="npcAdvancedAxeTemplate"> 
+			<property name="UserSpawnType" value="Menu"/><property name="Tags" value="entity,male,npc,walker,melee,UMA2,DRMid,Axe,Knife,Pistol,TRifle,M60,RocketL"/>
+			<property name="Faction" value="whiteriver"/>
+                        <property name="LookAtAngle" value="0"/>
+                        <property name="Names" value="Sgt Reese,Sgt Rock,Sgt Barnes,Sgt Hamilton,Sgt Benton,Sgt Knox,Sgt Dixon,Sgt Wolfe" />			
+			<property name="Mesh" value="#@modfolder:Resources/DarksSoldierz.unity3d?SoldierHelm2Dark"/> 
+		</entity_class>	
+		
+                 <entity_class name="npcSoldierHD2Knife" extends="npcAdvancedKnifeTemplate"> 
+			<property name="UserSpawnType" value="Menu"/><property name="Tags" value="entity,male,npc,walker,melee,UMA2,DRMid,Axe,Knife,Pistol,TRifle,M60,RocketL"/>
+			<property name="Faction" value="whiteriver"/>
+                        <property name="LookAtAngle" value="0"/>
+			<property name="Names" value="Sgt Reese,Sgt Rock,Sgt Barnes,Sgt Hamilton,Sgt Benton,Sgt Knox,Sgt Dixon,Sgt Wolfe" />				
+			<property name="Mesh" value="#@modfolder:Resources/DarksSoldierz.unity3d?SoldierHelm2Dark"/> 
+		</entity_class>	
+
+		<entity_class name="npcSoldierHD2Pistol" extends="npcAdvancedPistolTemplate"> 
+			<property name="UserSpawnType" value="Menu"/><property name="Tags" value="entity,male,npc,walker,ranged,UMA2,DRMid,Axe,Knife,Pistol,TRifle,M60,RocketL"/>
+			<property name="Faction" value="whiteriver"/>
+                        <property name="LookAtAngle" value="0"/>
+			<property name="Names" value="Sgt Reese,Sgt Rock,Sgt Barnes,Sgt Hamilton,Sgt Benton,Sgt Knox,Sgt Dixon,Sgt Wolfe" />			
+			<property name="Mesh" value="#@modfolder:Resources/DarksSoldierz.unity3d?SoldierHelm2Dark"/> 
+		</entity_class>		
+
+                <entity_class name="npcSoldierHD2TRifle" extends="npcAdvancedTRifleTemplate"> 
+			<property name="UserSpawnType" value="Menu"/><property name="Tags" value="entity,male,npc,walker,ranged,UMA2,DRMid,Axe,Knife,Pistol,TRifle,M60,RocketL"/>
+			<property name="Faction" value="whiteriver"/>
+                        <property name="LookAtAngle" value="0"/>
+			<property name="Names" value="Sgt Reese,Sgt Rock,Sgt Barnes,Sgt Hamilton,Sgt Benton,Sgt Knox,Sgt Dixon,Sgt Wolfe" />				
+			<property name="Mesh" value="#@modfolder:Resources/DarksSoldierz.unity3d?SoldierHelm2Dark"/> 
+		</entity_class>		
+
+                <entity_class name="npcSoldierHD2M60" extends="npcAdvancedM60Template"> 
+			<property name="UserSpawnType" value="Menu"/><property name="Tags" value="entity,male,npc,walker,ranged,UMA2,DRMid,Axe,Knife,Pistol,TRifle,M60,RocketL"/>
+			<property name="Faction" value="whiteriver"/>
+                        <property name="LookAtAngle" value="0"/>
+			<property name="Names" value="Sgt Reese,Sgt Rock,Sgt Barnes,Sgt Hamilton,Sgt Benton,Sgt Knox,Sgt Dixon,Sgt Wolfe" />				
+			<property name="Mesh" value="#@modfolder:Resources/DarksSoldierz.unity3d?SoldierHelm2Dark"/> 
+		</entity_class>		
+
+                <entity_class name="npcSoldierHD2RocketL" extends="npcAdvancedRocketLTemplate"> 
+			<property name="UserSpawnType" value="Menu"/><property name="Tags" value="entity,male,npc,walker,ranged,UMA2,DRMid,Axe,Knife,Pistol,TRifle,M60,RocketL"/>
+			<property name="Faction" value="whiteriver"/>
+                        <property name="LookAtAngle" value="0"/>
+			<property name="Names" value="Sgt Reese,Sgt Rock,Sgt Barnes,Sgt Hamilton,Sgt Benton,Sgt Knox,Sgt Dixon,Sgt Wolfe" />				
+			<property name="Mesh" value="#@modfolder:Resources/DarksSoldierz.unity3d?SoldierHelm2Dark"/> 
+		</entity_class>	
+
+    </append>			
+	
+</configs>
