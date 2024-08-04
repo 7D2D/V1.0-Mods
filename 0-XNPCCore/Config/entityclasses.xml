@@ -55,44 +55,49 @@
 		
 		<set xpath="//entity_class[starts-with(@name, 'animalTemplateTimid')]/property[@value='RunawayFromEntity']/@data">class=EntityPlayer,EntityZombie,EntityEnemyAnimal,EntityNPC</set> 
 		
-		<set xpath="//entity_class[starts-with(@name, 'animalTemplateHostile')]/property[@value='SetNearestEntityAsTarget']/@data">class=EntityPlayer,20,15,EntityZombie,15,10,EntityNPC,15,10</set> 
+		<set xpath="//entity_class[starts-with(@name, 'animalTemplateHostile')]/property[@value='SetNearestEntityAsTarget']/@data">class=EntityPlayer,20,15,EntityZombie,15,10,EntityNPC,0,0</set> 
 		
 		<set xpath="//entity_class[starts-with(@name, 'animalRabbit')]/property[@value='RunawayFromEntity']/@data">class=EntityPlayer,EntityZombie,EntityEnemyAnimal,EntityNPC;safeDistance=20</set> 
 		
 		<set xpath="//entity_class[starts-with(@name, 'animalBear')]/property[@value='ApproachAndAttackTarget']/@data">class=EntityAnimalStag,40,EntityPlayer,25,EntityZombie,30,EntityNPC,25</set> 
 		
-		<set xpath="//entity_class[starts-with(@name, 'animalBear')]/property[@value='SetNearestEntityAsTarget']/@data">class=EntityPlayer,13,8,EntityAnimalStag,0,0,EntityZombie,0,0,EntityNPC,13,8</set> 
+		<set xpath="//entity_class[starts-with(@name, 'animalBear')]/property[@value='SetNearestEntityAsTarget']/@data">class=EntityPlayer,13,8,EntityAnimalStag,0,0,EntityZombie,0,0,EntityNPC,0,0</set> 
 		
-		<set xpath="//entity_class[starts-with(@name, 'animalZombieBear')]/property[@value='SetNearestEntityAsTarget']/@data">class=EntityPlayer,18,13,EntityAnimalStag,0,0,EntityNPC,18,13</set> 
+		<set xpath="//entity_class[starts-with(@name, 'animalZombieBear')]/property[@value='ApproachAndAttackTarget']/@data">class=EntityAnimalStag,20,EntityPlayer,15,EntityBandit,15,EntityNPC,15</set> 
+		
+		<set xpath="//entity_class[starts-with(@name, 'animalZombieBear')]/property[@value='SetNearestEntityAsTarget']/@data">class=EntityPlayer,18,13,EntityAnimalStag,0,0,EntityNPC,0,0</set> 
 		
 		<set xpath="//entity_class[starts-with(@name, 'animalWolf')]/property[@value='ApproachAndAttackTarget']/@data">class=EntityAnimalStag,20,EntityPlayer,15,EntityZombie,20,EntityNPC,15</set> 
 		
-		<set xpath="//entity_class[starts-with(@name, 'animalWolf')]/property[@value='SetNearestEntityAsTarget']/@data">class=EntityPlayer,14,8,EntityAnimalStag,0,0,EntityZombie,0,0,EntityNPC,14,8</set> 
+		<set xpath="//entity_class[starts-with(@name, 'animalWolf')]/property[@value='SetNearestEntityAsTarget']/@data">class=EntityPlayer,14,8,EntityAnimalStag,0,0,EntityZombie,0,0,EntityNPC,0,0</set> 
 		
 		<set xpath="//entity_class[starts-with(@name, 'animalCoyote')]/property[@value='ApproachAndAttackTarget']/@data">class=EntityAnimalRabbit,8,EntityPlayer,10,EntityNPC,10</set> 
 		
-		<set xpath="//entity_class[starts-with(@name, 'animalCoyote')]/property[@value='SetNearestEntityAsTarget']/@data">class=EntityPlayer,15,10,EntityAnimalRabbit,0,18,EntityNPC,15,10</set> 		
+		<set xpath="//entity_class[starts-with(@name, 'animalCoyote')]/property[@value='SetNearestEntityAsTarget']/@data">class=EntityPlayer,15,10,EntityAnimalRabbit,0,18,EntityNPC,0,0</set> 		
 
 		<set xpath="/entity_classes/entity_class[@name='animalDireWolf']/property[@name='AITask']/@value">
-			BreakBlock|
-			DestroyArea|
-			Territorial|
-			ApproachDistraction|
-			ApproachAndAttackTarget class=EntityPlayer,0,EntityBandit,0,EntityEnemyAnimal,0,EntityNPC,0,EntityAnimal,0|
-			ApproachSpot|
-			Look|
-			Wander|
+			BreakBlock|DestroyArea|Territorial|ApproachDistraction|ApproachAndAttackTarget class=EntityPlayer,0,EntityBandit,0,EntityNPC,0,EntityAnimalStag,0|ApproachSpot|Look|Wander|
 		</set>	
-
-		<set xpath="//entity_class[starts-with(@name, 'animalMountainLion')]/property[@value='ApproachAndAttackTarget']/@data">class=EntityAnimalStag,30,EntityPlayer,15,EntityZombie,20,EntityNPC,30</set> 
 		
-		<set xpath="//entity_class[starts-with(@name, 'animalMountainLion')]/property[@value='SetNearestEntityAsTarget']/@data">class=EntityPlayer,14,9,EntityAnimalStag,0,0,EntityZombie,0,5,EntityNPC,14,9</set> 
+		<set xpath="/entity_classes/entity_class[@name='animalDireWolf']/property[@name='AITarget']/@value">
+			SetAsTargetIfHurt class=EntityPlayer,EntityBandit,EntityNPC,EntityEnemyAnimal|BlockingTargetTask|SetNearestCorpseAsTarget flags=edible|SetNearestEntityAsTarget class=EntityPlayer,16,10,EntityNPC,0,0,EntityBandit,0,-8,EntityAnimalStag,0,0|
+		</set>
+	
+		<set xpath="//entity_class[starts-with(@name, 'animalMountainLion')]/property[@value='ApproachAndAttackTarget']/@data">class=EntityAnimalStag,30,EntityPlayer,15,EntityZombie,20,EntityNPC,15</set> 
+		
+		<set xpath="//entity_class[starts-with(@name, 'animalMountainLion')]/property[@value='SetNearestEntityAsTarget']/@data">class=EntityPlayer,14,9,EntityAnimalStag,0,0,EntityZombie,0,5,EntityNPC,0,0</set> 
 		
 		<set xpath="//entity_class[starts-with(@name, 'animalBossGrace')]/property[@value='ApproachAndAttackTarget']/@data">class=EntityPlayer,30,EntityZombie,10,EntityNPC,30</set> 
 		
 		<set xpath="//entity_class[starts-with(@name, 'animalBossGrace')]/property[@value='SetNearestEntityAsTarget']/@data">class=EntityPlayer,0,0,EntityZombie,0,3,EntityNPC,0,0</set> 	
-
-
+		
+		<set xpath="//entity_class[starts-with(@name, 'animalSnake')]/property[@value='ApproachAndAttackTarget']/@data">class=EntityPlayer,15,EntityNPC,15,EntityBandit,15</set> 
+		
+		<set xpath="//entity_class[starts-with(@name, 'animalSnake')]/property[@value='SetNearestEntityAsTarget']/@data">class=EntityPlayer,12,15,EntityBandit,0,0,EntityNPC,0,0</set> 	
+		
+		<set xpath="//entity_class[starts-with(@name, 'animalZombieDog')]/property[@value='ApproachAndAttackTarget']/@data">class=EntityPlayer,20,EntityNPC,20,EntityBandit,20</set> 
+		
+		<set xpath="//entity_class[starts-with(@name, 'animalZombieDog')]/property[@value='SetNearestEntityAsTarget']/@data">class=EntityPlayer,22,20,EntityBandit,0,-8,EntityNPC,0,0</set> 					
 		<!--  Edits to add factions to animals	-->
 
 		<set xpath="//entity_class[@name='animalTemplateTimid']/property[@name='Faction']/@value">passiveanimalsmedium</set> 
@@ -252,15 +257,18 @@
 			<property name="SwimStrokeRate" value="1.1,1.5"/>
 			<property name="NavObject" value="twitch_spawn,twitch_spawn_other,clear_sleeper" />
 			<property name="WalkType" value="7"/>
-			<property name="SoundHurtSmall" value="Player_Male/player1painsm"/>
-			<property name="SoundStamina" value="Player_Male/player1stamina"/>
-			<property name="SoundDrownPain" value="Player_Male/player1drownpain"/>
-			<property name="SoundWaterSurface" value="Player_Male/player1drownsurface"/>
-			<property name="SoundDrownDeath" value="Player_Male/player1drowndeath"/>
-			<property name="SoundJump" value="Player_Male/player1Jump"/>
-			<property name="SoundLandSoft" value="Player_Male/player1LandSoft"/>
-			<property name="SoundLandHard" value="Player_Male/player1LandHard"/>
-			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
+			
+			<property name="SoundHurt" value="player1painlg"/>
+			<property name="SoundHurtSmall" value="player1painsm"/>
+			<property name="SoundDeath" value="player1death"/>
+			<property name="SoundStamina" value="player1stamina"/>
+			<property name="SoundDrownPain" value="player1drownpain"/>
+			<property name="SoundWaterSurface" value="player1drownsurface"/>
+			<property name="SoundDrownDeath" value="player1drowndeath"/>
+			<property name="SoundJump" value="player1Jump"/>
+			<property name="SoundLandSoft" value="player1LandSoft"/>
+			<property name="SoundLandHard" value="player1LandHard"/>
+			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>			
 			<property name="SoundSleeperSense" value="sleepersense"/>
 			<property name="SoundSleeperBackToSleep" value="sleeperbacktosleep"/>
 			<property name="SoundAlertTime" value="25"/>
@@ -2062,19 +2070,16 @@
 				<property name="Ragdoll" data="weight=0.2"/>
 			</property>
 			<property name="WalkType" value="7"/>
-	
-			<!-- <property name="SoundRandom" value="zombiemaleroam"/> -->
-	
-			<property name="SoundRandomTime" value="60"/> 
-			<property name="SoundRandom" value="Enemies/Base_Zombie_Male/zombiemaleroam"/>
-			<property name="SoundAlertTime" value="25"/> 
-			<property name="SoundAlert" value="Enemies/Base_Zombie_Male/zombiemalealert"/>
-			<property name="SoundSense" value="Enemies/Base_Zombie_Male/zombiemalesense"/>
-			<property name="SoundHurt" value="Enemies/Base_Zombie_Male/zombiemalepain"/>
-			<property name="SoundDeath" value="Enemies/Base_Zombie_Male/zombiemaledeath"/>
-			<property name="SoundAttack" value="Enemies/Base_Zombie_Male/zombiemaleattack"/>
+			<property name="SoundRandomTime" value="30"/> <!-- Plays SoundRandom every 30/15 seconds -->
+			<property name="SoundRandom" value="zombiemaleroam"/>
+			<property name="SoundAlertTime" value="25"/> <!-- Delay sounds after SoundAlert for x/2 to x seconds -->
+			<property name="SoundAlert" value="zombiemalealert"/>
+			<property name="SoundSense" value="zombiemalesense"/>
+			<property name="SoundHurt" value="zombiemalepain"/>
+			<property name="SoundDeath" value="zombiemaledeath"/>
+			<property name="SoundAttack" value="zombiemaleattack"/>
 			<property name="SoundSleeperSense" value="sleepersense"/>
-			<property name="SoundSleeperBackToSleep" value="sleeperbacktosleep"/>
+			<property name="SoundSleeperBackToSleep" value="sleeperbacktosleep"/>			
 			<property name="RootMotion" value="true"/>
 			<property name="HasDeathAnim" value="true"/>
 			<property name="ParticleOnDeath" value="blood_death"/>
@@ -2169,12 +2174,12 @@
 			<property name="UserSpawnType" value="None"/>
 			<property name="Tags" value="entity,female,zombie,walker,template"/> 
 			<property name="Faction" value="undead"/>
-			<property name="SoundRandom" value="Enemies/Base_Zombie_Female2/zombiefemale2roam"/>
-			<property name="SoundAlert" value="Enemies/Base_Zombie_Female2/zombiefemale2alert"/>
-			<property name="SoundAttack" value="Enemies/Base_Zombie_Female2/zombiefemale2attack"/>
-			<property name="SoundHurt" value="Enemies/Base_Zombie_Female2/zombiefemale2pain"/>
-			<property name="SoundDeath" value="Enemies/Base_Zombie_Female2/zombiefemale2death"/>
-			<property name="SoundSense" value="Enemies/Base_Zombie_Female2/zombiefemale2sense"/>
+			<property name="SoundRandom" value="zombiefemaleroam"/>
+			<property name="SoundAlert" value="zombiefemalealert"/>
+			<property name="SoundAttack" value="zombiefemaleattack"/>
+			<property name="SoundHurt" value="zombiefemalepain"/>
+			<property name="SoundDeath" value="zombiefemaledeath"/>
+			<property name="SoundSense" value="zombiefemalesense"/>
 		</entity_class> 
 		
 		
@@ -2190,13 +2195,13 @@
 			<property name="Tags" value="entity,male,zombie,walker,template"/>
 			<property name="Faction" value="undead"/>
 			<property name="Mesh" value="Zombies/zombieStandardHawaiianRagdoll"/>
-			<property name="SoundRandom" value="Enemies/Acid_Puking_Hulk/hulkroam"/>
-			<property name="SoundAlert" value="Enemies/Acid_Puking_Hulk/hulkalert"/>
-			<property name="SoundAttack" value="Enemies/Acid_Puking_Hulk/hulkattack"/>
-			<property name="SoundHurt" value="Enemies/Acid_Puking_Hulk/hulkpain"/>
-			<property name="SoundDeath" value="Enemies/Acid_Puking_Hulk/hulkdeath"/>
-			<property name="SoundSense" value="Enemies/Acid_Puking_Hulk/hulksense"/>
-			<property name="SoundFootstepModifier" value="Animals/Bear/bear_footstep"/>
+			<property name="SoundRandom" value="hulkroam"/>
+			<property name="SoundAlert" value="hulkalert"/>
+			<property name="SoundAttack" value="hulkattack"/>
+			<property name="SoundHurt" value="hulkpain"/>
+			<property name="SoundDeath" value="hulkdeath"/>
+			<property name="SoundSense" value="hulksense"/>
+			<property name="SoundFootstepModifier" value="bear_footstep"/>
 			<property name="AvatarController" value="AvatarZombieController"/>
 			<property name="ModelType" value="Standard"/>
 			<property name="WalkType" value="1"/>
@@ -2219,12 +2224,12 @@
 			<property name="Tags" value="entity,male,zombie,walker,feral,template"/>
 			<property name="Faction" value="undead"/>
 			<property name="Mesh" value="Zombies/zombieStandardFeralRagdoll"/>
-			<property name="SoundRandom" value="Enemies/Feral_Zombie/zombieferalroam"/>
-			<property name="SoundAlert" value="Enemies/Feral_Zombie/zombieferalalert"/>
-			<property name="SoundAttack" value="Enemies/Feral_Zombie/zombieferalattack"/>
-			<property name="SoundHurt" value="Enemies/Feral_Zombie/zombieferalpain"/>
-			<property name="SoundDeath" value="Enemies/Feral_Zombie/zombieferaldeath"/>
-			<property name="SoundSense" value="Enemies/Feral_Zombie/zombieferalsense"/>
+			<property name="SoundRandom" value="zombieferalroam"/>
+			<property name="SoundAlert" value="zombieferalalert"/>
+			<property name="SoundAttack" value="zombieferalattack"/>
+			<property name="SoundHurt" value="zombieferalpain"/>
+			<property name="SoundDeath" value="zombieferaldeath"/>
+			<property name="SoundSense" value="zombieferalsense"/>
 			<property name="SoundFootstepModifier" value="Enemies/Feral_Zombie/zombieferalfootstep"/>
 			<property name="WalkType" value="2"/>
 			<property name="Mass" value="210"/>
@@ -2267,13 +2272,13 @@
 			<property name="AITask-5" value="Look"/>
 			<property name="AITask-6" value="Wander"/>
 			<property name="AITask-7" value=""/>
-			<property name="SoundRandom" value="Enemies/Acid_Puking_Hulk/hulkroam"/>
-			<property name="SoundAlert" value="Enemies/Acid_Puking_Hulk/hulkalert"/>
-			<property name="SoundAttack" value="Enemies/Acid_Puking_Hulk/hulkattack"/>
-			<property name="SoundHurt" value="Enemies/Acid_Puking_Hulk/hulkpain"/>
-			<property name="SoundDeath" value="Enemies/Acid_Puking_Hulk/hulkdeath"/>
-			<property name="SoundSense" value="Enemies/Acid_Puking_Hulk/hulksense"/>
-			<property name="SoundFootstepModifier" value="Animals/Bear/bear_footstep"/>
+			<property name="SoundRandom" value="hulkroam"/>
+			<property name="SoundAlert" value="hulkalert"/>
+			<property name="SoundAttack" value="hulkattack"/>
+			<property name="SoundHurt" value="hulkpain"/>
+			<property name="SoundDeath" value="hulkdeath"/>
+			<property name="SoundSense" value="hulksense"/>
+			<property name="SoundFootstepModifier" value="bear_footstep"/>
 			<property name="SoundExplodeWarn" value="hulkexplodewarning"/>
 			<property name="DismemberMultiplierLegs" value="0"/>
 			<property name="LegCrawlerThreshold" value="0"/>
@@ -2494,22 +2499,22 @@
 			<property name="ItemsOnEnterGame.GameModeSurvival" value="meleeNPCEmptyHand,medicalFirstAidBandage"/> <!-- example for extra items on spawn  -->
 			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="meleeNPCEmptyHand,medicalFirstAidBandage"/>
 			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="meleeNPCEmptyHand,medicalFirstAidBandage"/> 
-			<property name="SoundHurt" value="Player_Female/player2painlg"/>
-			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
-			<property name="SoundDeath" value="Player_Female/player2death"/>
-			<property name="SoundStamina" value="Player_Female/player2stamina"/>
-			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
-			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
-			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
-			<property name="SoundJump" value="Player_Male/player2Jump"/>
-			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
-			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundHurt" value="player2painlg"/>
+			<property name="SoundHurtSmall" value="player2painsm"/>
+			<property name="SoundDeath" value="player2death"/>
+			<property name="SoundStamina" value="player2stamina"/>
+			<property name="SoundDrownPain" value="player2drownpain"/>
+			<property name="SoundWaterSurface" value="player2drownsurface"/>
+			<property name="SoundDrownDeath" value="player2drowndeath"/>
+			<property name="SoundJump" value="player2Jump"/>
+			<property name="SoundLandSoft" value="player2LandSoft"/>
+			<property name="SoundLandHard" value="player2LandHard"/>
 			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
-			<property name="SoundRandom" value="Player_Female/player2stamina" />
+			<property name="SoundRandom" value="player2stamina" />
 			<property name="SoundRandomTime" value="60"/>
-			<property name="SoundAlert" value="Player_Female/player2stamina"/>
-			<property name="SoundAttack" value="Player_Female/player2stamina"/>
-			<property name="SoundSense" value="Player_Female/player2stamina"/>	
+			<property name="SoundAlert" value="player2stamina"/>
+			<property name="SoundAttack" value="player2stamina"/>
+			<property name="SoundSense" value="player2stamina"/>	
 			<!-- <property name="AltMats" value="@:Entities/Zombies/Zombies/Materials/HD_Arlene2.mat,@:Entities/Zombies/Zombies/Materials/HD_Arlene3.mat"/> -->
 		</entity_class>	
 		
@@ -2522,22 +2527,22 @@
 			<property name="DanceType" value="2" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?NurseNancy_X"/> 
 			<property name="PickUpItem" value="nursePickUpNPC" />
-			<property name="SoundHurt" value="Player_Female/player2painlg"/>
-			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
-			<property name="SoundDeath" value="Player_Female/player2death"/>
-			<property name="SoundStamina" value="Player_Female/player2stamina"/>
-			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
-			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
-			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
-			<property name="SoundJump" value="Player_Male/player2Jump"/>
-			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
-			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundHurt" value="player2painlg"/>
+			<property name="SoundHurtSmall" value="player2painsm"/>
+			<property name="SoundDeath" value="player2death"/>
+			<property name="SoundStamina" value="player2stamina"/>
+			<property name="SoundDrownPain" value="player2drownpain"/>
+			<property name="SoundWaterSurface" value="player2drownsurface"/>
+			<property name="SoundDrownDeath" value="player2drowndeath"/>
+			<property name="SoundJump" value="player2Jump"/>
+			<property name="SoundLandSoft" value="player2LandSoft"/>
+			<property name="SoundLandHard" value="player2LandHard"/>
 			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
-			<property name="SoundRandom" value="Player_Female/player2stamina" />
+			<property name="SoundRandom" value="player2stamina" />
 			<property name="SoundRandomTime" value="60"/>
-			<property name="SoundAlert" value="Player_Female/player2stamina"/>
-			<property name="SoundAttack" value="Player_Female/player2stamina"/>
-			<property name="SoundSense" value="Player_Female/player2stamina"/>		
+			<property name="SoundAlert" value="player2stamina"/>
+			<property name="SoundAttack" value="player2stamina"/>
+			<property name="SoundSense" value="player2stamina"/>	
 		</entity_class>
 		
 		<entity_class name="npcNurseKnife" extends="npcAdvancedKnifeTemplate"> 
@@ -2549,22 +2554,22 @@
 			<property name="DanceType" value="2" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?NurseNancy_X"/> 
 			<property name="PickUpItem" value="nursePickUpNPC" />
-			<property name="SoundHurt" value="Player_Female/player2painlg"/>
-			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
-			<property name="SoundDeath" value="Player_Female/player2death"/>
-			<property name="SoundStamina" value="Player_Female/player2stamina"/>
-			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
-			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
-			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
-			<property name="SoundJump" value="Player_Male/player2Jump"/>
-			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
-			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundHurt" value="player2painlg"/>
+			<property name="SoundHurtSmall" value="player2painsm"/>
+			<property name="SoundDeath" value="player2death"/>
+			<property name="SoundStamina" value="player2stamina"/>
+			<property name="SoundDrownPain" value="player2drownpain"/>
+			<property name="SoundWaterSurface" value="player2drownsurface"/>
+			<property name="SoundDrownDeath" value="player2drowndeath"/>
+			<property name="SoundJump" value="player2Jump"/>
+			<property name="SoundLandSoft" value="player2LandSoft"/>
+			<property name="SoundLandHard" value="player2LandHard"/>
 			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
-			<property name="SoundRandom" value="Player_Female/player2stamina" />
+			<property name="SoundRandom" value="player2stamina" />
 			<property name="SoundRandomTime" value="60"/>
-			<property name="SoundAlert" value="Player_Female/player2stamina"/>
-			<property name="SoundAttack" value="Player_Female/player2stamina"/>
-			<property name="SoundSense" value="Player_Female/player2stamina"/>	
+			<property name="SoundAlert" value="player2stamina"/>
+			<property name="SoundAttack" value="player2stamina"/>
+			<property name="SoundSense" value="player2stamina"/>	
 		</entity_class>	
 		
 		<entity_class name="npcNurseAxe" extends="npcAdvancedAxeTemplate"> 
@@ -2576,22 +2581,22 @@
 			<property name="DanceType" value="2" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?NurseNancy_X"/> 
 			<property name="PickUpItem" value="nursePickUpNPC" />
-			<property name="SoundHurt" value="Player_Female/player2painlg"/>
-			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
-			<property name="SoundDeath" value="Player_Female/player2death"/>
-			<property name="SoundStamina" value="Player_Female/player2stamina"/>
-			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
-			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
-			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
-			<property name="SoundJump" value="Player_Male/player2Jump"/>
-			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
-			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundHurt" value="player2painlg"/>
+			<property name="SoundHurtSmall" value="player2painsm"/>
+			<property name="SoundDeath" value="player2death"/>
+			<property name="SoundStamina" value="player2stamina"/>
+			<property name="SoundDrownPain" value="player2drownpain"/>
+			<property name="SoundWaterSurface" value="player2drownsurface"/>
+			<property name="SoundDrownDeath" value="player2drowndeath"/>
+			<property name="SoundJump" value="player2Jump"/>
+			<property name="SoundLandSoft" value="player2LandSoft"/>
+			<property name="SoundLandHard" value="player2LandHard"/>
 			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
-			<property name="SoundRandom" value="Player_Female/player2stamina" />
+			<property name="SoundRandom" value="player2stamina" />
 			<property name="SoundRandomTime" value="60"/>
-			<property name="SoundAlert" value="Player_Female/player2stamina"/>
-			<property name="SoundAttack" value="Player_Female/player2stamina"/>
-			<property name="SoundSense" value="Player_Female/player2stamina"/>	
+			<property name="SoundAlert" value="player2stamina"/>
+			<property name="SoundAttack" value="player2stamina"/>
+			<property name="SoundSense" value="player2stamina"/>	
 		</entity_class>	
 		
 		<entity_class name="npcNurseSpear" extends="npcAdvancedSpearTemplate"> 
@@ -2603,22 +2608,22 @@
 			<property name="DanceType" value="2" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?NurseNancy_X"/> 
 			<property name="PickUpItem" value="nursePickUpNPC" />
-			<property name="SoundHurt" value="Player_Female/player2painlg"/>
-			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
-			<property name="SoundDeath" value="Player_Female/player2death"/>
-			<property name="SoundStamina" value="Player_Female/player2stamina"/>
-			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
-			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
-			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
-			<property name="SoundJump" value="Player_Male/player2Jump"/>
-			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
-			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundHurt" value="player2painlg"/>
+			<property name="SoundHurtSmall" value="player2painsm"/>
+			<property name="SoundDeath" value="player2death"/>
+			<property name="SoundStamina" value="player2stamina"/>
+			<property name="SoundDrownPain" value="player2drownpain"/>
+			<property name="SoundWaterSurface" value="player2drownsurface"/>
+			<property name="SoundDrownDeath" value="player2drowndeath"/>
+			<property name="SoundJump" value="player2Jump"/>
+			<property name="SoundLandSoft" value="player2LandSoft"/>
+			<property name="SoundLandHard" value="player2LandHard"/>
 			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
-			<property name="SoundRandom" value="Player_Female/player2stamina" />
+			<property name="SoundRandom" value="player2stamina" />
 			<property name="SoundRandomTime" value="60"/>
-			<property name="SoundAlert" value="Player_Female/player2stamina"/>
-			<property name="SoundAttack" value="Player_Female/player2stamina"/>
-			<property name="SoundSense" value="Player_Female/player2stamina"/>	
+			<property name="SoundAlert" value="player2stamina"/>
+			<property name="SoundAttack" value="player2stamina"/>
+			<property name="SoundSense" value="player2stamina"/>	
 		</entity_class>			
 		
 		<entity_class name="npcNurseBat" extends="npcAdvancedBatTemplate"> 
@@ -2631,22 +2636,22 @@
 			<property name="DanceType" value="2" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?NurseNancy_X"/> 
 			<property name="PickUpItem" value="nursePickUpNPC" />
-			<property name="SoundHurt" value="Player_Female/player2painlg"/>
-			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
-			<property name="SoundDeath" value="Player_Female/player2death"/>
-			<property name="SoundStamina" value="Player_Female/player2stamina"/>
-			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
-			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
-			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
-			<property name="SoundJump" value="Player_Male/player2Jump"/>
-			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
-			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundHurt" value="player2painlg"/>
+			<property name="SoundHurtSmall" value="player2painsm"/>
+			<property name="SoundDeath" value="player2death"/>
+			<property name="SoundStamina" value="player2stamina"/>
+			<property name="SoundDrownPain" value="player2drownpain"/>
+			<property name="SoundWaterSurface" value="player2drownsurface"/>
+			<property name="SoundDrownDeath" value="player2drowndeath"/>
+			<property name="SoundJump" value="player2Jump"/>
+			<property name="SoundLandSoft" value="player2LandSoft"/>
+			<property name="SoundLandHard" value="player2LandHard"/>
 			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
-			<property name="SoundRandom" value="Player_Female/player2stamina" />
+			<property name="SoundRandom" value="player2stamina" />
 			<property name="SoundRandomTime" value="60"/>
-			<property name="SoundAlert" value="Player_Female/player2stamina"/>
-			<property name="SoundAttack" value="Player_Female/player2stamina"/>
-			<property name="SoundSense" value="Player_Female/player2stamina"/>
+			<property name="SoundAlert" value="player2stamina"/>
+			<property name="SoundAttack" value="player2stamina"/>
+			<property name="SoundSense" value="player2stamina"/>	
 		</entity_class>			
 		
 		<entity_class name="npcNurseMachete" extends="npcAdvancedMacheteTemplate"> 
@@ -2658,22 +2663,22 @@
 			<property name="DanceType" value="2" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?NurseNancy_X"/> 
 			<property name="PickUpItem" value="nursePickUpNPC" />
-			<property name="SoundHurt" value="Player_Female/player2painlg"/>
-			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
-			<property name="SoundDeath" value="Player_Female/player2death"/>
-			<property name="SoundStamina" value="Player_Female/player2stamina"/>
-			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
-			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
-			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
-			<property name="SoundJump" value="Player_Male/player2Jump"/>
-			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
-			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundHurt" value="player2painlg"/>
+			<property name="SoundHurtSmall" value="player2painsm"/>
+			<property name="SoundDeath" value="player2death"/>
+			<property name="SoundStamina" value="player2stamina"/>
+			<property name="SoundDrownPain" value="player2drownpain"/>
+			<property name="SoundWaterSurface" value="player2drownsurface"/>
+			<property name="SoundDrownDeath" value="player2drowndeath"/>
+			<property name="SoundJump" value="player2Jump"/>
+			<property name="SoundLandSoft" value="player2LandSoft"/>
+			<property name="SoundLandHard" value="player2LandHard"/>
 			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
-			<property name="SoundRandom" value="Player_Female/player2stamina" />
+			<property name="SoundRandom" value="player2stamina" />
 			<property name="SoundRandomTime" value="60"/>
-			<property name="SoundAlert" value="Player_Female/player2stamina"/>
-			<property name="SoundAttack" value="Player_Female/player2stamina"/>
-			<property name="SoundSense" value="Player_Female/player2stamina"/>	
+			<property name="SoundAlert" value="player2stamina"/>
+			<property name="SoundAttack" value="player2stamina"/>
+			<property name="SoundSense" value="player2stamina"/>	
 		</entity_class>	
 		
 		<entity_class name="npcNurseSMG" extends="npcAdvancedSMGTemplate"> 
@@ -2685,22 +2690,22 @@
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?NurseNancy_X"/> 
 			<property name="PickUpItem" value="nursePickUpNPC" />
 			<property name="DanceType" value="2" />
-			<property name="SoundHurt" value="Player_Female/player2painlg"/>
-			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
-			<property name="SoundDeath" value="Player_Female/player2death"/>
-			<property name="SoundStamina" value="Player_Female/player2stamina"/>
-			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
-			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
-			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
-			<property name="SoundJump" value="Player_Male/player2Jump"/>
-			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
-			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundHurt" value="player2painlg"/>
+			<property name="SoundHurtSmall" value="player2painsm"/>
+			<property name="SoundDeath" value="player2death"/>
+			<property name="SoundStamina" value="player2stamina"/>
+			<property name="SoundDrownPain" value="player2drownpain"/>
+			<property name="SoundWaterSurface" value="player2drownsurface"/>
+			<property name="SoundDrownDeath" value="player2drowndeath"/>
+			<property name="SoundJump" value="player2Jump"/>
+			<property name="SoundLandSoft" value="player2LandSoft"/>
+			<property name="SoundLandHard" value="player2LandHard"/>
 			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
-			<property name="SoundRandom" value="Player_Female/player2stamina" />
+			<property name="SoundRandom" value="player2stamina" />
 			<property name="SoundRandomTime" value="60"/>
-			<property name="SoundAlert" value="Player_Female/player2stamina"/>
-			<property name="SoundAttack" value="Player_Female/player2stamina"/>
-			<property name="SoundSense" value="Player_Female/player2stamina"/>		
+			<property name="SoundAlert" value="player2stamina"/>
+			<property name="SoundAttack" value="player2stamina"/>
+			<property name="SoundSense" value="player2stamina"/>	
 			<property name="WalkType" value="7"/>
 		</entity_class>	
 		
@@ -2713,22 +2718,22 @@
 			<property name="DanceType" value="2" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?NurseNancy_X"/>
 			<property name="PickUpItem" value="nursePickUpNPC" />
-			<property name="SoundHurt" value="Player_Female/player2painlg"/>
-			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
-			<property name="SoundDeath" value="Player_Female/player2death"/>
-			<property name="SoundStamina" value="Player_Female/player2stamina"/>
-			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
-			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
-			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
-			<property name="SoundJump" value="Player_Male/player2Jump"/>
-			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
-			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundHurt" value="player2painlg"/>
+			<property name="SoundHurtSmall" value="player2painsm"/>
+			<property name="SoundDeath" value="player2death"/>
+			<property name="SoundStamina" value="player2stamina"/>
+			<property name="SoundDrownPain" value="player2drownpain"/>
+			<property name="SoundWaterSurface" value="player2drownsurface"/>
+			<property name="SoundDrownDeath" value="player2drowndeath"/>
+			<property name="SoundJump" value="player2Jump"/>
+			<property name="SoundLandSoft" value="player2LandSoft"/>
+			<property name="SoundLandHard" value="player2LandHard"/>
 			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
-			<property name="SoundRandom" value="Player_Female/player2stamina" />
+			<property name="SoundRandom" value="player2stamina" />
 			<property name="SoundRandomTime" value="60"/>
-			<property name="SoundAlert" value="Player_Female/player2stamina"/>
-			<property name="SoundAttack" value="Player_Female/player2stamina"/>
-			<property name="SoundSense" value="Player_Female/player2stamina"/>	
+			<property name="SoundAlert" value="player2stamina"/>
+			<property name="SoundAttack" value="player2stamina"/>
+			<property name="SoundSense" value="player2stamina"/>	
 		</entity_class>
 		
 		<entity_class name="npcNursePipePistol" extends="npcAdvancedPipePistolTemplate"> 
@@ -2740,22 +2745,22 @@
 			<property name="DanceType" value="2" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?NurseNancy_X"/>
 			<property name="PickUpItem" value="nursePickUpNPC" />
-			<property name="SoundHurt" value="Player_Female/player2painlg"/>
-			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
-			<property name="SoundDeath" value="Player_Female/player2death"/>
-			<property name="SoundStamina" value="Player_Female/player2stamina"/>
-			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
-			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
-			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
-			<property name="SoundJump" value="Player_Male/player2Jump"/>
-			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
-			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundHurt" value="player2painlg"/>
+			<property name="SoundHurtSmall" value="player2painsm"/>
+			<property name="SoundDeath" value="player2death"/>
+			<property name="SoundStamina" value="player2stamina"/>
+			<property name="SoundDrownPain" value="player2drownpain"/>
+			<property name="SoundWaterSurface" value="player2drownsurface"/>
+			<property name="SoundDrownDeath" value="player2drowndeath"/>
+			<property name="SoundJump" value="player2Jump"/>
+			<property name="SoundLandSoft" value="player2LandSoft"/>
+			<property name="SoundLandHard" value="player2LandHard"/>
 			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
-			<property name="SoundRandom" value="Player_Female/player2stamina" />
+			<property name="SoundRandom" value="player2stamina" />
 			<property name="SoundRandomTime" value="60"/>
-			<property name="SoundAlert" value="Player_Female/player2stamina"/>
-			<property name="SoundAttack" value="Player_Female/player2stamina"/>
-			<property name="SoundSense" value="Player_Female/player2stamina"/>
+			<property name="SoundAlert" value="player2stamina"/>
+			<property name="SoundAttack" value="player2stamina"/>
+			<property name="SoundSense" value="player2stamina"/>	
 		</entity_class>			
 		
 		<entity_class name="npcNursePistol" extends="npcAdvancedPistolTemplate"> 
@@ -2767,22 +2772,22 @@
 			<property name="DanceType" value="2" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?NurseNancy_X"/>
 			<property name="PickUpItem" value="nursePickUpNPC" />
-			<property name="SoundHurt" value="Player_Female/player2painlg"/>
-			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
-			<property name="SoundDeath" value="Player_Female/player2death"/>
-			<property name="SoundStamina" value="Player_Female/player2stamina"/>
-			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
-			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
-			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
-			<property name="SoundJump" value="Player_Male/player2Jump"/>
-			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
-			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundHurt" value="player2painlg"/>
+			<property name="SoundHurtSmall" value="player2painsm"/>
+			<property name="SoundDeath" value="player2death"/>
+			<property name="SoundStamina" value="player2stamina"/>
+			<property name="SoundDrownPain" value="player2drownpain"/>
+			<property name="SoundWaterSurface" value="player2drownsurface"/>
+			<property name="SoundDrownDeath" value="player2drowndeath"/>
+			<property name="SoundJump" value="player2Jump"/>
+			<property name="SoundLandSoft" value="player2LandSoft"/>
+			<property name="SoundLandHard" value="player2LandHard"/>
 			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
-			<property name="SoundRandom" value="Player_Female/player2stamina" />
+			<property name="SoundRandom" value="player2stamina" />
 			<property name="SoundRandomTime" value="60"/>
-			<property name="SoundAlert" value="Player_Female/player2stamina"/>
-			<property name="SoundAttack" value="Player_Female/player2stamina"/>
-			<property name="SoundSense" value="Player_Female/player2stamina"/>	
+			<property name="SoundAlert" value="player2stamina"/>
+			<property name="SoundAttack" value="player2stamina"/>
+			<property name="SoundSense" value="player2stamina"/>	
 		</entity_class>				
 		
 		
@@ -2795,22 +2800,22 @@
 			<property name="DanceType" value="2" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?NurseNancy_X"/>
 			<property name="PickUpItem" value="nursePickUpNPC" />
-			<property name="SoundHurt" value="Player_Female/player2painlg"/>
-			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
-			<property name="SoundDeath" value="Player_Female/player2death"/>
-			<property name="SoundStamina" value="Player_Female/player2stamina"/>
-			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
-			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
-			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
-			<property name="SoundJump" value="Player_Male/player2Jump"/>
-			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
-			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundHurt" value="player2painlg"/>
+			<property name="SoundHurtSmall" value="player2painsm"/>
+			<property name="SoundDeath" value="player2death"/>
+			<property name="SoundStamina" value="player2stamina"/>
+			<property name="SoundDrownPain" value="player2drownpain"/>
+			<property name="SoundWaterSurface" value="player2drownsurface"/>
+			<property name="SoundDrownDeath" value="player2drowndeath"/>
+			<property name="SoundJump" value="player2Jump"/>
+			<property name="SoundLandSoft" value="player2LandSoft"/>
+			<property name="SoundLandHard" value="player2LandHard"/>
 			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
-			<property name="SoundRandom" value="Player_Female/player2stamina" />
+			<property name="SoundRandom" value="player2stamina" />
 			<property name="SoundRandomTime" value="60"/>
-			<property name="SoundAlert" value="Player_Female/player2stamina"/>
-			<property name="SoundAttack" value="Player_Female/player2stamina"/>
-			<property name="SoundSense" value="Player_Female/player2stamina"/>	
+			<property name="SoundAlert" value="player2stamina"/>
+			<property name="SoundAttack" value="player2stamina"/>
+			<property name="SoundSense" value="player2stamina"/>	
 		</entity_class>	
 
 		<entity_class name="npcNursePipeMG" extends="npcAdvancedPipeMGTemplate"> 
@@ -2822,22 +2827,22 @@
 			<property name="DanceType" value="2" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?NurseNancy_X"/>
 			<property name="PickUpItem" value="nursePickUpNPC" />
-			<property name="SoundHurt" value="Player_Female/player2painlg"/>
-			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
-			<property name="SoundDeath" value="Player_Female/player2death"/>
-			<property name="SoundStamina" value="Player_Female/player2stamina"/>
-			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
-			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
-			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
-			<property name="SoundJump" value="Player_Male/player2Jump"/>
-			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
-			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundHurt" value="player2painlg"/>
+			<property name="SoundHurtSmall" value="player2painsm"/>
+			<property name="SoundDeath" value="player2death"/>
+			<property name="SoundStamina" value="player2stamina"/>
+			<property name="SoundDrownPain" value="player2drownpain"/>
+			<property name="SoundWaterSurface" value="player2drownsurface"/>
+			<property name="SoundDrownDeath" value="player2drowndeath"/>
+			<property name="SoundJump" value="player2Jump"/>
+			<property name="SoundLandSoft" value="player2LandSoft"/>
+			<property name="SoundLandHard" value="player2LandHard"/>
 			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
-			<property name="SoundRandom" value="Player_Female/player2stamina" />
+			<property name="SoundRandom" value="player2stamina" />
 			<property name="SoundRandomTime" value="60"/>
-			<property name="SoundAlert" value="Player_Female/player2stamina"/>
-			<property name="SoundAttack" value="Player_Female/player2stamina"/>
-			<property name="SoundSense" value="Player_Female/player2stamina"/>
+			<property name="SoundAlert" value="player2stamina"/>
+			<property name="SoundAttack" value="player2stamina"/>
+			<property name="SoundSense" value="player2stamina"/>	
 		</entity_class>
 
 		<entity_class name="npcNurseAK47" extends="npcAdvancedAK47Template"> 
@@ -2849,22 +2854,22 @@
 			<property name="DanceType" value="2" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?NurseNancy_X"/>
 			<property name="PickUpItem" value="nursePickUpNPC" />
-			<property name="SoundHurt" value="Player_Female/player2painlg"/>
-			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
-			<property name="SoundDeath" value="Player_Female/player2death"/>
-			<property name="SoundStamina" value="Player_Female/player2stamina"/>
-			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
-			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
-			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
-			<property name="SoundJump" value="Player_Male/player2Jump"/>
-			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
-			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundHurt" value="player2painlg"/>
+			<property name="SoundHurtSmall" value="player2painsm"/>
+			<property name="SoundDeath" value="player2death"/>
+			<property name="SoundStamina" value="player2stamina"/>
+			<property name="SoundDrownPain" value="player2drownpain"/>
+			<property name="SoundWaterSurface" value="player2drownsurface"/>
+			<property name="SoundDrownDeath" value="player2drowndeath"/>
+			<property name="SoundJump" value="player2Jump"/>
+			<property name="SoundLandSoft" value="player2LandSoft"/>
+			<property name="SoundLandHard" value="player2LandHard"/>
 			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
-			<property name="SoundRandom" value="Player_Female/player2stamina" />
+			<property name="SoundRandom" value="player2stamina" />
 			<property name="SoundRandomTime" value="60"/>
-			<property name="SoundAlert" value="Player_Female/player2stamina"/>
-			<property name="SoundAttack" value="Player_Female/player2stamina"/>
-			<property name="SoundSense" value="Player_Female/player2stamina"/>
+			<property name="SoundAlert" value="player2stamina"/>
+			<property name="SoundAttack" value="player2stamina"/>
+			<property name="SoundSense" value="player2stamina"/>	
 		</entity_class>
 		
 		<entity_class name="npcNurseTRifle" extends="npcAdvancedTRifleTemplate"> 
@@ -2876,22 +2881,22 @@
 			<property name="DanceType" value="2" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?NurseNancy_X"/>
 			<property name="PickUpItem" value="nursePickUpNPC" />
-			<property name="SoundHurt" value="Player_Female/player2painlg"/>
-			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
-			<property name="SoundDeath" value="Player_Female/player2death"/>
-			<property name="SoundStamina" value="Player_Female/player2stamina"/>
-			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
-			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
-			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
-			<property name="SoundJump" value="Player_Male/player2Jump"/>
-			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
-			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundHurt" value="player2painlg"/>
+			<property name="SoundHurtSmall" value="player2painsm"/>
+			<property name="SoundDeath" value="player2death"/>
+			<property name="SoundStamina" value="player2stamina"/>
+			<property name="SoundDrownPain" value="player2drownpain"/>
+			<property name="SoundWaterSurface" value="player2drownsurface"/>
+			<property name="SoundDrownDeath" value="player2drowndeath"/>
+			<property name="SoundJump" value="player2Jump"/>
+			<property name="SoundLandSoft" value="player2LandSoft"/>
+			<property name="SoundLandHard" value="player2LandHard"/>
 			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
-			<property name="SoundRandom" value="Player_Female/player2stamina" />
+			<property name="SoundRandom" value="player2stamina" />
 			<property name="SoundRandomTime" value="60"/>
-			<property name="SoundAlert" value="Player_Female/player2stamina"/>
-			<property name="SoundAttack" value="Player_Female/player2stamina"/>
-			<property name="SoundSense" value="Player_Female/player2stamina"/>
+			<property name="SoundAlert" value="player2stamina"/>
+			<property name="SoundAttack" value="player2stamina"/>
+			<property name="SoundSense" value="player2stamina"/>	
 		</entity_class>	
 
 		<entity_class name="npcNursePipeRifle" extends="npcAdvancedPipeRifleTemplate"> 
@@ -2903,23 +2908,22 @@
 			<property name="DanceType" value="2" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?NurseNancy_X"/>
 			<property name="PickUpItem" value="nursePickUpNPC" />
-			<property name="SoundHurt" value="Player_Female/player2painlg"/>
-			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
-			<property name="SoundDeath" value="Player_Female/player2death"/>
-			<property name="SoundStamina" value="Player_Female/player2stamina"/>
-			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
-			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
-			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
-			<property name="SoundJump" value="Player_Male/player2Jump"/>
-			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
-			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundHurt" value="player2painlg"/>
+			<property name="SoundHurtSmall" value="player2painsm"/>
+			<property name="SoundDeath" value="player2death"/>
+			<property name="SoundStamina" value="player2stamina"/>
+			<property name="SoundDrownPain" value="player2drownpain"/>
+			<property name="SoundWaterSurface" value="player2drownsurface"/>
+			<property name="SoundDrownDeath" value="player2drowndeath"/>
+			<property name="SoundJump" value="player2Jump"/>
+			<property name="SoundLandSoft" value="player2LandSoft"/>
+			<property name="SoundLandHard" value="player2LandHard"/>
 			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
-			<property name="SoundRandom" value="Player_Female/player2stamina" />
+			<property name="SoundRandom" value="player2stamina" />
 			<property name="SoundRandomTime" value="60"/>
-			<property name="SoundAlert" value="Player_Female/player2stamina"/>
-			<property name="SoundAttack" value="Player_Female/player2stamina"/>
-			<property name="SoundSense" value="Player_Female/player2stamina"/>	
-			<property name="WalkType" value="7"/>
+			<property name="SoundAlert" value="player2stamina"/>
+			<property name="SoundAttack" value="player2stamina"/>
+			<property name="SoundSense" value="player2stamina"/>	
 		</entity_class>    	
 		
 		
@@ -2932,23 +2936,22 @@
 			<property name="DanceType" value="2" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?NurseNancy_X"/>
 			<property name="PickUpItem" value="nursePickUpNPC" />
-			<property name="SoundHurt" value="Player_Female/player2painlg"/>
-			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
-			<property name="SoundDeath" value="Player_Female/player2death"/>
-			<property name="SoundStamina" value="Player_Female/player2stamina"/>
-			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
-			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
-			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
-			<property name="SoundJump" value="Player_Male/player2Jump"/>
-			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
-			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundHurt" value="player2painlg"/>
+			<property name="SoundHurtSmall" value="player2painsm"/>
+			<property name="SoundDeath" value="player2death"/>
+			<property name="SoundStamina" value="player2stamina"/>
+			<property name="SoundDrownPain" value="player2drownpain"/>
+			<property name="SoundWaterSurface" value="player2drownsurface"/>
+			<property name="SoundDrownDeath" value="player2drowndeath"/>
+			<property name="SoundJump" value="player2Jump"/>
+			<property name="SoundLandSoft" value="player2LandSoft"/>
+			<property name="SoundLandHard" value="player2LandHard"/>
 			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
-			<property name="SoundRandom" value="Player_Female/player2stamina" />
+			<property name="SoundRandom" value="player2stamina" />
 			<property name="SoundRandomTime" value="60"/>
-			<property name="SoundAlert" value="Player_Female/player2stamina"/>
-			<property name="SoundAttack" value="Player_Female/player2stamina"/>
-			<property name="SoundSense" value="Player_Female/player2stamina"/>	
-			<property name="WalkType" value="7"/>
+			<property name="SoundAlert" value="player2stamina"/>
+			<property name="SoundAttack" value="player2stamina"/>
+			<property name="SoundSense" value="player2stamina"/>	
 		</entity_class>    		
 		
 		<entity_class name="npcNurseSRifle" extends="npcAdvancedSRifleTemplate"> 
@@ -2960,23 +2963,22 @@
 			<property name="DanceType" value="2" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?NurseNancy_X"/>
 			<property name="PickUpItem" value="nursePickUpNPC" />
-			<property name="SoundHurt" value="Player_Female/player2painlg"/>
-			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
-			<property name="SoundDeath" value="Player_Female/player2death"/>
-			<property name="SoundStamina" value="Player_Female/player2stamina"/>
-			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
-			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
-			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
-			<property name="SoundJump" value="Player_Male/player2Jump"/>
-			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
-			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundHurt" value="player2painlg"/>
+			<property name="SoundHurtSmall" value="player2painsm"/>
+			<property name="SoundDeath" value="player2death"/>
+			<property name="SoundStamina" value="player2stamina"/>
+			<property name="SoundDrownPain" value="player2drownpain"/>
+			<property name="SoundWaterSurface" value="player2drownsurface"/>
+			<property name="SoundDrownDeath" value="player2drowndeath"/>
+			<property name="SoundJump" value="player2Jump"/>
+			<property name="SoundLandSoft" value="player2LandSoft"/>
+			<property name="SoundLandHard" value="player2LandHard"/>
 			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
-			<property name="SoundRandom" value="Player_Female/player2stamina" />
+			<property name="SoundRandom" value="player2stamina" />
 			<property name="SoundRandomTime" value="60"/>
-			<property name="SoundAlert" value="Player_Female/player2stamina"/>
-			<property name="SoundAttack" value="Player_Female/player2stamina"/>
-			<property name="SoundSense" value="Player_Female/player2stamina"/>	
-			<property name="WalkType" value="7"/>
+			<property name="SoundAlert" value="player2stamina"/>
+			<property name="SoundAttack" value="player2stamina"/>
+			<property name="SoundSense" value="player2stamina"/>	
 		</entity_class> 
 		
 		<entity_class name="npcNursePipeShotgun" extends="npcAdvancedPipeShotgunTemplate"> 
@@ -2988,22 +2990,22 @@
 			<property name="DanceType" value="2" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?NurseNancy_X"/>
 			<property name="PickUpItem" value="nursePickUpNPC" />
-			<property name="SoundHurt" value="Player_Female/player2painlg"/>
-			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
-			<property name="SoundDeath" value="Player_Female/player2death"/>
-			<property name="SoundStamina" value="Player_Female/player2stamina"/>
-			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
-			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
-			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
-			<property name="SoundJump" value="Player_Male/player2Jump"/>
-			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
-			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundHurt" value="player2painlg"/>
+			<property name="SoundHurtSmall" value="player2painsm"/>
+			<property name="SoundDeath" value="player2death"/>
+			<property name="SoundStamina" value="player2stamina"/>
+			<property name="SoundDrownPain" value="player2drownpain"/>
+			<property name="SoundWaterSurface" value="player2drownsurface"/>
+			<property name="SoundDrownDeath" value="player2drowndeath"/>
+			<property name="SoundJump" value="player2Jump"/>
+			<property name="SoundLandSoft" value="player2LandSoft"/>
+			<property name="SoundLandHard" value="player2LandHard"/>
 			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
-			<property name="SoundRandom" value="Player_Female/player2stamina" />
+			<property name="SoundRandom" value="player2stamina" />
 			<property name="SoundRandomTime" value="60"/>
-			<property name="SoundAlert" value="Player_Female/player2stamina"/>
-			<property name="SoundAttack" value="Player_Female/player2stamina"/>
-			<property name="SoundSense" value="Player_Female/player2stamina"/>
+			<property name="SoundAlert" value="player2stamina"/>
+			<property name="SoundAttack" value="player2stamina"/>
+			<property name="SoundSense" value="player2stamina"/>	
 		</entity_class> 		
 		
 		<entity_class name="npcNursePShotgun" extends="npcAdvancedPShotgunTemplate"> 
@@ -3015,22 +3017,22 @@
 			<property name="DanceType" value="2" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?NurseNancy_X"/>
 			<property name="PickUpItem" value="nursePickUpNPC" />
-			<property name="SoundHurt" value="Player_Female/player2painlg"/>
-			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
-			<property name="SoundDeath" value="Player_Female/player2death"/>
-			<property name="SoundStamina" value="Player_Female/player2stamina"/>
-			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
-			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
-			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
-			<property name="SoundJump" value="Player_Male/player2Jump"/>
-			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
-			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundHurt" value="player2painlg"/>
+			<property name="SoundHurtSmall" value="player2painsm"/>
+			<property name="SoundDeath" value="player2death"/>
+			<property name="SoundStamina" value="player2stamina"/>
+			<property name="SoundDrownPain" value="player2drownpain"/>
+			<property name="SoundWaterSurface" value="player2drownsurface"/>
+			<property name="SoundDrownDeath" value="player2drowndeath"/>
+			<property name="SoundJump" value="player2Jump"/>
+			<property name="SoundLandSoft" value="player2LandSoft"/>
+			<property name="SoundLandHard" value="player2LandHard"/>
 			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
-			<property name="SoundRandom" value="Player_Female/player2stamina" />
+			<property name="SoundRandom" value="player2stamina" />
 			<property name="SoundRandomTime" value="60"/>
-			<property name="SoundAlert" value="Player_Female/player2stamina"/>
-			<property name="SoundAttack" value="Player_Female/player2stamina"/>
-			<property name="SoundSense" value="Player_Female/player2stamina"/>
+			<property name="SoundAlert" value="player2stamina"/>
+			<property name="SoundAttack" value="player2stamina"/>
+			<property name="SoundSense" value="player2stamina"/>	
 		</entity_class> 
 		
 		<entity_class name="npcNurseAShotgun" extends="npcAdvancedAShotgunTemplate"> 
@@ -3042,22 +3044,22 @@
 			<property name="DanceType" value="2" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?NurseNancy_X"/>
 			<property name="PickUpItem" value="nursePickUpNPC" />
-			<property name="SoundHurt" value="Player_Female/player2painlg"/>
-			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
-			<property name="SoundDeath" value="Player_Female/player2death"/>
-			<property name="SoundStamina" value="Player_Female/player2stamina"/>
-			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
-			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
-			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
-			<property name="SoundJump" value="Player_Male/player2Jump"/>
-			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
-			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundHurt" value="player2painlg"/>
+			<property name="SoundHurtSmall" value="player2painsm"/>
+			<property name="SoundDeath" value="player2death"/>
+			<property name="SoundStamina" value="player2stamina"/>
+			<property name="SoundDrownPain" value="player2drownpain"/>
+			<property name="SoundWaterSurface" value="player2drownsurface"/>
+			<property name="SoundDrownDeath" value="player2drowndeath"/>
+			<property name="SoundJump" value="player2Jump"/>
+			<property name="SoundLandSoft" value="player2LandSoft"/>
+			<property name="SoundLandHard" value="player2LandHard"/>
 			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
-			<property name="SoundRandom" value="Player_Female/player2stamina" />
+			<property name="SoundRandom" value="player2stamina" />
 			<property name="SoundRandomTime" value="60"/>
-			<property name="SoundAlert" value="Player_Female/player2stamina"/>
-			<property name="SoundAttack" value="Player_Female/player2stamina"/>
-			<property name="SoundSense" value="Player_Female/player2stamina"/>	
+			<property name="SoundAlert" value="player2stamina"/>
+			<property name="SoundAttack" value="player2stamina"/>
+			<property name="SoundSense" value="player2stamina"/>	
 		</entity_class> 		
 		
 		<entity_class name="npcNurseXBow" extends="npcAdvancedXBowTemplate"> 
@@ -3069,22 +3071,22 @@
 			<property name="DanceType" value="2" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?NurseNancy_X"/>
 			<property name="PickUpItem" value="nursePickUpNPC" />
-			<property name="SoundHurt" value="Player_Female/player2painlg"/>
-			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
-			<property name="SoundDeath" value="Player_Female/player2death"/>
-			<property name="SoundStamina" value="Player_Female/player2stamina"/>
-			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
-			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
-			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
-			<property name="SoundJump" value="Player_Male/player2Jump"/>
-			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
-			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundHurt" value="player2painlg"/>
+			<property name="SoundHurtSmall" value="player2painsm"/>
+			<property name="SoundDeath" value="player2death"/>
+			<property name="SoundStamina" value="player2stamina"/>
+			<property name="SoundDrownPain" value="player2drownpain"/>
+			<property name="SoundWaterSurface" value="player2drownsurface"/>
+			<property name="SoundDrownDeath" value="player2drowndeath"/>
+			<property name="SoundJump" value="player2Jump"/>
+			<property name="SoundLandSoft" value="player2LandSoft"/>
+			<property name="SoundLandHard" value="player2LandHard"/>
 			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
-			<property name="SoundRandom" value="Player_Female/player2stamina" />
+			<property name="SoundRandom" value="player2stamina" />
 			<property name="SoundRandomTime" value="60"/>
-			<property name="SoundAlert" value="Player_Female/player2stamina"/>
-			<property name="SoundAttack" value="Player_Female/player2stamina"/>
-			<property name="SoundSense" value="Player_Female/player2stamina"/>	
+			<property name="SoundAlert" value="player2stamina"/>
+			<property name="SoundAttack" value="player2stamina"/>
+			<property name="SoundSense" value="player2stamina"/>	
 		</entity_class>	
 		
 		<entity_class name="npcNurseLBow" extends="npcAdvancedLBowTemplate"> 
@@ -3096,22 +3098,22 @@
 			<property name="DanceType" value="2" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?NurseNancy_X"/> 
 			<property name="PickUpItem" value="nursePickUpNPC" />
-			<property name="SoundHurt" value="Player_Female/player2painlg"/>
-			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
-			<property name="SoundDeath" value="Player_Female/player2death"/>
-			<property name="SoundStamina" value="Player_Female/player2stamina"/>
-			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
-			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
-			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
-			<property name="SoundJump" value="Player_Male/player2Jump"/>
-			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
-			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundHurt" value="player2painlg"/>
+			<property name="SoundHurtSmall" value="player2painsm"/>
+			<property name="SoundDeath" value="player2death"/>
+			<property name="SoundStamina" value="player2stamina"/>
+			<property name="SoundDrownPain" value="player2drownpain"/>
+			<property name="SoundWaterSurface" value="player2drownsurface"/>
+			<property name="SoundDrownDeath" value="player2drowndeath"/>
+			<property name="SoundJump" value="player2Jump"/>
+			<property name="SoundLandSoft" value="player2LandSoft"/>
+			<property name="SoundLandHard" value="player2LandHard"/>
 			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
-			<property name="SoundRandom" value="Player_Female/player2stamina" />
+			<property name="SoundRandom" value="player2stamina" />
 			<property name="SoundRandomTime" value="60"/>
-			<property name="SoundAlert" value="Player_Female/player2stamina"/>
-			<property name="SoundAttack" value="Player_Female/player2stamina"/>
-			<property name="SoundSense" value="Player_Female/player2stamina"/>	
+			<property name="SoundAlert" value="player2stamina"/>
+			<property name="SoundAttack" value="player2stamina"/>
+			<property name="SoundSense" value="player2stamina"/>	
 		</entity_class> 
 		
 		<entity_class name="npcNurseRocketL" extends="npcAdvancedRocketLTemplate"> 
@@ -3123,22 +3125,22 @@
 			<property name="DanceType" value="2" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?NurseNancy_X"/> 
 			<property name="PickUpItem" value="nursePickUpNPC" />
-			<property name="SoundHurt" value="Player_Female/player2painlg"/>
-			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
-			<property name="SoundDeath" value="Player_Female/player2death"/>
-			<property name="SoundStamina" value="Player_Female/player2stamina"/>
-			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
-			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
-			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
-			<property name="SoundJump" value="Player_Male/player2Jump"/>
-			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
-			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundHurt" value="player2painlg"/>
+			<property name="SoundHurtSmall" value="player2painsm"/>
+			<property name="SoundDeath" value="player2death"/>
+			<property name="SoundStamina" value="player2stamina"/>
+			<property name="SoundDrownPain" value="player2drownpain"/>
+			<property name="SoundWaterSurface" value="player2drownsurface"/>
+			<property name="SoundDrownDeath" value="player2drowndeath"/>
+			<property name="SoundJump" value="player2Jump"/>
+			<property name="SoundLandSoft" value="player2LandSoft"/>
+			<property name="SoundLandHard" value="player2LandHard"/>
 			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
-			<property name="SoundRandom" value="Player_Female/player2stamina" />
+			<property name="SoundRandom" value="player2stamina" />
 			<property name="SoundRandomTime" value="60"/>
-			<property name="SoundAlert" value="Player_Female/player2stamina"/>
-			<property name="SoundAttack" value="Player_Female/player2stamina"/>
-			<property name="SoundSense" value="Player_Female/player2stamina"/>
+			<property name="SoundAlert" value="player2stamina"/>
+			<property name="SoundAttack" value="player2stamina"/>
+			<property name="SoundSense" value="player2stamina"/>	
 		</entity_class> 	
 		
 		<!--  w  -->	
@@ -3150,15 +3152,15 @@
 			<property name="Names" value="Harley, Quinn, HarleyQuinn" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Quinn_X"/>
 			<property name="SoundHurt" value="HarleyHurt"/>
-			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
+			<property name="SoundHurtSmall" value="player2painsm"/>
 			<property name="SoundDeath" value="HarleyDie"/>
-			<property name="SoundStamina" value="Player_Female/player2stamina"/>
-			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
-			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
-			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
-			<property name="SoundJump" value="Player_Male/player2Jump"/>
-			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
-			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundStamina" value="player2stamina"/>
+			<property name="SoundDrownPain" value="player2drownpain"/>
+			<property name="SoundWaterSurface" value="player2drownsurface"/>
+			<property name="SoundDrownDeath" value="player2drowndeath"/>
+			<property name="SoundJump" value="player2Jump"/>
+			<property name="SoundLandSoft" value="player2LandSoft"/>
+			<property name="SoundLandHard" value="player2LandHard"/>
 			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
 			<property name="SoundRandom" value="HarleyRandom" />
 			<property name="SoundRandomTime" value="60"/>
@@ -3177,15 +3179,15 @@
 			<property name="Names" value="Harley, Quinn, HarleyQuinn" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Quinn_X"/>
 			<property name="SoundHurt" value="HarleyHurt"/>
-			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
+			<property name="SoundHurtSmall" value="player2painsm"/>
 			<property name="SoundDeath" value="HarleyDie"/>
-			<property name="SoundStamina" value="Player_Female/player2stamina"/>
-			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
-			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
-			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
-			<property name="SoundJump" value="Player_Male/player2Jump"/>
-			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
-			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundStamina" value="player2stamina"/>
+			<property name="SoundDrownPain" value="player2drownpain"/>
+			<property name="SoundWaterSurface" value="player2drownsurface"/>
+			<property name="SoundDrownDeath" value="player2drowndeath"/>
+			<property name="SoundJump" value="player2Jump"/>
+			<property name="SoundLandSoft" value="player2LandSoft"/>
+			<property name="SoundLandHard" value="player2LandHard"/>
 			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
 			<property name="SoundRandom" value="HarleyRandom" />
 			<property name="SoundRandomTime" value="60"/>
@@ -3203,15 +3205,15 @@
 			<property name="Names" value="Harley, Quinn, HarleyQuinn" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Quinn_X"/>
 			<property name="SoundHurt" value="HarleyHurt"/>
-			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
+			<property name="SoundHurtSmall" value="player2painsm"/>
 			<property name="SoundDeath" value="HarleyDie"/>
-			<property name="SoundStamina" value="Player_Female/player2stamina"/>
-			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
-			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
-			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
-			<property name="SoundJump" value="Player_Male/player2Jump"/>
-			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
-			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundStamina" value="player2stamina"/>
+			<property name="SoundDrownPain" value="player2drownpain"/>
+			<property name="SoundWaterSurface" value="player2drownsurface"/>
+			<property name="SoundDrownDeath" value="player2drowndeath"/>
+			<property name="SoundJump" value="player2Jump"/>
+			<property name="SoundLandSoft" value="player2LandSoft"/>
+			<property name="SoundLandHard" value="player2LandHard"/>
 			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
 			<property name="SoundRandom" value="HarleyRandom" />
 			<property name="SoundRandomTime" value="60"/>
@@ -3229,15 +3231,15 @@
 			<property name="Names" value="Harley, Quinn, HarleyQuinn" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Quinn_X"/>
 			<property name="SoundHurt" value="HarleyHurt"/>
-			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
+			<property name="SoundHurtSmall" value="player2painsm"/>
 			<property name="SoundDeath" value="HarleyDie"/>
-			<property name="SoundStamina" value="Player_Female/player2stamina"/>
-			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
-			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
-			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
-			<property name="SoundJump" value="Player_Male/player2Jump"/>
-			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
-			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundStamina" value="player2stamina"/>
+			<property name="SoundDrownPain" value="player2drownpain"/>
+			<property name="SoundWaterSurface" value="player2drownsurface"/>
+			<property name="SoundDrownDeath" value="player2drowndeath"/>
+			<property name="SoundJump" value="player2Jump"/>
+			<property name="SoundLandSoft" value="player2LandSoft"/>
+			<property name="SoundLandHard" value="player2LandHard"/>
 			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
 			<property name="SoundRandom" value="HarleyRandom" />
 			<property name="SoundRandomTime" value="60"/>
@@ -3255,15 +3257,15 @@
 			<property name="Names" value="Harley, Quinn, HarleyQuinn" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Quinn_X"/>
 			<property name="SoundHurt" value="HarleyHurt"/>
-			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
+			<property name="SoundHurtSmall" value="player2painsm"/>
 			<property name="SoundDeath" value="HarleyDie"/>
-			<property name="SoundStamina" value="Player_Female/player2stamina"/>
-			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
-			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
-			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
-			<property name="SoundJump" value="Player_Male/player2Jump"/>
-			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
-			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundStamina" value="player2stamina"/>
+			<property name="SoundDrownPain" value="player2drownpain"/>
+			<property name="SoundWaterSurface" value="player2drownsurface"/>
+			<property name="SoundDrownDeath" value="player2drowndeath"/>
+			<property name="SoundJump" value="player2Jump"/>
+			<property name="SoundLandSoft" value="player2LandSoft"/>
+			<property name="SoundLandHard" value="player2LandHard"/>
 			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
 			<property name="SoundRandom" value="HarleyRandom" />
 			<property name="SoundRandomTime" value="60"/>
@@ -3282,15 +3284,15 @@
 			<property name="Names" value="Harley, Quinn, HarleyQuinn" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Quinn_X"/>
 			<property name="SoundHurt" value="HarleyHurt"/>
-			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
+			<property name="SoundHurtSmall" value="player2painsm"/>
 			<property name="SoundDeath" value="HarleyDie"/>
-			<property name="SoundStamina" value="Player_Female/player2stamina"/>
-			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
-			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
-			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
-			<property name="SoundJump" value="Player_Male/player2Jump"/>
-			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
-			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundStamina" value="player2stamina"/>
+			<property name="SoundDrownPain" value="player2drownpain"/>
+			<property name="SoundWaterSurface" value="player2drownsurface"/>
+			<property name="SoundDrownDeath" value="player2drowndeath"/>
+			<property name="SoundJump" value="player2Jump"/>
+			<property name="SoundLandSoft" value="player2LandSoft"/>
+			<property name="SoundLandHard" value="player2LandHard"/>
 			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
 			<property name="SoundRandom" value="HarleyRandom" />
 			<property name="SoundRandomTime" value="60"/>
@@ -3308,15 +3310,15 @@
 			<property name="Names" value="Harley, Quinn, HarleyQuinn" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Quinn_X"/>
 			<property name="SoundHurt" value="HarleyHurt"/>
-			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
+			<property name="SoundHurtSmall" value="player2painsm"/>
 			<property name="SoundDeath" value="HarleyDie"/>
-			<property name="SoundStamina" value="Player_Female/player2stamina"/>
-			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
-			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
-			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
-			<property name="SoundJump" value="Player_Male/player2Jump"/>
-			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
-			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundStamina" value="player2stamina"/>
+			<property name="SoundDrownPain" value="player2drownpain"/>
+			<property name="SoundWaterSurface" value="player2drownsurface"/>
+			<property name="SoundDrownDeath" value="player2drowndeath"/>
+			<property name="SoundJump" value="player2Jump"/>
+			<property name="SoundLandSoft" value="player2LandSoft"/>
+			<property name="SoundLandHard" value="player2LandHard"/>
 			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
 			<property name="SoundRandom" value="HarleyRandom" />
 			<property name="SoundRandomTime" value="60"/>
@@ -3334,15 +3336,15 @@
 			<property name="Names" value="Harley, Quinn, HarleyQuinn" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Quinn_X"/>
 			<property name="SoundHurt" value="HarleyHurt"/>
-			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
+			<property name="SoundHurtSmall" value="player2painsm"/>
 			<property name="SoundDeath" value="HarleyDie"/>
-			<property name="SoundStamina" value="Player_Female/player2stamina"/>
-			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
-			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
-			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
-			<property name="SoundJump" value="Player_Male/player2Jump"/>
-			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
-			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundStamina" value="player2stamina"/>
+			<property name="SoundDrownPain" value="player2drownpain"/>
+			<property name="SoundWaterSurface" value="player2drownsurface"/>
+			<property name="SoundDrownDeath" value="player2drowndeath"/>
+			<property name="SoundJump" value="player2Jump"/>
+			<property name="SoundLandSoft" value="player2LandSoft"/>
+			<property name="SoundLandHard" value="player2LandHard"/>
 			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
 			<property name="SoundRandom" value="HarleyRandom" />
 			<property name="SoundRandomTime" value="60"/>
@@ -3362,15 +3364,15 @@
 			<property name="Names" value="Harley, Quinn, HarleyQuinn" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Quinn_X"/>
 			<property name="SoundHurt" value="HarleyHurt"/>
-			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
+			<property name="SoundHurtSmall" value="player2painsm"/>
 			<property name="SoundDeath" value="HarleyDie"/>
-			<property name="SoundStamina" value="Player_Female/player2stamina"/>
-			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
-			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
-			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
-			<property name="SoundJump" value="Player_Male/player2Jump"/>
-			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
-			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundStamina" value="player2stamina"/>
+			<property name="SoundDrownPain" value="player2drownpain"/>
+			<property name="SoundWaterSurface" value="player2drownsurface"/>
+			<property name="SoundDrownDeath" value="player2drowndeath"/>
+			<property name="SoundJump" value="player2Jump"/>
+			<property name="SoundLandSoft" value="player2LandSoft"/>
+			<property name="SoundLandHard" value="player2LandHard"/>
 			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
 			<property name="SoundRandom" value="HarleyRandom" />
 			<property name="SoundRandomTime" value="60"/>
@@ -3390,15 +3392,15 @@
 			<property name="Names" value="Harley, Quinn, HarleyQuinn" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Quinn_X"/>
 			<property name="SoundHurt" value="HarleyHurt"/>
-			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
+			<property name="SoundHurtSmall" value="player2painsm"/>
 			<property name="SoundDeath" value="HarleyDie"/>
-			<property name="SoundStamina" value="Player_Female/player2stamina"/>
-			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
-			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
-			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
-			<property name="SoundJump" value="Player_Male/player2Jump"/>
-			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
-			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundStamina" value="player2stamina"/>
+			<property name="SoundDrownPain" value="player2drownpain"/>
+			<property name="SoundWaterSurface" value="player2drownsurface"/>
+			<property name="SoundDrownDeath" value="player2drowndeath"/>
+			<property name="SoundJump" value="player2Jump"/>
+			<property name="SoundLandSoft" value="player2LandSoft"/>
+			<property name="SoundLandHard" value="player2LandHard"/>
 			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
 			<property name="SoundRandom" value="HarleyRandom" />
 			<property name="SoundRandomTime" value="60"/>
@@ -3418,15 +3420,15 @@
 			<property name="Names" value="Harley, Quinn, HarleyQuinn" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Quinn_X"/>
 			<property name="SoundHurt" value="HarleyHurt"/>
-			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
+			<property name="SoundHurtSmall" value="player2painsm"/>
 			<property name="SoundDeath" value="HarleyDie"/>
-			<property name="SoundStamina" value="Player_Female/player2stamina"/>
-			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
-			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
-			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
-			<property name="SoundJump" value="Player_Male/player2Jump"/>
-			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
-			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundStamina" value="player2stamina"/>
+			<property name="SoundDrownPain" value="player2drownpain"/>
+			<property name="SoundWaterSurface" value="player2drownsurface"/>
+			<property name="SoundDrownDeath" value="player2drowndeath"/>
+			<property name="SoundJump" value="player2Jump"/>
+			<property name="SoundLandSoft" value="player2LandSoft"/>
+			<property name="SoundLandHard" value="player2LandHard"/>
 			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
 			<property name="SoundRandom" value="HarleyRandom" />
 			<property name="SoundRandomTime" value="60"/>
@@ -3446,15 +3448,15 @@
 			<property name="Names" value="Harley, Quinn, HarleyQuinn" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Quinn_X"/>
 			<property name="SoundHurt" value="HarleyHurt"/>
-			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
+			<property name="SoundHurtSmall" value="player2painsm"/>
 			<property name="SoundDeath" value="HarleyDie"/>
-			<property name="SoundStamina" value="Player_Female/player2stamina"/>
-			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
-			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
-			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
-			<property name="SoundJump" value="Player_Male/player2Jump"/>
-			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
-			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundStamina" value="player2stamina"/>
+			<property name="SoundDrownPain" value="player2drownpain"/>
+			<property name="SoundWaterSurface" value="player2drownsurface"/>
+			<property name="SoundDrownDeath" value="player2drowndeath"/>
+			<property name="SoundJump" value="player2Jump"/>
+			<property name="SoundLandSoft" value="player2LandSoft"/>
+			<property name="SoundLandHard" value="player2LandHard"/>
 			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
 			<property name="SoundRandom" value="HarleyRandom" />
 			<property name="SoundRandomTime" value="60"/>
@@ -3474,15 +3476,15 @@
 			<property name="Names" value="Harley, Quinn, HarleyQuinn" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Quinn_X"/>
 			<property name="SoundHurt" value="HarleyHurt"/>
-			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
+			<property name="SoundHurtSmall" value="player2painsm"/>
 			<property name="SoundDeath" value="HarleyDie"/>
-			<property name="SoundStamina" value="Player_Female/player2stamina"/>
-			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
-			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
-			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
-			<property name="SoundJump" value="Player_Male/player2Jump"/>
-			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
-			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundStamina" value="player2stamina"/>
+			<property name="SoundDrownPain" value="player2drownpain"/>
+			<property name="SoundWaterSurface" value="player2drownsurface"/>
+			<property name="SoundDrownDeath" value="player2drowndeath"/>
+			<property name="SoundJump" value="player2Jump"/>
+			<property name="SoundLandSoft" value="player2LandSoft"/>
+			<property name="SoundLandHard" value="player2LandHard"/>
 			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
 			<property name="SoundRandom" value="HarleyRandom" />
 			<property name="SoundRandomTime" value="60"/>
@@ -3502,15 +3504,15 @@
 			<property name="Names" value="Harley, Quinn, HarleyQuinn" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Quinn_X"/>
 			<property name="SoundHurt" value="HarleyHurt"/>
-			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
+			<property name="SoundHurtSmall" value="player2painsm"/>
 			<property name="SoundDeath" value="HarleyDie"/>
-			<property name="SoundStamina" value="Player_Female/player2stamina"/>
-			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
-			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
-			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
-			<property name="SoundJump" value="Player_Male/player2Jump"/>
-			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
-			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundStamina" value="player2stamina"/>
+			<property name="SoundDrownPain" value="player2drownpain"/>
+			<property name="SoundWaterSurface" value="player2drownsurface"/>
+			<property name="SoundDrownDeath" value="player2drowndeath"/>
+			<property name="SoundJump" value="player2Jump"/>
+			<property name="SoundLandSoft" value="player2LandSoft"/>
+			<property name="SoundLandHard" value="player2LandHard"/>
 			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
 			<property name="SoundRandom" value="HarleyRandom" />
 			<property name="SoundRandomTime" value="60"/>
@@ -3530,15 +3532,15 @@
 			<property name="Names" value="Harley, Quinn, HarleyQuinn" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Quinn_X"/>
 			<property name="SoundHurt" value="HarleyHurt"/>
-			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
+			<property name="SoundHurtSmall" value="player2painsm"/>
 			<property name="SoundDeath" value="HarleyDie"/>
-			<property name="SoundStamina" value="Player_Female/player2stamina"/>
-			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
-			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
-			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
-			<property name="SoundJump" value="Player_Male/player2Jump"/>
-			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
-			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundStamina" value="player2stamina"/>
+			<property name="SoundDrownPain" value="player2drownpain"/>
+			<property name="SoundWaterSurface" value="player2drownsurface"/>
+			<property name="SoundDrownDeath" value="player2drowndeath"/>
+			<property name="SoundJump" value="player2Jump"/>
+			<property name="SoundLandSoft" value="player2LandSoft"/>
+			<property name="SoundLandHard" value="player2LandHard"/>
 			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
 			<property name="SoundRandom" value="HarleyRandom" />
 			<property name="SoundRandomTime" value="60"/>
@@ -3558,15 +3560,15 @@
 			<property name="Names" value="Harley, Quinn, HarleyQuinn" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Quinn_X"/>
 			<property name="SoundHurt" value="HarleyHurt"/>
-			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
+			<property name="SoundHurtSmall" value="player2painsm"/>
 			<property name="SoundDeath" value="HarleyDie"/>
-			<property name="SoundStamina" value="Player_Female/player2stamina"/>
-			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
-			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
-			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
-			<property name="SoundJump" value="Player_Male/player2Jump"/>
-			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
-			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundStamina" value="player2stamina"/>
+			<property name="SoundDrownPain" value="player2drownpain"/>
+			<property name="SoundWaterSurface" value="player2drownsurface"/>
+			<property name="SoundDrownDeath" value="player2drowndeath"/>
+			<property name="SoundJump" value="player2Jump"/>
+			<property name="SoundLandSoft" value="player2LandSoft"/>
+			<property name="SoundLandHard" value="player2LandHard"/>
 			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
 			<property name="SoundRandom" value="HarleyRandom" />
 			<property name="SoundRandomTime" value="60"/>
@@ -3586,15 +3588,15 @@
 			<property name="Names" value="Harley, Quinn, HarleyQuinn" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Quinn_X"/>
 			<property name="SoundHurt" value="HarleyHurt"/>
-			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
+			<property name="SoundHurtSmall" value="player2painsm"/>
 			<property name="SoundDeath" value="HarleyDie"/>
-			<property name="SoundStamina" value="Player_Female/player2stamina"/>
-			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
-			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
-			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
-			<property name="SoundJump" value="Player_Male/player2Jump"/>
-			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
-			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundStamina" value="player2stamina"/>
+			<property name="SoundDrownPain" value="player2drownpain"/>
+			<property name="SoundWaterSurface" value="player2drownsurface"/>
+			<property name="SoundDrownDeath" value="player2drowndeath"/>
+			<property name="SoundJump" value="player2Jump"/>
+			<property name="SoundLandSoft" value="player2LandSoft"/>
+			<property name="SoundLandHard" value="player2LandHard"/>
 			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
 			<property name="SoundRandom" value="HarleyRandom" />
 			<property name="SoundRandomTime" value="60"/>
@@ -3614,15 +3616,15 @@
 			<property name="Names" value="Harley, Quinn, HarleyQuinn" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Quinn_X"/>
 			<property name="SoundHurt" value="HarleyHurt"/>
-			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
+			<property name="SoundHurtSmall" value="player2painsm"/>
 			<property name="SoundDeath" value="HarleyDie"/>
-			<property name="SoundStamina" value="Player_Female/player2stamina"/>
-			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
-			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
-			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
-			<property name="SoundJump" value="Player_Male/player2Jump"/>
-			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
-			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundStamina" value="player2stamina"/>
+			<property name="SoundDrownPain" value="player2drownpain"/>
+			<property name="SoundWaterSurface" value="player2drownsurface"/>
+			<property name="SoundDrownDeath" value="player2drowndeath"/>
+			<property name="SoundJump" value="player2Jump"/>
+			<property name="SoundLandSoft" value="player2LandSoft"/>
+			<property name="SoundLandHard" value="player2LandHard"/>
 			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
 			<property name="SoundRandom" value="HarleyRandom" />
 			<property name="SoundRandomTime" value="60"/>
@@ -3641,22 +3643,22 @@
 			<property name="Faction" value="bandits" />
 			<property name="Names" value="Harley, Quinn, HarleyQuinn" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Quinn_X" />
-			<property name="SoundHurt" value="HarleyHurt" />
-			<property name="SoundHurtSmall" value="Player_Female/player2painsm" />
-			<property name="SoundDeath" value="HarleyDie" />
-			<property name="SoundStamina" value="Player_Female/player2stamina" />
-			<property name="SoundDrownPain" value="Player_Female/player2drownpain" />
-			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface" />
-			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath" />
-			<property name="SoundJump" value="Player_Male/player2Jump" />
-			<property name="SoundLandSoft" value="Player_Male/player2LandSoft" />
-			<property name="SoundLandHard" value="Player_Male/player2LandHard" />
-			<property name="SoundPlayerLandThump" value="PlayerLandThump" />
+			<property name="SoundHurt" value="HarleyHurt"/>
+			<property name="SoundHurtSmall" value="player2painsm"/>
+			<property name="SoundDeath" value="HarleyDie"/>
+			<property name="SoundStamina" value="player2stamina"/>
+			<property name="SoundDrownPain" value="player2drownpain"/>
+			<property name="SoundWaterSurface" value="player2drownsurface"/>
+			<property name="SoundDrownDeath" value="player2drowndeath"/>
+			<property name="SoundJump" value="player2Jump"/>
+			<property name="SoundLandSoft" value="player2LandSoft"/>
+			<property name="SoundLandHard" value="player2LandHard"/>
+			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
 			<property name="SoundRandom" value="HarleyRandom" />
-			<property name="SoundRandomTime" value="60" />
-			<property name="SoundAlert" value="HarleyAlert" />
-			<property name="SoundAttack" value="HarleyAttack" />
-			<property name="SoundSense" value="HarleySense" />
+			<property name="SoundRandomTime" value="60"/>
+			<property name="SoundAlert" value="HarleyAlert"/>
+			<property name="SoundAttack" value="HarleyAttack"/>
+			<property name="SoundSense" value="HarleySense"/>
 			<property name="LootDropProb" value="0.2" />
 			<property name="AIPackages" value="NPCModCoreNoChat, NPCModHostileMeleeBasic, NPCModHostileRangedBasic"/> 
 			<property name="Class" value="EntityNPCBandit, SCore" /> 
@@ -3670,15 +3672,15 @@
 			<property name="Names" value="Harley, Quinn, HarleyQuinn" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Quinn_X"/>
 			<property name="SoundHurt" value="HarleyHurt"/>
-			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
+			<property name="SoundHurtSmall" value="player2painsm"/>
 			<property name="SoundDeath" value="HarleyDie"/>
-			<property name="SoundStamina" value="Player_Female/player2stamina"/>
-			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
-			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
-			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
-			<property name="SoundJump" value="Player_Male/player2Jump"/>
-			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
-			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundStamina" value="player2stamina"/>
+			<property name="SoundDrownPain" value="player2drownpain"/>
+			<property name="SoundWaterSurface" value="player2drownsurface"/>
+			<property name="SoundDrownDeath" value="player2drowndeath"/>
+			<property name="SoundJump" value="player2Jump"/>
+			<property name="SoundLandSoft" value="player2LandSoft"/>
+			<property name="SoundLandHard" value="player2LandHard"/>
 			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
 			<property name="SoundRandom" value="HarleyRandom" />
 			<property name="SoundRandomTime" value="60"/>
@@ -3698,15 +3700,15 @@
 			<property name="Names" value="Harley, Quinn, HarleyQuinn" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Quinn_X"/>
 			<property name="SoundHurt" value="HarleyHurt"/>
-			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
+			<property name="SoundHurtSmall" value="player2painsm"/>
 			<property name="SoundDeath" value="HarleyDie"/>
-			<property name="SoundStamina" value="Player_Female/player2stamina"/>
-			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
-			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
-			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
-			<property name="SoundJump" value="Player_Male/player2Jump"/>
-			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
-			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundStamina" value="player2stamina"/>
+			<property name="SoundDrownPain" value="player2drownpain"/>
+			<property name="SoundWaterSurface" value="player2drownsurface"/>
+			<property name="SoundDrownDeath" value="player2drowndeath"/>
+			<property name="SoundJump" value="player2Jump"/>
+			<property name="SoundLandSoft" value="player2LandSoft"/>
+			<property name="SoundLandHard" value="player2LandHard"/>
 			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
 			<property name="SoundRandom" value="HarleyRandom" />
 			<property name="SoundRandomTime" value="60"/>
@@ -3726,15 +3728,15 @@
 			<property name="Names" value="Harley, Quinn, HarleyQuinn" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Quinn_X"/>
 			<property name="SoundHurt" value="HarleyHurt"/>
-			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
+			<property name="SoundHurtSmall" value="player2painsm"/>
 			<property name="SoundDeath" value="HarleyDie"/>
-			<property name="SoundStamina" value="Player_Female/player2stamina"/>
-			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
-			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
-			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
-			<property name="SoundJump" value="Player_Male/player2Jump"/>
-			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
-			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundStamina" value="player2stamina"/>
+			<property name="SoundDrownPain" value="player2drownpain"/>
+			<property name="SoundWaterSurface" value="player2drownsurface"/>
+			<property name="SoundDrownDeath" value="player2drowndeath"/>
+			<property name="SoundJump" value="player2Jump"/>
+			<property name="SoundLandSoft" value="player2LandSoft"/>
+			<property name="SoundLandHard" value="player2LandHard"/>
 			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
 			<property name="SoundRandom" value="HarleyRandom" />
 			<property name="SoundRandomTime" value="60"/>
@@ -3754,15 +3756,15 @@
 			<property name="Names" value="Harley, Quinn, HarleyQuinn" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Quinn_X"/>
 			<property name="SoundHurt" value="HarleyHurt"/>
-			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
+			<property name="SoundHurtSmall" value="player2painsm"/>
 			<property name="SoundDeath" value="HarleyDie"/>
-			<property name="SoundStamina" value="Player_Female/player2stamina"/>
-			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
-			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
-			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
-			<property name="SoundJump" value="Player_Male/player2Jump"/>
-			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
-			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundStamina" value="player2stamina"/>
+			<property name="SoundDrownPain" value="player2drownpain"/>
+			<property name="SoundWaterSurface" value="player2drownsurface"/>
+			<property name="SoundDrownDeath" value="player2drowndeath"/>
+			<property name="SoundJump" value="player2Jump"/>
+			<property name="SoundLandSoft" value="player2LandSoft"/>
+			<property name="SoundLandHard" value="player2LandHard"/>
 			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
 			<property name="SoundRandom" value="HarleyRandom" />
 			<property name="SoundRandomTime" value="60"/>
@@ -3781,15 +3783,15 @@
 			<property name="Names" value="Harley, Quinn, HarleyQuinn" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Quinn_X"/>
 			<property name="SoundHurt" value="HarleyHurt"/>
-			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
+			<property name="SoundHurtSmall" value="player2painsm"/>
 			<property name="SoundDeath" value="HarleyDie"/>
-			<property name="SoundStamina" value="Player_Female/player2stamina"/>
-			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
-			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
-			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
-			<property name="SoundJump" value="Player_Male/player2Jump"/>
-			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
-			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundStamina" value="player2stamina"/>
+			<property name="SoundDrownPain" value="player2drownpain"/>
+			<property name="SoundWaterSurface" value="player2drownsurface"/>
+			<property name="SoundDrownDeath" value="player2drowndeath"/>
+			<property name="SoundJump" value="player2Jump"/>
+			<property name="SoundLandSoft" value="player2LandSoft"/>
+			<property name="SoundLandHard" value="player2LandHard"/>
 			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
 			<property name="SoundRandom" value="HarleyRandom" />
 			<property name="SoundRandomTime" value="60"/>
@@ -4344,12 +4346,12 @@
 			<property name="Faction" value="undead"/>				
 			<property name="AvatarController" value="AvatarZombieController"/>
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?zombieTestFemale_X"/> 
-			<property name="SoundRandom" value="Enemies/Base_Zombie_Female2/zombiefemale2roam"/>
-			<property name="SoundAlert" value="Enemies/Base_Zombie_Female2/zombiefemale2alert"/>
-			<property name="SoundAttack" value="Enemies/Base_Zombie_Female2/zombiefemale2attack"/>
-			<property name="SoundHurt" value="Enemies/Base_Zombie_Female2/zombiefemale2pain"/>
-			<property name="SoundDeath" value="Enemies/Base_Zombie_Female2/zombiefemale2death"/>
-			<property name="SoundSense" value="Enemies/Base_Zombie_Female2/zombiefemale2sense"/>
+			<property name="SoundRandom" value="zombiefemaleroam"/>
+			<property name="SoundAlert" value="zombiefemalealert"/>
+			<property name="SoundAttack" value="zombiefemaleattack"/>
+			<property name="SoundHurt" value="zombiefemalepain"/>
+			<property name="SoundDeath" value="zombiefemaledeath"/>
+			<property name="SoundSense" value="zombiefemalesense"/>
 			<property name="RootMotion" value="true"/>
 			<property name="HasRagdoll" value="true"/>
 			<property name="PhysicsBody" value="mixamoConvertedStandardZombie"/>
