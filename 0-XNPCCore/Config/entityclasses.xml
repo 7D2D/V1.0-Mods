@@ -1027,7 +1027,7 @@
 			<property name="HandItem" value="gunNPCPipePistol"/>
 			<property name="RightHandJointName" value="PipePistol" />
 			<property name="AITask-5" value="RangedAttackTarget" data="itemType=1;cooldown=4;duration=6;minRange=2;maxRange=15;unreachableRange=40"/>  <!-- set duration == rounds?  -->
-			<property name="LootDropEntityClass" value="EntityNPCLootContainerPipePisol" />
+			<property name="LootDropEntityClass" value="EntityNPCLootContainerPipePistol" />
 		</entity_class>	
 		
 
