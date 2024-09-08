@@ -324,17 +324,18 @@
 			</effect_group>	
 		</item>				
 
-		<item name="meleeNPCKnife"> 
-			<property name="Extends" value="meleeHandNPCMaster"/>
+		<item name="meleeNPCKnife">
+			<property name="Extends" value="meleeHandNPCMaster" />
 			<property name="CompatibleWeapon" value="meleeWpnBladeT1HuntingKnife" />
 			<property name="RightHandJointName" value="Knife" />
-			<property name="Canhold" value="true"/> 
-			<property name="HoldType" value="36"/>
-			<property name="CreativeMode" value="None"/>
-			<property name="Tags" value="knife,melee,grunting,light,perkFlurryOfBlows,weapon,meleeWeapon,attAgility,perkDeepCuts,perkTheHuntsman,canHaveCosmetic"/>
-			<property name="DisplayType" value="melee"/>
-			<property name="Meshfile" value="@:Other/Items/Weapons/Melee/Knives/hunting_knifePrefab.prefab"/>
-			<property name="Material" value="Mmetal"/>
+			<property name="Canhold" value="true" />
+			<property name="HoldType" value="36" />
+			<property name="CreativeMode" value="None" />
+			<property name="Tags" value="knife,melee,grunting,light,perkFlurryOfBlows,weapon,meleeWeapon,attAgility,perkDeepCuts,perkTheHuntsman,canHaveCosmetic" />
+			<property name="DisplayType" value="melee" />
+			<property name="Meshfile" value="@:Other/Items/Weapons/Melee/Knives/hunting_knifePrefab.prefab" />
+			<property name="Material" value="Mmetal" />
+			<property name="TintColor" value="0,0,0" />
 			<property name="RepairTools" value="resourceRepairKit"/>
 			<property name="DegradationBreaksAfter" value="false"/>
 			<property name="FuelValue" value="1"/>
@@ -426,15 +427,16 @@
 		</item>
 		
 		<item name="meleeNPCMachete">
-			<property name="Extends" value="meleeHandNPCMaster"/>
+			<property name="Extends" value="meleeHandNPCMaster" />
 			<property name="CompatibleWeapon" value="meleeWpnBladeT3Machete" />
 			<property name="RightHandJointName" value="Machete" />
-			<property name="Canhold" value="true"/> 
-			<property name="HoldType" value="32"/> <!-- 47 is default with.1 delay, but 32 has a .2 delay and looks better -->
-			<property name="Tags" value="machete,melee,grunting,light,longShaft,perkFlurryOfBlows,weapon,meleeWeapon,attAgility,perkDeepCuts,perkTheHuntsman,canHaveCosmetic"/>
-			<property name="CreativeMode" value="None"/>
-			<property name="Meshfile" value="@:Other/Items/Weapons/Melee/Knives/machetePrefab.prefab"/>
-			<property name="Material" value="Mmetal"/>
+			<property name="Canhold" value="true" />
+			<property name="HoldType" value="32" /> <!-- 47 is default with.1 delay, but 32 has a .2 delay and looks better -->
+			<property name="Tags" value="machete,melee,grunting,light,longShaft,perkFlurryOfBlows,weapon,meleeWeapon,attAgility,perkDeepCuts,perkTheHuntsman,canHaveCosmetic" />
+			<property name="CreativeMode" value="None" />
+			<property name="Meshfile" value="@:Other/Items/Weapons/Melee/Knives/machetePrefab.prefab" />
+			<property name="Material" value="Mmetal" />
+			<property name="TintColor" value="107, 107, 71" />
 			<property name="RepairTools" value="resourceRepairKit"/>
 			<property name="DegradationBreaksAfter" value="false"/>
 			<property name="FuelValue" value="1"/>
@@ -522,19 +524,20 @@
 			</effect_group>
 		</item>		
 
-		<item name="meleeNPCClubWood"> 
+		<item name="meleeNPCClubWood">
 			<property name="Extends" value="meleeHandNPCMaster" />
 			<property name="CompatibleWeapon" value="meleeWpnClubT0WoodenClub" />
 			<property name="RightHandJointName" value="Club" />
-			<property name="Canhold" value="true"/> 
-			<property name="HoldType" value="36"/>
-			<property name="Tags" value="blunt,club,melee,grunting,light,longShaft,perkFlurryOfBlows,weapon,meleeWeapon,attStrength,perkPummelPete,canHaveCosmetic"/>
-			<property name="CreativeMode" value="None"/>
-			<property name="DisplayType" value="melee"/>
-			<property name="Group" value="Ammo/Weapons,Basics"/>
-			<property name="Meshfile" value="@:Other/Items/Weapons/Melee/ClubWood/clubWoodPrefab.prefab"/>
-			<property name="Candrop" value="false"/>
-			<property name="Material" value="Mwood"/>
+			<property name="Canhold" value="true" />
+			<property name="HoldType" value="36" />
+			<property name="Tags" value="blunt,club,melee,grunting,light,longShaft,perkFlurryOfBlows,weapon,meleeWeapon,attStrength,perkPummelPete,canHaveCosmetic" />
+			<property name="CreativeMode" value="None" />
+			<property name="DisplayType" value="melee" />
+			<property name="Group" value="Ammo/Weapons,Basics" />
+			<property name="Meshfile" value="@:Other/Items/Weapons/Melee/ClubWood/clubWoodPrefab.prefab" />
+			<property name="Candrop" value="false" />
+			<property name="Material" value="Mwood" />
+			<property name="TintColor" value="102, 0, 0" />
 			<property name="RepairTools" value="resourceWood"/>
 			<property name="SoundDestroy" value="wooddestroy1"/>
 			<property name="SellableToTrader" value="false"/>
@@ -621,19 +624,20 @@
 				<requirement name="HasBuff" target="self" buff="RocketLUser"/>
 			</effect_group>
 		</item>
-		<item name="meleeNPCBatWood"> 
-			<property name="Extends" value="meleeHandNPCMaster"/>
+		<item name="meleeNPCBatWood">
+			<property name="Extends" value="meleeHandNPCMaster" />
 			<property name="CompatibleWeapon" value="meleeWpnClubT1BaseballBat" />
 			<property name="RightHandJointName" value="Bat" />
-			<property name="Canhold" value="true"/> 
-			<property name="HoldType" value="36"/>
-			<property name="Tags" value="blunt,club,melee,reloadPenalty1,grunting,light,longShaft,perkFlurryOfBlows,weapon,meleeWeapon,attStrength,perkPummelPete,canHaveCosmetic"/>
-			<property name="CreativeMode" value="None"/>
-			<property name="DisplayType" value="melee"/>
-			<property name="Group" value="Ammo/Weapons,Basics"/>
-			<property name="Meshfile" value="@:Other/Items/Weapons/Melee/Bat/bat_Prefab.prefab"/>
-			<property name="Candrop" value="false"/>
-			<property name="Material" value="Mwood"/>
+			<property name="Canhold" value="true" />
+			<property name="HoldType" value="36" />
+			<property name="Tags" value="blunt,club,melee,reloadPenalty1,grunting,light,longShaft,perkFlurryOfBlows,weapon,meleeWeapon,attStrength,perkPummelPete,canHaveCosmetic" />
+			<property name="CreativeMode" value="None" />
+			<property name="DisplayType" value="melee" />
+			<property name="Group" value="Ammo/Weapons,Basics" />
+			<property name="Meshfile" value="@:Other/Items/Weapons/Melee/Bat/bat_Prefab.prefab" />
+			<property name="Candrop" value="false" />
+			<property name="Material" value="Mwood" />
+			<property name="TintColor" value="102, 0, 0" />
 			<property name="RepairTools" value="resourceWood"/>
 			<property name="SoundDestroy" value="wooddestroy1"/>
 			<property name="SellableToTrader" value="false"/>
@@ -721,18 +725,19 @@
 			</effect_group>
 		</item>
 		
-		<item name="meleeNPCAxe"> 
-			<property name="Extends" value="meleeHandNPCMaster"/>
+		<item name="meleeNPCAxe">
+			<property name="Extends" value="meleeHandNPCMaster" />
 			<property name="CompatibleWeapon" value="meleeToolAxeT1IronFireaxe" />
 			<property name="RightHandJointName" value="Axe" />
-			<property name="Canhold" value="true"/> 
-			<property name="HoldType" value="2"/>
-			<property name="Tags" value="axe,melee,grunting,weapon,meleeWeapon,medium,longShaft,attStrength,perkDeepCuts,canHaveCosmetic"/>
-			<property name="CreativeMode" value="None"/>
-			<property name="DisplayType" value="melee"/>
-			<property name="Group" value="Ammo/Weapons,Basics"/>
-			<property name="Meshfile" value="@:Other/Items/Weapons/Melee/Axe/fireaxe_ironPrefab.prefab"/>
-			<property name="Material" value="Mmetal"/>
+			<property name="Canhold" value="true" />
+			<property name="HoldType" value="2" />
+			<property name="Tags" value="axe,melee,grunting,weapon,meleeWeapon,medium,longShaft,attStrength,perkDeepCuts,canHaveCosmetic" />
+			<property name="CreativeMode" value="None" />
+			<property name="DisplayType" value="melee" />
+			<property name="Group" value="Ammo/Weapons,Basics" />
+			<property name="Meshfile" value="@:Other/Items/Weapons/Melee/Axe/fireaxe_ironPrefab.prefab" />
+			<property name="Material" value="Mmetal" />
+			<property name="TintColor" value="102, 0, 0" />
 			<property name="Candrop" value="false"/>
 			<property name="SellableToTrader" value="false"/>
 			<property name="EconomicBundleSize" value="1"/>
@@ -798,7 +803,7 @@
 					<passive_effect name="BlockDamage" operation="perc_add" value="1.25" tags="secondary"/>
 					<passive_effect name="AttacksPerMinute" operation="perc_add" value="-.3" tags="secondary"/>
 					<passive_effect name="StaminaLoss" operation="base_set" value="39.9" tags="secondary"/>
-					<!-- Moaning and grunting sounds moved to buffs.xml, <effect_group name="Power Attack Grunt"> -->
+				<!-- Moaning and grunting sounds moved to buffs.xml, <effect_group name="Power Attack Grunt"> -->
 				</effect_group>
 				<effect_group name="WeaponType">
 					<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="WeaponType" operation="set" value="17"/>
@@ -820,18 +825,19 @@
 			</effect_group>
 		</item>		
 		
-		<item name="meleeNPCSpear"> 
-			<property name="Extends" value="meleeHandNPCMaster"/>
+		<item name="meleeNPCSpear">
+			<property name="Extends" value="meleeHandNPCMaster" />
 			<property name="CompatibleWeapon" value="meleeWpnSpearT1IronSpear" />
 			<property name="RightHandJointName" value="Spear" />
-			<property name="Canhold" value="true"/> 
-			<property name="HoldType" value="2"/>
-			<property name="Tags" value="melee,grunting,medium,weapon,meleeWeapon,longShaft,attPerception,perkJavelinMaster,canHaveCosmetic,thrownWeapon"/>
-			<property name="CreativeMode" value="None"/>
-			<property name="DisplayType" value="melee"/>
-			<property name="Group" value="Ammo/Weapons,Basics"/>
-			<property name="Meshfile" value="@:Other/Items/Weapons/Melee/Spear/spear_iron_Prefab.prefab"/>
-			<property name="Material" value="Mmetal"/>
+			<property name="Canhold" value="true" />
+			<property name="HoldType" value="2" />
+			<property name="Tags" value="melee,grunting,medium,weapon,meleeWeapon,longShaft,attPerception,perkJavelinMaster,canHaveCosmetic,thrownWeapon" />
+			<property name="CreativeMode" value="None" />
+			<property name="DisplayType" value="melee" />
+			<property name="Group" value="Ammo/Weapons,Basics" />
+			<property name="Meshfile" value="@:Other/Items/Weapons/Melee/Spear/spear_iron_Prefab.prefab" />
+			<property name="Material" value="Mmetal" />
+			<property name="TintColor" value="153, 77, 0" />
 			<property name="Candrop" value="false"/>
 			<property name="SellableToTrader" value="false"/>
 			<property name="EconomicBundleSize" value="1"/>
@@ -918,21 +924,23 @@
 				<triggered_effect trigger="onSelfEquipStart" action="RemoveBuff" buff="RocketLUser" /> 
 				<requirement name="HasBuff" target="self" buff="RocketLUser"/>
 			</effect_group>
-		</item>		
-		
+		</item>
+
 		<!-- Ranged Weapons -->
 
 		<item name="gunNPCSMG5"> <!-- Base Ranged Weapon -->
-			<property name="Tags" value="weapon,ranged,holdBreathAiming,gun,reloadPenalty3,shortRange,barrelAttachments,sideAttachments,smallTopAttachments,magazine,drumMagazine,firingMode,bottomAttachments,attAgility,perkGunslinger,9mmGun,attachmentsIncluded,canHaveCosmetic"/>
-			<property name="CreativeMode" value="None"/>
-			<property name="DisplayType" value="rangedGun"/>
+			<property name="Tags" value="weapon,ranged,holdBreathAiming,gun,reloadPenalty3,shortRange,barrelAttachments,sideAttachments,smallTopAttachments,magazine,drumMagazine,firingMode,bottomAttachments,attAgility,perkGunslinger,9mmGun,attachmentsIncluded,canHaveCosmetic" />
+			<property name="CreativeMode" value="None" />
+			<property name="DisplayType" value="rangedGun" />
 			<property name="RightHandJointName" value="SMG" />
-			<property name="HoldType" value="2"/> <!-- vanilla 6 --> <!-- So on ranged weapons, a small delay to the raycast is needed so the raycast doesnt fire when the melee animation is moving backwards.  Holdtype one adds a .16 delay.  Seems okay for the guns tested, but each weapon might better use more or less delay.  Setting Showhits in console shows the hit vector -->
+			<property name="HoldType" value="2" /> <!-- vanilla 6 --> <!-- So on ranged weapons, a small delay to the raycast is needed so the raycast doesnt fire when the melee animation is moving backwards.  Holdtype one adds a .16 delay.  Seems okay for the guns tested, but each weapon might better use more or less delay.  Setting Showhits in console shows the hit vector -->
 			<property name="CompatibleWeapon" value="gunHandgunT3SMG5" />
-			<property name="Stacknumber" value="1"/>
-			<property name="Candrop" value="false"/>	<!--  required or it will drop an Uber gun that never needs reloading  -->	
-			<property name="Meshfile" value="@:Other/Items/Weapons/Ranged/SMG/smgPrefab.prefab"/>
-			<property name="Material" value="MHandGunParts"/> <property name="Weight" value="6"/>
+			<property name="Stacknumber" value="1" />
+			<property name="Candrop" value="false" />	<!--  required or it will drop an Uber gun that never needs reloading  -->
+			<property name="Meshfile" value="@:Other/Items/Weapons/Ranged/SMG/smgPrefab.prefab" />
+			<property name="Material" value="MHandGunParts" />
+			<property name="Weight" value="6" />
+			<property name="TintColor" value="80, 80, 80" />
 			<property name="DegradationBreaksAfter" value="false"/>
 			<property name="SoundJammed" value="weapon_jam"/>
 			<property name="TintColor" value="255,255,255"/>
@@ -973,7 +981,7 @@
 				<property name="Particles_muzzle_fire" value="nozzleflash_ak" />
 				<property name="Particles_muzzle_smoke" value="nozzlesmokeuzi" />
 				<property name="DamageEntity" value="5"/> <!--  This is base damage per ray that hits) -->
-				<property name="DamageBlock" value="5"/> 
+				<property name="DamageBlock" value="5"/>
 				<!--<requirement name="CVarCompare" cvar="_underwater" operation="LTE" value="0"/> -->
 			</property>
 			<effect_group name="gunHandgunT3SMG5">
@@ -981,10 +989,10 @@
 				<passive_effect name="EntityDamage" operation="perc_add" value="0,.2"/>  <!-- Simulate random number of mods added -->
 				<passive_effect name="DamageFalloffRange" operation="base_set" value="10" tags="perkGunslinger,9mmGun"/>
 				<passive_effect name="DamageFalloffRange" operation="perc_add" value="-.2,.2" tags="perkGunslinger,9mmGun"/> <!-- random effective rng -->
-	<!--			<passive_effect name="EntityDamage" operation="base_add" value="3" tags="perkGunslinger"/> damage offset -->
+				<!--			<passive_effect name="EntityDamage" operation="base_add" value="3" tags="perkGunslinger"/> damage offset -->
 				<passive_effect name="RoundsPerMinute" operation="base_set" value="480" tags="perkGunslinger"/>
 				<passive_effect name="BurstRoundCount" operation="base_set" value="1000" tags="perkGunslinger"/><!--  no effect  -->
-	<!--		<passive_effect name="MagazineSize" operation="base_set" value="30" tags="perkGunslinger"/> We set this in template  -->
+				<!--		<passive_effect name="MagazineSize" operation="base_set" value="30" tags="perkGunslinger"/> We set this in template  -->
 				<passive_effect name="ReloadSpeedMultiplier" operation="base_set" value="1" />  <!-- 4s, but messes up reload timing -->
 				<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
 				<passive_effect name="ModPowerBonus" operation="perc_add" value=".10" tags="EntityDamage,BlockDamage"/>
@@ -995,8 +1003,8 @@
 				<passive_effect name="BlockDamage" operation="perc_add" value=".1,.5" tier="2,6" tags="perkGunslinger"/> <!-- tier bonus -->
 
 				<passive_effect name="DegradationMax" operation="perc_add" value="-.2,.2" tags="perkGunslinger"/> <!-- random DegMax -->
-	<!--		<passive_effect name="RoundsPerMinute" operation="perc_add" value="-.05,.05" tags="perkGunslinger"/> --> <!-- random APM -->
-	<!--		<passive_effect name="MagazineSize" operation="perc_add" value="-.122,.122"/>  dont want random MagazineSize mess up reloading -->
+				<!--		<passive_effect name="RoundsPerMinute" operation="perc_add" value="-.05,.05" tags="perkGunslinger"/> --> <!-- random APM -->
+				<!--		<passive_effect name="MagazineSize" operation="perc_add" value="-.122,.122"/>  dont want random MagazineSize mess up reloading -->
 				<passive_effect name="WeaponHandling" operation="perc_add" value="-.08,.08" tags="perkGunslinger"/> <!-- random WeaponHandling -->
 
 				<passive_effect name="SpreadDegreesVertical" operation="base_set" value="5" tags="perkGunslinger"/>
@@ -1036,24 +1044,26 @@
 			</effect_group>
 			 <effect_group name="Melee pushback / knockdown">
 				<requirement name="!EntityTagCompare" target="other" tags="trader,animal,crawler"/>
-				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="33"/> 
-			<!--	 <triggered_effect trigger="onSelfSecondaryActionRayHit" action="Ragdoll" target="other" duration=".2" force="200"/> -->
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="33"/>
+				<!--	 <triggered_effect trigger="onSelfSecondaryActionRayHit" action="Ragdoll" target="other" duration=".2" force="200"/> -->
 				<requirement name="IsPrimaryAttack" />
 				<triggered_effect trigger="onSelfDamagedOther" action="Ragdoll" target="other" duration=".1" force="25"/>
 			</effect_group> 
 		</item>	
 		
 		<item name="gunNPCPipePistol">
-			<property name="Extends" value="gunNPCSMG5"/> 
+			<property name="Extends" value="gunNPCSMG5" />
 			<property name="CompatibleWeapon" value="gunHandgunT0PipePistol" />
 			<property name="RightHandJointName" value="PipePistol" />
-			<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty4,gun,shortRange,revolver,barrelAttachments,sideAttachments,smallTopAttachments,attAgility,perkGunslinger,9mmGun,attachmentsIncluded,canHaveCosmetic"/>
-			<property name="CreativeMode" value="None"/>
-			<property name="HoldType" value="2"/>
-			<property name="Stacknumber" value="1"/>
-			<property name="Candrop" value="false"/>	
-			<property name="Meshfile" value="@:Other/Items/Weapons/Ranged/PipeRevolver/pipeRevolverPrefab.prefab"/>
-			<property name="Material" value="MHandGunParts"/> <property name="Weight" value="6"/>
+			<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty4,gun,shortRange,revolver,barrelAttachments,sideAttachments,smallTopAttachments,attAgility,perkGunslinger,9mmGun,attachmentsIncluded,canHaveCosmetic" />
+			<property name="CreativeMode" value="None" />
+			<property name="HoldType" value="2" />
+			<property name="Stacknumber" value="1" />
+			<property name="Candrop" value="false" />
+			<property name="Meshfile" value="@:Other/Items/Weapons/Ranged/PipeRevolver/pipeRevolverPrefab.prefab" />
+			<property name="Material" value="MHandGunParts" />
+			<property name="Weight" value="6" />
+			<property name="TintColor" value="40, 40, 40" />
 			<property name="DegradationBreaksAfter" value="false"/>
 			<property name="SoundJammed" value="weapon_jam"/>
 			<property name="TintColor" value="255,255,255"/>
@@ -1158,16 +1168,18 @@
 		</item>				
 		
 		<item name="gunNPCPipePistol2">
-			<property name="Extends" value="gunNPCSMG5"/> 
+			<property name="Extends" value="gunNPCSMG5" />
 			<property name="CompatibleWeapon" value="gunHandgunT0PipePistol" />
 			<property name="RightHandJointName" value="PipePistol" />
-			<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty4,gun,shortRange,revolver,barrelAttachments,sideAttachments,smallTopAttachments,attAgility,perkGunslinger,9mmGun,attachmentsIncluded,canHaveCosmetic"/>
-			<property name="CreativeMode" value="None"/>
-			<property name="HoldType" value="2"/>
-			<property name="Stacknumber" value="1"/>
-			<property name="Candrop" value="false"/>	
-			<property name="Meshfile" value="@:Other/Items/Weapons/Ranged/PipeRevolver/pipeRevolverPrefab.prefab"/>
-			<property name="Material" value="MHandGunParts"/> <property name="Weight" value="6"/>
+			<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty4,gun,shortRange,revolver,barrelAttachments,sideAttachments,smallTopAttachments,attAgility,perkGunslinger,9mmGun,attachmentsIncluded,canHaveCosmetic" />
+			<property name="CreativeMode" value="None" />
+			<property name="HoldType" value="2" />
+			<property name="Stacknumber" value="1" />
+			<property name="Candrop" value="false" />
+			<property name="Meshfile" value="@:Other/Items/Weapons/Ranged/PipeRevolver/pipeRevolverPrefab.prefab" />
+			<property name="Material" value="MHandGunParts" />
+			<property name="Weight" value="6" />
+			<property name="TintColor" value="40, 40, 40" />
 			<property name="DegradationBreaksAfter" value="false"/>
 			<property name="SoundJammed" value="weapon_jam"/>
 			<property name="TintColor" value="255,255,255"/>
@@ -1281,17 +1293,19 @@
 		</item>				
 			
 		<item name="gunNPCPipeShotgun">
-			<property name="Extends" value="gunNPCSMG5"/>
+			<property name="Extends" value="gunNPCSMG5" />
 			<property name="CompatibleWeapon" value="gunShotgunT0PipeShotgun" />
 			<property name="RightHandJointName" value="PipeSG" />
-			<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty5,gun,shotgun,shortRange,barrelAttachments,sideAttachments,stock,smallTopAttachments,noScopes,bottomAttachments,attStrength,perkBoomstick,attachmentsIncluded,canHaveCosmetic"/>
-			<property name="CreativeMode" value="None"/>
-			<property name="DisplayType" value="rangedShotgun"/>
-			<property name="HoldType" value="32"/>
-			<property name="Stacknumber" value="1"/>
-			<property name="Candrop" value="false"/>
-			<property name="Meshfile" value="@:Other/Items/Weapons/Ranged/PipeShotgun/pipeShotgunPrefab.prefab"/>
-			<property name="Material" value="MShotgunParts"/> <property name="Weight" value="6"/>
+			<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty5,gun,shotgun,shortRange,barrelAttachments,sideAttachments,stock,smallTopAttachments,noScopes,bottomAttachments,attStrength,perkBoomstick,attachmentsIncluded,canHaveCosmetic" />
+			<property name="CreativeMode" value="None" />
+			<property name="DisplayType" value="rangedShotgun" />
+			<property name="HoldType" value="32" />
+			<property name="Stacknumber" value="1" />
+			<property name="Candrop" value="false" />
+			<property name="Meshfile" value="@:Other/Items/Weapons/Ranged/PipeShotgun/pipeShotgunPrefab.prefab" />
+			<property name="Material" value="MShotgunParts" />
+			<property name="Weight" value="6" />
+			<property name="TintColor" value="85, 107, 130" />
 			<property name="DegradationBreaksAfter" value="false"/>
 			<property name="SoundJammed" value="weapon_jam"/>
 			<property name="TintColor" value="255,255,255"/>
@@ -1400,17 +1414,19 @@
 		</item>			
 		
 		<item name="gunNPCPipeRifle">
-			<property name="Extends" value="gunNPCSMG5"/> 
+			<property name="Extends" value="gunNPCSMG5" />
 			<property name="CompatibleWeapon" value="gunRifleT0PipeRifle" />
 			<property name="RightHandJointName" value="PipeRifle" />
-			<property name="Tags" value="weapon,ranged,medRange,holdBreathAiming,reloadPenalty3,gun,barrelAttachments,sideAttachments,smallTopAttachments,mediumTopAttachments,largeTopAttachments,stock,attachmentsIncluded,bottomAttachments,attPerception,perkDeadEye,canHaveCosmetic"/>
-			<property name="CreativeMode" value="None"/>
-			<property name="DisplayType" value="rangedGun"/>
-			<property name="HoldType" value="32"/>
-			<property name="Stacknumber" value="1"/>
-			<property name="Candrop" value="false"/>			
-			<property name="Meshfile" value="@:Other/Items/Weapons/Ranged/PipeRifle/PipeRiflePrefab.prefab"/>
-			<property name="Material" value="MRifleParts"/> <property name="Weight" value="4"/>
+			<property name="Tags" value="weapon,ranged,medRange,holdBreathAiming,reloadPenalty3,gun,barrelAttachments,sideAttachments,smallTopAttachments,mediumTopAttachments,largeTopAttachments,stock,attachmentsIncluded,bottomAttachments,attPerception,perkDeadEye,canHaveCosmetic" />
+			<property name="CreativeMode" value="None" />
+			<property name="DisplayType" value="rangedGun" />
+			<property name="HoldType" value="32" />
+			<property name="Stacknumber" value="1" />
+			<property name="Candrop" value="false" />
+			<property name="Meshfile" value="@:Other/Items/Weapons/Ranged/PipeRifle/PipeRiflePrefab.prefab" />
+			<property name="Material" value="MRifleParts" />
+			<property name="Weight" value="4" />
+			<property name="TintColor" value="138, 163, 148" />
 			<property name="DegradationBreaksAfter" value="false"/>
 			<property name="SoundJammed" value="ItemNeedsRepair"/>
 			<property name="TintColor" value="255,255,255"/>
@@ -1512,13 +1528,15 @@
 		</item>			
 		
 		<item name="gunNPCPipeMG">
-			<property name="Extends" value="gunNPCSMG5"/>
+			<property name="Extends" value="gunNPCSMG5" />
 			<property name="CompatibleWeapon" value="gunMGT0PipeMachineGun" />
 			<property name="RightHandJointName" value="PipeMG" />
-			<property name="Tags" value="weapon,ranged,medRange,holdBreathAiming,reloadPenalty2,gun,barrelAttachments,sideAttachments,smallTopAttachments,mediumTopAttachments,stock,magazine,drumMagazine,firingMode,bottomAttachments,attFortitude,perkMachineGunner,perkBookAutoWeapons,attachmentsIncluded,canHaveCosmetic"/>
-			<property name="CreativeMode" value="None"/>
-			<property name="Meshfile" value="@:Other/Items/Weapons/Ranged/PipeMachinegun/PipeMachinegunPrefab.prefab"/>
-			<property name="Material" value="MMachineGunParts"/> <property name="Weight" value="4"/>
+			<property name="Tags" value="weapon,ranged,medRange,holdBreathAiming,reloadPenalty2,gun,barrelAttachments,sideAttachments,smallTopAttachments,mediumTopAttachments,stock,magazine,drumMagazine,firingMode,bottomAttachments,attFortitude,perkMachineGunner,perkBookAutoWeapons,attachmentsIncluded,canHaveCosmetic" />
+			<property name="CreativeMode" value="None" />
+			<property name="Meshfile" value="@:Other/Items/Weapons/Ranged/PipeMachinegun/PipeMachinegunPrefab.prefab" />
+			<property name="Material" value="MMachineGunParts" />
+			<property name="Weight" value="4" />
+			<property name="TintColor" value="219, 124, 15" />
 			<property name="CustomIcon" value="gunAK47"/>
 			<property name="HoldType" value="32"/>
 			<property name="SoundUnholster" value="weapon_unholster"/>
@@ -1619,17 +1637,19 @@
 		</item>			
 		
 		<item name="gunNPCM60">
-			<property name="Extends" value="gunNPCSMG5"/> 
+			<property name="Extends" value="gunNPCSMG5" />
 			<property name="CompatibleWeapon" value="gunMGT3M60" />
 			<property name="RightHandJointName" value="M60" />
-			<property name="Tags" value="weapon,ranged,medRange,holdBreathAiming,reloadPenalty4,gun,barrelAttachments,sideAttachments,smallTopAttachments,magazine,drumMagazine,bottomAttachments,mediumTopAttachments,attFortitude,perkMachineGunner,perkBookAutoWeapons,attachmentsIncluded,canHaveCosmetic"/>
-			<property name="CreativeMode" value="None"/>
-			<property name="DisplayType" value="rangedShotgun"/>
-			<property name="HoldType" value="32"/> <!-- 5  -->
-			<property name="Stacknumber" value="1"/>
-			<property name="Candrop" value="false"/>
-			<property name="Meshfile" value="@:Other/Items/Weapons/Ranged/MachineGun/m60MachinegunPrefab.prefab"/>
-			<property name="Material" value="MShotgunParts"/> <property name="Weight" value="6"/>
+			<property name="Tags" value="weapon,ranged,medRange,holdBreathAiming,reloadPenalty4,gun,barrelAttachments,sideAttachments,smallTopAttachments,magazine,drumMagazine,bottomAttachments,mediumTopAttachments,attFortitude,perkMachineGunner,perkBookAutoWeapons,attachmentsIncluded,canHaveCosmetic" />
+			<property name="CreativeMode" value="None" />
+			<property name="DisplayType" value="rangedShotgun" />
+			<property name="HoldType" value="32" /> <!-- 5  -->
+			<property name="Stacknumber" value="1" />
+			<property name="Candrop" value="false" />
+			<property name="Meshfile" value="@:Other/Items/Weapons/Ranged/MachineGun/m60MachinegunPrefab.prefab" />
+			<property name="Material" value="MShotgunParts" />
+			<property name="Weight" value="6" />
+			<property name="TintColor" value="71, 84, 59" />
 			<property name="DegradationBreaksAfter" value="false"/>
 			<property name="SoundJammed" value="weapon_jam"/>
 			<property name="TintColor" value="255,255,255"/>
@@ -1739,16 +1759,18 @@
 		</item>	
 
 		<item name="gunNPCPistol">
-			<property name="Extends" value="gunNPCSMG5"/>
+			<property name="Extends" value="gunNPCSMG5" />
 			<property name="CompatibleWeapon" value="gunHandgunT1Pistol" />
 			<property name="RightHandJointName" value="Pistol" />
-			<property name="Tags" value="weapon,ranged,shortRange,gun,pistol,reloadPenalty1,barrelAttachments,sideAttachments,smallTopAttachments,magazine,firingMode,attAgility,perkGunslinger"/>
-			<property name="CreativeMode" value="None"/>
-			<property name="HoldType" value="2"/>
-			<property name="Stacknumber" value="1"/>
-			<property name="Candrop" value="false"/>	
-			<property name="Meshfile" value="@:Other/Items/Weapons/Ranged/Pistol/PistolPrefab.prefab"/>
-			<property name="Material" value="MHandGunParts"/> <property name="Weight" value="6"/>
+			<property name="Tags" value="weapon,ranged,shortRange,gun,pistol,reloadPenalty1,barrelAttachments,sideAttachments,smallTopAttachments,magazine,firingMode,attAgility,perkGunslinger" />
+			<property name="CreativeMode" value="None" />
+			<property name="HoldType" value="2" />
+			<property name="Stacknumber" value="1" />
+			<property name="Candrop" value="false" />
+			<property name="Meshfile" value="@:Other/Items/Weapons/Ranged/Pistol/PistolPrefab.prefab" />
+			<property name="Material" value="MHandGunParts" />
+			<property name="Weight" value="6" />
+			<property name="TintColor" value="66, 33, 0" />
 			<property name="DegradationBreaksAfter" value="false"/>
 			<property name="SoundJammed" value="weapon_jam"/>
 			<property name="TintColor" value="255,255,255"/>
@@ -1813,7 +1835,7 @@
 				<passive_effect name="BlockDamage" operation="perc_add" value=".1,.5" tier="2,6" tags="perkGunslinger"/> <!-- tier bonus -->
 
 				<passive_effect name="DegradationMax" operation="perc_add" value="-.2,.2" tags="perkGunslinger"/> <!-- random DegMax -->
-				<passive_effect name="RoundsPerMinute" operation="perc_add" value="-.05,.05" tags="perkGunslinger"/>  
+				<passive_effect name="RoundsPerMinute" operation="perc_add" value="-.05,.05" tags="perkGunslinger"/>
 				<!-- <passive_effect name="MagazineSize" operation="perc_add" value="-.122,.122"/> -->
 				<passive_effect name="WeaponHandling" operation="perc_add" value="-.08,.08" tags="perkGunslinger"/> <!-- random WeaponHandling -->
 
@@ -1862,11 +1884,12 @@
 		</item>	
 
 		<item name="gunNPCPistolHidden"> <!-- Using as default for ranged mechs  -->
-			<property name="Extends" value="gunNPCPistol"/> 
+			<property name="Extends" value="gunNPCPistol" />
 			<property name="CompatibleWeapon" value="gunHandgunT1Pistol" />
 			<property name="RightHandJointName" value="Pistol" />
-			<property name="Tags" value="weapon,ranged,shortRange,gun,pistol,reloadPenalty1,barrelAttachments,sideAttachments,smallTopAttachments,magazine,firingMode,attAgility,perkGunslinger"/>
-			<property name="CreativeMode" value="None"/>
+			<property name="Tags" value="weapon,ranged,shortRange,gun,pistol,reloadPenalty1,barrelAttachments,sideAttachments,smallTopAttachments,magazine,firingMode,attAgility,perkGunslinger" />
+			<property name="CreativeMode" value="None" />
+			<property name="TintColor" value="66, 33, 0" />
 			<property name="HoldingItemHidden" value="true"/>
 			<property name="SoundUnholster" value="weapon_unholster"/>
 			<property name="SoundHolster" value="weapon_holster"/>
@@ -1918,9 +1941,10 @@
 		</item>	
 		
 		<item name="gunNPCPistolHiddenFlying"> <!-- Using as default for ranged mechs  -->
-			<property name="Extends" value="gunNPCPistol"/> 
-			<property name="Tags" value="weapon,ranged,shortRange,gun,pistol,reloadPenalty1,barrelAttachments,sideAttachments,smallTopAttachments,magazine,firingMode,attAgility,perkGunslinger"/>
-			<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="gunNPCPistol" />
+			<property name="Tags" value="weapon,ranged,shortRange,gun,pistol,reloadPenalty1,barrelAttachments,sideAttachments,smallTopAttachments,magazine,firingMode,attAgility,perkGunslinger" />
+			<property name="CreativeMode" value="None" />
+			<property name="TintColor" value="66, 33, 0" />
 			<property name="HoldingItemHidden" value="true"/>
 			<property name="SoundUnholster" value="weapon_unholster"/>
 			<property name="SoundHolster" value="weapon_holster"/>
@@ -2003,16 +2027,18 @@
 		</item>
 
 		<item name="gunNPCDPistol">
-			<property name="Extends" value="gunNPCSMG5"/>
+			<property name="Extends" value="gunNPCSMG5" />
 			<property name="CompatibleWeapon" value="gunHandgunT3DesertVulture" />
 			<property name="RightHandJointName" value="DPistol" />
-			<property name="Tags" value="weapon,ranged,revolver,gun,shortRange,reloadPenalty1,pistol,barrelAttachments,sideAttachments,smallTopAttachments,magazine,firingMode,attAgility,perkGunslinger,attachmentsIncluded,canHaveCosmetic"/>
-			<property name="CreativeMode" value="None"/>
-			<property name="HoldType" value="2"/>
-			<property name="Stacknumber" value="1"/>
-			<property name="Candrop" value="false"/>	
-			<property name="Meshfile" value="@:Other/Items/Weapons/Ranged/Desert Eagle/desertEaglePrefab.prefab"/>
-			<property name="Material" value="MHandGunParts"/> <property name="Weight" value="6"/>
+			<property name="Tags" value="weapon,ranged,revolver,gun,shortRange,reloadPenalty1,pistol,barrelAttachments,sideAttachments,smallTopAttachments,magazine,firingMode,attAgility,perkGunslinger,attachmentsIncluded,canHaveCosmetic" />
+			<property name="CreativeMode" value="None" />
+			<property name="HoldType" value="2" />
+			<property name="Stacknumber" value="1" />
+			<property name="Candrop" value="false" />
+			<property name="Meshfile" value="@:Other/Items/Weapons/Ranged/Desert Eagle/desertEaglePrefab.prefab" />
+			<property name="Material" value="MHandGunParts" />
+			<property name="Weight" value="6" />
+			<property name="TintColor" value="80, 80, 80" />
 			<property name="DegradationBreaksAfter" value="false"/>
 			<property name="SoundJammed" value="weapon_jam"/>
 			<property name="TintColor" value="255,255,255"/>
@@ -2121,13 +2147,15 @@
 		</item>			
 		
 		<item name="gunNPCAk47">
-			<property name="Extends" value="gunNPCSMG5"/> 
+			<property name="Extends" value="gunNPCSMG5" />
 			<property name="CompatibleWeapon" value="gunMGT1AK47" />
 			<property name="RightHandJointName" value="AK47" />
-			<property name="Tags" value="weapon,ranged,medRange,gun,barrelAttachments,reloadPenalty2,sideAttachments,smallTopAttachments,mediumTopAttachments,stock,magazine,drumMagazine,firingMode,bottomAttachments,attFortitude,perkMachineGunner,perkBookAutoWeapons,attachmentsIncluded,canHaveCosmetic"/>
-			<property name="CreativeMode" value="None"/>
-			<property name="Meshfile" value="@:Other/Items/Weapons/Ranged/AK47/ak47Prefab.prefab"/>
-			<property name="Material" value="MMachineGunParts"/> <property name="Weight" value="4"/>
+			<property name="Tags" value="weapon,ranged,medRange,gun,barrelAttachments,reloadPenalty2,sideAttachments,smallTopAttachments,mediumTopAttachments,stock,magazine,drumMagazine,firingMode,bottomAttachments,attFortitude,perkMachineGunner,perkBookAutoWeapons,attachmentsIncluded,canHaveCosmetic" />
+			<property name="CreativeMode" value="None" />
+			<property name="Meshfile" value="@:Other/Items/Weapons/Ranged/AK47/ak47Prefab.prefab" />
+			<property name="Material" value="MMachineGunParts" />
+			<property name="Weight" value="4" />
+			<property name="TintColor" value="151, 81, 63" />
 			<property name="CustomIcon" value="gunAK47"/>
 			<property name="HoldType" value="32"/>
 			<property name="SoundUnholster" value="weapon_unholster"/>
@@ -2227,13 +2255,15 @@
 		</item>	
 		
 		<item name="gunNPCTRifle">
-			<property name="Extends" value="gunNPCSMG5"/> 
+			<property name="Extends" value="gunNPCSMG5" />
 			<property name="CompatibleWeapon" value="gunMGT2TacticalAR" />
 			<property name="RightHandJointName" value="TRifle" />
-			<property name="Tags" value="weapon,ranged,medRange,gun,barrelAttachments,reloadPenalty1,sideAttachments,smallTopAttachments,mediumTopAttachments,stock,magazine,drumMagazine,firingMode,bottomAttachments,attFortitude,perkMachineGunner,perkBookAutoWeapons,canHaveCosmetic"/>
-			<property name="CreativeMode" value="None"/>
-			<property name="Meshfile" value="@:Other/Items/Weapons/Ranged/Tactical Assault Rifle/tacticalAssaultRiflePrefab.prefab"/>
-			<property name="Material" value="MMachineGunParts"/> <property name="Weight" value="4"/>
+			<property name="Tags" value="weapon,ranged,medRange,gun,barrelAttachments,reloadPenalty1,sideAttachments,smallTopAttachments,mediumTopAttachments,stock,magazine,drumMagazine,firingMode,bottomAttachments,attFortitude,perkMachineGunner,perkBookAutoWeapons,canHaveCosmetic" />
+			<property name="CreativeMode" value="None" />
+			<property name="Meshfile" value="@:Other/Items/Weapons/Ranged/Tactical Assault Rifle/tacticalAssaultRiflePrefab.prefab" />
+			<property name="Material" value="MMachineGunParts" />
+			<property name="Weight" value="4" />
+			<property name="TintColor" value="102, 102, 51" />
 			<property name="CustomIcon" value="gunAK47"/>
 			<property name="HoldType" value="32"/>
 			<property name="SoundUnholster" value="weapon_unholster"/>
@@ -2331,17 +2361,19 @@
 		</item>	
 		
 		<item name="gunNPCHRifle">
-			<property name="Extends" value="gunNPCSMG5"/> 
+			<property name="Extends" value="gunNPCSMG5" />
 			<property name="CompatibleWeapon" value="gunRifleT1HuntingRifle" />
 			<property name="RightHandJointName" value="HRifle" />
-			<property name="Tags" value="weapon,ranged,longRange,gun,barrelAttachments,reloadPenalty1,sideAttachments,smallTopAttachments,mediumTopAttachments,largeTopAttachments,stock,bottomAttachments,attPerception,perkDeadEye,attachmentsIncluded,canHaveCosmetic"/>
-			<property name="CreativeMode" value="None"/>
-			<property name="DisplayType" value="rangedGun"/>
-			<property name="HoldType" value="32"/>
-			<property name="Stacknumber" value="1"/>
-			<property name="Candrop" value="false"/>			
-			<property name="Meshfile" value="@:Other/Items/Weapons/Ranged/HuntingRifle/HuntingRiflePrefab.prefab"/>
-			<property name="Material" value="MRifleParts"/> <property name="Weight" value="4"/>
+			<property name="Tags" value="weapon,ranged,longRange,gun,barrelAttachments,reloadPenalty1,sideAttachments,smallTopAttachments,mediumTopAttachments,largeTopAttachments,stock,bottomAttachments,attPerception,perkDeadEye,attachmentsIncluded,canHaveCosmetic" />
+			<property name="CreativeMode" value="None" />
+			<property name="DisplayType" value="rangedGun" />
+			<property name="HoldType" value="32" />
+			<property name="Stacknumber" value="1" />
+			<property name="Candrop" value="false" />
+			<property name="Meshfile" value="@:Other/Items/Weapons/Ranged/HuntingRifle/HuntingRiflePrefab.prefab" />
+			<property name="Material" value="MRifleParts" />
+			<property name="Weight" value="4" />
+			<property name="TintColor" value="101, 84, 67" />
 			<property name="DegradationBreaksAfter" value="false"/>
 			<property name="SoundJammed" value="ItemNeedsRepair"/>
 			<property name="TintColor" value="255,255,255"/>
@@ -2449,17 +2481,19 @@
 		</item>	
 		
 		<item name="gunNPCSRifle">
-			<property name="Extends" value="gunNPCSMG5"/> 
+			<property name="Extends" value="gunNPCSMG5" />
 			<property name="CompatibleWeapon" value="gunRifleT3SniperRifle" />
 			<property name="RightHandJointName" value="SRifle" />
-			<property name="Tags" value="weapon,ranged,longRange,gun,barrelAttachments,reloadPenalty2,sideAttachments,smallTopAttachments,mediumTopAttachments,largeTopAttachments,stock,magazine,firingMode,bottomAttachments,attPerception,perkDeadEye,attachmentsIncluded,canHaveCosmetic"/>
-			<property name="CreativeMode" value="None"/>
-			<property name="DisplayType" value="rangedGun"/>
-			<property name="HoldType" value="32"/>
-			<property name="Stacknumber" value="1"/>
-			<property name="Candrop" value="false"/>
-			<property name="Meshfile" value="@:Other/Items/Weapons/Ranged/Sharp Shooter/sharpShooterGunPrefab.prefab"/>
-			<property name="Material" value="MRifleParts"/> <property name="Weight" value="6"/>
+			<property name="Tags" value="weapon,ranged,longRange,gun,barrelAttachments,reloadPenalty2,sideAttachments,smallTopAttachments,mediumTopAttachments,largeTopAttachments,stock,magazine,firingMode,bottomAttachments,attPerception,perkDeadEye,attachmentsIncluded,canHaveCosmetic" />
+			<property name="CreativeMode" value="None" />
+			<property name="DisplayType" value="rangedGun" />
+			<property name="HoldType" value="32" />
+			<property name="Stacknumber" value="1" />
+			<property name="Candrop" value="false" />
+			<property name="Meshfile" value="@:Other/Items/Weapons/Ranged/Sharp Shooter/sharpShooterGunPrefab.prefab" />
+			<property name="Material" value="MRifleParts" />
+			<property name="Weight" value="6" />
+			<property name="TintColor" value="126, 135, 145" />
 			<property name="DegradationBreaksAfter" value="false"/>
 			<property name="SoundJammed" value="weapon_jam"/>
 			<property name="TintColor" value="255,255,255"/>
@@ -2567,18 +2601,20 @@
 			</effect_group> 			
 		</item>
 		
-		<item name="gunNPCLBow"> 
-			<property name="Extends" value="gunNPCSMG5"/>
+		<item name="gunNPCLBow">
+			<property name="Extends" value="gunNPCSMG5" />
 			<property name="CompatibleWeapon" value="gunBowT3CompoundBow" />
 			<property name="RightHandJointName" value="LBow" />
-			<property name="Tags" value="weapon,ranged,medRange,gun,attAgility,perkArchery,canHaveCosmetic"/>
-			<property name="CreativeMode" value="None"/>
-			<property name="DisplayType" value="rangedBow"/>
-			<property name="HoldType" value="32"/> 
-			<property name="Meshfile" value="@:Other/Items/Weapons/Ranged/Bows/advancedBow/advancedWoodenBow/advancedWoodenBowPrefab.prefab"/>
-			<property name="Stacknumber" value="1"/>
-			<property name="Candrop" value="false"/>				
-			<property name="Material" value="MBowCrossbowParts"/> <property name="Weight" value="4"/>
+			<property name="Tags" value="weapon,ranged,medRange,gun,attAgility,perkArchery,canHaveCosmetic" />
+			<property name="CreativeMode" value="None" />
+			<property name="DisplayType" value="rangedBow" />
+			<property name="HoldType" value="32" />
+			<property name="Meshfile" value="@:Other/Items/Weapons/Ranged/Bows/advancedBow/advancedWoodenBow/advancedWoodenBowPrefab.prefab" />
+			<property name="Stacknumber" value="1" />
+			<property name="Candrop" value="false" />
+			<property name="Material" value="MBowCrossbowParts" />
+			<property name="Weight" value="4" />
+			<property name="TintColor" value="80, 80, 80" />
 			<property name="DegradationBreaksAfter" value="false"/>
 			<property name="CustomIcon" value="gunBowWooden"/>
 			<property name="AutoReload" value="true"/>
@@ -2677,7 +2713,7 @@
 				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="15"/> 
 				<requirement name="IsPrimaryAttack" />
 				<triggered_effect trigger="onSelfDamagedOther" action="Ragdoll" target="other" duration=".1" force="25"/>
-			</effect_group> 			
+			</effect_group>
 			<!--<effect_group name="sneak damage bonus">
 				<requirement name="CVarCompare" cvar="_crouching" operation="Equals" value="1"/>
 				<requirement name="CVarCompare" cvar="_notAlerted" operation="GT" value="0" target="other"/>
@@ -2688,16 +2724,18 @@
 		</item>
 
 		<item name="gunNPCXBow">
-			<property name="Extends" value="gunNPCSMG5"/>
+			<property name="Extends" value="gunNPCSMG5" />
 			<property name="CompatibleWeapon" value="gunBowT1IronCrossbow" />
 			<property name="RightHandJointName" value="XBow" />
-			<property name="Tags" value="weapon,ranged,medRange,sideAttachments,reloadPenalty1,smallTopAttachments,mediumTopAttachments,bottomAttachments,attAgility,perkArchery,crossbow,attachmentsIncluded,canHaveCosmetic"/>
-			<property name="CreativeMode" value="None"/>
-			<property name="HoldType" value="32"/>
-			<property name="Stacknumber" value="1"/>
-			<property name="Candrop" value="false"/>				
-			<property name="Meshfile" value="@:Other/Items/Weapons/Ranged/IronCrossBow/ironCrossBowPrefab.prefab"/>
-			<property name="Material" value="MBowCrossbowParts"/> <property name="Weight" value="4"/>
+			<property name="Tags" value="weapon,ranged,medRange,sideAttachments,reloadPenalty1,smallTopAttachments,mediumTopAttachments,bottomAttachments,attAgility,perkArchery,crossbow,attachmentsIncluded,canHaveCosmetic" />
+			<property name="CreativeMode" value="None" />
+			<property name="HoldType" value="32" />
+			<property name="Stacknumber" value="1" />
+			<property name="Candrop" value="false" />
+			<property name="Meshfile" value="@:Other/Items/Weapons/Ranged/IronCrossBow/ironCrossBowPrefab.prefab" />
+			<property name="Material" value="MBowCrossbowParts" />
+			<property name="Weight" value="4" />
+			<property name="TintColor" value="125, 110, 94" />
 			<property name="DegradationBreaksAfter" value="false"/>
 			<property name="CustomIcon" value="gunBowWooden"/>
 			<property name="AutoReload" value="true"/>
@@ -2733,7 +2771,7 @@
 				<property name="SoundDestroy" value="wooddestroy1"/>
 				<property name="DamageEntity" value="10"/> 
 				<property name="DamageBlock" value="10"/> 				
-			</property> 
+			</property>
 			<!-- Testing launcher class  -->
 			<!--<property class="Action1"> 
 				<property name="Class" value="Launcher"/>
@@ -2810,7 +2848,7 @@
 				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="33"/> 
 				<requirement name="IsPrimaryAttack" />
 				<triggered_effect trigger="onSelfDamagedOther" action="Ragdoll" target="other" duration=".1" force="30"/>
-			</effect_group> 			
+			</effect_group>
 			<!--<effect_group name="sneak damage bonus">
 				<requirement name="CVarCompare" cvar="_crouching" operation="Equals" value="1"/>
 				<requirement name="CVarCompare" cvar="_notAlerted" operation="GT" value="0" target="other"/>
@@ -2821,17 +2859,19 @@
 		</item>	
 		
 		<item name="gunNPCPShotgun">
-			<property name="Extends" value="gunNPCSMG5"/> 
+			<property name="Extends" value="gunNPCSMG5" />
 			<property name="CompatibleWeapon" value="gunShotgunT2PumpShotgun" />
 			<property name="RightHandJointName" value="PShotgun" />
-			<property name="Tags" value="weapon,ranged,gun,shotgun,shortRange,reloadPenalty2,barrelAttachments,sideAttachments,smallTopAttachments,noScopes,stock,bottomAttachments,perkBoomstick,modGunShotgunTubeExtenderMagazine,attachmentsIncluded,canHaveCosmetic"/>
-			<property name="CreativeMode" value="None"/>
-			<property name="DisplayType" value="rangedShotgun"/>
-			<property name="HoldType" value="32"/>
-			<property name="Stacknumber" value="1"/>
-			<property name="Candrop" value="false"/>
-			<property name="Meshfile" value="@:Other/Items/Weapons/Ranged/Pump Shotgun/pumpShotgunPrefab.prefab"/>
-			<property name="Material" value="MShotgunParts"/> <property name="Weight" value="6"/>
+			<property name="Tags" value="weapon,ranged,gun,shotgun,shortRange,reloadPenalty2,barrelAttachments,sideAttachments,smallTopAttachments,noScopes,stock,bottomAttachments,perkBoomstick,modGunShotgunTubeExtenderMagazine,attachmentsIncluded,canHaveCosmetic" />
+			<property name="CreativeMode" value="None" />
+			<property name="DisplayType" value="rangedShotgun" />
+			<property name="HoldType" value="32" />
+			<property name="Stacknumber" value="1" />
+			<property name="Candrop" value="false" />
+			<property name="Meshfile" value="@:Other/Items/Weapons/Ranged/Pump Shotgun/pumpShotgunPrefab.prefab" />
+			<property name="Material" value="MShotgunParts" />
+			<property name="Weight" value="6" />
+			<property name="TintColor" value="80, 80, 80" />
 			<property name="DegradationBreaksAfter" value="false"/>
 			<property name="SoundJammed" value="weapon_jam"/>
 			<property name="TintColor" value="255,255,255"/>
@@ -2888,7 +2928,7 @@
 
 				<passive_effect name="DegradationMax" operation="perc_add" value="-.2,.2" tags="perkBoomstick"/> <!-- random DegMax -->
 				<passive_effect name="RoundsPerMinute" operation="perc_add" value="-.05,.05" tags="perkBoomstick"/> <!-- random APM -->
-			<!--	<passive_effect name="MagazineSize" operation="perc_add" value="-.122,.24"/>  -->
+				<!--	<passive_effect name="MagazineSize" operation="perc_add" value="-.122,.24"/>  -->
 				<passive_effect name="WeaponHandling" operation="perc_add" value="-.08,.08" tags="perkBoomstick"/> <!-- random WeaponHandling -->
 
 				<passive_effect name="KickDegreesVerticalMin" operation="base_set" value="4.2" tags="perkBoomstick"/>
@@ -2942,17 +2982,19 @@
 		</item>	
 	
 		<item name="gunNPCAShotgun">
-			<property name="Extends" value="gunNPCSMG5"/> 
+			<property name="Extends" value="gunNPCSMG5" />
 			<property name="CompatibleWeapon" value="gunShotgunT3AutoShotgun" />
 			<property name="RightHandJointName" value="AShotgun" />
-			<property name="Tags" value="weapon,ranged,gun,shotgun,shortRange,reloadPenalty2,barrelAttachments,sideAttachments,smallTopAttachments,noScopes,stock,magazine,drumMagazine,bottomAttachments,attStrength,perkBoomstick,attachmentsIncluded,canHaveCosmetic"/>
-			<property name="CreativeMode" value="None"/>
-			<property name="DisplayType" value="rangedShotgun"/>
-			<property name="HoldType" value="32"/>
-			<property name="Stacknumber" value="1"/>
-			<property name="Candrop" value="false"/>
-			<property name="Meshfile" value="@:Other/Items/Weapons/Ranged/Auto Shotgun/autoShotgunPrefab.prefab"/>
-			<property name="Material" value="MShotgunParts"/> <property name="Weight" value="6"/>
+			<property name="Tags" value="weapon,ranged,gun,shotgun,shortRange,reloadPenalty2,barrelAttachments,sideAttachments,smallTopAttachments,noScopes,stock,magazine,drumMagazine,bottomAttachments,attStrength,perkBoomstick,attachmentsIncluded,canHaveCosmetic" />
+			<property name="CreativeMode" value="None" />
+			<property name="DisplayType" value="rangedShotgun" />
+			<property name="HoldType" value="32" />
+			<property name="Stacknumber" value="1" />
+			<property name="Candrop" value="false" />
+			<property name="Meshfile" value="@:Other/Items/Weapons/Ranged/Auto Shotgun/autoShotgunPrefab.prefab" />
+			<property name="Material" value="MShotgunParts" />
+			<property name="Weight" value="6" />
+			<property name="TintColor" value="138, 138, 138" />
 			<property name="DegradationBreaksAfter" value="false"/>
 			<property name="SoundJammed" value="weapon_jam"/>
 			<property name="TintColor" value="255,255,255"/>
@@ -3009,7 +3051,7 @@
 
 				<passive_effect name="DegradationMax" operation="perc_add" value="-.2,.2" tags="perkBoomstick"/> <!-- random DegMax -->
 				<passive_effect name="RoundsPerMinute" operation="perc_add" value="-.05,.05" tags="perkBoomstick"/> <!-- random APM -->
-			<!--	<passive_effect name="MagazineSize" operation="perc_add" value="-.122,.24"/> -->
+				<!--	<passive_effect name="MagazineSize" operation="perc_add" value="-.122,.24"/> -->
 				<passive_effect name="WeaponHandling" operation="perc_add" value="-.08,.08" tags="perkBoomstick"/> <!-- random WeaponHandling -->
 
 				<passive_effect name="KickDegreesVerticalMin" operation="base_set" value="4.2" tags="perkBoomstick"/>
@@ -3064,13 +3106,15 @@
 
 		<item name="gunNPCRocketLauncher">
 			<property name="CompatibleWeapon" value="gunExplosivesT3RocketLauncher" />
-			<property name="Tags" value="weapon,ranged,longRange,launcher,gun,perkDemolitionsExpert"/>
+			<property name="Tags" value="weapon,ranged,longRange,launcher,gun,perkDemolitionsExpert" />
 			<property name="RightHandJointName" value="RocketL" />
-			<property name="DisplayType" value="rangedLauncher"/>
-			<property name="HoldType" value="32"/>
-			<property name="CreativeMode" value="None"/>
-			<property name="Meshfile" value="@:Other/Items/Weapons/Ranged/RocketLauncher/rocketlauncherPrefab.prefab"/>
-			<property name="Material" value="MRocketLauncherParts"/> <property name="Weight" value="4"/>
+			<property name="DisplayType" value="rangedLauncher" />
+			<property name="HoldType" value="32" />
+			<property name="CreativeMode" value="None" />
+			<property name="Meshfile" value="@:Other/Items/Weapons/Ranged/RocketLauncher/rocketlauncherPrefab.prefab" />
+			<property name="Material" value="MRocketLauncherParts" />
+			<property name="Weight" value="4" />
+			<property name="TintColor" value="77, 77, 51" />
 			<property name="RepairTools" value="resourceRepairKit"/>
 			<property name="DegradationBreaksAfter" value="false"/>
 			<property name="SoundJammed" value="weapon_jam"/>
@@ -3181,9 +3225,9 @@
 				<requirement name="IsPrimaryAttack" />
 				<triggered_effect trigger="onSelfDamagedOther" action="Ragdoll" target="other" duration=".2" force="100"/>
 			</effect_group> 			
-		</item>		
-	
-	<!--  Ammo for spawned NPC weapons  -->	
+		</item>
+
+		<!--  Ammo for spawned NPC weapons  -->	
 	
 		<item name="ammoNPC9mmBulletBall">
 			<property name="Tags" value="ammo"/>
@@ -3370,8 +3414,8 @@
 				<passive_effect name="TargetArmor" operation="perc_add" value="-.3" tags="perkArchery">
 					<requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="4"/></passive_effect>
 			</effect_group>
-		</item>		
-		
+		</item>
+
 		<!--  NPC Animal hand  -->
 
 		<item name="meleeHandAnimalTemplate">
@@ -3390,8 +3434,8 @@
 					buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
 					weights=".11,.07,.07,.05,.29,.36,.11"/>
 			</effect_group>
-		</item>	
-		
+		</item>
+
 		<!-- Quest items   -->
 
 		<item name="qc_FoolsGold">
@@ -3403,7 +3447,7 @@
 				<property name="QuestGiven" value="challenge_FoolsGold"/>
 			</property>
 		</item>
-	
+
 		<!-- Faction Schematics 
 		
 		Relationship Values Chart 
@@ -3464,8 +3508,8 @@
 		  <effect_group tiered="false">
 			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ChangeFactionSDX, SCore" value="greenteam" />
 		  </effect_group>
-		</item>	
-		
+		</item>
+
 		<!-- Schematics that adds or subtracts 100 pointa to your faction for these groups  -->
 
 		<item name="MechPositiveFactionSchematic">
@@ -3566,8 +3610,8 @@
 		  <effect_group tiered="false">
 			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyFactionSDX, SCore" target="self" faction="greenteam" value="-100" />
 		  </effect_group>	  
-		</item>	
-	
+		</item>
+
 
 		<!--  Schematics for testing infection changes -->
 
@@ -3640,8 +3684,8 @@
 					<requirement name="EntityTagCompare" target="other" tags="npc"/>
 				</triggered_effect>
 			</effect_group>
-		</item>  
-		
+		</item>
+
 		<!--  WalkStyle testing  -->
 	
 		<item name="ZombieW7WalkStyle0Schematic">
@@ -3696,8 +3740,8 @@
 					<requirement name="EntityTagCompare" target="other" tags="npc"/>
 			   </triggered_effect>  
 			</effect_group>		  
-		</item>	
-		
+		</item>
+
 		<!--<item name="NPCWVarTestingSchematic0">
 			  <property name="Extends" value="schematicMaster" />
 			  <property name="DescriptionKey" value="BeZombieSchematicDesc" />
@@ -3752,9 +3796,9 @@
 					<requirement name="EntityTagCompare" target="other" tags="npc"/>
 			   </triggered_effect>  
 			</effect_group>		  
-		</item>		-->	
-		
-		
+		</item>		-->
+
+
 		<!--  Werewolf testing   -->		
 		
 		<item name="HumantoWerewolfSchematic">
@@ -3778,7 +3822,7 @@
 					<requirement name="EntityTagCompare" target="other" tags="werewolf"/>
 				</triggered_effect>
 			</effect_group>		  
-		</item>  	
+		</item>
 
 		<!--  Medical items  -->		
 		
@@ -3820,8 +3864,8 @@
 				<requirement name="EntityTagCompare" target="other" tags="saveable"/>
 				<triggered_effect trigger="onSelfSecondaryActionEnd" action="AddBuff" target="other" buff="IsCured" />
 			</effect_group>
-		</item>	
-		
+		</item>
+
 		<!--  Zombie Hands to correct for holdtype attack timing deltas if needed  -->
 
 		<!-- Hands - Strange as it may seem, in A19 its the holdtype that syncs the attacks in combination with the animation speed on the attack animations and blends.  I think its the Raycast variable but that needs verification.  Maybe we can add new hold types for tuning? I'm using existing ones but those don't have a moving raycast, so custom might be better.  Please let me know if that works if you want to help -->
