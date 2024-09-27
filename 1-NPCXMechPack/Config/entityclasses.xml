@@ -33,7 +33,8 @@
 		</entity_class>
 		
 		<entity_class name="npcMechCompanion" extends="npcMechMeleeTemplate">
-			<property name="UserSpawnType" value="Menu"/>		
+			<property name="UserSpawnType" value="Menu"/>
+			<property name="Class" value="EntityAliveSDX, SCore" /> 
 			<property name="Mesh" value="#@modfolder:Resources/XythMechs.unity3d?Drone_X"/>	<!-- Free CC model by Willy Decarpentrie -->
 			<property name="Tags" value="entity,cp,npc,floating"/>			
 			<property name="HandItem" value="handDrone"/>
@@ -53,14 +54,15 @@
 			<drop event="Harvest" name="resourceScrapIron" tag="salvageHarvest" count="9"/>
 			<drop event="Harvest" name="resourceElectricParts" tag="salvageHarvest" count="12"/> 
 			<drop event="Harvest" name="resourceScrapPolymers" tag="salvageHarvest" count="9"/>	
+			<property name="AIPackages" value="NPCModCore, NPCModNPCMeleeAdvanced, NPCModNPCRangedAdvanced, NPCModNPCHired"/>
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="400"/>
 				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
 				<passive_effect name="StaminaMax" operation="base_set" value="200"/>
 				<passive_effect name="PhysicalDamageResist" operation="base_set" value="60" />
 				<passive_effect name="BuffResistance" operation="base_add" value="1" tags="buffInjuryBleeding,buffInjuryBleedingZombie,buffInfectionCatch"/>
+				<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="WeaponType" operation="set" value="0"/>	
 			</effect_group>
-			 <property name="AIPackages" value="NPCModMechCore, NPCModNPCMeleeBasic, NPCModNPCHired"/>
 		</entity_class>		
 		
 		<entity_class name="npcMechRustyDrone" extends="npcMechDrone" >

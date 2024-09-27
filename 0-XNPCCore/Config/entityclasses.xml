@@ -57,6 +57,8 @@
 		
 		<set xpath="//entity_class[starts-with(@name, 'animalTemplateHostile')]/property[@value='SetNearestEntityAsTarget']/@data">class=EntityPlayer,20,15,EntityZombie,15,10,EntityNPC,0,0</set> 
 		
+		<set xpath="//entity_class[starts-with(@name, 'animalTemplateHostile')]/property[@value='ApproachAndAttackTarget']/@data">class=EntityPlayer,20,EntityBandit,20,EntityNPC,20</set>
+		
 		<set xpath="//entity_class[starts-with(@name, 'animalRabbit')]/property[@value='RunawayFromEntity']/@data">class=EntityPlayer,EntityZombie,EntityEnemyAnimal,EntityNPC;safeDistance=20</set> 
 		
 		<set xpath="//entity_class[starts-with(@name, 'animalBear')]/property[@value='ApproachAndAttackTarget']/@data">class=EntityAnimalStag,40,EntityPlayer,25,EntityZombie,30,EntityNPC,25</set> 
@@ -519,6 +521,8 @@
 			<property name="LootListAlive" value=""/> 
 			<property name="NPCID" value=""/> 
 			<property name="NeverScaleAI" value="true" /> <!-- AI has a delay added when 8M away from a player, so dont do that sh*t on NPCs. -->
+			<property name="NoStorage" value="true" /> <!-- Cant put NPCs into containers -->
+			<property name="DisallowedKey" value="npcNoStorage" />	<!-- Cant put NPCs into containers -->					
 			
 			<!--  Defaults for basic, dumb characters  -->
 			<property name="Hirable" value="false" /> <!--  This was added to all advanced tempates, Note: you still need the UAI Hired package  -->
@@ -3849,7 +3853,7 @@
 			<property name="Names" value="Bob,Billy,Beau,Ben,Brody,Byron,Brian,Bruce" />				
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Baker_X"/> 
 			<property name="PickUpItem" value="bakerPickUpNPC" />
-	<!--		<property name="CanCollideWithLeader" value="false" /> -->
+			<!-- <property name="CanCollideWithLeader" value="false" /> -->
 		</entity_class>				
 		
 		<entity_class name="npcBakerMachete" extends="npcAdvancedMacheteTemplate"> 

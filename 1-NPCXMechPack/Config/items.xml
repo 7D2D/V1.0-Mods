@@ -18,6 +18,8 @@
 		
 		<item name="meleeHandMechTemplate">
 			<property name="Extends" value="meleeNPCEmptyHand"/>
+			<property name="Tags" value="blunt,melee"/>
+			
 			<property name="CreativeMode" value="None"/>
 			<!--<property name="HoldType" value="2"/> --> <!-- 35  -->
 			<property class="Action0">
@@ -32,6 +34,7 @@
 				<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
 					buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
 					weights=".11,.07,.07,.05,.29,.36,.11"/>
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="WeaponType" operation="set" value="0"/>	
 			</effect_group>
 		</item>		
 		<item name="handSphereII">
