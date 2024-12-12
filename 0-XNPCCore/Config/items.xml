@@ -2603,7 +2603,7 @@
 		
 		<item name="gunNPCLBow">
 			<property name="Extends" value="gunNPCSMG5" />
-			<property name="CompatibleWeapon" value="gunBowT3CompoundBow" />
+			<property name="CompatibleWeapon" value="gunBowT1WoodenBow" />
 			<property name="RightHandJointName" value="LBow" />
 			<property name="Tags" value="weapon,ranged,medRange,gun,attAgility,perkArchery,canHaveCosmetic" />
 			<property name="CreativeMode" value="None" />

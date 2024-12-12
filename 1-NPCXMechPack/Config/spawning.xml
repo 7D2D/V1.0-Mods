@@ -1,30 +1,29 @@
 <configs>
 
 	<append xpath="/spawning/biome[@name='pine_forest']">
-		<!-- <spawn maxcount="1" respawndelay="3" time="Day" entitygroup="XMechEnemyGroupGS01" notags="downtown" /> Not noob friendly -->
-		<spawn maxcount="1" respawndelay="2" time="Night" entitygroup="XMechEnemyGroupGS01" notags="downtown" />
+		<spawn id="nmXEnemyGroupGS01" maxcount="1" respawndelay="2" time="Night" entitygroup="XMechEnemyGroupGS01" notags="downtown" />
 	</append>
 	
 	<append xpath="/spawning/biome[@name='burnt_forest']">
-		<spawn maxcount="1" respawndelay="2" time="Day" entitygroup="XMechEnemyGroupGS01" notags="downtown" />
-		<spawn maxcount="1" respawndelay="1" time="Night" entitygroup="XMechEnemyGroupGS50" notags="downtown" />
-		<spawn maxcount="1" respawndelay="3" time="Any" entitygroup="XMechCompanion" notags="downtown" />
+		<spawn id="dmXEnemyGroupGS01" maxcount="1" respawndelay="2" time="Day" entitygroup="XMechEnemyGroupGS01" notags="downtown" />
+		<spawn id="nmXEnemyGroupGS50" maxcount="1" respawndelay="1" time="Night" entitygroup="XMechEnemyGroupGS50" notags="downtown" />
+		<spawn id="amXMechCompanion" maxcount="1" respawndelay="3" time="Any" entitygroup="XMechCompanion" notags="downtown" />
 	</append>
 	
 	<append xpath="/spawning/biome[@name='desert']">
-		<spawn maxcount="1" respawndelay="2" time="Day" entitygroup="XMechEnemyGroupGS50" notags="downtown" />
-		<spawn maxcount="1" respawndelay="1" time="Night" entitygroup="XMechEnemyGroupGS50" notags="downtown" />
+		<spawn id="dmXEnemyGroupGS50" maxcount="1" respawndelay="2" time="Day" entitygroup="XMechEnemyGroupGS50" notags="downtown" />
+		<spawn id="nmXEnemyGroupGS50" maxcount="1" respawndelay="1" time="Night" entitygroup="XMechEnemyGroupGS50" notags="downtown" />
 	</append>	
 	
 	<append xpath="/spawning/biome[@name='snow']">
-		<spawn maxcount="10" respawndelay="1" time="Day" entitygroup="XMechEnemyGroupGS50" notags="downtown" />
-		<spawn maxcount="1" respawndelay="1" time="Night" entitygroup="XMechEnemyGroupGS100" notags="downtown" />
+		<spawn id="dmXEnemyGroupGS50" maxcount="10" respawndelay="1" time="Day" entitygroup="XMechEnemyGroupGS50" notags="downtown" />
+		<spawn id="nmXEnemyGroupGS100" maxcount="1" respawndelay="1" time="Night" entitygroup="XMechEnemyGroupGS100" notags="downtown" />
 	</append>	
 	
 	<append xpath="/spawning/biome[@name='wasteland']">
-		<spawn maxcount="2" respawndelay="1" time="Day" entitygroup="XMechEnemyGroupGS100" notags="downtown" />
-		<spawn maxcount="3" respawndelay="1" time="Night" entitygroup="XMechEnemyGroupGS100" notags="downtown" />
-		<spawn maxcount="1" respawndelay="3" time="Any" entitygroup="XMechCompanion" notags="downtown" />
+		<spawn id="dmXEnemyGroupGS100" maxcount="2" respawndelay="1" time="Day" entitygroup="XMechEnemyGroupGS100" notags="downtown" />
+		<spawn id="nmXEnemyGroupGS100" maxcount="3" respawndelay="1" time="Night" entitygroup="XMechEnemyGroupGS100" notags="downtown" />
+		<spawn id="amXMechCompanion" maxcount="1" respawndelay="3" time="Any" entitygroup="XMechCompanion" notags="downtown" />
 	</append>	
 	
 </configs>
