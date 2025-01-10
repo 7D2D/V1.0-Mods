@@ -560,7 +560,7 @@
 				Wander|
 				"/>
 			<property name="AITarget" value="
-				SetAsTargetIfHurt class=EntityPlayer,0,0,EntityZombie,0,0,EntityEnemyAnimal,0,-10,EntityNPC,0,0|
+				SetAsTargetIfHurt class=EntityPlayer,EntityBandit,EntityEnemyAnimal,EntityNPC|
 				BlockingTargetTask|
 				SetNearestEntityAsTarget class=EntityPlayer,0,0,EntityZombie,0,0,EntityEnemyAnimal,0,-10,EntityNPC,0,0|
 				"/>
@@ -582,7 +582,7 @@
 				Wander|
 				"/>
 			<property name="AITarget" value="
-				SetAsTargetIfHurt class=EntityPlayer,0,0,EntityZombie,0,0,EntityEnemyAnimal,0,-10,EntityNPC,0,0|
+				SetAsTargetIfHurt class=EntityPlayer,EntityBandit,EntityEnemyAnimal,EntityNPC|
 				BlockingTargetTask|
 				SetNearestEntityAsTarget class=EntityPlayer,0,0,EntityZombie,0,0,EntityNPC,0,0|
 				"/>
