@@ -620,7 +620,7 @@
                     <task class="Loot, SCore" run="false" TargetType="Loot, SecureLoot" buff="ActivityBuff"/>
                     <consideration class="HasOrder, SCore" order="Loot"/>
                    <consideration class="EnemyNotNear, SCore" distance="15"/> 
-                   <!-- <consideration class="FailOnDistanceToLeader, SCore" max_distance="30"/> -->
+                  <!-- <consideration class="FailOnDistanceToLeader, SCore" max_distance="30"/> -->
                    <consideration class="SelfNotHasBuff, SCore" buffs="ActivityCoolDown"/>
                    <consideration class="HasPath, SCore" TargetType="Loot, SecureLoot" />
                 </action>
