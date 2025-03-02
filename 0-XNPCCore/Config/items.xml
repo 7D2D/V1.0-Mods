@@ -979,7 +979,7 @@
 				<property name="Sound_empty" value="dryfire"/>
 				<property name="Sound_reload" value="Weapons/Ranged/MP5/mp5_reload" />
 				<property name="Particles_muzzle_fire" value="nozzleflash_ak" />
-				<property name="Particles_muzzle_smoke" value="nozzlesmokeuzi" />
+				<!-- <property name="Particles_muzzle_smoke" value="nozzlesmokeuzi" /> -->
 				<property name="DamageEntity" value="5"/> <!--  This is base damage per ray that hits) -->
 				<property name="DamageBlock" value="5"/>
 				<!--<requirement name="CVarCompare" cvar="_underwater" operation="LTE" value="0"/> -->
@@ -1103,7 +1103,7 @@
 				<property name="Sound_reload" value="pistol_reload"/>
 				<property name="AutoReload" value="true"/>
 				<property name="Particles_muzzle_fire" value="gunfire_pistol"/>
-				<property name="Particles_muzzle_smoke" value="nozzlesmokeuzi" />
+				<!-- <property name="Particles_muzzle_smoke" value="nozzlesmokeuzi" /> -->
 				<property name="DamageEntity" value="5"/> 
 				<property name="DamageBlock" value="5"/> 
 			</property>
@@ -1209,7 +1209,7 @@
 				<property name="Sound_reload" value="pistol_reload"/>
 				<property name="AutoReload" value="true"/>
 				<property name="Particles_muzzle_fire" value="gunfire_pistol"/>
-				<property name="Particles_muzzle_smoke" value="nozzlesmokeuzi" />
+				<!-- <property name="Particles_muzzle_smoke" value="nozzlesmokeuzi" /> -->
 				<property name="DamageEntity" value="12"/> 
 				<property name="DamageBlock" value="12"/> 
 			</property>
@@ -1228,7 +1228,7 @@
 				<property name="Sound_reload" value="pistol_reload"/>
 				<property name="AutoReload" value="true"/>
 				<property name="Particles_muzzle_fire" value="gunfire_pistol"/>
-				<property name="Particles_muzzle_smoke" value="nozzlesmokeuzi" />
+				<!-- <property name="Particles_muzzle_smoke" value="nozzlesmokeuzi" /> -->
 				<property name="DamageEntity" value="5"/> 
 				<property name="DamageBlock" value="5"/> 
 			</property>
@@ -1566,7 +1566,7 @@
 				<property name="Sound_reload" value="ak47_reload"/>
 				<property name="Sound_end" value="ak47_fire_end"/>
 				<property name="Particles_muzzle_fire" value="nozzleflash_ak" />
-				<property name="Particles_muzzle_smoke" value="nozzlesmokeuzi" />
+				<!-- <property name="Particles_muzzle_smoke" value="nozzlesmokeuzi" /> -->
 				<property name="DamageEntity" value="5"/> 
 				<property name="DamageBlock" value="5"/> 				
 			</property>
@@ -1812,7 +1812,7 @@
 				<property name="Sound_reload" value="pistol_reload"/>
 				<property name="AutoReload" value="true"/>
 				<property name="Particles_muzzle_fire" value="gunfire_pistol"/>
-				<property name="Particles_muzzle_smoke" value="nozzlesmokeuzi" />
+				<!-- <property name="Particles_muzzle_smoke" value="nozzlesmokeuzi" /> -->
 				<property name="DamageEntity" value="5"/> <!--  This is base damage per ray that hits) -->
 				<property name="DamageBlock" value="5"/> 				
 			</property>
@@ -1936,7 +1936,7 @@
 			</effect_group> 
 			<effect_group name="MuzzleFlash">
 				<triggered_effect trigger="onSelfRangedBurstShotStart" action="AttachParticleEffectToEntity" particle="p_gunfire_pistol" local_offset="0,0,0" parent_transform="Gunjoint" />
-				<triggered_effect trigger="onSelfRangedBurstShotStart" action="AttachParticleEffectToEntity" particle="p_nozzlesmokeuzi" local_offset="0,.1,0" parent_transform="Gunjoint" />
+				<!-- <triggered_effect trigger="onSelfRangedBurstShotStart" action="AttachParticleEffectToEntity" particle="p_nozzlesmokeuzi" local_offset="0,.1,0" parent_transform="Gunjoint" /> -->
 			</effect_group>
 		</item>	
 		
@@ -1965,7 +1965,7 @@
 				<property name="Sound_reload" value="pistol_reload"/>
 				<property name="AutoReload" value="true"/>
 				<property name="Particles_muzzle_fire" value="gunfire_pistol"/>
-				<property name="Particles_muzzle_smoke" value="nozzlesmokeuzi" />
+				<!-- <property name="Particles_muzzle_smoke" value="nozzlesmokeuzi" /> -->
 				<property name="DamageEntity" value="5"/> 
 				<property name="DamageBlock" value="5"/> 				
 			</property>
@@ -1986,7 +1986,7 @@
 				<property name="Sound_reload" value="pistol_reload"/>
 				<property name="AutoReload" value="true"/>
 				<property name="Particles_muzzle_fire" value="gunfire_pistol"/>
-				<property name="Particles_muzzle_smoke" value="nozzlesmokeuzi" />
+				<!-- <property name="Particles_muzzle_smoke" value="nozzlesmokeuzi" /> -->
 				<property name="DamageEntity" value="5"/> 
 				<property name="DamageBlock" value="5"/> 				
 			</property>
@@ -2022,7 +2022,7 @@
 			</effect_group> 
 			<effect_group name="MuzzleFlash">
 				<triggered_effect trigger="onSelfRangedBurstShotStart" action="AttachParticleEffectToEntity" particle="p_gunfire_pistol" local_offset="0,0,0" parent_transform="Gunjoint" />
-				<triggered_effect trigger="onSelfRangedBurstShotStart" action="AttachParticleEffectToEntity" particle="p_nozzlesmokeuzi" local_offset="0,.1,0" parent_transform="Gunjoint" />
+				<!--<triggered_effect trigger="onSelfRangedBurstShotStart" action="AttachParticleEffectToEntity" particle="p_nozzlesmokeuzi" local_offset="0,.1,0" parent_transform="Gunjoint" />-->
 			</effect_group>
 		</item>
 
@@ -2077,7 +2077,7 @@
 				<property name="Sound_empty" value="dryfire"/>
 				<property name="AutoReload" value="true"/>
 				<property name="Particles_muzzle_fire" value="gunfire_pistol"/>
-				<property name="Particles_muzzle_smoke" value="nozzlesmokeuzi" />
+				<!-- <property name="Particles_muzzle_smoke" value="nozzlesmokeuzi" /> -->
 				<property name="DamageEntity" value="5"/> 
 				<property name="DamageBlock" value="5"/> 				
 			</property>
@@ -2185,7 +2185,7 @@
 				<property name="Sound_reload" value="ak47_reload"/>
 				<property name="Sound_end" value="ak47_fire_end"/>
 				<property name="Particles_muzzle_fire" value="nozzleflash_ak" />
-				<property name="Particles_muzzle_smoke" value="nozzlesmokeuzi" />
+				<!-- <property name="Particles_muzzle_smoke" value="nozzlesmokeuzi" /> -->
 				<property name="DamageEntity" value="10"/> <!--  This is base damage per ray that hits) -->
 				<property name="DamageBlock" value="10"/> 				
 			</property>
@@ -2291,7 +2291,7 @@
 				<property name="Sound_loop" value="tacticalar_fire"/>
 				<property name="Sound_empty" value="dryfire"/>
 				<property name="Particles_muzzle_fire" value="nozzleflash_ak" />
-				<property name="Particles_muzzle_smoke" value="nozzlesmokeuzi" />
+				<!-- <property name="Particles_muzzle_smoke" value="nozzlesmokeuzi" /> -->
 				<property name="DamageEntity" value="10"/> 
 				<property name="DamageBlock" value="10"/> 				
 			</property>
