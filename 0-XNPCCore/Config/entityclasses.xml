@@ -1991,6 +1991,7 @@
 			<property name="RootMotion" value="false"/><!-- In A21, animals seem to need root motion animations for walk and run.  RootMotion and HasDeathAnim set to true in the xml, HasRagdoll set to false if you don't have a ragdoll, otherwise the death anim does not work consistently, if you do have a ragdoll set it to true.   -->
 			<property name="RagdollOnDeathChance" value="0"/>
 			<property name="PhysicsBody" value=""/>
+			<property name="Prefab" value=""/>
 		</entity_class> 
 
 	
